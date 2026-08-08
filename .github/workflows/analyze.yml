@@ -1,0 +1,49 @@
+name: Scan markets and notify
+
+on:
+  schedule:
+    - cron: "*/15 * * * *"
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: "Dry run (log Telegram messages instead of sending)"
+        type: boolean
+        default: false
+
+permissions:
+  contents: write
+
+concurrency:
+  group: market-scan
+  cancel-in-progress: false
+
+jobs:
+  scan:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: "pip"
+          cache-dependency-path: scripts/requirements.txt
+
+      - name: Install dependencies
+        run: pip install -r scripts/requirements.txt
+
+      - name: Run analysis
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+          DRY_RUN: ${{ inputs.dry_run == true && '1' || '' }}
+        run: python scripts/main.py
+
+      - name: Commit updated data
+        run: |
+          git config user.name "market-scan-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add public/data/latest.json data/state.json
+          git diff --cached --quiet || git commit -m "chore: update market scan data [skip ci]"
+          git push
