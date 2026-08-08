@@ -38,9 +38,16 @@ Vercel build time, ~1 min).
 ### Why a curated watchlist instead of "the whole market"?
 
 Free APIs don't offer a full market screener. Instead of scanning every listed
-stock/coin, [`scripts/lib/universe.py`](scripts/lib/universe.py) hardcodes ~40
-large-cap/high-liquidity US stocks and the top 20 crypto assets by market cap —
-the names most retail traders actually watch. Edit that file to change the list.
+stock/coin, [`scripts/lib/universe.py`](scripts/lib/universe.py) hardcodes:
+
+- **~70 crypto assets** listed on **Bitkub** that also have a liquid USDT pair
+  on Binance (Binance is used for OHLCV/technical data — verified by
+  cross-referencing `api.bitkub.com/api/market/symbols` against Binance's
+  `exchangeInfo`; prices track closely across both exchanges).
+- **~40 US large-cap stocks** + **~30 liquid Thai SET stocks**, both tradable
+  through **Dime** (Yahoo Finance's `.BK` suffix is used for SET tickers).
+
+Edit `scripts/lib/universe.py` to change any of these lists.
 
 ## Setup
 
