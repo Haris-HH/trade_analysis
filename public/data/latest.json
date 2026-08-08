@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-08T21:14:23.521467+00:00",
+  "generated_at": "2026-08-08T21:51:32.483389+00:00",
   "disclaimer": "Automated technical + news-sentiment signals. Not financial advice. Educational use only.",
   "min_confidence_threshold": 70,
   "watchlist_counts": {
@@ -28,13 +28,13 @@
       "display_name": "Microsoft",
       "market": "stock",
       "direction": "BUY",
-      "confidence": 17.96483333333333,
+      "confidence": 23.697249999999997,
       "technical_score": 10.0,
-      "news_score": 32.75666666666667,
+      "news_score": 49.135,
       "price": 499.989990234375,
       "reasons": [
         "EMA20 > EMA50 (แนวโน้มขาขึ้น)",
-        "ข่าวเชิงบวก 3 ชิ้นใน 24 ชม. (sentiment +0.33)"
+        "ข่าวเชิงบวก 2 ชิ้นใน 24 ชม. (sentiment +0.49)"
       ],
       "verified": false,
       "last_alert_at": null
@@ -76,13 +76,13 @@
       "display_name": "Nvidia",
       "market": "stock",
       "direction": "BUY",
-      "confidence": 10.782,
+      "confidence": 9.015583333333336,
       "technical_score": 22.0,
-      "news_score": -10.051428571428572,
+      "news_score": -15.098333333333333,
       "price": 223.9600067138672,
       "reasons": [
         "EMA20 > EMA50 (แนวโน้มขาขึ้น)",
-        "ข่าวเป็นกลาง 7 ชิ้นใน 24 ชม. (sentiment -0.10)"
+        "ข่าวเป็นกลาง 6 ชิ้นใน 24 ชม. (sentiment -0.15)"
       ],
       "verified": false,
       "last_alert_at": null
@@ -141,14 +141,14 @@
       "display_name": "Broadcom",
       "market": "stock",
       "direction": "BUY",
-      "confidence": 4.4673125,
+      "confidence": 2.9798125,
       "technical_score": 7.0,
-      "news_score": -0.23624999999999965,
+      "news_score": -4.48625,
       "price": 427.760009765625,
       "reasons": [
         "EMA20 > EMA50 (แนวโน้มขาขึ้น)",
         "ราคาแตะขอบบน Bollinger Band → bearish",
-        "ข่าวเป็นกลาง 8 ชิ้นใน 24 ชม. (sentiment -0.00)"
+        "ข่าวเป็นกลาง 8 ชิ้นใน 24 ชม. (sentiment -0.04)"
       ],
       "verified": false,
       "last_alert_at": null
@@ -158,9 +158,9 @@
       "display_name": "JPMorgan Chase",
       "market": "stock",
       "direction": "BUY",
-      "confidence": 14.4271875,
+      "confidence": 14.427187500000002,
       "technical_score": 30.0,
-      "news_score": -14.49375,
+      "news_score": -14.493749999999997,
       "price": 357.5199890136719,
       "reasons": [
         "EMA20 > EMA50 (แนวโน้มขาขึ้น)",
@@ -191,13 +191,13 @@
       "display_name": "Visa",
       "market": "stock",
       "direction": "BUY",
-      "confidence": 8.8885,
+      "confidence": 12.284666666666668,
       "technical_score": -2.0,
-      "news_score": 29.110000000000003,
+      "news_score": 38.81333333333334,
       "price": 362.5,
       "reasons": [
         "EMA20 < EMA50 (แนวโน้มขาลง)",
-        "ข่าวเชิงบวก 4 ชิ้นใน 24 ชม. (sentiment +0.29)"
+        "ข่าวเชิงบวก 3 ชิ้นใน 24 ชม. (sentiment +0.39)"
       ],
       "verified": false,
       "last_alert_at": null
@@ -207,13 +207,13 @@
       "display_name": "UnitedHealth",
       "market": "stock",
       "direction": "BUY",
-      "confidence": 16.880000000000003,
+      "confidence": 16.14,
       "technical_score": 18.0,
-      "news_score": 14.799999999999999,
+      "news_score": 12.685714285714283,
       "price": 407.0799865722656,
       "reasons": [
         "EMA20 > EMA50 (แนวโน้มขาขึ้น)",
-        "ข่าวเป็นกลาง 8 ชิ้นใน 24 ชม. (sentiment +0.15)"
+        "ข่าวเป็นกลาง 7 ชิ้นใน 24 ชม. (sentiment +0.13)"
       ],
       "verified": false,
       "last_alert_at": null
@@ -223,13 +223,13 @@
       "display_name": "Exxon Mobil",
       "market": "stock",
       "direction": "SELL",
-      "confidence": 12.593333333333334,
+      "confidence": 9.14,
       "technical_score": -30.0,
-      "news_score": 19.733333333333334,
+      "news_score": 29.599999999999998,
       "price": 153.0399932861328,
       "reasons": [
         "EMA20 < EMA50 (แนวโน้มขาลง)",
-        "ข่าวเป็นกลาง 3 ชิ้นใน 24 ชม. (sentiment +0.20)"
+        "ข่าวเชิงบวก 1 ชิ้นใน 24 ชม. (sentiment +0.30)"
       ],
       "verified": false,
       "last_alert_at": null
@@ -271,14 +271,14 @@
       "display_name": "Home Depot",
       "market": "stock",
       "direction": "BUY",
-      "confidence": 11.366599999999998,
+      "confidence": 10.381,
       "technical_score": 7.0,
-      "news_score": 19.476,
+      "news_score": 16.66,
       "price": 355.6199951171875,
       "reasons": [
         "EMA20 > EMA50 (แนวโน้มขาขึ้น)",
         "ราคาแตะขอบบน Bollinger Band → bearish",
-        "ข่าวเป็นกลาง 5 ชิ้นใน 24 ชม. (sentiment +0.19)"
+        "ข่าวเป็นกลาง 6 ชิ้นใน 24 ชม. (sentiment +0.17)"
       ],
       "verified": false,
       "last_alert_at": null
@@ -338,13 +338,13 @@
       "display_name": "Bank of America",
       "market": "stock",
       "direction": "BUY",
-      "confidence": 15.346818181818183,
+      "confidence": 15.09205,
       "technical_score": 22.0,
-      "news_score": 2.9909090909090907,
+      "news_score": 2.263,
       "price": 63.16999816894531,
       "reasons": [
         "EMA20 > EMA50 (แนวโน้มขาขึ้น)",
-        "ข่าวเป็นกลาง 11 ชิ้นใน 24 ชม. (sentiment +0.03)"
+        "ข่าวเป็นกลาง 10 ชิ้นใน 24 ชม. (sentiment +0.02)"
       ],
       "verified": false,
       "last_alert_at": null
@@ -371,13 +371,13 @@
       "display_name": "AMD",
       "market": "stock",
       "direction": "SELL",
-      "confidence": 7.304,
+      "confidence": 6.10975,
       "technical_score": -10.0,
-      "news_score": -2.297142857142858,
+      "news_score": 1.1149999999999993,
       "price": 483.3599853515625,
       "reasons": [
         "EMA20 < EMA50 (แนวโน้มขาลง)",
-        "ข่าวเป็นกลาง 7 ชิ้นใน 24 ชม. (sentiment -0.02)"
+        "ข่าวเป็นกลาง 8 ชิ้นใน 24 ชม. (sentiment +0.01)"
       ],
       "verified": false,
       "last_alert_at": null
@@ -387,13 +387,13 @@
       "display_name": "Oracle",
       "market": "stock",
       "direction": "BUY",
-      "confidence": 7.856500000000001,
+      "confidence": 9.120000000000001,
       "technical_score": 22.0,
-      "news_score": -18.41,
+      "news_score": -14.799999999999999,
       "price": 147.02000427246094,
       "reasons": [
         "EMA20 > EMA50 (แนวโน้มขาขึ้น)",
-        "ข่าวเป็นกลาง 4 ชิ้นใน 24 ชม. (sentiment -0.18)"
+        "ข่าวเป็นกลาง 2 ชิ้นใน 24 ชม. (sentiment -0.15)"
       ],
       "verified": false,
       "last_alert_at": null
@@ -435,13 +435,13 @@
       "display_name": "Adobe",
       "market": "stock",
       "direction": "BUY",
-      "confidence": 3.853249999999999,
+      "confidence": 3.882999999999999,
       "technical_score": 2.0,
-      "news_score": 7.294999999999997,
+      "news_score": 7.379999999999999,
       "price": 265.2099914550781,
       "reasons": [
         "EMA20 > EMA50 (แนวโน้มขาขึ้น)",
-        "ข่าวเป็นกลาง 4 ชิ้นใน 24 ชม. (sentiment +0.07)"
+        "ข่าวเป็นกลาง 5 ชิ้นใน 24 ชม. (sentiment +0.07)"
       ],
       "verified": false,
       "last_alert_at": null
@@ -451,13 +451,13 @@
       "display_name": "Walmart",
       "market": "stock",
       "direction": "SELL",
-      "confidence": 5.534750000000002,
+      "confidence": 7.288833333333335,
       "technical_score": -18.0,
-      "news_score": 17.615,
+      "news_score": 12.603333333333333,
       "price": 111.8499984741211,
       "reasons": [
         "EMA20 < EMA50 (แนวโน้มขาลง)",
-        "ข่าวเป็นกลาง 2 ชิ้นใน 24 ชม. (sentiment +0.18)"
+        "ข่าวเป็นกลาง 3 ชิ้นใน 24 ชม. (sentiment +0.13)"
       ],
       "verified": false,
       "last_alert_at": null
@@ -499,15 +499,15 @@
       "display_name": "Airbnb",
       "market": "stock",
       "direction": "SELL",
-      "confidence": 16.0196,
+      "confidence": 15.632888888888889,
       "technical_score": -30.0,
-      "news_score": 9.944,
+      "news_score": 11.04888888888889,
       "price": 178.07000732421875,
       "reasons": [
         "RSI overbought (79.5) → bearish",
         "EMA20 > EMA50 (แนวโน้มขาขึ้น)",
         "ราคาแตะขอบบน Bollinger Band → bearish",
-        "ข่าวเป็นกลาง 10 ชิ้นใน 24 ชม. (sentiment +0.10)"
+        "ข่าวเป็นกลาง 9 ชิ้นใน 24 ชม. (sentiment +0.11)"
       ],
       "verified": false,
       "last_alert_at": null
@@ -573,7 +573,7 @@
         "RSI overbought (72.3) → bearish",
         "EMA20 > EMA50 (แนวโน้มขาขึ้น)",
         "ราคาแตะขอบบน Bollinger Band → bearish",
-        "ข่าวเป็นกลาง 4 ชิ้นใน 24 ชม. (sentiment +0.00)"
+        "ข่าวเป็นกลาง 3 ชิ้นใน 24 ชม. (sentiment +0.00)"
       ],
       "verified": false,
       "last_alert_at": null
@@ -631,14 +631,14 @@
       "display_name": "SoFi",
       "market": "stock",
       "direction": "BUY",
-      "confidence": 12.27061111111111,
+      "confidence": 13.235687500000001,
       "technical_score": 7.0,
-      "news_score": 22.058888888888887,
+      "news_score": 24.81625,
       "price": 18.3799991607666,
       "reasons": [
         "EMA20 > EMA50 (แนวโน้มขาขึ้น)",
         "ราคาแตะขอบบน Bollinger Band → bearish",
-        "ข่าวเชิงบวก 9 ชิ้นใน 24 ชม. (sentiment +0.22)"
+        "ข่าวเชิงบวก 8 ชิ้นใน 24 ชม. (sentiment +0.25)"
       ],
       "verified": false,
       "last_alert_at": null
@@ -648,13 +648,13 @@
       "display_name": "Super Micro Computer",
       "market": "stock",
       "direction": "BUY",
-      "confidence": 39.9872,
+      "confidence": 40.048625,
       "technical_score": 22.0,
-      "news_score": 73.39200000000001,
+      "news_score": 73.56750000000001,
       "price": 31.1299991607666,
       "reasons": [
         "EMA20 > EMA50 (แนวโน้มขาขึ้น)",
-        "ข่าวเชิงบวก 5 ชิ้นใน 24 ชม. (sentiment +0.73)"
+        "ข่าวเชิงบวก 4 ชิ้นใน 24 ชม. (sentiment +0.74)"
       ],
       "verified": false,
       "last_alert_at": null
