@@ -9,6 +9,7 @@ export interface Signal {
   technical_score: number;
   news_score: number;
   price: number;
+  sparkline: number[];
   verified: boolean;
   reasons: string[];
   last_alert_at: string | null;

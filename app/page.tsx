@@ -1,6 +1,7 @@
 import fs from "fs";
 import path from "path";
 import type { AnalysisData } from "@/lib/types";
+import { Sparkline } from "@/components/Sparkline";
 
 export const revalidate = 0;
 
@@ -71,6 +72,8 @@ export default function Home() {
                 <span className="confidence-num">{s.confidence.toFixed(0)}%</span>
               </div>
 
+              <Sparkline values={s.sparkline} direction={s.direction} />
+
               <div className="sub-scores">
                 <span>เทคนิค: {s.technical_score.toFixed(0)}</span>
                 <span>ข่าว: {s.news_score.toFixed(0)}</span>
@@ -96,7 +99,8 @@ export default function Home() {
       )}
 
       <footer>
-        ข้อมูลราคาจาก Binance / Yahoo Finance · ข่าวจาก Google News · วิเคราะห์อัตโนมัติทุก 15 นาทีผ่าน GitHub Actions
+        ข้อมูลราคาจาก Bitkub / Yahoo Finance · ข่าวจาก Google News, Bing News และ Yahoo Finance ·
+        วิเคราะห์อัตโนมัติทุก 5 นาทีผ่าน GitHub Actions
       </footer>
     </main>
   );

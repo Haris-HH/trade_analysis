@@ -29,7 +29,7 @@ sys.path.insert(0, os.path.dirname(__file__))
 
 import json
 
-from lib import bitkub_source, stock_source, indicators, news_source, scoring, state_store, telegram_notify
+from lib import bitkub_source, stock_source, indicators, news_source, scoring, state_store, telegram_notify, chart
 from lib.universe import STOCK_NAMES
 from lib.scoring import NEWS_WEIGHT
 
@@ -92,12 +92,14 @@ def technical_pass(item: dict, df) -> dict:
         "technical_score": tech_score,
         "tech_reasons": tech_reasons,
         "price": price,
+        "sparkline": chart.extract_sparkline(df),
     }
 
 
 def add_news_and_score(partial: dict) -> dict:
     query = f"{partial['display_name']} {'crypto' if partial['market'] == 'crypto' else 'stock'}"
-    news_score, news_reasons, _ = news_source.compute_news_score(query)
+    news_ticker = partial["raw_key"] if partial["market"] == "stock" else None
+    news_score, news_reasons, _ = news_source.compute_news_score(query, ticker=news_ticker)
     direction, confidence = scoring.combine_scores(partial["technical_score"], news_score)
 
     return {

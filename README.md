@@ -18,9 +18,11 @@ GitHub Actions (every 5 min, free)
          listed there) + Yahoo Finance chart API (S&P 500 + liquid Thai SET stocks)
       2. Compute technical score: RSI, MACD cross, EMA20/50 trend, Bollinger %B, volume spike
       3. Skip news lookups for symbols whose technical score alone can't
-         mathematically reach 70% (see scoring math below) — keeps Google News
-         RSS calls down to a handful of symbols per run instead of ~950
-      4. For the rest: fetch recent headlines (Google News RSS), score with VADER sentiment
+         mathematically reach 70% (see scoring math below) — keeps news
+         lookups down to a handful of symbols per run instead of ~950
+      4. For the rest: fetch + merge recent headlines from 3 free sources
+         (Google News RSS, Bing News RSS, and Yahoo Finance's per-ticker feed
+         for stocks), de-dupe by title, score the combined set with VADER
       5. Combine → confidence score (0-100%), direction BUY/SELL
       6. Candidates ≥ 70%: wait ~45s, re-fetch fresh data for all of them in
          parallel, recompute ("double-check")
@@ -43,7 +45,15 @@ cooldown (`state_store.COOLDOWN_HOURS`) still prevents alert spam regardless
 of how often the scan runs.
 
 Everything runs on free tiers: GitHub Actions (unlimited minutes on public repos),
-Bitkub/Yahoo Finance/Google News (no API key needed), Vercel Hobby, Telegram Bot API.
+Bitkub/Yahoo Finance/Google News/Bing News (no API key needed), Vercel Hobby, Telegram Bot API.
+
+### Charts
+
+Each card on the dashboard includes a sparkline built from the same price
+series (`scripts/lib/chart.py`) that fed the technical indicators — the exact
+history the BUY/SELL call is based on, not a separate/prettier feed. It's
+computed server-side and rendered as inline SVG (`components/Sparkline.tsx`),
+so there's no charting library dependency.
 
 ### Why not "true" real-time on Vercel alone?
 
@@ -75,7 +85,7 @@ a symbol needs a technical score of at least ~54 before news could possibly
 push it over the 70% alert threshold — so `scripts/main.py` computes technical
 scores for the whole universe first (fast, parallel, no news call) and only
 fetches news for the small number of symbols that clear that bar. This is what
-keeps a ~950-symbol scan fast and inside Google News' informal rate limits.
+keeps a ~950-symbol scan fast and inside these free news sources' informal rate limits.
 
 ## Setup
 
