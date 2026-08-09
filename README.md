@@ -14,18 +14,26 @@ verification pass**.
 ```
 GitHub Actions (every 15 min, free)
   → scripts/main.py
-      1. Fetch prices: Binance API (crypto) + Yahoo Finance via yfinance (stocks)
+      1. Fetch prices for ~950 symbols IN PARALLEL: Bitkub's own API (every coin
+         listed there) + Yahoo Finance chart API (S&P 500 + liquid Thai SET stocks)
       2. Compute technical score: RSI, MACD cross, EMA20/50 trend, Bollinger %B, volume spike
-      3. Fetch recent headlines: Google News RSS, score with VADER sentiment
-      4. Combine → confidence score (0-100%), direction BUY/SELL
-      5. Candidates ≥ 70%: wait ~45s, re-fetch fresh data, recompute ("double-check")
-      6. Still ≥ 70% + direction unchanged + not in cooldown → send Telegram alert
+      3. Skip news lookups for symbols whose technical score alone can't
+         mathematically reach 70% (see scoring math below) — keeps Google News
+         RSS calls down to a handful of symbols per run instead of ~950
+      4. For the rest: fetch recent headlines (Google News RSS), score with VADER sentiment
+      5. Combine → confidence score (0-100%), direction BUY/SELL
+      6. Candidates ≥ 70%: wait ~45s, re-fetch fresh data for all of them in
+         parallel, recompute ("double-check")
+      7. Still ≥ 70% + direction unchanged + not in cooldown → send Telegram alert
   → commits public/data/latest.json + data/state.json back to the repo
   → push triggers Vercel to redeploy the dashboard (free Hobby plan)
 ```
 
+The whole ~950-symbol scan (parallel price fetch + prefilter) typically takes well
+under a minute, comfortably inside the 15-minute cron window.
+
 Everything runs on free tiers: GitHub Actions (unlimited minutes on public repos),
-Binance/Yahoo Finance/Google News (no API key needed), Vercel Hobby, Telegram Bot API.
+Bitkub/Yahoo Finance/Google News (no API key needed), Vercel Hobby, Telegram Bot API.
 
 ### Why not "true" real-time on Vercel alone?
 
@@ -35,19 +43,29 @@ repos, so it does the scanning/alerting; Vercel just hosts the static dashboard,
 which updates every time the Action pushes new data (~15 min cadence, plus your
 Vercel build time, ~1 min).
 
-### Why a curated watchlist instead of "the whole market"?
+### Watchlist coverage
 
-Free APIs don't offer a full market screener. Instead of scanning every listed
-stock/coin, [`scripts/lib/universe.py`](scripts/lib/universe.py) hardcodes:
+- **Crypto: every coin listed on Bitkub** (~360, minus fiat-pegged stablecoins).
+  [`scripts/lib/bitkub_source.py`](scripts/lib/bitkub_source.py) fetches the live
+  symbol list from `api.bitkub.com/api/market/symbols` on every run — no
+  hardcoded list to go stale — and pulls THB-quoted OHLCV candles from Bitkub's
+  own `tradingview/history` endpoint, so prices reflect the market you'd
+  actually trade on.
+- **Stocks: the full S&P 500** + **~90 liquid Thai SET stocks** (SET50 + notable
+  SET100 names, individually verified against Yahoo Finance), both tradable
+  through **Dime**. These are hardcoded in
+  [`scripts/lib/universe.py`](scripts/lib/universe.py) since there's no free
+  live screener API for either market — edit that file to add/remove names.
 
-- **~70 crypto assets** listed on **Bitkub** that also have a liquid USDT pair
-  on Binance (Binance is used for OHLCV/technical data — verified by
-  cross-referencing `api.bitkub.com/api/market/symbols` against Binance's
-  `exchangeInfo`; prices track closely across both exchanges).
-- **~40 US large-cap stocks** + **~30 liquid Thai SET stocks**, both tradable
-  through **Dime** (Yahoo Finance's `.BK` suffix is used for SET tickers).
+### Why news lookups don't scale with the watchlist size
 
-Edit `scripts/lib/universe.py` to change any of these lists.
+News sentiment can only ever contribute `NEWS_WEIGHT * 100` points to the
+combined score (see `scripts/lib/scoring.py`). With the default 65/35 split,
+a symbol needs a technical score of at least ~54 before news could possibly
+push it over the 70% alert threshold — so `scripts/main.py` computes technical
+scores for the whole universe first (fast, parallel, no news call) and only
+fetches news for the small number of symbols that clear that bar. This is what
+keeps a ~950-symbol scan fast and inside Google News' informal rate limits.
 
 ## Setup
 
