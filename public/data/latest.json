@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-09T05:22:53.583873+00:00",
+  "generated_at": "2026-08-09T06:12:53.061109+00:00",
   "disclaimer": "Automated technical + news-sentiment signals. Not financial advice. Educational use only.",
   "min_confidence_threshold": 70,
   "watchlist_counts": {
@@ -76,13 +76,13 @@
       "display_name": "Nvidia",
       "market": "stock",
       "direction": "BUY",
-      "confidence": 10.4465,
+      "confidence": 11.217200000000002,
       "technical_score": 22.0,
-      "news_score": -11.01,
+      "news_score": -8.808,
       "price": 223.9600067138672,
       "reasons": [
         "EMA20 > EMA50 (แนวโน้มขาขึ้น)",
-        "ข่าวเป็นกลาง 4 ชิ้นใน 24 ชม. (sentiment -0.11)"
+        "ข่าวเป็นกลาง 5 ชิ้นใน 24 ชม. (sentiment -0.09)"
       ],
       "verified": false,
       "last_alert_at": null
@@ -108,13 +108,13 @@
       "display_name": "Tesla",
       "market": "stock",
       "direction": "SELL",
-      "confidence": 5.432250000000001,
+      "confidence": 5.036166666666667,
       "technical_score": 2.0,
-      "news_score": -19.235000000000003,
+      "news_score": -18.103333333333335,
       "price": 328.5799865722656,
       "reasons": [
         "EMA20 > EMA50 (แนวโน้มขาขึ้น)",
-        "ข่าวเป็นกลาง 4 ชิ้นใน 24 ชม. (sentiment -0.19)"
+        "ข่าวเป็นกลาง 3 ชิ้นใน 24 ชม. (sentiment -0.18)"
       ],
       "verified": false,
       "last_alert_at": null
@@ -141,14 +141,14 @@
       "display_name": "Broadcom",
       "market": "stock",
       "direction": "BUY",
-      "confidence": 2.9982272727272723,
+      "confidence": 5.26085,
       "technical_score": 7.0,
-      "news_score": -4.4336363636363645,
+      "news_score": 2.0309999999999984,
       "price": 427.760009765625,
       "reasons": [
         "EMA20 > EMA50 (แนวโน้มขาขึ้น)",
         "ราคาแตะขอบบน Bollinger Band → bearish",
-        "ข่าวเป็นกลาง 11 ชิ้นใน 24 ชม. (sentiment -0.04)"
+        "ข่าวเป็นกลาง 10 ชิ้นใน 24 ชม. (sentiment +0.02)"
       ],
       "verified": false,
       "last_alert_at": null
@@ -320,15 +320,15 @@
       "display_name": "Johnson & Johnson",
       "market": "stock",
       "direction": "SELL",
-      "confidence": 0.8620833333333335,
+      "confidence": 0.1875000000000009,
       "technical_score": -10.0,
-      "news_score": 16.108333333333334,
+      "news_score": 18.035714285714285,
       "price": 259.239990234375,
       "reasons": [
         "RSI overbought (72.5) → bearish",
         "EMA20 > EMA50 (แนวโน้มขาขึ้น)",
         "ราคาแตะขอบบน Bollinger Band → bearish",
-        "ข่าวเป็นกลาง 6 ชิ้นใน 24 ชม. (sentiment +0.16)"
+        "ข่าวเป็นกลาง 7 ชิ้นใน 24 ชม. (sentiment +0.18)"
       ],
       "verified": false,
       "last_alert_at": null
@@ -371,13 +371,13 @@
       "display_name": "AMD",
       "market": "stock",
       "direction": "SELL",
-      "confidence": 8.3655,
+      "confidence": 10.488600000000002,
       "technical_score": -10.0,
-      "news_score": -5.330000000000001,
+      "news_score": -11.396000000000003,
       "price": 483.3599853515625,
       "reasons": [
         "EMA20 < EMA50 (แนวโน้มขาลง)",
-        "ข่าวเป็นกลาง 6 ชิ้นใน 24 ชม. (sentiment -0.05)"
+        "ข่าวเป็นกลาง 5 ชิ้นใน 24 ชม. (sentiment -0.11)"
       ],
       "verified": false,
       "last_alert_at": null
@@ -405,7 +405,7 @@
       "direction": "BUY",
       "confidence": 19.660874999999997,
       "technical_score": 10.0,
-      "news_score": 37.6025,
+      "news_score": 37.60249999999999,
       "price": 87.05000305175781,
       "reasons": [
         "EMA20 > EMA50 (แนวโน้มขาขึ้น)",
@@ -499,15 +499,15 @@
       "display_name": "Airbnb",
       "market": "stock",
       "direction": "SELL",
-      "confidence": 17.4889,
+      "confidence": 16.986125,
       "technical_score": -30.0,
-      "news_score": 5.7459999999999996,
+      "news_score": 7.1825,
       "price": 178.07000732421875,
       "reasons": [
         "RSI overbought (79.5) → bearish",
         "EMA20 > EMA50 (แนวโน้มขาขึ้น)",
         "ราคาแตะขอบบน Bollinger Band → bearish",
-        "ข่าวเป็นกลาง 5 ชิ้นใน 24 ชม. (sentiment +0.06)"
+        "ข่าวเป็นกลาง 4 ชิ้นใน 24 ชม. (sentiment +0.07)"
       ],
       "verified": false,
       "last_alert_at": null
@@ -565,15 +565,15 @@
       "display_name": "Palantir",
       "market": "stock",
       "direction": "SELL",
-      "confidence": 19.5745,
+      "confidence": 21.108055555555556,
       "technical_score": -30.0,
-      "news_score": -0.2128571428571432,
+      "news_score": -4.594444444444445,
       "price": 172.00999450683594,
       "reasons": [
         "RSI overbought (72.3) → bearish",
         "EMA20 > EMA50 (แนวโน้มขาขึ้น)",
         "ราคาแตะขอบบน Bollinger Band → bearish",
-        "ข่าวเป็นกลาง 7 ชิ้นใน 24 ชม. (sentiment -0.00)"
+        "ข่าวเป็นกลาง 9 ชิ้นใน 24 ชม. (sentiment -0.05)"
       ],
       "verified": false,
       "last_alert_at": null
