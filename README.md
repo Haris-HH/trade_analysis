@@ -55,6 +55,15 @@ history the BUY/SELL call is based on, not a separate/prettier feed. It's
 computed server-side and rendered as inline SVG (`components/Sparkline.tsx`),
 so there's no charting library dependency.
 
+### Auto-refresh
+
+An open browser tab updates itself when a new scan cycle finishes — no manual
+reload needed. `components/AutoRefresh.tsx` polls `public/data/latest.json`
+every 30s and calls Next.js's `router.refresh()` if `generated_at` has moved
+forward, which re-renders the page with fresh data in place (no full page
+reload, scroll position kept). The small pulsing dot next to "อัปเดตอัตโนมัติ"
+in the header turns red if a poll fails (e.g. you're offline).
+
 ### Why not "true" real-time on Vercel alone?
 
 Vercel's free (Hobby) plan only allows cron jobs to run **once per day**, which is

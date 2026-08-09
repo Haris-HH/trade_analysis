@@ -83,6 +83,33 @@ header.hero p {
   border-radius: 999px;
 }
 
+.live-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.live-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 999px;
+  background: var(--buy);
+}
+
+.live-dot.on {
+  animation: live-pulse 1.6s ease-in-out infinite;
+}
+
+.live-dot.off {
+  background: var(--sell);
+  animation: none;
+}
+
+@keyframes live-pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.35; }
+}
+
 .grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));

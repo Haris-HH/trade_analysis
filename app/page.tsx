@@ -2,6 +2,7 @@ import fs from "fs";
 import path from "path";
 import type { AnalysisData } from "@/lib/types";
 import { Sparkline } from "@/components/Sparkline";
+import { AutoRefresh } from "@/components/AutoRefresh";
 
 export const revalidate = 0;
 
@@ -40,6 +41,7 @@ export default function Home() {
       </div>
 
       <div className="meta-row">
+        <AutoRefresh generatedAt={data.generated_at} />
         <span className="badge">อัปเดตล่าสุด: {timeAgo(data.generated_at)}</span>
         <span className="badge">เกณฑ์แจ้งเตือน: ≥ {data.min_confidence_threshold}%</span>
         <span className="badge">คริปโตที่สแกน: {data.watchlist_counts.crypto}</span>
