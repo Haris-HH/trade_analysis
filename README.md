@@ -12,7 +12,7 @@ verification pass**.
 ## How it works
 
 ```
-GitHub Actions (every 15 min, free)
+GitHub Actions (every 5 min, free)
   → scripts/main.py
       1. Fetch prices for ~950 symbols IN PARALLEL: Bitkub's own API (every coin
          listed there) + Yahoo Finance chart API (S&P 500 + liquid Thai SET stocks)
@@ -30,7 +30,17 @@ GitHub Actions (every 15 min, free)
 ```
 
 The whole ~950-symbol scan (parallel price fetch + prefilter) typically takes well
-under a minute, comfortably inside the 15-minute cron window.
+under a minute, comfortably inside the 5-minute cron window.
+
+### Why 5 minutes and not faster?
+
+5 minutes is the shortest interval GitHub Actions' `schedule` trigger reliably
+supports — GitHub's own docs note shorter intervals aren't guaranteed to run
+on time and may be delayed during high load. True second-by-second real-time
+would need an always-on server (not a scheduled job), which isn't free. 5 min
+is the practical ceiling for this architecture; the per-symbol Telegram
+cooldown (`state_store.COOLDOWN_HOURS`) still prevents alert spam regardless
+of how often the scan runs.
 
 Everything runs on free tiers: GitHub Actions (unlimited minutes on public repos),
 Bitkub/Yahoo Finance/Google News (no API key needed), Vercel Hobby, Telegram Bot API.
@@ -40,7 +50,7 @@ Bitkub/Yahoo Finance/Google News (no API key needed), Vercel Hobby, Telegram Bot
 Vercel's free (Hobby) plan only allows cron jobs to run **once per day**, which is
 too infrequent for trading signals. GitHub Actions has no such limit on public
 repos, so it does the scanning/alerting; Vercel just hosts the static dashboard,
-which updates every time the Action pushes new data (~15 min cadence, plus your
+which updates every time the Action pushes new data (~5 min cadence, plus your
 Vercel build time, ~1 min).
 
 ### Watchlist coverage
@@ -96,7 +106,7 @@ In your GitHub repo: **Settings → Secrets and variables → Actions → New re
 - `TELEGRAM_CHAT_ID`
 
 The scheduled workflow at [`.github/workflows/analyze.yml`](.github/workflows/analyze.yml)
-will start running automatically every 15 minutes once it's on the default branch
+will start running automatically every 5 minutes once it's on the default branch
 (you can also trigger it manually from the **Actions** tab via "Run workflow").
 
 ### 4. Deploy the dashboard to Vercel (free)
