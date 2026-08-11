@@ -13,12 +13,15 @@ export interface Signal {
   market: "crypto" | "stock";
   direction: Direction;
   confidence: number;
+  agreement: number;
   technical_score: number;
   news_score: number;
   price: number;
   sparkline: number[];
   price_target: PriceTarget | null;
   verified: boolean;
+  vetoed: boolean;
+  abstain: boolean;
   reasons: string[];
   last_alert_at: string | null;
 }

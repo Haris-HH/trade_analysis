@@ -27,7 +27,10 @@ function timeAgo(iso: string): string {
 
 export default function Home() {
   const data = loadData();
-  const signals = [...data.signals].sort((a, b) => b.confidence - a.confidence);
+  const abstainCount = data.signals.filter((s) => s.abstain).length;
+  const signals = data.signals
+    .filter((s) => !s.abstain)
+    .sort((a, b) => b.confidence - a.confidence);
 
   return (
     <main className="container">
@@ -52,6 +55,11 @@ export default function Home() {
         <span className="badge">เกณฑ์แจ้งเตือน: ≥ {data.min_confidence_threshold}%</span>
         <span className="badge">คริปโตที่สแกน: {data.watchlist_counts.crypto}</span>
         <span className="badge">หุ้นที่สแกน: {data.watchlist_counts.stock}</span>
+        {abstainCount > 0 && (
+          <span className="badge" title="ข้อมูลราคาน้อยกว่า 60 แท่ง ระบบเลือกไม่ฟันธง (ABSTAIN) แทนการเดา">
+            งดออกความเห็น (ABSTAIN): {abstainCount}
+          </span>
+        )}
       </div>
 
       {signals.length === 0 ? (
@@ -67,7 +75,14 @@ export default function Home() {
                     {s.display_name} · {s.market === "crypto" ? "คริปโต" : "หุ้น"}
                   </div>
                 </div>
-                <span className={`direction ${s.direction}`}>{s.direction}</span>
+                <div>
+                  <span className={`direction ${s.direction}`}>{s.direction}</span>
+                  {s.vetoed && (
+                    <span className="veto-badge" title="ผ่านเกณฑ์ความมั่นใจแล้วแต่ถูก veto — ดูเหตุผลด้านล่าง">
+                      VETOED
+                    </span>
+                  )}
+                </div>
               </div>
 
               <div className="confidence-row">
@@ -85,6 +100,7 @@ export default function Home() {
               <div className="sub-scores">
                 <span>เทคนิค: {s.technical_score.toFixed(0)}</span>
                 <span>ข่าว: {s.news_score.toFixed(0)}</span>
+                <span>สอดคล้อง: {(s.agreement * 100).toFixed(0)}%</span>
                 <span>ราคา: {formatPrice(s.price)}</span>
               </div>
 

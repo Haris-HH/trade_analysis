@@ -16,24 +16,61 @@ GitHub Actions (every 5 min, free)
   → scripts/main.py
       1. Fetch prices for ~950 symbols IN PARALLEL: Bitkub's own API (every coin
          listed there) + Yahoo Finance chart API (S&P 500 + liquid Thai SET stocks)
-      2. Compute technical score: RSI, MACD cross, EMA20/50 trend, Bollinger %B, volume spike
-      3. Skip news lookups for symbols whose technical score alone can't
-         mathematically reach 70% (see scoring math below) — keeps news
-         lookups down to a handful of symbols per run instead of ~950
+      2. Score each with 5 weighted technical factors (trend/momentum/macd/
+         mean_reversion/volume), regime-aware (see "Signal engine" below).
+         Below 60 candles: no opinion at all (ABSTAIN), not a weak guess
+      3. Skip news lookups for symbols whose technical factors alone can't
+         mathematically reach 70% confidence even with maximal news — keeps
+         news lookups down to a handful of symbols per run instead of ~950
       4. For the rest: fetch + merge recent headlines from 3 free sources
          (Google News RSS, Bing News RSS, and Yahoo Finance's per-ticker feed
-         for stocks), de-dupe by title, score the combined set with VADER
-      5. Combine → confidence score (0-100%), direction BUY/SELL
-      6. Candidates ≥ 70%: wait ~45s, re-fetch fresh data for all of them in
-         parallel, recompute ("double-check")
-      7. Still ≥ 70% + direction unchanged + not in cooldown → send an explicit
-         BUY NOW / SELL NOW Telegram alert with an estimated price target + date
+         for stocks), de-dupe by title, score with VADER, add as one more
+         weighted factor
+      5. Aggregate all factors → confidence (magnitude blended with factor
+         agreement, capped at 90%) + direction BUY/SELL
+      6. VETO: even a high-confidence signal is downgraded if risk:reward < 1.5,
+         no valid ATR stop could be computed, or agreement < 60%
+      7. Candidates ≥ 70% that survive veto: wait ~45s, re-fetch fresh data for
+         all of them in parallel, recompute ("double-check")
+      8. Still ≥ 70% + not vetoed + direction unchanged + not in cooldown →
+         send an explicit BUY NOW / SELL NOW Telegram alert with an estimated
+         price target + date
   → commits public/data/latest.json + data/state.json back to the repo
   → push triggers Vercel to redeploy the dashboard (free Hobby plan)
 ```
 
 The whole ~950-symbol scan (parallel price fetch + prefilter) typically takes well
 under a minute, comfortably inside the 5-minute cron window.
+
+### Signal engine
+
+The confluence engine (`scripts/lib/indicators.py` + `scripts/lib/scoring.py`)
+is ported from a more mature companion project (QuantDesk — a separate,
+unpublished local project, not part of this repo), which found several sharp
+edges the first version of this dashboard didn't handle:
+
+- **Regime detection.** RSI and Bollinger %B are mean-reversion tools —
+  correct in a range, actively harmful in a trend (RSI sits above 70 for the
+  entire length of a real rally). The engine checks EMA20/EMA50 separation
+  first and flips how those two factors are read depending on whether the
+  market is trending or ranging.
+- **Agreement, not just magnitude.** Confidence isn't a flat weighted sum —
+  it blends `|score|` with what fraction of the total factor weight agrees
+  with that sign. A score of +0.6 from five agreeing factors means more than
+  the same score from one loud factor and four silent ones. Capped at 90%:
+  never claim near-certainty.
+- **Veto rules.** A signal that clears the confidence bar is still rejected
+  if risk:reward < 1.5, no valid ATR-based stop could be computed, or fewer
+  than 60% of factors agree. These show up on the dashboard as a `VETOED`
+  tag next to the direction, with the reason in the card's reasons list.
+- **ABSTAIN.** Under 60 candles, the engine returns no factors at all rather
+  than a plausible-looking number computed from insufficient warmup data.
+  These symbols are counted (see the "งดออกความเห็น (ABSTAIN)" badge) but
+  excluded from the signal list — there's nothing to show.
+
+Missing news is treated as *absent* evidence (the factor is simply omitted,
+shrinking coverage), not as a neutral vote — a symbol nobody wrote about
+today isn't the same evidence as one with genuinely neutral headlines.
 
 ### Why 5 minutes and not faster?
 
@@ -110,13 +147,15 @@ Vercel build time, ~1 min).
 
 ### Why news lookups don't scale with the watchlist size
 
-News sentiment can only ever contribute `NEWS_WEIGHT * 100` points to the
-combined score (see `scripts/lib/scoring.py`). With the default 65/35 split,
-a symbol needs a technical score of at least ~54 before news could possibly
-push it over the 70% alert threshold — so `scripts/main.py` computes technical
-scores for the whole universe first (fast, parallel, no news call) and only
-fetches news for the small number of symbols that clear that bar. This is what
-keeps a ~950-symbol scan fast and inside these free news sources' informal rate limits.
+News is one factor among six, weighted 0.10 out of a 1.00 total (see
+`WEIGHTS` in `scripts/lib/scoring.py`), so it can only ever push the
+confidence so far. `scoring.best_case_confidence()` computes what confidence
+*would* result if news voted maximally in the technical read's favor — if
+even that can't reach 70%, there's no point spending an HTTP request to find
+out what the news actually says. `scripts/main.py` runs this check for the
+whole universe first (fast, parallel, no network call) and only fetches news
+for the small number of symbols that clear it. This is what keeps a
+~950-symbol scan fast and inside these free news sources' informal rate limits.
 
 ## Setup
 
@@ -172,10 +211,14 @@ DRY_RUN=1 python scripts/main.py   # scans + logs would-be Telegram messages, do
 ## Tuning
 
 - `scripts/main.py`: `MIN_CONFIDENCE` (default 70), `VERIFY_DELAY_SECONDS` (default 45s re-check delay)
+- `scripts/lib/scoring.py`: `WEIGHTS` (per-factor weights), `CONFIDENCE_CAP` (90), `MIN_AGREEMENT` (0.6),
+  `MIN_RR` (1.5), `ATR_STOP_MULTIPLE` / `ATR_TARGET_MULTIPLE` (1.5x / 2.5x, used for the veto check —
+  not the same as the longer-horizon target shown on the dashboard, see `price_target.py`)
+- `scripts/lib/indicators.py`: `MIN_CANDLES` (60 — below this, a symbol abstains instead of guessing),
+  `TREND_THRESHOLD` (0.8% EMA separation before a market counts as "trending")
 - `scripts/lib/state_store.py`: `COOLDOWN_HOURS` (default 4h between repeat alerts for the same symbol/direction)
-- `scripts/lib/scoring.py`: `TECH_WEIGHT` / `NEWS_WEIGHT` (default 65/35 split)
-- `scripts/lib/universe.py`: the stock/crypto watchlists
-- `.github/workflows/analyze.yml`: cron schedule (`*/15 * * * *`)
+- `scripts/lib/universe.py`: the stock watchlists (crypto is fetched live, see above)
+- `.github/workflows/analyze.yml`: cron schedule (`*/5 * * * *`)
 
 ## Disclaimer
 

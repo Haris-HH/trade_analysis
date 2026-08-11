@@ -38,7 +38,8 @@ def format_signal_message(signal: dict) -> str:
     lines = [
         f"{emoji} <b>แนะนำ: {action_th}</b>",
         f"{signal['symbol']} ({market_th}) — {signal['display_name']}",
-        f"ความมั่นใจ: <b>{signal['confidence']:.0f}%</b> (เทคนิค {signal['technical_score']:.0f} / ข่าว {signal['news_score']:.0f}) — ตรวจสอบซ้ำแล้ว ✓",
+        f"ความมั่นใจ: <b>{signal['confidence']:.0f}%</b> (เทคนิค {signal['technical_score']:.0f} / ข่าว {signal['news_score']:.0f}, "
+        f"ปัจจัยเห็นตรงกัน {signal['agreement']:.0%}) — ตรวจสอบซ้ำแล้ว ✓",
         f"ราคาปัจจุบัน: {_fmt_price(signal['price'])}",
     ]
 

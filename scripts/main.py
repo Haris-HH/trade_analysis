@@ -1,20 +1,26 @@
 """Orchestrates one full scan cycle across ~1000 symbols (all Bitkub-listed
-crypto + S&P 500 + liquid Thai SET stocks):
+crypto + S&P 500 + liquid Thai SET stocks), using a regime-aware confluence
+engine ported from QuantDesk (D:\\Haris\\Quantdesk\\core\\signals.py):
 
 1. Fetch price data for every symbol IN PARALLEL and score it with technical
-   indicators only (cheap: one HTTP request per symbol, no news lookup yet).
-2. News sentiment can only ever contribute NEWS_WEIGHT*100 points to the
-   combined score (see scoring.py), so a symbol whose technical score alone
-   can't mathematically reach MIN_CONFIDENCE even with maximal same-direction
-   news is skipped — this keeps the slow, rate-limit-sensitive news lookups
-   (Google News RSS) down to a handful of symbols per run instead of ~1000.
-3. For the surviving candidates, fetch news and compute the combined
-   confidence score. Anything >= MIN_CONFIDENCE is an alert candidate.
-4. Wait once (VERIFY_DELAY_SECONDS), then re-fetch + recompute all
+   factors only (cheap: one HTTP request per symbol, no news lookup yet).
+   Below MIN_CANDLES the engine returns no factors at all — "no opinion"
+   (ABSTAIN), not a weak guess.
+2. News can only ever contribute WEIGHTS["news"] of the total weight, so a
+   symbol whose technical factors alone can't mathematically reach
+   MIN_CONFIDENCE even with maximal same-direction news is skipped — this
+   keeps news lookups down to a handful of symbols per run instead of ~1000.
+3. For the surviving candidates, fetch news, add it as one more voting
+   factor, and aggregate: direction from the weighted sign, confidence from
+   magnitude blended with how much of the weight agrees (not just a flat
+   weighted sum), capped at 90%.
+4. A signal that clears MIN_CONFIDENCE can still be VETOED: no valid ATR
+   stop/target, poor risk:reward, or insufficient factor agreement.
+5. Wait once (VERIFY_DELAY_SECONDS), then re-fetch + recompute all
    candidates in parallel ("double-check") before allowing a Telegram alert.
-5. Respect a per-symbol cooldown so the same signal doesn't spam Telegram
+6. Respect a per-symbol cooldown so the same signal doesn't spam Telegram
    every scan cycle.
-6. Write public/data/latest.json (consumed by the Next.js dashboard) and
+7. Write public/data/latest.json (consumed by the Next.js dashboard) and
    data/state.json (alert cooldown memory).
 """
 from __future__ import annotations
@@ -31,19 +37,12 @@ import json
 
 from lib import bitkub_source, stock_source, indicators, news_source, scoring, state_store, telegram_notify, chart, price_target
 from lib.universe import STOCK_NAMES
-from lib.scoring import NEWS_WEIGHT
+from lib.scoring import Factor
 
 MIN_CONFIDENCE = 70
 VERIFY_DELAY_SECONDS = int(os.environ.get("VERIFY_DELAY_SECONDS", "45"))
 DRY_RUN = os.environ.get("DRY_RUN") == "1"
 PRICE_FETCH_WORKERS = int(os.environ.get("PRICE_FETCH_WORKERS", "16"))
-
-# A symbol whose technical score is below this can never reach MIN_CONFIDENCE
-# even with perfect (100, same-direction) news sentiment, given the fixed
-# TECH_WEIGHT/NEWS_WEIGHT split in scoring.py. A few points of margin are
-# kept below the exact cutoff to be safe against rounding.
-_exact_cutoff = (MIN_CONFIDENCE - NEWS_WEIGHT * 100) / (1 - NEWS_WEIGHT)
-TECH_PREFILTER_THRESHOLD = max(0.0, _exact_cutoff - 5)
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 OUTPUT_PATH = os.path.join(ROOT, "public", "data", "latest.json")
@@ -76,7 +75,6 @@ def fetch_price_data(item: dict) -> tuple[dict, object] | None:
 
 
 def technical_pass(item: dict, df) -> dict:
-    tech_score, tech_reasons = indicators.compute_technical_score(df)
     if item["market"] == "crypto":
         price = bitkub_source.get_last_price(item["ticker"], df)
         display_symbol = f"{item['ticker']}/THB"
@@ -84,38 +82,90 @@ def technical_pass(item: dict, df) -> dict:
         price = stock_source.get_last_price(item["ticker"], df)
         display_symbol = item["ticker"]
 
-    # Confidence >= MIN_CONFIDENCE can only happen when the final direction
-    # matches the technical score's sign (see scoring.py docs) — safe to use
-    # as the direction hint here, before news is even fetched.
-    direction_hint = "BUY" if tech_score >= 0 else "SELL"
-    target = price_target.estimate_price_target(df, direction_hint, price, market=item["market"])
-
-    return {
+    base = {
         "market": item["market"],
         "raw_key": item["ticker"],
         "symbol": display_symbol,
         "display_name": item["name"],
-        "technical_score": tech_score,
-        "tech_reasons": tech_reasons,
         "price": price,
         "sparkline": chart.extract_sparkline(df),
-        "price_target": target,
+    }
+
+    factors = indicators.compute_factors(df)
+    if not factors:
+        # Fewer than MIN_CANDLES bars available — no directional view, not a
+        # weak guess (QuantDesk calls this ABSTAIN).
+        return {**base, "factors": [], "atr": None, "price_target": None, "abstain": True}
+
+    atr = indicators.compute_atr(df)
+    direction_hint = scoring.aggregate(factors)["direction"]
+    target = price_target.estimate_price_target(df, direction_hint, price, market=item["market"])
+
+    return {**base, "factors": factors, "atr": atr, "price_target": target, "abstain": False}
+
+
+def finalize(partial: dict, news_score_signed: float | None, news_reasons: list[str]) -> dict:
+    """Combine technical factors (+ news, if available) into a final
+    direction/confidence/agreement, apply veto rules, and build the
+    human-readable reasons list, sorted by how much each factor mattered."""
+    tech_factors = partial["factors"]
+    all_factors = list(tech_factors)
+    if news_score_signed is not None:
+        all_factors.append(Factor(
+            "news", news_score_signed / 100.0, scoring.WEIGHTS["news"],
+            news_reasons[0] if news_reasons else "ข่าว",
+        ))
+
+    agg = scoring.aggregate(all_factors)
+    tech_only_agg = scoring.aggregate(tech_factors)
+
+    stop_target = scoring.compute_stop_target(agg["direction"], partial["price"], partial["atr"])
+    veto_reason = scoring.check_veto(agreement=agg["agreement"], rr=stop_target["rr"] if stop_target else None)
+
+    reasons = [f.detail for f in sorted(all_factors, key=lambda f: -abs(f.contribution))]
+    if news_score_signed is None and news_reasons:
+        reasons.append(news_reasons[0])
+    if veto_reason:
+        reasons.append(veto_reason)
+
+    return {
+        **{k: v for k, v in partial.items() if k != "factors"},
+        "direction": agg["direction"],
+        "confidence": agg["confidence"],
+        "agreement": agg["agreement"],
+        "technical_score": tech_only_agg["score"] * 100,
+        "news_score": news_score_signed if news_score_signed is not None else 0.0,
+        "reasons": reasons,
+        "vetoed": veto_reason is not None,
+    }
+
+
+def make_abstain_result(partial: dict) -> dict:
+    return {
+        **{k: v for k, v in partial.items() if k != "factors"},
+        "direction": "BUY",
+        "confidence": 0.0,
+        "agreement": 0.0,
+        "technical_score": 0.0,
+        "news_score": 0.0,
+        "reasons": ["ข้อมูลราคาน้อยกว่า 60 แท่ง จึงไม่สามารถวิเคราะห์ได้ (ABSTAIN)"],
+        "vetoed": True,
     }
 
 
 def add_news_and_score(partial: dict) -> dict:
     query = f"{partial['display_name']} {'crypto' if partial['market'] == 'crypto' else 'stock'}"
     news_ticker = partial["raw_key"] if partial["market"] == "stock" else None
-    news_score, news_reasons, _ = news_source.compute_news_score(query, ticker=news_ticker)
-    direction, confidence = scoring.combine_scores(partial["technical_score"], news_score)
+    news_score_signed, news_reasons, count = news_source.compute_news_score(query, ticker=news_ticker)
+    # Missing news is treated as ABSENT (the factor is omitted, shrinking
+    # coverage), not as a neutral vote — a symbol nobody wrote about is not
+    # the same evidence as one with genuinely neutral headlines.
+    news_value = news_score_signed if count > 0 else None
+    return finalize(partial, news_value, news_reasons)
 
-    return {
-        **partial,
-        "direction": direction,
-        "confidence": confidence,
-        "news_score": news_score,
-        "reasons": partial["tech_reasons"] + news_reasons,
-    }
+
+def add_without_news(partial: dict) -> dict:
+    return finalize(partial, None, [])
 
 
 def scan_universe(universe: list[dict]) -> list[dict]:
@@ -134,21 +184,26 @@ def scan_universe(universe: list[dict]) -> list[dict]:
 
     print(f"Priced {len(technical_results)}/{len(universe)} symbols.")
 
+    abstained = [r for r in technical_results if r["abstain"]]
+    active = [r for r in technical_results if not r["abstain"]]
+
     needs_news, skipped = [], []
-    for r in technical_results:
-        (needs_news if abs(r["technical_score"]) >= TECH_PREFILTER_THRESHOLD else skipped).append(r)
-    print(f"{len(needs_news)} symbol(s) cleared the technical prefilter (>= {TECH_PREFILTER_THRESHOLD:.0f}), fetching news for those...")
+    for r in active:
+        best_case = scoring.best_case_confidence(r["factors"])
+        (needs_news if best_case >= MIN_CONFIDENCE else skipped).append(r)
+    print(
+        f"{len(needs_news)}/{len(active)} active symbol(s) cleared the technical prefilter, "
+        f"fetching news for those... ({len(abstained)} abstained for insufficient data)"
+    )
 
     scored = []
     for partial in needs_news:
         scored.append(add_news_and_score(partial))
         time.sleep(0.3)
-
-    # Symbols that never got a news lookup still get a neutral (0) news score
-    # so the dashboard can show the full universe, not just the candidates.
     for partial in skipped:
-        direction, confidence = scoring.combine_scores(partial["technical_score"], 0.0)
-        scored.append({**partial, "direction": direction, "confidence": confidence, "news_score": 0.0, "reasons": partial["tech_reasons"]})
+        scored.append(add_without_news(partial))
+    for partial in abstained:
+        scored.append(make_abstain_result(partial))
 
     return scored
 
@@ -166,6 +221,8 @@ def reverify_candidates(candidates: list[dict]) -> list[dict]:
             return None
         _, df = result
         partial = technical_pass(item, df)
+        if partial["abstain"]:
+            return make_abstain_result(partial)
         return add_news_and_score(partial)
 
     verified = []
@@ -190,15 +247,15 @@ def main() -> None:
     results = scan_universe(universe)
 
     by_key = {(r["market"], r["raw_key"]): i for i, r in enumerate(results)}
-    candidates = [r for r in results if r["confidence"] >= MIN_CONFIDENCE]
-    print(f"{len(candidates)} candidate(s) crossed {MIN_CONFIDENCE}% on first pass.")
+    candidates = [r for r in results if r["confidence"] >= MIN_CONFIDENCE and not r.get("vetoed")]
+    print(f"{len(candidates)} candidate(s) crossed {MIN_CONFIDENCE}% and survived veto checks on first pass.")
 
     alerts_sent = 0
     for original, verified in reverify_candidates(candidates):
         key = f"{verified['market']}:{verified['raw_key']}"
 
-        if verified["confidence"] < MIN_CONFIDENCE or verified["direction"] != original["direction"]:
-            print(f"[verify] {verified['symbol']} did not hold up on re-check, not alerting")
+        if verified["confidence"] < MIN_CONFIDENCE or verified["direction"] != original["direction"] or verified.get("vetoed"):
+            print(f"[verify] {verified['symbol']} did not hold up on re-check (vetoed={verified.get('vetoed')}), not alerting")
             continue
 
         idx = by_key.get((verified["market"], verified["raw_key"]))
@@ -223,7 +280,6 @@ def main() -> None:
         r.setdefault("verified", False)
         r["last_alert_at"] = state.get(f"{r['market']}:{r['raw_key']}", {}).get("last_alert_at")
         r.pop("raw_key", None)
-        r.pop("tech_reasons", None)
 
     crypto_count = sum(1 for u in universe if u["market"] == "crypto")
     stock_count = sum(1 for u in universe if u["market"] == "stock")

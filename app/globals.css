@@ -150,6 +150,19 @@ header.hero p {
 .direction.BUY { background: rgba(22,199,132,0.15); color: var(--buy); }
 .direction.SELL { background: rgba(234,57,67,0.15); color: var(--sell); }
 
+.veto-badge {
+  display: inline-block;
+  margin-left: 6px;
+  font-weight: 700;
+  font-size: 0.68rem;
+  padding: 2px 8px;
+  border-radius: 999px;
+  background: rgba(139, 147, 167, 0.2);
+  color: var(--muted);
+  letter-spacing: 0.03em;
+  vertical-align: middle;
+}
+
 .confidence-row {
   display: flex;
   align-items: center;

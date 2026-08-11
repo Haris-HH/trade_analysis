@@ -1,9 +1,16 @@
-"""Technical indicator scoring.
+"""Regime-aware technical factor scoring — ported from QuantDesk's engine
+(D:\\Haris\\Quantdesk\\core\\signals.py / indicators.py).
 
-Turns a price/volume dataframe into a signed score in [-100, 100]:
-positive = bullish (BUY lean), negative = bearish (SELL lean).
-Each indicator "votes" and the votes are combined with fixed weights.
-This is a simple heuristic system, not a proven trading strategy.
+The key idea: RSI and Bollinger %B are mean-reversion tools. They're correct
+in a ranging market and actively harmful in a trending one — RSI sits above
+70 for the entire length of a real rally, so reading it as "overbought"
+there means fighting every trend the market gives you. This module detects
+the regime first (from EMA20/EMA50 separation) and flips how those two
+factors are interpreted accordingly.
+
+Below MIN_CANDLES, compute_factors() returns an empty list rather than a
+plausible-looking number computed from insufficient warmup data — the
+caller treats that as "no opinion" (QuantDesk's ABSTAIN), not as a weak BUY.
 """
 from __future__ import annotations
 
@@ -11,89 +18,133 @@ import numpy as np
 import pandas as pd
 import ta
 
+from .scoring import Factor, WEIGHTS
 
-def compute_technical_score(df: pd.DataFrame) -> tuple[float, list[str]]:
-    """df must have columns: close, high, low, volume, indexed by time, ascending."""
-    reasons: list[str] = []
-    if len(df) < 35:
-        return 0.0, ["ข้อมูลราคาไม่พอสำหรับคำนวณอินดิเคเตอร์"]
+MIN_CANDLES = 60
+TREND_THRESHOLD = 0.008  # 0.8% EMA20/EMA50 separation marks a trending regime
 
-    close = df["close"]
-    votes = 0.0
-    max_votes = 0.0
 
-    # RSI(14): oversold -> bullish, overbought -> bearish
-    rsi = ta.momentum.RSIIndicator(close, window=14).rsi()
-    last_rsi = float(rsi.iloc[-1])
-    max_votes += 25
-    if last_rsi <= 30:
-        votes += 25
-        reasons.append(f"RSI oversold ({last_rsi:.1f}) → bullish")
-    elif last_rsi >= 70:
-        votes -= 25
-        reasons.append(f"RSI overbought ({last_rsi:.1f}) → bearish")
-    elif last_rsi < 45:
-        votes += 8
-    elif last_rsi > 55:
-        votes -= 8
+def _clamp(v: float, lo: float = -1.0, hi: float = 1.0) -> float:
+    return max(lo, min(hi, v))
 
-    # MACD cross
+
+def compute_factors(df: pd.DataFrame) -> list[Factor]:
+    """df: columns open/high/low/close/volume, ascending time index."""
+    if len(df) < MIN_CANDLES:
+        return []
+
+    close, high, low, volume = df["close"], df["high"], df["low"], df["volume"]
+    price = float(close.iloc[-1])
+    factors: list[Factor] = []
+    trending = False
+
+    # ---- Regime detection (must run before RSI/Bollinger) ----
+    ema20_series = ta.trend.EMAIndicator(close, window=20).ema_indicator()
+    ema50_series = ta.trend.EMAIndicator(close, window=50).ema_indicator()
+    ema20, ema50 = float(ema20_series.iloc[-1]), float(ema50_series.iloc[-1])
+    if pd.notna(ema20) and pd.notna(ema50) and ema50 != 0:
+        trend_strength = abs((ema20 - ema50) / ema50)
+        trending = trend_strength > TREND_THRESHOLD
+        regime = "เทรนด์" if trending else "ไซด์เวย์"
+
+        sep = (ema20 - ema50) / ema50
+        vote = _clamp(sep * 40)  # ~2.5% separation saturates the vote
+        above = price > ema20
+        if (vote > 0) != above:
+            vote *= 0.4  # price on the wrong side of the fast EMA weakens the read
+        factors.append(Factor(
+            "trend", vote, WEIGHTS["trend"],
+            f"EMA20 {ema20:,.4g} vs EMA50 {ema50:,.4g} ({sep:+.2%}); "
+            f"ราคาอยู่{'เหนือ' if above else 'ใต้'} EMA20 [{regime}]",
+        ))
+
+    # ---- Momentum: RSI, regime-aware ----
+    rsi_series = ta.momentum.RSIIndicator(close, window=14).rsi()
+    if pd.notna(rsi_series.iloc[-1]):
+        r = float(rsi_series.iloc[-1])
+        if trending:
+            # In a trend, RSI measures strength, not exhaustion. Only a
+            # genuine extreme counts as a warning sign.
+            if r >= 80:
+                vote, desc = -0.3, f"RSI {r:.1f} overbought สุดขั้วแม้อยู่ในเทรนด์"
+            elif r <= 20:
+                vote, desc = 0.3, f"RSI {r:.1f} oversold สุดขั้วแม้อยู่ในเทรนด์"
+            else:
+                vote, desc = _clamp((r - 50) / 30), f"RSI {r:.1f} ยืนยันความแข็งแรงของเทรนด์"
+        else:
+            if r >= 70:
+                vote, desc = -_clamp((r - 70) / 20), f"RSI {r:.1f} overbought ในไซด์เวย์"
+            elif r <= 30:
+                vote, desc = _clamp((30 - r) / 20), f"RSI {r:.1f} oversold ในไซด์เวย์"
+            else:
+                vote, desc = (r - 50) / 40, f"RSI {r:.1f} โซนกลาง"
+        factors.append(Factor("momentum", _clamp(vote), WEIGHTS["momentum"], desc))
+
+    # ---- MACD: histogram direction + expansion ----
     macd_ind = ta.trend.MACD(close)
     macd_line = macd_ind.macd()
     signal_line = macd_ind.macd_signal()
-    max_votes += 30
-    if len(macd_line) >= 2:
-        prev_diff = macd_line.iloc[-2] - signal_line.iloc[-2]
-        cur_diff = macd_line.iloc[-1] - signal_line.iloc[-1]
-        if prev_diff <= 0 < cur_diff:
-            votes += 30
-            reasons.append("MACD bullish crossover")
-        elif prev_diff >= 0 > cur_diff:
-            votes -= 30
-            reasons.append("MACD bearish crossover")
-        elif cur_diff > 0:
-            votes += 10
-        elif cur_diff < 0:
-            votes -= 10
+    hist = macd_line - signal_line
+    if len(hist) >= 2 and pd.notna(hist.iloc[-1]) and pd.notna(hist.iloc[-2]):
+        cur_hist, prev_hist = float(hist.iloc[-1]), float(hist.iloc[-2])
+        cross = macd_line.iloc[-1] > signal_line.iloc[-1]
+        vote = 0.5 if cross else -0.5
+        expanding = abs(cur_hist) > abs(prev_hist)
+        if expanding:
+            vote *= 1.6
+        flipped = (cur_hist > 0) != (prev_hist > 0)
+        if flipped:
+            vote = 0.9 if cur_hist > 0 else -0.9
+        factors.append(Factor(
+            "macd", _clamp(vote), WEIGHTS["macd"],
+            f"MACD hist {cur_hist:+.4g}"
+            f"{' (ขยายตัว)' if expanding else ''}{' (เพิ่งกลับทิศ)' if flipped else ''}",
+        ))
 
-    # EMA20 vs EMA50 trend
-    ema20 = ta.trend.EMAIndicator(close, window=20).ema_indicator()
-    ema50 = ta.trend.EMAIndicator(close, window=50).ema_indicator() if len(close) >= 50 else None
-    max_votes += 20
-    if ema50 is not None and not np.isnan(ema50.iloc[-1]):
-        if ema20.iloc[-1] > ema50.iloc[-1]:
-            votes += 20
-            reasons.append("EMA20 > EMA50 (แนวโน้มขาขึ้น)")
-        else:
-            votes -= 20
-            reasons.append("EMA20 < EMA50 (แนวโน้มขาลง)")
-
-    # Bollinger %B
+    # ---- Bollinger %B: fade in a range, confirm in a trend ----
     bb = ta.volatility.BollingerBands(close, window=20, window_dev=2)
-    pct_b = bb.bollinger_pband()
-    max_votes += 15
-    last_pb = float(pct_b.iloc[-1]) if not np.isnan(pct_b.iloc[-1]) else 0.5
-    if last_pb <= 0.05:
-        votes += 15
-        reasons.append("ราคาแตะขอบล่าง Bollinger Band → bullish")
-    elif last_pb >= 0.95:
-        votes -= 15
-        reasons.append("ราคาแตะขอบบน Bollinger Band → bearish")
+    pct_b_series = bb.bollinger_pband()
+    if pd.notna(pct_b_series.iloc[-1]):
+        pct_b = float(pct_b_series.iloc[-1])
+        upper, lower, mid = (
+            float(bb.bollinger_hband().iloc[-1]),
+            float(bb.bollinger_lband().iloc[-1]),
+            float(bb.bollinger_mavg().iloc[-1]),
+        )
+        width = (upper - lower) / mid if mid else 0.0
+        if trending:
+            vote = _clamp((pct_b - 0.5) * 1.2)
+            mode = "ขี่แถบยืนยันเทรนด์"
+        else:
+            vote = _clamp((0.5 - pct_b) * 2.0)
+            mode = "fade ที่จุดสุดขั้วในไซด์เวย์"
+        squeeze = width < 0.02
+        if squeeze:
+            vote *= 0.3
+        factors.append(Factor(
+            "mean_reversion", vote, WEIGHTS["mean_reversion"],
+            f"%B={pct_b:.2f}, width={width:.2%} [{mode}]"
+            + (" ⚠ Bollinger squeeze — ทิศทางไม่แน่นอน" if squeeze else ""),
+        ))
 
-    # Volume spike confirms the move direction
-    if "volume" in df.columns and df["volume"].iloc[-20:].mean() > 0:
-        avg_vol = df["volume"].iloc[-20:-1].mean()
-        last_vol = df["volume"].iloc[-1]
-        max_votes += 10
-        if avg_vol > 0 and last_vol > 1.5 * avg_vol:
-            price_change = close.iloc[-1] - close.iloc[-2]
-            if price_change > 0:
-                votes += 10
-                reasons.append("ปริมาณซื้อขายพุ่งพร้อมราคาขึ้น")
-            elif price_change < 0:
-                votes -= 10
-                reasons.append("ปริมาณซื้อขายพุ่งพร้อมราคาลง")
+    # ---- Volume: amplifies the existing read, never originates one ----
+    if len(volume) >= 21:
+        avg_vol = float(volume.iloc[-21:-1].mean())
+        if avg_vol > 0:
+            vr = float(volume.iloc[-1]) / avg_vol
+            prior = sum(f.contribution for f in factors)
+            vote = _clamp(vr - 1.0) * (1.0 if prior >= 0 else -1.0)
+            factors.append(Factor(
+                "volume", vote, WEIGHTS["volume"],
+                f"ปริมาณซื้อขาย {vr:.2f} เท่าของค่าเฉลี่ย 20 แท่ง" + (" (สูงผิดปกติ)" if vr > 1.5 else ""),
+            ))
 
-    score = 100.0 * votes / max_votes if max_votes else 0.0
-    score = max(-100.0, min(100.0, score))
-    return score, reasons
+    return factors
+
+
+def compute_atr(df: pd.DataFrame, window: int = 14) -> float | None:
+    if len(df) < window + 1:
+        return None
+    atr_series = ta.volatility.AverageTrueRange(df["high"], df["low"], df["close"], window=window).average_true_range()
+    val = float(atr_series.iloc[-1])
+    return val if val > 0 and not np.isnan(val) else None
