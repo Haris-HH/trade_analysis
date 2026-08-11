@@ -153,5 +153,10 @@
     "direction": "SELL",
     "confidence": 71.13527537457725,
     "last_alert_at": "2026-08-11T17:52:06.557738+00:00"
+  },
+  "crypto:PONKE": {
+    "direction": "SELL",
+    "confidence": 71.79457390569402,
+    "last_alert_at": "2026-08-11T19:56:45.489888+00:00"
   }
 }
