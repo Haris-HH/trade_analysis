@@ -18,5 +18,10 @@
     "direction": "SELL",
     "confidence": 82.87103178238243,
     "last_alert_at": "2026-08-11T06:16:52.777491+00:00"
+  },
+  "crypto:PUMP": {
+    "direction": "BUY",
+    "confidence": 74.55479170321048,
+    "last_alert_at": "2026-08-11T06:21:52.340505+00:00"
   }
 }
