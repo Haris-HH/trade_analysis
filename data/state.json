@@ -38,5 +38,10 @@
     "direction": "SELL",
     "confidence": 75.03669761016415,
     "last_alert_at": "2026-08-11T07:46:43.328069+00:00"
+  },
+  "crypto:EDGE": {
+    "direction": "SELL",
+    "confidence": 74.15520658794986,
+    "last_alert_at": "2026-08-11T08:31:46.615088+00:00"
   }
 }
