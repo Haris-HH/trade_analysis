@@ -23,5 +23,15 @@
     "direction": "BUY",
     "confidence": 74.55479170321048,
     "last_alert_at": "2026-08-11T06:21:52.340505+00:00"
+  },
+  "crypto:KUB": {
+    "direction": "SELL",
+    "confidence": 70.13955035488128,
+    "last_alert_at": "2026-08-11T06:51:49.167414+00:00"
+  },
+  "crypto:MET": {
+    "direction": "SELL",
+    "confidence": 71.93290528351993,
+    "last_alert_at": "2026-08-11T06:51:49.676641+00:00"
   }
 }
