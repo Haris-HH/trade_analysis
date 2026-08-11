@@ -3,5 +3,10 @@
     "direction": "BUY",
     "confidence": 76.52631114248791,
     "last_alert_at": "2026-08-11T03:56:42.014740+00:00"
+  },
+  "crypto:ADA": {
+    "direction": "SELL",
+    "confidence": 70.23508850845236,
+    "last_alert_at": "2026-08-11T05:41:46.760580+00:00"
   }
 }
