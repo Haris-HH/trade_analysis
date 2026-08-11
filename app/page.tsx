@@ -12,6 +12,10 @@ function loadData(): AnalysisData {
   return JSON.parse(raw);
 }
 
+function formatPrice(value: number): string {
+  return value.toLocaleString(undefined, { maximumFractionDigits: value < 10 ? 4 : 2 });
+}
+
 function timeAgo(iso: string): string {
   const diffMs = Date.now() - new Date(iso).getTime();
   const mins = Math.round(diffMs / 60000);
@@ -36,6 +40,8 @@ export default function Home() {
         <strong>ไม่ใช่คำแนะนำการลงทุน</strong> — เว็บนี้เป็นเครื่องมือให้ข้อมูลเชิงสถิติ/สัญญาณอัตโนมัติ
         เพื่อการศึกษาเท่านั้น ไม่ได้รับใบอนุญาตเป็นที่ปรึกษาการลงทุน คะแนนความมั่นใจเป็นค่าประมาณจากอินดิเคเตอร์ทางเทคนิคและ
         การวิเคราะห์ความรู้สึกของข่าวเท่านั้น ไม่ใช่การรับประกันผลลัพธ์ โปรดตัดสินใจลงทุนด้วยวิจารณญาณของคุณเองและศึกษาข้อมูลเพิ่มเติมก่อนเสมอ
+        คำว่า &quot;ซื้อทันที/ขายทันที&quot; และเป้าหมายราคา เป็นการเรียกทิศทางของสัญญาณอัตโนมัติเท่านั้น
+        ไม่ใช่คำแนะนำจากผู้เชี่ยวชาญที่ได้รับใบอนุญาตและไม่ใช่การพยากรณ์ที่รับประกันได้
         <br />
         {data.disclaimer}
       </div>
@@ -79,9 +85,7 @@ export default function Home() {
               <div className="sub-scores">
                 <span>เทคนิค: {s.technical_score.toFixed(0)}</span>
                 <span>ข่าว: {s.news_score.toFixed(0)}</span>
-                <span>
-                  ราคา: {s.price.toLocaleString(undefined, { maximumFractionDigits: s.price < 10 ? 4 : 2 })}
-                </span>
+                <span>ราคา: {formatPrice(s.price)}</span>
               </div>
 
               {s.reasons.length > 0 && (
@@ -93,7 +97,20 @@ export default function Home() {
               )}
 
               {s.verified && s.confidence >= data.min_confidence_threshold && (
-                <span className="verified-tag">✓ ตรวจสอบซ้ำแล้ว / แจ้งเตือนผ่าน Telegram</span>
+                <div className={`action-banner ${s.direction}`}>
+                  <div className="action-call">
+                    {s.direction === "BUY" ? "🟢 แนะนำ: ซื้อทันที (BUY NOW)" : "🔴 แนะนำ: ขายทันที (SELL NOW)"}
+                  </div>
+                  {s.price_target && (
+                    <div className="action-target">
+                      เป้าหมาย: <strong>{formatPrice(s.price_target.target_price)}</strong> ภายในวันที่{" "}
+                      {s.price_target.target_date} (~{s.price_target.horizon_days} วัน)
+                    </div>
+                  )}
+                  <div className="action-caveat">
+                    ✓ ตรวจสอบซ้ำแล้ว / แจ้งเตือนผ่าน Telegram — เป้าหมายเป็นการประมาณจากความผันผวนล่าสุด ไม่ใช่การรับประกัน
+                  </div>
+                </div>
               )}
             </div>
           ))}

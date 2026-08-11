@@ -26,7 +26,8 @@ GitHub Actions (every 5 min, free)
       5. Combine → confidence score (0-100%), direction BUY/SELL
       6. Candidates ≥ 70%: wait ~45s, re-fetch fresh data for all of them in
          parallel, recompute ("double-check")
-      7. Still ≥ 70% + direction unchanged + not in cooldown → send Telegram alert
+      7. Still ≥ 70% + direction unchanged + not in cooldown → send an explicit
+         BUY NOW / SELL NOW Telegram alert with an estimated price target + date
   → commits public/data/latest.json + data/state.json back to the repo
   → push triggers Vercel to redeploy the dashboard (free Hobby plan)
 ```
@@ -46,6 +47,27 @@ of how often the scan runs.
 
 Everything runs on free tiers: GitHub Actions (unlimited minutes on public repos),
 Bitkub/Yahoo Finance/Google News/Bing News (no API key needed), Vercel Hobby, Telegram Bot API.
+
+### Price targets and the "BUY NOW / SELL NOW" call
+
+Once a signal has cleared both confidence checks, the dashboard and Telegram
+alert state the call directly ("🟢 แนะนำ: ซื้อทันที (BUY NOW)") along with an
+estimated **price target and target date**, computed by
+[`scripts/lib/price_target.py`](scripts/lib/price_target.py):
+
+1. Target distance = 15x the 14-period Average True Range (a "measured move"
+   projection — a standard technical-analysis technique, not a statistical model).
+2. Time-to-target = that distance divided by the recent average per-bar price
+   move, converted to a calendar date using the chart's own bar interval
+   (with a trading-hours/weekend adjustment for stocks, since markets close
+   overnight but crypto trades 24/7).
+
+This is explicitly a heuristic, not a forecast — it answers "if price kept
+moving at its recent pace, when would it cover this distance?", not "this is
+what will happen." Both the dashboard banner and the Telegram message carry
+that caveat next to the number. There is still no licensed advisor behind
+this — "BUY NOW" here means "the automated signal crossed the alert
+threshold," not personalized financial advice.
 
 ### Charts
 

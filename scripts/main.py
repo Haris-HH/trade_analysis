@@ -29,7 +29,7 @@ sys.path.insert(0, os.path.dirname(__file__))
 
 import json
 
-from lib import bitkub_source, stock_source, indicators, news_source, scoring, state_store, telegram_notify, chart
+from lib import bitkub_source, stock_source, indicators, news_source, scoring, state_store, telegram_notify, chart, price_target
 from lib.universe import STOCK_NAMES
 from lib.scoring import NEWS_WEIGHT
 
@@ -84,6 +84,12 @@ def technical_pass(item: dict, df) -> dict:
         price = stock_source.get_last_price(item["ticker"], df)
         display_symbol = item["ticker"]
 
+    # Confidence >= MIN_CONFIDENCE can only happen when the final direction
+    # matches the technical score's sign (see scoring.py docs) — safe to use
+    # as the direction hint here, before news is even fetched.
+    direction_hint = "BUY" if tech_score >= 0 else "SELL"
+    target = price_target.estimate_price_target(df, direction_hint, price, market=item["market"])
+
     return {
         "market": item["market"],
         "raw_key": item["ticker"],
@@ -93,6 +99,7 @@ def technical_pass(item: dict, df) -> dict:
         "tech_reasons": tech_reasons,
         "price": price,
         "sparkline": chart.extract_sparkline(df),
+        "price_target": target,
     }
 
 

@@ -1,5 +1,12 @@
 export type Direction = "BUY" | "SELL";
 
+export interface PriceTarget {
+  target_price: number;
+  target_date: string;
+  horizon_days: number;
+  method: string;
+}
+
 export interface Signal {
   symbol: string;
   display_name: string;
@@ -10,6 +17,7 @@ export interface Signal {
   news_score: number;
   price: number;
   sparkline: number[];
+  price_target: PriceTarget | null;
   verified: boolean;
   reasons: string[];
   last_alert_at: string | null;

@@ -219,11 +219,41 @@ header.hero p {
   color: var(--accent);
 }
 
-.verified-tag {
-  font-size: 0.7rem;
-  color: var(--buy);
-  margin-top: 8px;
-  display: inline-block;
+.action-banner {
+  margin-top: 10px;
+  padding: 10px 12px;
+  border-radius: 8px;
+  border: 1px solid;
+}
+
+.action-banner.BUY {
+  background: rgba(22, 199, 132, 0.1);
+  border-color: rgba(22, 199, 132, 0.35);
+}
+
+.action-banner.SELL {
+  background: rgba(234, 57, 67, 0.1);
+  border-color: rgba(234, 57, 67, 0.35);
+}
+
+.action-call {
+  font-weight: 700;
+  font-size: 0.9rem;
+  margin-bottom: 4px;
+}
+
+.action-banner.BUY .action-call { color: var(--buy); }
+.action-banner.SELL .action-call { color: var(--sell); }
+
+.action-target {
+  font-size: 0.8rem;
+  margin-bottom: 4px;
+}
+
+.action-caveat {
+  font-size: 0.68rem;
+  color: var(--muted);
+  line-height: 1.4;
 }
 
 .empty-state {
