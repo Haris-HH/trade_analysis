@@ -73,5 +73,10 @@
     "direction": "BUY",
     "confidence": 73.57185596369456,
     "last_alert_at": "2026-08-11T14:17:46.726730+00:00"
+  },
+  "crypto:SQD": {
+    "direction": "BUY",
+    "confidence": 75.27170392130117,
+    "last_alert_at": "2026-08-11T14:33:12.656393+00:00"
   }
 }
