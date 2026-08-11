@@ -1,1 +1,7 @@
-{}
+{
+  "crypto:CRV": {
+    "direction": "BUY",
+    "confidence": 76.52631114248791,
+    "last_alert_at": "2026-08-11T03:56:42.014740+00:00"
+  }
+}
