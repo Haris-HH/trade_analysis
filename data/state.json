@@ -11,8 +11,8 @@
   },
   "crypto:ELIZAOS": {
     "direction": "SELL",
-    "confidence": 79.90883555428353,
-    "last_alert_at": "2026-08-11T10:56:45.185762+00:00"
+    "confidence": 70.84406309533504,
+    "last_alert_at": "2026-08-11T14:57:54.988152+00:00"
   },
   "crypto:SNT": {
     "direction": "SELL",
@@ -36,8 +36,8 @@
   },
   "crypto:BONK": {
     "direction": "SELL",
-    "confidence": 75.03669761016415,
-    "last_alert_at": "2026-08-11T07:46:43.328069+00:00"
+    "confidence": 71.84215392000037,
+    "last_alert_at": "2026-08-11T14:57:56.238054+00:00"
   },
   "crypto:EDGE": {
     "direction": "SELL",
@@ -88,5 +88,10 @@
     "direction": "BUY",
     "confidence": 71.8626482034936,
     "last_alert_at": "2026-08-11T14:42:55.187730+00:00"
+  },
+  "crypto:NEAR": {
+    "direction": "SELL",
+    "confidence": 74.97730338791068,
+    "last_alert_at": "2026-08-11T14:57:55.629324+00:00"
   }
 }
