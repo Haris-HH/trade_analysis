@@ -98,5 +98,10 @@
     "direction": "SELL",
     "confidence": 70.40485422019648,
     "last_alert_at": "2026-08-11T15:02:59.017817+00:00"
+  },
+  "crypto:HOLO": {
+    "direction": "BUY",
+    "confidence": 70.80572486366778,
+    "last_alert_at": "2026-08-11T15:32:04.742342+00:00"
   }
 }
