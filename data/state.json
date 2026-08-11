@@ -53,5 +53,10 @@
     "direction": "SELL",
     "confidence": 76.42818217210386,
     "last_alert_at": "2026-08-11T12:26:41.022443+00:00"
+  },
+  "crypto:ZBT": {
+    "direction": "SELL",
+    "confidence": 71.60324985937095,
+    "last_alert_at": "2026-08-11T12:36:54.596786+00:00"
   }
 }
