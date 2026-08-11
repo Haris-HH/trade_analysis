@@ -78,5 +78,10 @@
     "direction": "BUY",
     "confidence": 75.27170392130117,
     "last_alert_at": "2026-08-11T14:33:12.656393+00:00"
+  },
+  "crypto:AZTEC": {
+    "direction": "SELL",
+    "confidence": 71.5880360646469,
+    "last_alert_at": "2026-08-11T14:38:11.092649+00:00"
   }
 }
