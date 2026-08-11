@@ -72,15 +72,42 @@ Missing news is treated as *absent* evidence (the factor is simply omitted,
 shrinking coverage), not as a neutral vote — a symbol nobody wrote about
 today isn't the same evidence as one with genuinely neutral headlines.
 
-### Why 5 minutes and not faster?
+### Why 5 minutes and not faster? (and why it may run even less often than that)
 
-5 minutes is the shortest interval GitHub Actions' `schedule` trigger reliably
-supports — GitHub's own docs note shorter intervals aren't guaranteed to run
-on time and may be delayed during high load. True second-by-second real-time
-would need an always-on server (not a scheduled job), which isn't free. 5 min
-is the practical ceiling for this architecture; the per-symbol Telegram
-cooldown (`state_store.COOLDOWN_HOURS`) still prevents alert spam regardless
-of how often the scan runs.
+5 minutes is the shortest interval GitHub Actions' `schedule` trigger claims
+to support. In practice it's worse than advertised: GitHub's own docs admit
+the schedule event "can be delayed during periods of high load," and in
+testing this repo's `*/5 * * * *` cron actually fired every **40-90 minutes**,
+not 5 — a well-known real-world limitation of GitHub's free scheduler, not a
+bug in this code (verified via `GET /repos/{owner}/{repo}/actions/runs`,
+looking at the gap between consecutive `schedule`-triggered runs).
+
+**Fix: trigger it externally instead of relying on GitHub's own clock.**
+`workflow_dispatch` (already enabled in `analyze.yml`) lets anything with a
+GitHub token start the workflow on demand via the API. Point a *reliable*
+free external cron service at it and GitHub only has to actually run the
+job when told to, not decide when to fire it:
+
+1. Create a GitHub token: **github.com/settings/personal-access-tokens/new**
+   → Fine-grained token → Repository access: only this repo → Permissions:
+   **Actions: Read and write**. Copy the token (starts with `github_pat_`).
+2. Sign up free at [cron-job.org](https://cron-job.org) (supports 1-minute
+   intervals on the free tier) and create a cronjob:
+   - URL: `https://api.github.com/repos/Haris-HH/trade_analysis/actions/workflows/analyze.yml/dispatches`
+   - Method: `POST`
+   - Schedule: every 5 minutes
+   - Headers: `Authorization: Bearer <your token>`, `Accept: application/vnd.github+json`, `Content-Type: application/json`
+   - Body: `{"ref":"main"}`
+3. Save and enable it.
+
+The native `schedule:` trigger is left in `analyze.yml` as a free backup —
+if the external cron service ever has an outage, GitHub's own (slower,
+best-effort) clock still keeps the dashboard updating instead of going
+silent entirely.
+
+True second-by-second real-time would still need an always-on server, which
+isn't free. The per-symbol Telegram cooldown (`state_store.COOLDOWN_HOURS`)
+prevents alert spam regardless of how often the scan actually runs.
 
 Everything runs on free tiers: GitHub Actions (unlimited minutes on public repos),
 Bitkub/Yahoo Finance/Google News/Bing News (no API key needed), Vercel Hobby, Telegram Bot API.
