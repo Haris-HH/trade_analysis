@@ -135,6 +135,8 @@ def finalize(partial: dict, news_score_signed: float | None, news_reasons: list[
         "agreement": agg["agreement"],
         "technical_score": tech_only_agg["score"] * 100,
         "news_score": news_score_signed if news_score_signed is not None else 0.0,
+        "stop_loss": stop_target["stop"] if stop_target else None,
+        "risk_reward": stop_target["rr"] if stop_target else None,
         "reasons": reasons,
         "vetoed": veto_reason is not None,
     }
@@ -148,6 +150,8 @@ def make_abstain_result(partial: dict) -> dict:
         "agreement": 0.0,
         "technical_score": 0.0,
         "news_score": 0.0,
+        "stop_loss": None,
+        "risk_reward": None,
         "reasons": ["ข้อมูลราคาน้อยกว่า 60 แท่ง จึงไม่สามารถวิเคราะห์ได้ (ABSTAIN)"],
         "vetoed": True,
     }

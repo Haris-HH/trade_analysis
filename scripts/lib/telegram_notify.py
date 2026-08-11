@@ -50,12 +50,18 @@ def format_signal_message(signal: dict) -> str:
             f"(~{target['horizon_days']:g} วัน)"
         )
 
+    stop_loss = signal.get("stop_loss")
+    if stop_loss is not None:
+        rr = signal.get("risk_reward")
+        rr_text = f" (R:R {rr:.2f})" if rr is not None else ""
+        lines.append(f"ตัดขาดทุนที่ (Stop-loss): {_fmt_price(stop_loss)}{rr_text}")
+
     lines += ["", "เหตุผล:"]
     lines += [f"• {r}" for r in signal["reasons"]]
     lines.append("")
-    if target:
+    if target or stop_loss is not None:
         lines.append(
-            "⚠️ เป้าหมายราคาเป็นการประมาณจากความผันผวนล่าสุด (measured move) ไม่ใช่การพยากรณ์ทางสถิติ "
+            "⚠️ เป้าหมายราคาและจุดตัดขาดทุนเป็นการประมาณจากความผันผวนล่าสุด (ATR) ไม่ใช่การพยากรณ์ทางสถิติ "
             "และไม่ใช่การรับประกันว่าราคาจะไปถึงจริง"
         )
     lines.append("⚠️ นี่ไม่ใช่คำแนะนำการลงทุนจากผู้เชี่ยวชาญที่ได้รับใบอนุญาต เป็นสัญญาณอัตโนมัติเพื่อการศึกษาเท่านั้น โปรดตรวจสอบข้อมูลเพิ่มเติมก่อนตัดสินใจลงทุนจริง")

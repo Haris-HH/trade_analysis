@@ -133,6 +133,12 @@ that caveat next to the number. There is still no licensed advisor behind
 this — "BUY NOW" here means "the automated signal crossed the alert
 threshold," not personalized financial advice.
 
+Alongside the target, the same banner shows a **stop-loss price and
+risk:reward ratio** — the same ATR-scaled stop (`ATR_STOP_MULTIPLE` = 1.5x)
+already computed internally for the risk:reward veto check (see "Signal
+engine" above), just surfaced directly instead of only being used to decide
+whether to veto the signal.
+
 ### Charts
 
 Each card on the dashboard includes a sparkline built from the same price

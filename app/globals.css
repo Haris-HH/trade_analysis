@@ -263,6 +263,12 @@ header.hero p {
   margin-bottom: 4px;
 }
 
+.action-stoploss {
+  font-size: 0.8rem;
+  margin-bottom: 4px;
+  color: var(--sell);
+}
+
 .action-caveat {
   font-size: 0.68rem;
   color: var(--muted);

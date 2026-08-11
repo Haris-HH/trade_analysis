@@ -123,8 +123,14 @@ export default function Home() {
                       {s.price_target.target_date} (~{s.price_target.horizon_days} วัน)
                     </div>
                   )}
+                  {s.stop_loss !== null && (
+                    <div className="action-stoploss">
+                      ตัดขาดทุนที่: <strong>{formatPrice(s.stop_loss)}</strong>
+                      {s.risk_reward !== null && ` (R:R ${s.risk_reward.toFixed(2)})`}
+                    </div>
+                  )}
                   <div className="action-caveat">
-                    ✓ ตรวจสอบซ้ำแล้ว / แจ้งเตือนผ่าน Telegram — เป้าหมายเป็นการประมาณจากความผันผวนล่าสุด ไม่ใช่การรับประกัน
+                    ✓ ตรวจสอบซ้ำแล้ว / แจ้งเตือนผ่าน Telegram — เป้าหมายและจุดตัดขาดทุนเป็นการประมาณจาก ATR ไม่ใช่การรับประกัน
                   </div>
                 </div>
               )}

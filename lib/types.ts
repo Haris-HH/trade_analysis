@@ -19,6 +19,8 @@ export interface Signal {
   price: number;
   sparkline: number[];
   price_target: PriceTarget | null;
+  stop_loss: number | null;
+  risk_reward: number | null;
   verified: boolean;
   vetoed: boolean;
   abstain: boolean;
