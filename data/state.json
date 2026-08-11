@@ -33,5 +33,10 @@
     "direction": "SELL",
     "confidence": 71.93290528351993,
     "last_alert_at": "2026-08-11T06:51:49.676641+00:00"
+  },
+  "crypto:BONK": {
+    "direction": "SELL",
+    "confidence": 75.03669761016415,
+    "last_alert_at": "2026-08-11T07:46:43.328069+00:00"
   }
 }
