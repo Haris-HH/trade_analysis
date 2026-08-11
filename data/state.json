@@ -8,5 +8,10 @@
     "direction": "SELL",
     "confidence": 70.23508850845236,
     "last_alert_at": "2026-08-11T05:41:46.760580+00:00"
+  },
+  "crypto:ELIZAOS": {
+    "direction": "SELL",
+    "confidence": 71.13745731818578,
+    "last_alert_at": "2026-08-11T06:11:46.179051+00:00"
   }
 }
