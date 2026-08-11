@@ -68,5 +68,10 @@
     "direction": "SELL",
     "confidence": 71.03245813964062,
     "last_alert_at": "2026-08-11T12:57:24.783436+00:00"
+  },
+  "crypto:LUNA": {
+    "direction": "BUY",
+    "confidence": 73.57185596369456,
+    "last_alert_at": "2026-08-11T14:17:46.726730+00:00"
   }
 }
