@@ -51,8 +51,8 @@
   },
   "crypto:BSB": {
     "direction": "SELL",
-    "confidence": 73.69215776501298,
-    "last_alert_at": "2026-08-12T04:36:49.667761+00:00"
+    "confidence": 81.43417261729378,
+    "last_alert_at": "2026-08-12T09:51:44.221794+00:00"
   },
   "crypto:ZBT": {
     "direction": "SELL",
@@ -223,5 +223,10 @@
     "direction": "SELL",
     "confidence": 74.74891974668806,
     "last_alert_at": "2026-08-12T09:21:49.012174+00:00"
+  },
+  "crypto:PARTI": {
+    "direction": "SELL",
+    "confidence": 71.95551530069326,
+    "last_alert_at": "2026-08-12T09:51:43.731059+00:00"
   }
 }
