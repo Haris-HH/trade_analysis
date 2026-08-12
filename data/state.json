@@ -218,5 +218,10 @@
     "direction": "SELL",
     "confidence": 72.48114395482064,
     "last_alert_at": "2026-08-12T07:56:46.184208+00:00"
+  },
+  "crypto:PORTAL": {
+    "direction": "SELL",
+    "confidence": 74.74891974668806,
+    "last_alert_at": "2026-08-12T09:21:49.012174+00:00"
   }
 }
