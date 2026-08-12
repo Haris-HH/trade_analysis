@@ -183,5 +183,10 @@
     "direction": "SELL",
     "confidence": 73.8411496140932,
     "last_alert_at": "2026-08-12T01:36:49.333741+00:00"
+  },
+  "crypto:BMT": {
+    "direction": "SELL",
+    "confidence": 74.61103876268277,
+    "last_alert_at": "2026-08-12T03:26:45.644612+00:00"
   }
 }
