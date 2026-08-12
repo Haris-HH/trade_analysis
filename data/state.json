@@ -188,5 +188,10 @@
     "direction": "SELL",
     "confidence": 74.61103876268277,
     "last_alert_at": "2026-08-12T03:26:45.644612+00:00"
+  },
+  "crypto:NXPC": {
+    "direction": "SELL",
+    "confidence": 78.58632615887338,
+    "last_alert_at": "2026-08-12T03:41:45.618898+00:00"
   }
 }
