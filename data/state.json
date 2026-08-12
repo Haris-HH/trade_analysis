@@ -248,5 +248,10 @@
     "direction": "BUY",
     "confidence": 70.05373482391421,
     "last_alert_at": "2026-08-12T11:36:49.664163+00:00"
+  },
+  "crypto:MPLX": {
+    "direction": "BUY",
+    "confidence": 72.90364066444,
+    "last_alert_at": "2026-08-12T15:44:29.685573+00:00"
   }
 }
