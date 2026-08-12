@@ -193,5 +193,10 @@
     "direction": "SELL",
     "confidence": 78.58632615887338,
     "last_alert_at": "2026-08-12T03:41:45.618898+00:00"
+  },
+  "crypto:JFIN": {
+    "direction": "SELL",
+    "confidence": 77.69291815730207,
+    "last_alert_at": "2026-08-12T03:56:42.981054+00:00"
   }
 }
