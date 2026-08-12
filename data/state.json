@@ -198,5 +198,10 @@
     "direction": "SELL",
     "confidence": 77.69291815730207,
     "last_alert_at": "2026-08-12T03:56:42.981054+00:00"
+  },
+  "crypto:KAITO": {
+    "direction": "SELL",
+    "confidence": 71.1680652641578,
+    "last_alert_at": "2026-08-12T04:31:50.534037+00:00"
   }
 }
