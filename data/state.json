@@ -233,5 +233,10 @@
     "direction": "SELL",
     "confidence": 70.17333007966619,
     "last_alert_at": "2026-08-12T10:21:39.286656+00:00"
+  },
+  "crypto:ZIL": {
+    "direction": "SELL",
+    "confidence": 76.29583586256726,
+    "last_alert_at": "2026-08-12T10:31:46.791861+00:00"
   }
 }
