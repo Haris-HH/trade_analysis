@@ -41,8 +41,8 @@
   },
   "crypto:EDGE": {
     "direction": "SELL",
-    "confidence": 71.01810957830284,
-    "last_alert_at": "2026-08-12T13:56:54.801470+00:00"
+    "confidence": 71.44525506499585,
+    "last_alert_at": "2026-08-14T10:47:08.340234+00:00"
   },
   "crypto:SCRT": {
     "direction": "SELL",
@@ -231,8 +231,8 @@
   },
   "crypto:ROBO": {
     "direction": "BUY",
-    "confidence": 74.79101928212917,
-    "last_alert_at": "2026-08-14T10:22:07.703329+00:00"
+    "confidence": 87.10077148658303,
+    "last_alert_at": "2026-08-14T10:47:07.116796+00:00"
   },
   "crypto:ZIL": {
     "direction": "SELL",
@@ -278,5 +278,15 @@
     "direction": "SELL",
     "confidence": 73.35832228024422,
     "last_alert_at": "2026-08-14T10:22:10.200627+00:00"
+  },
+  "crypto:ELSA": {
+    "direction": "SELL",
+    "confidence": 75.58519063280674,
+    "last_alert_at": "2026-08-14T10:47:06.499349+00:00"
+  },
+  "crypto:ZKP": {
+    "direction": "SELL",
+    "confidence": 70.93198337187481,
+    "last_alert_at": "2026-08-14T10:47:07.719417+00:00"
   }
 }
