@@ -136,8 +136,8 @@
   },
   "crypto:UNI": {
     "direction": "SELL",
-    "confidence": 70.61422869922805,
-    "last_alert_at": "2026-08-14T16:01:55.096365+00:00"
+    "confidence": 70.15913841157848,
+    "last_alert_at": "2026-08-14T20:01:56.120431+00:00"
   },
   "crypto:ES": {
     "direction": "SELL",
@@ -348,5 +348,15 @@
     "direction": "BUY",
     "confidence": 72.64753883560437,
     "last_alert_at": "2026-08-14T17:56:53.133403+00:00"
+  },
+  "stock:NRG": {
+    "direction": "BUY",
+    "confidence": 74.97453542888003,
+    "last_alert_at": "2026-08-14T20:01:55.152935+00:00"
+  },
+  "stock:STZ": {
+    "direction": "BUY",
+    "confidence": 70.23309702342769,
+    "last_alert_at": "2026-08-14T20:01:55.609575+00:00"
   }
 }
