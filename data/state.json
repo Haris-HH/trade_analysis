@@ -303,5 +303,10 @@
     "direction": "SELL",
     "confidence": 71.17508879433001,
     "last_alert_at": "2026-08-14T10:52:06.328678+00:00"
+  },
+  "crypto:GOAT": {
+    "direction": "SELL",
+    "confidence": 80.75642183341577,
+    "last_alert_at": "2026-08-14T12:16:51.049916+00:00"
   }
 }
