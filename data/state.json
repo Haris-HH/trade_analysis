@@ -358,5 +358,10 @@
     "direction": "BUY",
     "confidence": 70.23309702342769,
     "last_alert_at": "2026-08-14T20:01:55.609575+00:00"
+  },
+  "crypto:DEGEN": {
+    "direction": "SELL",
+    "confidence": 81.70418404910635,
+    "last_alert_at": "2026-08-14T23:51:46.278604+00:00"
   }
 }
