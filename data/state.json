@@ -186,8 +186,8 @@
   },
   "crypto:BMT": {
     "direction": "SELL",
-    "confidence": 74.61103876268277,
-    "last_alert_at": "2026-08-12T03:26:45.644612+00:00"
+    "confidence": 76.42992476293465,
+    "last_alert_at": "2026-08-14T10:22:08.957171+00:00"
   },
   "crypto:NXPC": {
     "direction": "SELL",
@@ -230,9 +230,9 @@
     "last_alert_at": "2026-08-12T09:51:43.731059+00:00"
   },
   "crypto:ROBO": {
-    "direction": "SELL",
-    "confidence": 70.17333007966619,
-    "last_alert_at": "2026-08-12T10:21:39.286656+00:00"
+    "direction": "BUY",
+    "confidence": 74.79101928212917,
+    "last_alert_at": "2026-08-14T10:22:07.703329+00:00"
   },
   "crypto:ZIL": {
     "direction": "SELL",
@@ -258,5 +258,25 @@
     "direction": "SELL",
     "confidence": 70.46135504203099,
     "last_alert_at": "2026-08-12T17:11:43.014080+00:00"
+  },
+  "crypto:SPEC": {
+    "direction": "SELL",
+    "confidence": 73.84296604568362,
+    "last_alert_at": "2026-08-14T10:22:07.059223+00:00"
+  },
+  "crypto:SCR": {
+    "direction": "SELL",
+    "confidence": 72.43845110695545,
+    "last_alert_at": "2026-08-14T10:22:08.325100+00:00"
+  },
+  "crypto:BABYDOGE": {
+    "direction": "SELL",
+    "confidence": 71.51452733574008,
+    "last_alert_at": "2026-08-14T10:22:09.592733+00:00"
+  },
+  "crypto:MOVR": {
+    "direction": "SELL",
+    "confidence": 73.35832228024422,
+    "last_alert_at": "2026-08-14T10:22:10.200627+00:00"
   }
 }
