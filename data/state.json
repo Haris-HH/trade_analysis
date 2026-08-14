@@ -333,5 +333,10 @@
     "direction": "SELL",
     "confidence": 72.92953075268177,
     "last_alert_at": "2026-08-14T14:56:57.636343+00:00"
+  },
+  "crypto:CHZ": {
+    "direction": "SELL",
+    "confidence": 73.71431816893217,
+    "last_alert_at": "2026-08-14T15:06:49.306754+00:00"
   }
 }
