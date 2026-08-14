@@ -318,5 +318,10 @@
     "direction": "BUY",
     "confidence": 71.96303271063647,
     "last_alert_at": "2026-08-14T13:41:56.233793+00:00"
+  },
+  "stock:SNDK": {
+    "direction": "BUY",
+    "confidence": 71.16859249658887,
+    "last_alert_at": "2026-08-14T14:06:51.248805+00:00"
   }
 }
