@@ -338,5 +338,10 @@
     "direction": "SELL",
     "confidence": 73.71431816893217,
     "last_alert_at": "2026-08-14T15:06:49.306754+00:00"
+  },
+  "crypto:APEX": {
+    "direction": "SELL",
+    "confidence": 70.92476710727433,
+    "last_alert_at": "2026-08-14T17:41:47.538832+00:00"
   }
 }
