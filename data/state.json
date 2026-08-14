@@ -343,5 +343,10 @@
     "direction": "SELL",
     "confidence": 70.92476710727433,
     "last_alert_at": "2026-08-14T17:41:47.538832+00:00"
+  },
+  "crypto:MAVIA": {
+    "direction": "BUY",
+    "confidence": 72.64753883560437,
+    "last_alert_at": "2026-08-14T17:56:53.133403+00:00"
   }
 }
