@@ -313,5 +313,10 @@
     "direction": "SELL",
     "confidence": 71.51680022493713,
     "last_alert_at": "2026-08-14T12:21:51.492894+00:00"
+  },
+  "stock:STX": {
+    "direction": "BUY",
+    "confidence": 71.96303271063647,
+    "last_alert_at": "2026-08-14T13:41:56.233793+00:00"
   }
 }
