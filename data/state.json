@@ -75,9 +75,9 @@
     "last_alert_at": "2026-08-11T14:17:46.726730+00:00"
   },
   "crypto:SQD": {
-    "direction": "BUY",
-    "confidence": 75.27170392130117,
-    "last_alert_at": "2026-08-11T14:33:12.656393+00:00"
+    "direction": "SELL",
+    "confidence": 70.26629094685373,
+    "last_alert_at": "2026-08-14T10:26:50.292351+00:00"
   },
   "crypto:AZTEC": {
     "direction": "SELL",
@@ -100,9 +100,9 @@
     "last_alert_at": "2026-08-11T15:02:59.017817+00:00"
   },
   "crypto:HOLO": {
-    "direction": "BUY",
-    "confidence": 75.39301245384254,
-    "last_alert_at": "2026-08-12T01:31:48.581375+00:00"
+    "direction": "SELL",
+    "confidence": 72.05630299405773,
+    "last_alert_at": "2026-08-14T10:26:49.695959+00:00"
   },
   "crypto:IOST": {
     "direction": "SELL",
