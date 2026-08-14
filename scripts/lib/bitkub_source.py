@@ -22,21 +22,22 @@ STABLECOIN_EXCLUDE = {
 
 
 def get_universe() -> dict[str, str]:
-    """Returns {ticker: display_name} for every non-stablecoin THB market on Bitkub."""
-    resp = requests.get(f"{BASE_URL}/api/market/symbols", headers=HEADERS, timeout=20)
+    """Returns {ticker: display_name} for every active, non-stablecoin THB market
+    on Bitkub. Uses the v3 symbols endpoint — the unversioned /api/market/symbols
+    endpoint now hangs indefinitely instead of responding (observed 2026-08-14)."""
+    resp = requests.get(f"{BASE_URL}/api/v3/market/symbols", headers=HEADERS, timeout=20)
     resp.raise_for_status()
     data = resp.json()
 
     universe: dict[str, str] = {}
     for row in data.get("result", []):
-        symbol = row.get("symbol", "")
-        if not symbol.startswith("THB_"):
+        if row.get("quote_asset") != "THB" or row.get("status") != "active":
             continue
-        ticker = symbol[len("THB_"):]
-        if ticker in STABLECOIN_EXCLUDE:
+        ticker = row.get("base_asset", "")
+        if not ticker or ticker in STABLECOIN_EXCLUDE:
             continue
-        info = row.get("info", "")
-        name = info[len("Thai Baht to "):] if info.startswith("Thai Baht to ") else ticker
+        description = row.get("description", "")
+        name = description[len("Thai Baht to "):] if description.startswith("Thai Baht to ") else ticker
         universe[ticker] = name
     return universe
 
