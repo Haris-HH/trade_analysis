@@ -363,5 +363,10 @@
     "direction": "SELL",
     "confidence": 81.70418404910635,
     "last_alert_at": "2026-08-14T23:51:46.278604+00:00"
+  },
+  "crypto:AVA": {
+    "direction": "SELL",
+    "confidence": 72.29403932946116,
+    "last_alert_at": "2026-08-14T23:55:20.220413+00:00"
   }
 }
