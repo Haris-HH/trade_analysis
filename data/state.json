@@ -288,5 +288,20 @@
     "direction": "SELL",
     "confidence": 70.93198337187481,
     "last_alert_at": "2026-08-14T10:47:07.719417+00:00"
+  },
+  "crypto:SOON": {
+    "direction": "SELL",
+    "confidence": 71.17677527584799,
+    "last_alert_at": "2026-08-14T10:52:05.391801+00:00"
+  },
+  "crypto:SIGN": {
+    "direction": "SELL",
+    "confidence": 71.86842494277815,
+    "last_alert_at": "2026-08-14T10:52:05.856549+00:00"
+  },
+  "crypto:CHILLGUY": {
+    "direction": "SELL",
+    "confidence": 71.17508879433001,
+    "last_alert_at": "2026-08-14T10:52:06.328678+00:00"
   }
 }
