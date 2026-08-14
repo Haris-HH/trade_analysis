@@ -323,5 +323,10 @@
     "direction": "BUY",
     "confidence": 71.16859249658887,
     "last_alert_at": "2026-08-14T14:06:51.248805+00:00"
+  },
+  "crypto:BCH": {
+    "direction": "SELL",
+    "confidence": 70.50487580569745,
+    "last_alert_at": "2026-08-14T14:41:49.710040+00:00"
   }
 }
