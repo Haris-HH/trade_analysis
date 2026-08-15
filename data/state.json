@@ -423,5 +423,10 @@
     "direction": "BUY",
     "confidence": 75.80496185081464,
     "last_alert_at": "2026-08-15T13:41:50.093586+00:00"
+  },
+  "crypto:BOME": {
+    "direction": "BUY",
+    "confidence": 71.96877952860616,
+    "last_alert_at": "2026-08-15T15:51:19.698734+00:00"
   }
 }
