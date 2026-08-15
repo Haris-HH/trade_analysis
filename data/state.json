@@ -341,8 +341,8 @@
   },
   "crypto:APEX": {
     "direction": "SELL",
-    "confidence": 70.92476710727433,
-    "last_alert_at": "2026-08-14T17:41:47.538832+00:00"
+    "confidence": 72.8379785271238,
+    "last_alert_at": "2026-08-15T18:11:47.644808+00:00"
   },
   "crypto:MAVIA": {
     "direction": "BUY",
@@ -433,5 +433,10 @@
     "direction": "SELL",
     "confidence": 72.67677836071336,
     "last_alert_at": "2026-08-15T17:51:49.814882+00:00"
+  },
+  "crypto:FET": {
+    "direction": "SELL",
+    "confidence": 73.4029813602026,
+    "last_alert_at": "2026-08-15T18:11:48.177632+00:00"
   }
 }
