@@ -373,5 +373,10 @@
     "direction": "BUY",
     "confidence": 82.0093661897294,
     "last_alert_at": "2026-08-15T02:06:36.147396+00:00"
+  },
+  "crypto:PIEVERSE": {
+    "direction": "BUY",
+    "confidence": 79.00502984045536,
+    "last_alert_at": "2026-08-15T02:41:48.935121+00:00"
   }
 }
