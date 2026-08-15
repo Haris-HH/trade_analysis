@@ -41,8 +41,8 @@
   },
   "crypto:EDGE": {
     "direction": "SELL",
-    "confidence": 70.15078907753829,
-    "last_alert_at": "2026-08-15T19:21:46.689580+00:00"
+    "confidence": 81.19451952996177,
+    "last_alert_at": "2026-08-15T22:51:53.025464+00:00"
   },
   "crypto:SCRT": {
     "direction": "SELL",
@@ -181,8 +181,8 @@
   },
   "crypto:VIC": {
     "direction": "SELL",
-    "confidence": 71.84255000776707,
-    "last_alert_at": "2026-08-15T18:46:50.149878+00:00"
+    "confidence": 74.69013666626755,
+    "last_alert_at": "2026-08-15T22:51:52.393792+00:00"
   },
   "crypto:BMT": {
     "direction": "SELL",
