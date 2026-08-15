@@ -378,5 +378,10 @@
     "direction": "BUY",
     "confidence": 79.00502984045536,
     "last_alert_at": "2026-08-15T02:41:48.935121+00:00"
+  },
+  "crypto:ALCH": {
+    "direction": "SELL",
+    "confidence": 72.78904082856894,
+    "last_alert_at": "2026-08-15T03:51:41.781155+00:00"
   }
 }
