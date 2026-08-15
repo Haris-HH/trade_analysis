@@ -403,5 +403,10 @@
     "direction": "BUY",
     "confidence": 86.9463667477422,
     "last_alert_at": "2026-08-15T08:41:49.273127+00:00"
+  },
+  "crypto:PLN": {
+    "direction": "SELL",
+    "confidence": 70.58401339372845,
+    "last_alert_at": "2026-08-15T09:16:47.793674+00:00"
   }
 }
