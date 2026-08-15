@@ -393,5 +393,10 @@
     "direction": "BUY",
     "confidence": 70.545523555899,
     "last_alert_at": "2026-08-15T05:56:45.971040+00:00"
+  },
+  "crypto:PEOPLE": {
+    "direction": "SELL",
+    "confidence": 74.11687121456558,
+    "last_alert_at": "2026-08-15T07:31:47.859513+00:00"
   }
 }
