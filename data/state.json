@@ -428,5 +428,10 @@
     "direction": "BUY",
     "confidence": 86.74645759516586,
     "last_alert_at": "2026-08-15T16:46:49.019775+00:00"
+  },
+  "crypto:EDEN": {
+    "direction": "SELL",
+    "confidence": 72.67677836071336,
+    "last_alert_at": "2026-08-15T17:51:49.814882+00:00"
   }
 }
