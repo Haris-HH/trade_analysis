@@ -413,5 +413,10 @@
     "direction": "SELL",
     "confidence": 72.8291020816292,
     "last_alert_at": "2026-08-15T10:51:44.147462+00:00"
+  },
+  "crypto:PLUME": {
+    "direction": "BUY",
+    "confidence": 75.27413215256229,
+    "last_alert_at": "2026-08-15T11:01:52.817532+00:00"
   }
 }
