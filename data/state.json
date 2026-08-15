@@ -231,8 +231,8 @@
   },
   "crypto:ROBO": {
     "direction": "BUY",
-    "confidence": 71.77491218403945,
-    "last_alert_at": "2026-08-14T16:41:53.727370+00:00"
+    "confidence": 72.83101257609547,
+    "last_alert_at": "2026-08-15T00:21:43.573152+00:00"
   },
   "crypto:ZIL": {
     "direction": "SELL",
