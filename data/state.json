@@ -443,5 +443,10 @@
     "direction": "SELL",
     "confidence": 70.54918864948479,
     "last_alert_at": "2026-08-15T18:56:49.631694+00:00"
+  },
+  "crypto:BASED": {
+    "direction": "BUY",
+    "confidence": 71.18957672951902,
+    "last_alert_at": "2026-08-15T20:31:49.523235+00:00"
   }
 }
