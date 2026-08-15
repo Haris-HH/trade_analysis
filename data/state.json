@@ -266,8 +266,8 @@
   },
   "crypto:SCR": {
     "direction": "SELL",
-    "confidence": 73.11967487807874,
-    "last_alert_at": "2026-08-14T22:36:44.044426+00:00"
+    "confidence": 70.2326967793459,
+    "last_alert_at": "2026-08-15T02:36:57.183949+00:00"
   },
   "crypto:BABYDOGE": {
     "direction": "SELL",
