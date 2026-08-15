@@ -216,8 +216,8 @@
   },
   "crypto:HFT": {
     "direction": "SELL",
-    "confidence": 81.32388163601429,
-    "last_alert_at": "2026-08-15T18:56:49.035508+00:00"
+    "confidence": 82.66578699657343,
+    "last_alert_at": "2026-08-15T23:00:27.646112+00:00"
   },
   "crypto:PORTAL": {
     "direction": "BUY",
