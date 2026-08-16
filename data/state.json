@@ -478,5 +478,10 @@
     "direction": "SELL",
     "confidence": 70.55475818801034,
     "last_alert_at": "2026-08-16T10:31:46.614197+00:00"
+  },
+  "crypto:WLFI": {
+    "direction": "BUY",
+    "confidence": 77.03004139156016,
+    "last_alert_at": "2026-08-16T11:36:41.942204+00:00"
   }
 }
