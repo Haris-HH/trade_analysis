@@ -221,8 +221,8 @@
   },
   "crypto:PORTAL": {
     "direction": "BUY",
-    "confidence": 84.40747960238839,
-    "last_alert_at": "2026-08-16T11:51:24.692046+00:00"
+    "confidence": 70.33078880195583,
+    "last_alert_at": "2026-08-16T17:56:44.060973+00:00"
   },
   "crypto:PARTI": {
     "direction": "SELL",
@@ -291,8 +291,8 @@
   },
   "crypto:SOON": {
     "direction": "SELL",
-    "confidence": 73.77744027272637,
-    "last_alert_at": "2026-08-16T13:51:50.267669+00:00"
+    "confidence": 74.31931424319089,
+    "last_alert_at": "2026-08-16T17:56:44.569778+00:00"
   },
   "crypto:SIGN": {
     "direction": "SELL",
