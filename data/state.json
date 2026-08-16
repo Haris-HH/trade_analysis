@@ -453,5 +453,10 @@
     "direction": "SELL",
     "confidence": 70.20620011163324,
     "last_alert_at": "2026-08-16T01:36:44.268964+00:00"
+  },
+  "crypto:OPG": {
+    "direction": "BUY",
+    "confidence": 70.56829756400028,
+    "last_alert_at": "2026-08-16T04:26:50.684817+00:00"
   }
 }
