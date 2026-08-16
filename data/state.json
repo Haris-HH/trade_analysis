@@ -391,8 +391,8 @@
   },
   "crypto:CHIP": {
     "direction": "BUY",
-    "confidence": 81.02997255837938,
-    "last_alert_at": "2026-08-16T00:26:39.103295+00:00"
+    "confidence": 72.59540384314168,
+    "last_alert_at": "2026-08-16T04:51:50.268416+00:00"
   },
   "crypto:PEOPLE": {
     "direction": "SELL",
