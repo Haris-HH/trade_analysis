@@ -456,8 +456,8 @@
   },
   "crypto:OPG": {
     "direction": "BUY",
-    "confidence": 70.56829756400028,
-    "last_alert_at": "2026-08-16T04:26:50.684817+00:00"
+    "confidence": 72.8243754604734,
+    "last_alert_at": "2026-08-16T09:36:49.289865+00:00"
   },
   "crypto:BAND": {
     "direction": "SELL",
@@ -468,5 +468,10 @@
     "direction": "BUY",
     "confidence": 70.93720299031287,
     "last_alert_at": "2026-08-16T07:21:41.966452+00:00"
+  },
+  "crypto:ICNT": {
+    "direction": "SELL",
+    "confidence": 70.96196261111086,
+    "last_alert_at": "2026-08-16T09:36:49.866166+00:00"
   }
 }
