@@ -463,5 +463,10 @@
     "direction": "SELL",
     "confidence": 75.39269624524593,
     "last_alert_at": "2026-08-16T05:26:31.447976+00:00"
+  },
+  "crypto:GPS": {
+    "direction": "BUY",
+    "confidence": 70.93720299031287,
+    "last_alert_at": "2026-08-16T07:21:41.966452+00:00"
   }
 }
