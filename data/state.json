@@ -50,9 +50,9 @@
     "last_alert_at": "2026-08-15T03:56:49.676319+00:00"
   },
   "crypto:BSB": {
-    "direction": "SELL",
-    "confidence": 71.67571232699862,
-    "last_alert_at": "2026-08-15T22:56:47.603963+00:00"
+    "direction": "BUY",
+    "confidence": 72.1604417528189,
+    "last_alert_at": "2026-08-16T17:50:13.432024+00:00"
   },
   "crypto:ZBT": {
     "direction": "SELL",
