@@ -291,8 +291,8 @@
   },
   "crypto:SOON": {
     "direction": "SELL",
-    "confidence": 80.41315410725394,
-    "last_alert_at": "2026-08-15T07:16:45.517637+00:00"
+    "confidence": 78.03552412796924,
+    "last_alert_at": "2026-08-16T02:21:50.506283+00:00"
   },
   "crypto:SIGN": {
     "direction": "SELL",
@@ -446,8 +446,8 @@
   },
   "crypto:BASED": {
     "direction": "BUY",
-    "confidence": 71.18957672951902,
-    "last_alert_at": "2026-08-15T20:31:49.523235+00:00"
+    "confidence": 71.6869155009805,
+    "last_alert_at": "2026-08-16T02:21:49.817776+00:00"
   },
   "crypto:ZENT": {
     "direction": "SELL",
