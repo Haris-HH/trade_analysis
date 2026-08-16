@@ -493,5 +493,10 @@
     "direction": "SELL",
     "confidence": 72.24940377674216,
     "last_alert_at": "2026-08-16T12:46:52.367489+00:00"
+  },
+  "crypto:WLD": {
+    "direction": "BUY",
+    "confidence": 75.16577682671644,
+    "last_alert_at": "2026-08-16T16:26:44.262352+00:00"
   }
 }
