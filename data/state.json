@@ -126,8 +126,8 @@
   },
   "crypto:ZEREBRO": {
     "direction": "BUY",
-    "confidence": 77.92460439554415,
-    "last_alert_at": "2026-08-15T19:49:53.076235+00:00"
+    "confidence": 73.67006973394743,
+    "last_alert_at": "2026-08-16T14:46:53.174990+00:00"
   },
   "crypto:BRETT": {
     "direction": "SELL",
@@ -281,8 +281,8 @@
   },
   "crypto:ELSA": {
     "direction": "SELL",
-    "confidence": 75.58519063280674,
-    "last_alert_at": "2026-08-14T10:47:06.499349+00:00"
+    "confidence": 70.47681498139855,
+    "last_alert_at": "2026-08-16T14:46:52.523629+00:00"
   },
   "crypto:ZKP": {
     "direction": "SELL",
@@ -401,8 +401,8 @@
   },
   "crypto:ETHFI": {
     "direction": "BUY",
-    "confidence": 86.9463667477422,
-    "last_alert_at": "2026-08-15T08:41:49.273127+00:00"
+    "confidence": 83.397558907343,
+    "last_alert_at": "2026-08-16T14:46:53.881273+00:00"
   },
   "crypto:PLN": {
     "direction": "SELL",
