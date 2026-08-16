@@ -181,8 +181,8 @@
   },
   "crypto:VIC": {
     "direction": "SELL",
-    "confidence": 74.69013666626755,
-    "last_alert_at": "2026-08-15T22:51:52.393792+00:00"
+    "confidence": 76.02798173141329,
+    "last_alert_at": "2026-08-16T05:41:52.688860+00:00"
   },
   "crypto:BMT": {
     "direction": "SELL",
