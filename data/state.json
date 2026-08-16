@@ -46,8 +46,8 @@
   },
   "crypto:SCRT": {
     "direction": "SELL",
-    "confidence": 73.72497769693113,
-    "last_alert_at": "2026-08-15T03:56:49.676319+00:00"
+    "confidence": 75.10763484887158,
+    "last_alert_at": "2026-08-16T20:11:41.841886+00:00"
   },
   "crypto:BSB": {
     "direction": "BUY",
