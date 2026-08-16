@@ -281,8 +281,8 @@
   },
   "crypto:ELSA": {
     "direction": "SELL",
-    "confidence": 70.47681498139855,
-    "last_alert_at": "2026-08-16T14:46:52.523629+00:00"
+    "confidence": 79.291518112434,
+    "last_alert_at": "2026-08-16T23:06:39.403670+00:00"
   },
   "crypto:ZKP": {
     "direction": "SELL",
