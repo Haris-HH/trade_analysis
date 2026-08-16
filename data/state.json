@@ -241,8 +241,8 @@
   },
   "crypto:BR": {
     "direction": "SELL",
-    "confidence": 71.94636578514424,
-    "last_alert_at": "2026-08-16T08:16:44.689653+00:00"
+    "confidence": 70.17289445219352,
+    "last_alert_at": "2026-08-16T15:55:49.410353+00:00"
   },
   "crypto:WET": {
     "direction": "BUY",
