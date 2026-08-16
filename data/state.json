@@ -256,8 +256,8 @@
   },
   "crypto:XAI": {
     "direction": "BUY",
-    "confidence": 73.53743009743256,
-    "last_alert_at": "2026-08-16T05:31:50.222442+00:00"
+    "confidence": 70.43302747702761,
+    "last_alert_at": "2026-08-16T12:46:53.016752+00:00"
   },
   "crypto:SPEC": {
     "direction": "SELL",
@@ -488,5 +488,10 @@
     "direction": "SELL",
     "confidence": 70.51202211291198,
     "last_alert_at": "2026-08-16T11:56:45.406753+00:00"
+  },
+  "crypto:SD": {
+    "direction": "SELL",
+    "confidence": 72.24940377674216,
+    "last_alert_at": "2026-08-16T12:46:52.367489+00:00"
   }
 }
