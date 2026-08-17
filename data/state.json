@@ -190,9 +190,9 @@
     "last_alert_at": "2026-08-15T08:56:43.423157+00:00"
   },
   "crypto:NXPC": {
-    "direction": "SELL",
-    "confidence": 77.95746653240307,
-    "last_alert_at": "2026-08-12T13:06:42.492875+00:00"
+    "direction": "BUY",
+    "confidence": 72.20532313421575,
+    "last_alert_at": "2026-08-17T05:46:40.815521+00:00"
   },
   "crypto:JFIN": {
     "direction": "SELL",
