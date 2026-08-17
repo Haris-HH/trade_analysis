@@ -523,5 +523,10 @@
     "direction": "BUY",
     "confidence": 74.09548096561126,
     "last_alert_at": "2026-08-17T20:01:59.205236+00:00"
+  },
+  "crypto:VVV": {
+    "direction": "BUY",
+    "confidence": 71.40161727756838,
+    "last_alert_at": "2026-08-17T21:46:43.112524+00:00"
   }
 }
