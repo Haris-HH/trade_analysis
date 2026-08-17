@@ -508,5 +508,10 @@
     "direction": "BUY",
     "confidence": 71.9461953780058,
     "last_alert_at": "2026-08-17T07:31:45.176324+00:00"
+  },
+  "stock:SENA.BK": {
+    "direction": "SELL",
+    "confidence": 70.43958910955332,
+    "last_alert_at": "2026-08-17T09:56:45.978525+00:00"
   }
 }
