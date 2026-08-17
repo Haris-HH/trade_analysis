@@ -201,8 +201,8 @@
   },
   "crypto:KAITO": {
     "direction": "SELL",
-    "confidence": 76.15794171813643,
-    "last_alert_at": "2026-08-16T02:36:46.908719+00:00"
+    "confidence": 75.82085835546246,
+    "last_alert_at": "2026-08-17T22:36:50.453771+00:00"
   },
   "crypto:BIRB": {
     "direction": "BUY",
