@@ -1,5 +1,11 @@
 export type Direction = "BUY" | "SELL";
 
+export type AlertMode = "crypto" | "stock" | "both" | "none";
+
+export interface AlertSettings {
+  alert_mode: AlertMode;
+}
+
 export interface PriceTarget {
   target_price: number;
   target_date: string;

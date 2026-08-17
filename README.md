@@ -229,7 +229,30 @@ will start running automatically every 5 minutes once it's on the default branch
    for the dashboard itself — it just reads the committed JSON file.
 3. Deploy. Vercel will auto-redeploy on every push the Action makes.
 
-### 5. Local development
+### 5. (Optional) Enable the alert-mode radio buttons
+
+The dashboard header has radio buttons — **Crypto only / Stocks only / Both / None** —
+that control which market(s) are allowed to trigger a Telegram alert. The choice is
+stored in [`data/alert_settings.json`](data/alert_settings.json), which
+`scripts/main.py` reads on every scan (`market_alerts_allowed()` in `main.py`) before
+sending, and the dashboard's page and cards keep showing all signals either way — only
+the Telegram send is filtered.
+
+Because Vercel's filesystem is read-only at runtime, saving a new choice works by
+committing the updated `data/alert_settings.json` straight to GitHub via its Contents
+API (`app/api/alert-settings/route.ts`), the same way the GitHub Action commits scan
+results. That needs its own token, separate from the Action's `GITHUB_TOKEN` secret
+(which only exists inside Action runs) — add these as **Vercel project env vars**
+(Project → Settings → Environment Variables):
+
+- `GITHUB_TOKEN` — a fine-grained PAT ([github.com/settings/personal-access-tokens/new](https://github.com/settings/personal-access-tokens/new)) scoped to only this repo, with **Contents: Read and write**
+- `GITHUB_REPO` — `owner/repo`, e.g. `Haris-HH/trade_analysis`
+- `GITHUB_BRANCH` — `main` (optional, defaults to `main`)
+
+Without these two set, the radio buttons still render but saving fails with a clear
+error instead of silently doing nothing.
+
+### 6. Local development
 
 ```bash
 npm install
@@ -250,6 +273,8 @@ DRY_RUN=1 python scripts/main.py   # scans + logs would-be Telegram messages, do
 - `scripts/lib/indicators.py`: `MIN_CANDLES` (60 — below this, a symbol abstains instead of guessing),
   `TREND_THRESHOLD` (0.8% EMA separation before a market counts as "trending")
 - `scripts/lib/state_store.py`: `COOLDOWN_HOURS` (default 4h between repeat alerts for the same symbol/direction)
+- `data/alert_settings.json`: `alert_mode` (`crypto` / `stock` / `both` / `none`) — which market(s) may send a
+  Telegram alert; editable via the dashboard's radio buttons (see setup step 5) or by hand
 - `scripts/lib/universe.py`: the stock watchlists (crypto is fetched live, see above)
 - `.github/workflows/analyze.yml`: cron schedule (`*/5 * * * *`)
 

@@ -47,6 +47,30 @@ PRICE_FETCH_WORKERS = int(os.environ.get("PRICE_FETCH_WORKERS", "16"))
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 OUTPUT_PATH = os.path.join(ROOT, "public", "data", "latest.json")
 STATE_PATH = os.path.join(ROOT, "data", "state.json")
+ALERT_SETTINGS_PATH = os.path.join(ROOT, "data", "alert_settings.json")
+
+
+def load_alert_mode() -> str:
+    """Which market(s) may trigger a Telegram alert: crypto/stock/both/none.
+
+    Set via the dashboard's radio buttons (app/api/alert-settings), committed
+    to ALERT_SETTINGS_PATH. Missing/invalid file or value falls back to
+    "both" so a misconfiguration never silently kills all alerts.
+    """
+    try:
+        with open(ALERT_SETTINGS_PATH, "r", encoding="utf-8") as f:
+            mode = json.load(f).get("alert_mode")
+    except (OSError, json.JSONDecodeError):
+        return "both"
+    return mode if mode in ("crypto", "stock", "both", "none") else "both"
+
+
+def market_alerts_allowed(market: str, alert_mode: str) -> bool:
+    if alert_mode == "none":
+        return False
+    if alert_mode in ("crypto", "stock"):
+        return market == alert_mode
+    return True
 
 
 def build_universe() -> list[dict]:
@@ -244,6 +268,8 @@ def reverify_candidates(candidates: list[dict]) -> list[dict]:
 
 def main() -> None:
     state = state_store.load_state(STATE_PATH)
+    alert_mode = load_alert_mode()
+    print(f"Alert mode: {alert_mode}")
     universe = build_universe()
     print(f"Universe: {sum(1 for u in universe if u['market'] == 'crypto')} crypto, "
           f"{sum(1 for u in universe if u['market'] == 'stock')} stocks.")
@@ -267,7 +293,9 @@ def main() -> None:
             verified["verified"] = True
             results[idx] = verified
 
-        if state_store.should_alert(state, key, verified["direction"], verified["confidence"]):
+        if not market_alerts_allowed(verified["market"], alert_mode):
+            print(f"[alert-mode] {verified['symbol']} suppressed (alert_mode={alert_mode})")
+        elif state_store.should_alert(state, key, verified["direction"], verified["confidence"]):
             message = telegram_notify.format_signal_message(verified)
             if DRY_RUN:
                 print("[dry-run] would send Telegram message:\n" + message)

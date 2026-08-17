@@ -1,8 +1,9 @@
 import fs from "fs";
 import path from "path";
-import type { AnalysisData } from "@/lib/types";
+import type { AlertSettings as AlertSettingsData, AnalysisData } from "@/lib/types";
 import { Sparkline } from "@/components/Sparkline";
 import { AutoRefresh } from "@/components/AutoRefresh";
+import { AlertSettings } from "@/components/AlertSettings";
 
 export const revalidate = 0;
 
@@ -10,6 +11,18 @@ function loadData(): AnalysisData {
   const file = path.join(process.cwd(), "public", "data", "latest.json");
   const raw = fs.readFileSync(file, "utf-8");
   return JSON.parse(raw);
+}
+
+function loadAlertSettings(): AlertSettingsData {
+  try {
+    const file = path.join(process.cwd(), "data", "alert_settings.json");
+    const raw = fs.readFileSync(file, "utf-8");
+    const parsed = JSON.parse(raw);
+    if (["crypto", "stock", "both", "none"].includes(parsed.alert_mode)) return parsed;
+  } catch {
+    // fall through to default
+  }
+  return { alert_mode: "both" };
 }
 
 function formatPrice(value: number): string {
@@ -27,6 +40,7 @@ function timeAgo(iso: string): string {
 
 export default function Home() {
   const data = loadData();
+  const alertSettings = loadAlertSettings();
   const abstainCount = data.signals.filter((s) => s.abstain).length;
   const signals = data.signals
     .filter((s) => !s.abstain)
@@ -61,6 +75,8 @@ export default function Home() {
           </span>
         )}
       </div>
+
+      <AlertSettings initialMode={alertSettings.alert_mode} />
 
       {signals.length === 0 ? (
         <div className="empty-state">ยังไม่มีข้อมูล รอรอบสแกนถัดไป...</div>
