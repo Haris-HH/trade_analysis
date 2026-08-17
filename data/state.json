@@ -181,8 +181,8 @@
   },
   "crypto:VIC": {
     "direction": "SELL",
-    "confidence": 81.75943680480347,
-    "last_alert_at": "2026-08-16T22:26:51.241663+00:00"
+    "confidence": 72.61644371259911,
+    "last_alert_at": "2026-08-17T02:56:49.386769+00:00"
   },
   "crypto:BMT": {
     "direction": "SELL",
@@ -221,8 +221,8 @@
   },
   "crypto:PORTAL": {
     "direction": "BUY",
-    "confidence": 70.73719964840042,
-    "last_alert_at": "2026-08-16T22:51:46.257794+00:00"
+    "confidence": 73.95124386814015,
+    "last_alert_at": "2026-08-17T02:56:48.757873+00:00"
   },
   "crypto:PARTI": {
     "direction": "SELL",
@@ -466,8 +466,8 @@
   },
   "crypto:GPS": {
     "direction": "BUY",
-    "confidence": 70.93720299031287,
-    "last_alert_at": "2026-08-16T07:21:41.966452+00:00"
+    "confidence": 71.97590272339646,
+    "last_alert_at": "2026-08-17T02:56:50.078187+00:00"
   },
   "crypto:ICNT": {
     "direction": "SELL",
