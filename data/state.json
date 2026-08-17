@@ -461,8 +461,8 @@
   },
   "crypto:BAND": {
     "direction": "SELL",
-    "confidence": 74.72570627853196,
-    "last_alert_at": "2026-08-16T20:54:06.733378+00:00"
+    "confidence": 74.29442795030391,
+    "last_alert_at": "2026-08-17T11:41:40.314150+00:00"
   },
   "crypto:GPS": {
     "direction": "BUY",
