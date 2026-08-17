@@ -503,5 +503,10 @@
     "direction": "SELL",
     "confidence": 71.56685074999197,
     "last_alert_at": "2026-08-17T03:21:40.274553+00:00"
+  },
+  "crypto:HYPE": {
+    "direction": "BUY",
+    "confidence": 71.9461953780058,
+    "last_alert_at": "2026-08-17T07:31:45.176324+00:00"
   }
 }
