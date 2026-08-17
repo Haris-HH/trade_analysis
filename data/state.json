@@ -76,8 +76,8 @@
   },
   "crypto:SQD": {
     "direction": "SELL",
-    "confidence": 70.76825124164128,
-    "last_alert_at": "2026-08-17T10:56:41.736722+00:00"
+    "confidence": 82.60040559124182,
+    "last_alert_at": "2026-08-17T13:31:56.441358+00:00"
   },
   "crypto:AZTEC": {
     "direction": "SELL",
@@ -321,8 +321,8 @@
   },
   "stock:SNDK": {
     "direction": "BUY",
-    "confidence": 71.16859249658887,
-    "last_alert_at": "2026-08-14T14:06:51.248805+00:00"
+    "confidence": 70.17176366612237,
+    "last_alert_at": "2026-08-17T13:31:55.775887+00:00"
   },
   "crypto:BCH": {
     "direction": "SELL",
