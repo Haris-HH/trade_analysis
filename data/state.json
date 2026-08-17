@@ -210,9 +210,9 @@
     "last_alert_at": "2026-08-12T04:41:52.827591+00:00"
   },
   "crypto:FHE": {
-    "direction": "SELL",
-    "confidence": 72.81605381538922,
-    "last_alert_at": "2026-08-14T14:51:56.322500+00:00"
+    "direction": "BUY",
+    "confidence": 77.15327817037095,
+    "last_alert_at": "2026-08-17T16:06:41.175553+00:00"
   },
   "crypto:HFT": {
     "direction": "SELL",
