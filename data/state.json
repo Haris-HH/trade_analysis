@@ -518,5 +518,10 @@
     "direction": "BUY",
     "confidence": 78.53945362670608,
     "last_alert_at": "2026-08-17T18:36:36.599791+00:00"
+  },
+  "stock:DVN": {
+    "direction": "BUY",
+    "confidence": 74.09548096561126,
+    "last_alert_at": "2026-08-17T20:01:59.205236+00:00"
   }
 }
