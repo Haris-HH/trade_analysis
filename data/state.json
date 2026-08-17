@@ -66,8 +66,8 @@
   },
   "crypto:BICO": {
     "direction": "SELL",
-    "confidence": 71.27670172911502,
-    "last_alert_at": "2026-08-17T13:37:00.506351+00:00"
+    "confidence": 76.37267961220277,
+    "last_alert_at": "2026-08-17T19:48:18.233146+00:00"
   },
   "crypto:LUNA": {
     "direction": "BUY",
