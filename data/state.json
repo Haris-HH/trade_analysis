@@ -466,8 +466,8 @@
   },
   "crypto:GPS": {
     "direction": "BUY",
-    "confidence": 85.39144529764525,
-    "last_alert_at": "2026-08-17T03:41:49.747689+00:00"
+    "confidence": 72.01046001252718,
+    "last_alert_at": "2026-08-17T08:21:47.872075+00:00"
   },
   "crypto:ICNT": {
     "direction": "SELL",
