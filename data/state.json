@@ -513,5 +513,10 @@
     "direction": "SELL",
     "confidence": 70.43958910955332,
     "last_alert_at": "2026-08-17T09:56:45.978525+00:00"
+  },
+  "crypto:POL": {
+    "direction": "BUY",
+    "confidence": 78.53945362670608,
+    "last_alert_at": "2026-08-17T18:36:36.599791+00:00"
   }
 }
