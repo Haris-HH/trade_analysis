@@ -528,5 +528,10 @@
     "direction": "BUY",
     "confidence": 71.40161727756838,
     "last_alert_at": "2026-08-17T21:46:43.112524+00:00"
+  },
+  "crypto:GALA": {
+    "direction": "SELL",
+    "confidence": 71.9788991200036,
+    "last_alert_at": "2026-08-18T02:41:46.535265+00:00"
   }
 }
