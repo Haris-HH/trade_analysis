@@ -361,8 +361,8 @@
   },
   "crypto:DEGEN": {
     "direction": "SELL",
-    "confidence": 81.70418404910635,
-    "last_alert_at": "2026-08-14T23:51:46.278604+00:00"
+    "confidence": 70.09619992454887,
+    "last_alert_at": "2026-08-18T02:51:54.895117+00:00"
   },
   "crypto:AVA": {
     "direction": "SELL",
@@ -533,5 +533,10 @@
     "direction": "SELL",
     "confidence": 71.9788991200036,
     "last_alert_at": "2026-08-18T02:41:46.535265+00:00"
+  },
+  "crypto:MEME": {
+    "direction": "SELL",
+    "confidence": 76.71271515741363,
+    "last_alert_at": "2026-08-18T02:51:55.597537+00:00"
   }
 }
