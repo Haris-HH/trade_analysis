@@ -568,5 +568,10 @@
     "direction": "BUY",
     "confidence": 74.28502684743529,
     "last_alert_at": "2026-08-18T09:36:41.613290+00:00"
+  },
+  "crypto:TRIA": {
+    "direction": "BUY",
+    "confidence": 76.0284751956511,
+    "last_alert_at": "2026-08-18T18:36:41.833909+00:00"
   }
 }
