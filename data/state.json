@@ -25,9 +25,9 @@
     "last_alert_at": "2026-08-11T06:21:52.340505+00:00"
   },
   "crypto:KUB": {
-    "direction": "SELL",
-    "confidence": 75.58195889242337,
-    "last_alert_at": "2026-08-16T07:51:50.433479+00:00"
+    "direction": "BUY",
+    "confidence": 71.90380205771955,
+    "last_alert_at": "2026-08-18T03:32:01.077039+00:00"
   },
   "crypto:MET": {
     "direction": "SELL",
@@ -311,8 +311,8 @@
   },
   "crypto:GMT": {
     "direction": "SELL",
-    "confidence": 71.51680022493713,
-    "last_alert_at": "2026-08-14T12:21:51.492894+00:00"
+    "confidence": 71.839387137924,
+    "last_alert_at": "2026-08-18T03:32:00.522643+00:00"
   },
   "stock:STX": {
     "direction": "BUY",
