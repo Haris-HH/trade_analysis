@@ -563,5 +563,10 @@
     "direction": "SELL",
     "confidence": 78.70876935792762,
     "last_alert_at": "2026-08-18T07:11:00.646107+00:00"
+  },
+  "stock:BGRIM.BK": {
+    "direction": "BUY",
+    "confidence": 74.28502684743529,
+    "last_alert_at": "2026-08-18T09:36:41.613290+00:00"
   }
 }
