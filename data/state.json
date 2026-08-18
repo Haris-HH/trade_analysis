@@ -411,8 +411,8 @@
   },
   "crypto:ZAMA": {
     "direction": "SELL",
-    "confidence": 80.47942250398745,
-    "last_alert_at": "2026-08-16T04:06:37.057194+00:00"
+    "confidence": 70.94436068638771,
+    "last_alert_at": "2026-08-18T02:57:06.686400+00:00"
   },
   "crypto:PLUME": {
     "direction": "BUY",
@@ -425,9 +425,9 @@
     "last_alert_at": "2026-08-15T13:41:50.093586+00:00"
   },
   "crypto:BOME": {
-    "direction": "BUY",
-    "confidence": 86.74645759516586,
-    "last_alert_at": "2026-08-15T16:46:49.019775+00:00"
+    "direction": "SELL",
+    "confidence": 72.32349051867713,
+    "last_alert_at": "2026-08-18T02:57:06.129731+00:00"
   },
   "crypto:EDEN": {
     "direction": "SELL",
@@ -538,5 +538,10 @@
     "direction": "SELL",
     "confidence": 76.71271515741363,
     "last_alert_at": "2026-08-18T02:51:55.597537+00:00"
+  },
+  "crypto:TAO": {
+    "direction": "SELL",
+    "confidence": 71.13529483589046,
+    "last_alert_at": "2026-08-18T02:57:07.251113+00:00"
   }
 }
