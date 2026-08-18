@@ -430,9 +430,9 @@
     "last_alert_at": "2026-08-18T02:57:06.129731+00:00"
   },
   "crypto:EDEN": {
-    "direction": "SELL",
-    "confidence": 72.67677836071336,
-    "last_alert_at": "2026-08-15T17:51:49.814882+00:00"
+    "direction": "BUY",
+    "confidence": 77.87035789601637,
+    "last_alert_at": "2026-08-18T07:10:59.915444+00:00"
   },
   "crypto:FET": {
     "direction": "SELL",
@@ -450,9 +450,9 @@
     "last_alert_at": "2026-08-16T02:21:49.817776+00:00"
   },
   "crypto:ZENT": {
-    "direction": "SELL",
-    "confidence": 70.20620011163324,
-    "last_alert_at": "2026-08-16T01:36:44.268964+00:00"
+    "direction": "BUY",
+    "confidence": 74.81506639460956,
+    "last_alert_at": "2026-08-18T07:11:01.328330+00:00"
   },
   "crypto:OPG": {
     "direction": "BUY",
@@ -558,5 +558,10 @@
     "direction": "SELL",
     "confidence": 70.69126405022952,
     "last_alert_at": "2026-08-18T06:46:51.693594+00:00"
+  },
+  "crypto:DMC": {
+    "direction": "SELL",
+    "confidence": 78.70876935792762,
+    "last_alert_at": "2026-08-18T07:11:00.646107+00:00"
   }
 }
