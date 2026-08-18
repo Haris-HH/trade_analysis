@@ -561,8 +561,8 @@
   },
   "crypto:DMC": {
     "direction": "SELL",
-    "confidence": 78.70876935792762,
-    "last_alert_at": "2026-08-18T07:11:00.646107+00:00"
+    "confidence": 72.93627053965743,
+    "last_alert_at": "2026-08-18T20:31:52.297551+00:00"
   },
   "stock:BGRIM.BK": {
     "direction": "BUY",
