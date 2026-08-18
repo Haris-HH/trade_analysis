@@ -573,5 +573,10 @@
     "direction": "BUY",
     "confidence": 76.0284751956511,
     "last_alert_at": "2026-08-18T18:36:41.833909+00:00"
+  },
+  "stock:BLDR": {
+    "direction": "SELL",
+    "confidence": 74.49775937167641,
+    "last_alert_at": "2026-08-18T20:01:55.848345+00:00"
   }
 }
