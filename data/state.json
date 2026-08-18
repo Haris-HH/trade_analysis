@@ -141,8 +141,8 @@
   },
   "crypto:ES": {
     "direction": "SELL",
-    "confidence": 70.64946719007958,
-    "last_alert_at": "2026-08-18T01:31:54.134489+00:00"
+    "confidence": 71.75508100989232,
+    "last_alert_at": "2026-08-18T13:21:48.080338+00:00"
   },
   "crypto:HOME": {
     "direction": "SELL",
