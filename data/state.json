@@ -553,5 +553,10 @@
     "direction": "BUY",
     "confidence": 71.84321821765765,
     "last_alert_at": "2026-08-18T06:31:55.513273+00:00"
+  },
+  "crypto:BLEND": {
+    "direction": "SELL",
+    "confidence": 70.69126405022952,
+    "last_alert_at": "2026-08-18T06:46:51.693594+00:00"
   }
 }
