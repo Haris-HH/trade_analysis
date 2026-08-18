@@ -543,5 +543,10 @@
     "direction": "SELL",
     "confidence": 71.13529483589046,
     "last_alert_at": "2026-08-18T02:57:07.251113+00:00"
+  },
+  "crypto:SUI": {
+    "direction": "SELL",
+    "confidence": 71.62250426641772,
+    "last_alert_at": "2026-08-18T04:26:51.895647+00:00"
   }
 }
