@@ -548,5 +548,10 @@
     "direction": "SELL",
     "confidence": 71.62250426641772,
     "last_alert_at": "2026-08-18T04:26:51.895647+00:00"
+  },
+  "crypto:CFG": {
+    "direction": "BUY",
+    "confidence": 71.84321821765765,
+    "last_alert_at": "2026-08-18T06:31:55.513273+00:00"
   }
 }
