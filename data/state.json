@@ -176,8 +176,8 @@
   },
   "crypto:ZRC": {
     "direction": "SELL",
-    "confidence": 71.35783527626226,
-    "last_alert_at": "2026-08-17T00:36:46.319557+00:00"
+    "confidence": 72.75783286702705,
+    "last_alert_at": "2026-08-18T03:46:52.100463+00:00"
   },
   "crypto:VIC": {
     "direction": "SELL",
@@ -195,9 +195,9 @@
     "last_alert_at": "2026-08-17T05:46:40.815521+00:00"
   },
   "crypto:JFIN": {
-    "direction": "SELL",
-    "confidence": 72.16109500985998,
-    "last_alert_at": "2026-08-15T14:31:51.165893+00:00"
+    "direction": "BUY",
+    "confidence": 70.16273151881201,
+    "last_alert_at": "2026-08-18T03:46:52.600002+00:00"
   },
   "crypto:KAITO": {
     "direction": "SELL",
