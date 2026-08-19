@@ -85,9 +85,9 @@
     "last_alert_at": "2026-08-19T15:32:05.446629+00:00"
   },
   "crypto:LIT": {
-    "direction": "SELL",
-    "confidence": 71.21392205051461,
-    "last_alert_at": "2026-08-12T14:26:43.511506+00:00"
+    "direction": "BUY",
+    "confidence": 72.8516456748579,
+    "last_alert_at": "2026-08-19T19:16:47.373198+00:00"
   },
   "crypto:NEAR": {
     "direction": "SELL",
