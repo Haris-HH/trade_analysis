@@ -588,5 +588,10 @@
     "direction": "BUY",
     "confidence": 82.20254594436172,
     "last_alert_at": "2026-08-19T05:21:46.576289+00:00"
+  },
+  "crypto:MASK": {
+    "direction": "BUY",
+    "confidence": 70.54960274387413,
+    "last_alert_at": "2026-08-19T05:51:48.935922+00:00"
   }
 }
