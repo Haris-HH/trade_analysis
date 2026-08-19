@@ -608,5 +608,10 @@
     "direction": "BUY",
     "confidence": 76.29343530637604,
     "last_alert_at": "2026-08-19T14:52:00.061588+00:00"
+  },
+  "crypto:CAKE": {
+    "direction": "BUY",
+    "confidence": 77.29640461919436,
+    "last_alert_at": "2026-08-19T15:26:48.927224+00:00"
   }
 }
