@@ -216,8 +216,8 @@
   },
   "crypto:HFT": {
     "direction": "SELL",
-    "confidence": 82.66578699657343,
-    "last_alert_at": "2026-08-15T23:00:27.646112+00:00"
+    "confidence": 70.44441508110255,
+    "last_alert_at": "2026-08-19T07:56:43.061145+00:00"
   },
   "crypto:PORTAL": {
     "direction": "BUY",
@@ -340,9 +340,9 @@
     "last_alert_at": "2026-08-18T03:02:01.899076+00:00"
   },
   "crypto:APEX": {
-    "direction": "SELL",
-    "confidence": 72.60355158066046,
-    "last_alert_at": "2026-08-16T03:56:51.037743+00:00"
+    "direction": "BUY",
+    "confidence": 72.54764197118597,
+    "last_alert_at": "2026-08-19T07:56:42.561162+00:00"
   },
   "crypto:MAVIA": {
     "direction": "BUY",
@@ -593,5 +593,10 @@
     "direction": "BUY",
     "confidence": 70.54960274387413,
     "last_alert_at": "2026-08-19T05:51:48.935922+00:00"
+  },
+  "crypto:G": {
+    "direction": "BUY",
+    "confidence": 71.31660321595159,
+    "last_alert_at": "2026-08-19T07:56:43.577264+00:00"
   }
 }
