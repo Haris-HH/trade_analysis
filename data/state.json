@@ -90,9 +90,9 @@
     "last_alert_at": "2026-08-19T19:36:33.669680+00:00"
   },
   "crypto:NEAR": {
-    "direction": "SELL",
-    "confidence": 74.97730338791068,
-    "last_alert_at": "2026-08-11T14:57:55.629324+00:00"
+    "direction": "BUY",
+    "confidence": 71.73675008519744,
+    "last_alert_at": "2026-08-19T21:32:27.177165+00:00"
   },
   "crypto:ONDO": {
     "direction": "SELL",
@@ -673,5 +673,10 @@
     "direction": "BUY",
     "confidence": 73.44316546439433,
     "last_alert_at": "2026-08-19T21:12:07.529475+00:00"
+  },
+  "crypto:MOG": {
+    "direction": "BUY",
+    "confidence": 71.40482259441967,
+    "last_alert_at": "2026-08-19T21:32:26.582604+00:00"
   }
 }
