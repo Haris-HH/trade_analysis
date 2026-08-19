@@ -31,8 +31,8 @@
   },
   "crypto:MET": {
     "direction": "BUY",
-    "confidence": 73.36638274638582,
-    "last_alert_at": "2026-08-19T15:56:58.205190+00:00"
+    "confidence": 76.30037023304476,
+    "last_alert_at": "2026-08-19T21:12:07.071997+00:00"
   },
   "crypto:BONK": {
     "direction": "SELL",
@@ -663,5 +663,15 @@
     "direction": "BUY",
     "confidence": 70.28546829544602,
     "last_alert_at": "2026-08-19T20:55:58.780483+00:00"
+  },
+  "crypto:PENGU": {
+    "direction": "BUY",
+    "confidence": 77.31948338414378,
+    "last_alert_at": "2026-08-19T21:12:06.622979+00:00"
+  },
+  "crypto:PEPE": {
+    "direction": "BUY",
+    "confidence": 73.44316546439433,
+    "last_alert_at": "2026-08-19T21:12:07.529475+00:00"
   }
 }
