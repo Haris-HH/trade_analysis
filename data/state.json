@@ -618,5 +618,10 @@
     "direction": "BUY",
     "confidence": 80.82772903110921,
     "last_alert_at": "2026-08-19T15:32:04.835802+00:00"
+  },
+  "crypto:ARB": {
+    "direction": "BUY",
+    "confidence": 78.48031433616882,
+    "last_alert_at": "2026-08-19T15:42:08.484276+00:00"
   }
 }
