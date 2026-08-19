@@ -623,5 +623,10 @@
     "direction": "BUY",
     "confidence": 78.48031433616882,
     "last_alert_at": "2026-08-19T15:42:08.484276+00:00"
+  },
+  "crypto:RPL": {
+    "direction": "BUY",
+    "confidence": 70.5088456708904,
+    "last_alert_at": "2026-08-19T18:46:47.766363+00:00"
   }
 }
