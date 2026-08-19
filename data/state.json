@@ -220,9 +220,9 @@
     "last_alert_at": "2026-08-19T07:56:43.061145+00:00"
   },
   "crypto:PORTAL": {
-    "direction": "BUY",
-    "confidence": 73.95124386814015,
-    "last_alert_at": "2026-08-17T02:56:48.757873+00:00"
+    "direction": "SELL",
+    "confidence": 88.03182854769742,
+    "last_alert_at": "2026-08-19T11:31:50.821080+00:00"
   },
   "crypto:PARTI": {
     "direction": "SELL",
