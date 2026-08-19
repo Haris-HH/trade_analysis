@@ -601,8 +601,8 @@
   },
   "crypto:PYBOBO": {
     "direction": "SELL",
-    "confidence": 73.73901049868348,
-    "last_alert_at": "2026-08-19T17:41:54.563331+00:00"
+    "confidence": 72.84843906993135,
+    "last_alert_at": "2026-08-19T21:42:19.522833+00:00"
   },
   "crypto:SOL": {
     "direction": "BUY",
