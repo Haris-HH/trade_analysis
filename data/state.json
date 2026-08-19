@@ -330,9 +330,9 @@
     "last_alert_at": "2026-08-14T14:41:49.710040+00:00"
   },
   "crypto:ENA": {
-    "direction": "SELL",
-    "confidence": 71.57736145514444,
-    "last_alert_at": "2026-08-16T21:41:51.836719+00:00"
+    "direction": "BUY",
+    "confidence": 72.27321317351965,
+    "last_alert_at": "2026-08-19T21:06:57.360936+00:00"
   },
   "crypto:CHZ": {
     "direction": "SELL",
