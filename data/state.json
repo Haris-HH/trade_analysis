@@ -611,13 +611,13 @@
   },
   "crypto:CAKE": {
     "direction": "BUY",
-    "confidence": 77.29640461919436,
-    "last_alert_at": "2026-08-19T15:26:48.927224+00:00"
+    "confidence": 75.92175694491112,
+    "last_alert_at": "2026-08-19T21:17:11.094194+00:00"
   },
   "crypto:SPX": {
     "direction": "BUY",
-    "confidence": 70.86563537079662,
-    "last_alert_at": "2026-08-19T19:46:49.354358+00:00"
+    "confidence": 84.56006695651016,
+    "last_alert_at": "2026-08-19T21:17:10.466306+00:00"
   },
   "crypto:ARB": {
     "direction": "BUY",
