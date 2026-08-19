@@ -410,9 +410,9 @@
     "last_alert_at": "2026-08-19T12:51:46.356321+00:00"
   },
   "crypto:ZAMA": {
-    "direction": "SELL",
-    "confidence": 70.94436068638771,
-    "last_alert_at": "2026-08-18T02:57:06.686400+00:00"
+    "direction": "BUY",
+    "confidence": 70.7551646480632,
+    "last_alert_at": "2026-08-19T17:11:48.652920+00:00"
   },
   "crypto:PLUME": {
     "direction": "BUY",
