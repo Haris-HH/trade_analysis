@@ -66,8 +66,8 @@
   },
   "crypto:BICO": {
     "direction": "SELL",
-    "confidence": 70.47760815158749,
-    "last_alert_at": "2026-08-19T08:56:56.929423+00:00"
+    "confidence": 76.22536887595764,
+    "last_alert_at": "2026-08-19T15:52:05.633781+00:00"
   },
   "crypto:LUNA": {
     "direction": "BUY",
@@ -586,8 +586,8 @@
   },
   "crypto:HEMI": {
     "direction": "BUY",
-    "confidence": 74.51330571087813,
-    "last_alert_at": "2026-08-19T11:21:45.797562+00:00"
+    "confidence": 70.95475001168252,
+    "last_alert_at": "2026-08-19T15:52:05.061161+00:00"
   },
   "crypto:MASK": {
     "direction": "BUY",
