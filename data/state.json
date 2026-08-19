@@ -603,5 +603,10 @@
     "direction": "SELL",
     "confidence": 72.15101681673406,
     "last_alert_at": "2026-08-19T13:31:50.663265+00:00"
+  },
+  "crypto:SOL": {
+    "direction": "BUY",
+    "confidence": 76.29343530637604,
+    "last_alert_at": "2026-08-19T14:52:00.061588+00:00"
   }
 }
