@@ -86,8 +86,8 @@
   },
   "crypto:LIT": {
     "direction": "BUY",
-    "confidence": 72.8516456748579,
-    "last_alert_at": "2026-08-19T19:16:47.373198+00:00"
+    "confidence": 83.66792540484514,
+    "last_alert_at": "2026-08-19T19:36:33.669680+00:00"
   },
   "crypto:NEAR": {
     "direction": "SELL",
@@ -251,8 +251,8 @@
   },
   "crypto:MPLX": {
     "direction": "BUY",
-    "confidence": 74.00280660199412,
-    "last_alert_at": "2026-08-19T15:32:06.663001+00:00"
+    "confidence": 72.6758842649866,
+    "last_alert_at": "2026-08-19T19:36:34.158113+00:00"
   },
   "crypto:XAI": {
     "direction": "BUY",
