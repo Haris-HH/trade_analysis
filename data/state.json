@@ -551,8 +551,8 @@
   },
   "crypto:CFG": {
     "direction": "SELL",
-    "confidence": 71.08915884468516,
-    "last_alert_at": "2026-08-19T04:56:50.224050+00:00"
+    "confidence": 81.64113416121387,
+    "last_alert_at": "2026-08-19T08:51:51.260314+00:00"
   },
   "crypto:BLEND": {
     "direction": "SELL",
