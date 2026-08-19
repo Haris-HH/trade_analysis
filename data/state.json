@@ -653,5 +653,10 @@
     "direction": "BUY",
     "confidence": 73.8504436992542,
     "last_alert_at": "2026-08-19T20:16:48.951671+00:00"
+  },
+  "crypto:FLOKI": {
+    "direction": "BUY",
+    "confidence": 73.6787152688595,
+    "last_alert_at": "2026-08-19T20:51:53.506031+00:00"
   }
 }
