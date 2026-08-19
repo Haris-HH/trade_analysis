@@ -628,5 +628,25 @@
     "direction": "BUY",
     "confidence": 70.5088456708904,
     "last_alert_at": "2026-08-19T18:46:47.766363+00:00"
+  },
+  "stock:Q": {
+    "direction": "SELL",
+    "confidence": 73.39730817398134,
+    "last_alert_at": "2026-08-19T20:02:14.599497+00:00"
+  },
+  "stock:ARE": {
+    "direction": "BUY",
+    "confidence": 80.63710239337902,
+    "last_alert_at": "2026-08-19T20:02:15.188924+00:00"
+  },
+  "stock:NCLH": {
+    "direction": "SELL",
+    "confidence": 70.63602501907063,
+    "last_alert_at": "2026-08-19T20:02:15.799381+00:00"
+  },
+  "stock:JCI": {
+    "direction": "SELL",
+    "confidence": 72.34655648651534,
+    "last_alert_at": "2026-08-19T20:02:16.380603+00:00"
   }
 }
