@@ -441,8 +441,8 @@
   },
   "crypto:TA": {
     "direction": "SELL",
-    "confidence": 76.95442265143487,
-    "last_alert_at": "2026-08-19T14:32:06.021137+00:00"
+    "confidence": 70.97505931875685,
+    "last_alert_at": "2026-08-19T23:47:05.754580+00:00"
   },
   "crypto:BASED": {
     "direction": "BUY",
