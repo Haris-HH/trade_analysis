@@ -35,9 +35,9 @@
     "last_alert_at": "2026-08-19T21:12:07.071997+00:00"
   },
   "crypto:BONK": {
-    "direction": "SELL",
-    "confidence": 73.08971603763565,
-    "last_alert_at": "2026-08-12T12:36:45.022911+00:00"
+    "direction": "BUY",
+    "confidence": 71.11200838660038,
+    "last_alert_at": "2026-08-19T21:52:15.006280+00:00"
   },
   "crypto:EDGE": {
     "direction": "SELL",
@@ -411,8 +411,8 @@
   },
   "crypto:ZAMA": {
     "direction": "BUY",
-    "confidence": 70.7551646480632,
-    "last_alert_at": "2026-08-19T17:11:48.652920+00:00"
+    "confidence": 71.24391092122656,
+    "last_alert_at": "2026-08-19T21:52:15.454306+00:00"
   },
   "crypto:PLUME": {
     "direction": "BUY",
