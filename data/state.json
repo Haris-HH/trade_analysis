@@ -688,5 +688,15 @@
     "direction": "BUY",
     "confidence": 70.37762241062933,
     "last_alert_at": "2026-08-19T21:57:18.852491+00:00"
+  },
+  "crypto:SHIB": {
+    "direction": "BUY",
+    "confidence": 72.98996586307857,
+    "last_alert_at": "2026-08-19T22:36:59.576956+00:00"
+  },
+  "crypto:XRP": {
+    "direction": "BUY",
+    "confidence": 73.29100865744603,
+    "last_alert_at": "2026-08-19T22:37:00.171696+00:00"
   }
 }
