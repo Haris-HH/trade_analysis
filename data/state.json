@@ -21,8 +21,8 @@
   },
   "crypto:PUMP": {
     "direction": "BUY",
-    "confidence": 73.28075685346155,
-    "last_alert_at": "2026-08-18T22:41:46.131630+00:00"
+    "confidence": 80.47980146305818,
+    "last_alert_at": "2026-08-19T15:36:57.142454+00:00"
   },
   "crypto:KUB": {
     "direction": "BUY",
@@ -196,8 +196,8 @@
   },
   "crypto:JFIN": {
     "direction": "BUY",
-    "confidence": 72.0805351550901,
-    "last_alert_at": "2026-08-19T06:06:47.287328+00:00"
+    "confidence": 73.03648357012915,
+    "last_alert_at": "2026-08-19T15:36:57.602610+00:00"
   },
   "crypto:KAITO": {
     "direction": "SELL",
