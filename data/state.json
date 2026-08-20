@@ -873,5 +873,10 @@
     "direction": "BUY",
     "confidence": 71.15228804082098,
     "last_alert_at": "2026-08-20T16:52:45.240940+00:00"
+  },
+  "crypto:XDC": {
+    "direction": "BUY",
+    "confidence": 71.90189762718484,
+    "last_alert_at": "2026-08-20T18:42:03.306868+00:00"
   }
 }
