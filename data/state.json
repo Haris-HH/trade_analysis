@@ -793,5 +793,10 @@
     "direction": "BUY",
     "confidence": 72.70478075976648,
     "last_alert_at": "2026-08-20T09:42:28.912588+00:00"
+  },
+  "crypto:ZORA": {
+    "direction": "BUY",
+    "confidence": 70.78366737804582,
+    "last_alert_at": "2026-08-20T10:12:02.095779+00:00"
   }
 }
