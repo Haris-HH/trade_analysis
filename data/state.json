@@ -696,8 +696,8 @@
   },
   "crypto:XRP": {
     "direction": "BUY",
-    "confidence": 87.68711687256514,
-    "last_alert_at": "2026-08-20T08:57:40.813158+00:00"
+    "confidence": 75.78659562637071,
+    "last_alert_at": "2026-08-20T16:27:13.701633+00:00"
   },
   "crypto:DOGE": {
     "direction": "BUY",
@@ -816,8 +816,8 @@
   },
   "crypto:XPL": {
     "direction": "BUY",
-    "confidence": 73.5633172987542,
-    "last_alert_at": "2026-08-20T14:36:57.761306+00:00"
+    "confidence": 86.35063241548295,
+    "last_alert_at": "2026-08-20T16:27:12.368034+00:00"
   },
   "crypto:BTC": {
     "direction": "BUY",
@@ -846,8 +846,8 @@
   },
   "crypto:ZIG": {
     "direction": "BUY",
-    "confidence": 71.93571968211197,
-    "last_alert_at": "2026-08-20T16:12:20.821509+00:00"
+    "confidence": 82.37838573565914,
+    "last_alert_at": "2026-08-20T16:27:12.999832+00:00"
   },
   "crypto:ABT": {
     "direction": "BUY",
