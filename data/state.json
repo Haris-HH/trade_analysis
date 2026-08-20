@@ -380,9 +380,9 @@
     "last_alert_at": "2026-08-18T00:56:43.617154+00:00"
   },
   "crypto:ALCH": {
-    "direction": "SELL",
-    "confidence": 74.04339291719295,
-    "last_alert_at": "2026-08-15T09:36:48.671267+00:00"
+    "direction": "BUY",
+    "confidence": 76.08808894626415,
+    "last_alert_at": "2026-08-20T07:47:04.362822+00:00"
   },
   "crypto:EPIC": {
     "direction": "BUY",
@@ -681,8 +681,8 @@
   },
   "crypto:JUP": {
     "direction": "BUY",
-    "confidence": 73.13880516204354,
-    "last_alert_at": "2026-08-19T21:57:17.589675+00:00"
+    "confidence": 70.16790668782076,
+    "last_alert_at": "2026-08-20T07:47:04.817927+00:00"
   },
   "crypto:MEW": {
     "direction": "BUY",
