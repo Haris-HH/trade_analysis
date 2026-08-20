@@ -36,8 +36,8 @@
   },
   "crypto:BONK": {
     "direction": "BUY",
-    "confidence": 75.76998293895575,
-    "last_alert_at": "2026-08-20T12:37:10.195011+00:00"
+    "confidence": 72.17770508385276,
+    "last_alert_at": "2026-08-20T16:57:44.718152+00:00"
   },
   "crypto:EDGE": {
     "direction": "BUY",
@@ -71,8 +71,8 @@
   },
   "crypto:LUNA": {
     "direction": "BUY",
-    "confidence": 71.19200446876306,
-    "last_alert_at": "2026-08-20T08:42:47.217231+00:00"
+    "confidence": 75.7831766865657,
+    "last_alert_at": "2026-08-20T16:57:44.210689+00:00"
   },
   "crypto:SQD": {
     "direction": "SELL",
@@ -691,8 +691,8 @@
   },
   "crypto:SHIB": {
     "direction": "BUY",
-    "confidence": 80.61128295477519,
-    "last_alert_at": "2026-08-20T08:32:57.563129+00:00"
+    "confidence": 72.01916801941117,
+    "last_alert_at": "2026-08-20T16:57:45.233112+00:00"
   },
   "crypto:XRP": {
     "direction": "BUY",
@@ -706,8 +706,8 @@
   },
   "crypto:XLM": {
     "direction": "BUY",
-    "confidence": 70.29057090013386,
-    "last_alert_at": "2026-08-20T15:52:41.581474+00:00"
+    "confidence": 84.69127308470166,
+    "last_alert_at": "2026-08-20T16:57:43.571229+00:00"
   },
   "crypto:VELO": {
     "direction": "BUY",
