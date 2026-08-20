@@ -743,5 +743,10 @@
     "direction": "BUY",
     "confidence": 75.15557531176333,
     "last_alert_at": "2026-08-20T05:41:53.401726+00:00"
+  },
+  "crypto:RED": {
+    "direction": "BUY",
+    "confidence": 71.08352990814662,
+    "last_alert_at": "2026-08-20T06:21:48.444959+00:00"
   }
 }
