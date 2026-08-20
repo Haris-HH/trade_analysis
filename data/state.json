@@ -111,8 +111,8 @@
   },
   "crypto:HBAR": {
     "direction": "BUY",
-    "confidence": 72.31715279006791,
-    "last_alert_at": "2026-08-20T02:47:00.243486+00:00"
+    "confidence": 73.18229678787708,
+    "last_alert_at": "2026-08-20T11:42:29.361829+00:00"
   },
   "crypto:RNDR": {
     "direction": "SELL",
@@ -391,8 +391,8 @@
   },
   "crypto:CHIP": {
     "direction": "BUY",
-    "confidence": 70.5016199827153,
-    "last_alert_at": "2026-08-17T06:51:43.195697+00:00"
+    "confidence": 72.29349182127298,
+    "last_alert_at": "2026-08-20T11:42:30.130809+00:00"
   },
   "crypto:PEOPLE": {
     "direction": "BUY",
@@ -606,8 +606,8 @@
   },
   "crypto:SOL": {
     "direction": "BUY",
-    "confidence": 70.27709322784969,
-    "last_alert_at": "2026-08-20T06:46:59.144227+00:00"
+    "confidence": 76.70889266391791,
+    "last_alert_at": "2026-08-20T11:42:28.680325+00:00"
   },
   "crypto:CAKE": {
     "direction": "BUY",
@@ -666,8 +666,8 @@
   },
   "crypto:PENGU": {
     "direction": "BUY",
-    "confidence": 77.80902654113933,
-    "last_alert_at": "2026-08-20T08:32:56.932922+00:00"
+    "confidence": 89.86470804261015,
+    "last_alert_at": "2026-08-20T11:42:27.985898+00:00"
   },
   "crypto:PEPE": {
     "direction": "BUY",
