@@ -495,9 +495,9 @@
     "last_alert_at": "2026-08-16T12:46:52.367489+00:00"
   },
   "crypto:WLD": {
-    "direction": "SELL",
-    "confidence": 75.70475200536364,
-    "last_alert_at": "2026-08-18T05:41:53.882551+00:00"
+    "direction": "BUY",
+    "confidence": 79.26970043327081,
+    "last_alert_at": "2026-08-20T08:22:42.156970+00:00"
   },
   "crypto:OPEN": {
     "direction": "SELL",
@@ -540,9 +540,9 @@
     "last_alert_at": "2026-08-18T02:51:55.597537+00:00"
   },
   "crypto:TAO": {
-    "direction": "SELL",
-    "confidence": 71.13529483589046,
-    "last_alert_at": "2026-08-18T02:57:07.251113+00:00"
+    "direction": "BUY",
+    "confidence": 71.66895100766185,
+    "last_alert_at": "2026-08-20T08:22:43.374585+00:00"
   },
   "crypto:SUI": {
     "direction": "SELL",
@@ -696,8 +696,8 @@
   },
   "crypto:XRP": {
     "direction": "BUY",
-    "confidence": 73.29100865744603,
-    "last_alert_at": "2026-08-19T22:37:00.171696+00:00"
+    "confidence": 77.08538754348369,
+    "last_alert_at": "2026-08-20T08:22:42.775663+00:00"
   },
   "crypto:DOGE": {
     "direction": "BUY",
@@ -716,8 +716,8 @@
   },
   "crypto:OP": {
     "direction": "BUY",
-    "confidence": 74.95743884304491,
-    "last_alert_at": "2026-08-20T00:42:07.582706+00:00"
+    "confidence": 78.6700945608288,
+    "last_alert_at": "2026-08-20T08:22:40.953749+00:00"
   },
   "crypto:PNUT": {
     "direction": "BUY",
@@ -758,5 +758,10 @@
     "direction": "BUY",
     "confidence": 74.4670222800717,
     "last_alert_at": "2026-08-20T08:17:20.722466+00:00"
+  },
+  "crypto:AIXBT": {
+    "direction": "BUY",
+    "confidence": 72.06350400289132,
+    "last_alert_at": "2026-08-20T08:22:41.553177+00:00"
   }
 }
