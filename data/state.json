@@ -545,9 +545,9 @@
     "last_alert_at": "2026-08-20T08:22:43.374585+00:00"
   },
   "crypto:SUI": {
-    "direction": "SELL",
-    "confidence": 71.62250426641772,
-    "last_alert_at": "2026-08-18T04:26:51.895647+00:00"
+    "direction": "BUY",
+    "confidence": 80.56885695851507,
+    "last_alert_at": "2026-08-20T08:52:50.492086+00:00"
   },
   "crypto:CFG": {
     "direction": "SELL",
