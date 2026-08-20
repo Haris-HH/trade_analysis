@@ -1,8 +1,8 @@
 {
   "crypto:CRV": {
     "direction": "BUY",
-    "confidence": 82.2474195170491,
-    "last_alert_at": "2026-08-20T10:51:54.369158+00:00"
+    "confidence": 80.86784617145611,
+    "last_alert_at": "2026-08-20T20:57:01.343575+00:00"
   },
   "crypto:ADA": {
     "direction": "BUY",
@@ -771,8 +771,8 @@
   },
   "crypto:DOOD": {
     "direction": "BUY",
-    "confidence": 74.05946510807541,
-    "last_alert_at": "2026-08-20T16:52:47.405728+00:00"
+    "confidence": 70.7648223166875,
+    "last_alert_at": "2026-08-20T20:57:00.819896+00:00"
   },
   "crypto:POPCAT": {
     "direction": "BUY",
@@ -871,8 +871,8 @@
   },
   "crypto:YB": {
     "direction": "BUY",
-    "confidence": 71.15228804082098,
-    "last_alert_at": "2026-08-20T16:52:45.240940+00:00"
+    "confidence": 73.93909166744768,
+    "last_alert_at": "2026-08-20T20:57:01.806720+00:00"
   },
   "crypto:XDC": {
     "direction": "BUY",
