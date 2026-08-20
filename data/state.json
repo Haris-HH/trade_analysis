@@ -21,8 +21,8 @@
   },
   "crypto:PUMP": {
     "direction": "BUY",
-    "confidence": 74.2960488303292,
-    "last_alert_at": "2026-08-20T09:37:39.596434+00:00"
+    "confidence": 77.75486968162991,
+    "last_alert_at": "2026-08-20T13:57:25.351763+00:00"
   },
   "crypto:KUB": {
     "direction": "BUY",
@@ -686,8 +686,8 @@
   },
   "crypto:MEW": {
     "direction": "BUY",
-    "confidence": 80.28880680743885,
-    "last_alert_at": "2026-08-20T08:42:48.539152+00:00"
+    "confidence": 74.32997737679963,
+    "last_alert_at": "2026-08-20T13:57:25.833281+00:00"
   },
   "crypto:SHIB": {
     "direction": "BUY",
