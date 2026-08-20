@@ -878,5 +878,10 @@
     "direction": "BUY",
     "confidence": 71.90189762718484,
     "last_alert_at": "2026-08-20T18:42:03.306868+00:00"
+  },
+  "stock:FCX": {
+    "direction": "BUY",
+    "confidence": 70.91208525636448,
+    "last_alert_at": "2026-08-20T20:02:16.922737+00:00"
   }
 }
