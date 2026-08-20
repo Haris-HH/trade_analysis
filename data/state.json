@@ -681,8 +681,8 @@
   },
   "crypto:JUP": {
     "direction": "BUY",
-    "confidence": 70.16790668782076,
-    "last_alert_at": "2026-08-20T07:47:04.817927+00:00"
+    "confidence": 74.01571486541364,
+    "last_alert_at": "2026-08-20T16:12:17.616580+00:00"
   },
   "crypto:MEW": {
     "direction": "BUY",
@@ -838,5 +838,15 @@
     "direction": "BUY",
     "confidence": 73.68281388080216,
     "last_alert_at": "2026-08-20T15:32:29.088839+00:00"
+  },
+  "crypto:SAND": {
+    "direction": "BUY",
+    "confidence": 83.48432762018818,
+    "last_alert_at": "2026-08-20T16:12:18.863951+00:00"
+  },
+  "crypto:ZIG": {
+    "direction": "BUY",
+    "confidence": 71.93571968211197,
+    "last_alert_at": "2026-08-20T16:12:20.821509+00:00"
   }
 }
