@@ -696,8 +696,8 @@
   },
   "crypto:XRP": {
     "direction": "BUY",
-    "confidence": 77.08538754348369,
-    "last_alert_at": "2026-08-20T08:22:42.775663+00:00"
+    "confidence": 87.68711687256514,
+    "last_alert_at": "2026-08-20T08:57:40.813158+00:00"
   },
   "crypto:DOGE": {
     "direction": "BUY",
@@ -721,8 +721,8 @@
   },
   "crypto:PNUT": {
     "direction": "BUY",
-    "confidence": 82.5118473047606,
-    "last_alert_at": "2026-08-20T04:56:59.451968+00:00"
+    "confidence": 73.41583428878307,
+    "last_alert_at": "2026-08-20T08:57:41.757733+00:00"
   },
   "crypto:EIGEN": {
     "direction": "BUY",
@@ -773,5 +773,10 @@
     "direction": "BUY",
     "confidence": 71.7713253490493,
     "last_alert_at": "2026-08-20T08:42:49.224625+00:00"
+  },
+  "crypto:POPCAT": {
+    "direction": "BUY",
+    "confidence": 70.62543950489501,
+    "last_alert_at": "2026-08-20T08:57:41.270646+00:00"
   }
 }
