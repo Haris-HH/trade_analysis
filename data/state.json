@@ -326,8 +326,8 @@
   },
   "crypto:BCH": {
     "direction": "BUY",
-    "confidence": 72.5961150649221,
-    "last_alert_at": "2026-08-20T08:17:19.976758+00:00"
+    "confidence": 70.54109990983778,
+    "last_alert_at": "2026-08-20T15:07:07.615713+00:00"
   },
   "crypto:ENA": {
     "direction": "BUY",
@@ -711,8 +711,8 @@
   },
   "crypto:VELO": {
     "direction": "BUY",
-    "confidence": 74.3387273806993,
-    "last_alert_at": "2026-08-20T10:47:28.434600+00:00"
+    "confidence": 77.23848951228275,
+    "last_alert_at": "2026-08-20T15:07:05.632467+00:00"
   },
   "crypto:OP": {
     "direction": "BUY",
@@ -823,5 +823,15 @@
     "direction": "BUY",
     "confidence": 75.00111171989204,
     "last_alert_at": "2026-08-20T14:42:29.297565+00:00"
+  },
+  "crypto:POW": {
+    "direction": "BUY",
+    "confidence": 72.14912338645605,
+    "last_alert_at": "2026-08-20T15:07:06.323606+00:00"
+  },
+  "crypto:BREV": {
+    "direction": "BUY",
+    "confidence": 74.07286913809837,
+    "last_alert_at": "2026-08-20T15:07:06.975516+00:00"
   }
 }
