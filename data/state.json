@@ -541,8 +541,8 @@
   },
   "crypto:TAO": {
     "direction": "BUY",
-    "confidence": 71.66895100766185,
-    "last_alert_at": "2026-08-20T08:22:43.374585+00:00"
+    "confidence": 79.77956514575074,
+    "last_alert_at": "2026-08-20T12:27:14.266557+00:00"
   },
   "crypto:SUI": {
     "direction": "BUY",
@@ -676,8 +676,8 @@
   },
   "crypto:MOG": {
     "direction": "BUY",
-    "confidence": 78.4834818206167,
-    "last_alert_at": "2026-08-20T08:12:07.030016+00:00"
+    "confidence": 71.94684144818203,
+    "last_alert_at": "2026-08-20T12:27:14.797300+00:00"
   },
   "crypto:JUP": {
     "direction": "BUY",
@@ -803,5 +803,10 @@
     "direction": "BUY",
     "confidence": 72.66142117158941,
     "last_alert_at": "2026-08-20T12:07:03.273887+00:00"
+  },
+  "crypto:STRK": {
+    "direction": "BUY",
+    "confidence": 72.4827620008837,
+    "last_alert_at": "2026-08-20T12:27:15.342085+00:00"
   }
 }
