@@ -31,8 +31,8 @@
   },
   "crypto:MET": {
     "direction": "BUY",
-    "confidence": 70.68356377732378,
-    "last_alert_at": "2026-08-20T01:26:49.696931+00:00"
+    "confidence": 75.07594753118414,
+    "last_alert_at": "2026-08-20T08:32:58.194925+00:00"
   },
   "crypto:BONK": {
     "direction": "BUY",
@@ -666,8 +666,8 @@
   },
   "crypto:PENGU": {
     "direction": "BUY",
-    "confidence": 77.31948338414378,
-    "last_alert_at": "2026-08-19T21:12:06.622979+00:00"
+    "confidence": 77.80902654113933,
+    "last_alert_at": "2026-08-20T08:32:56.932922+00:00"
   },
   "crypto:PEPE": {
     "direction": "BUY",
@@ -691,8 +691,8 @@
   },
   "crypto:SHIB": {
     "direction": "BUY",
-    "confidence": 72.98996586307857,
-    "last_alert_at": "2026-08-19T22:36:59.576956+00:00"
+    "confidence": 80.61128295477519,
+    "last_alert_at": "2026-08-20T08:32:57.563129+00:00"
   },
   "crypto:XRP": {
     "direction": "BUY",
