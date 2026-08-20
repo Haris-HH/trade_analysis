@@ -853,5 +853,10 @@
     "direction": "BUY",
     "confidence": 70.55631883317551,
     "last_alert_at": "2026-08-20T16:22:08.699681+00:00"
+  },
+  "crypto:BEAM": {
+    "direction": "BUY",
+    "confidence": 74.09146521560079,
+    "last_alert_at": "2026-08-20T16:42:28.917902+00:00"
   }
 }
