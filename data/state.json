@@ -848,5 +848,10 @@
     "direction": "BUY",
     "confidence": 71.93571968211197,
     "last_alert_at": "2026-08-20T16:12:20.821509+00:00"
+  },
+  "crypto:ABT": {
+    "direction": "BUY",
+    "confidence": 70.55631883317551,
+    "last_alert_at": "2026-08-20T16:22:08.699681+00:00"
   }
 }
