@@ -251,8 +251,8 @@
   },
   "crypto:MPLX": {
     "direction": "BUY",
-    "confidence": 70.70020435752986,
-    "last_alert_at": "2026-08-20T05:01:58.679162+00:00"
+    "confidence": 71.98116728722297,
+    "last_alert_at": "2026-08-20T09:02:21.870657+00:00"
   },
   "crypto:XAI": {
     "direction": "BUY",
@@ -460,9 +460,9 @@
     "last_alert_at": "2026-08-18T05:46:50.395258+00:00"
   },
   "crypto:BAND": {
-    "direction": "SELL",
-    "confidence": 74.29442795030391,
-    "last_alert_at": "2026-08-17T11:41:40.314150+00:00"
+    "direction": "BUY",
+    "confidence": 71.69730654739526,
+    "last_alert_at": "2026-08-20T09:02:22.387355+00:00"
   },
   "crypto:GPS": {
     "direction": "BUY",
