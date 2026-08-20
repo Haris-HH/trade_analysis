@@ -270,9 +270,9 @@
     "last_alert_at": "2026-08-15T02:36:57.183949+00:00"
   },
   "crypto:BABYDOGE": {
-    "direction": "SELL",
-    "confidence": 71.51452733574008,
-    "last_alert_at": "2026-08-14T10:22:09.592733+00:00"
+    "direction": "BUY",
+    "confidence": 70.72340551816131,
+    "last_alert_at": "2026-08-20T08:27:23.838932+00:00"
   },
   "crypto:MOVR": {
     "direction": "SELL",
@@ -686,8 +686,8 @@
   },
   "crypto:MEW": {
     "direction": "BUY",
-    "confidence": 70.37762241062933,
-    "last_alert_at": "2026-08-19T21:57:18.852491+00:00"
+    "confidence": 70.0059398048872,
+    "last_alert_at": "2026-08-20T08:27:23.381357+00:00"
   },
   "crypto:SHIB": {
     "direction": "BUY",
@@ -736,8 +736,8 @@
   },
   "crypto:NEIRO": {
     "direction": "BUY",
-    "confidence": 73.72764019640101,
-    "last_alert_at": "2026-08-20T04:16:53.212281+00:00"
+    "confidence": 71.58525808471738,
+    "last_alert_at": "2026-08-20T08:27:22.449990+00:00"
   },
   "crypto:ASTER": {
     "direction": "BUY",
@@ -763,5 +763,10 @@
     "direction": "BUY",
     "confidence": 72.06350400289132,
     "last_alert_at": "2026-08-20T08:22:41.553177+00:00"
+  },
+  "crypto:WIF": {
+    "direction": "BUY",
+    "confidence": 74.78261030887049,
+    "last_alert_at": "2026-08-20T08:27:22.908046+00:00"
   }
 }
