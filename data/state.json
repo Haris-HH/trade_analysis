@@ -41,8 +41,8 @@
   },
   "crypto:EDGE": {
     "direction": "BUY",
-    "confidence": 75.39084706343897,
-    "last_alert_at": "2026-08-20T06:41:53.256010+00:00"
+    "confidence": 85.47121412219397,
+    "last_alert_at": "2026-08-20T07:32:05.591764+00:00"
   },
   "crypto:SCRT": {
     "direction": "SELL",
