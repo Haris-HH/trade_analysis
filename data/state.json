@@ -36,8 +36,8 @@
   },
   "crypto:BONK": {
     "direction": "BUY",
-    "confidence": 71.11200838660038,
-    "last_alert_at": "2026-08-19T21:52:15.006280+00:00"
+    "confidence": 70.58426266669073,
+    "last_alert_at": "2026-08-20T08:17:17.974357+00:00"
   },
   "crypto:EDGE": {
     "direction": "BUY",
@@ -300,9 +300,9 @@
     "last_alert_at": "2026-08-14T10:52:05.856549+00:00"
   },
   "crypto:CHILLGUY": {
-    "direction": "SELL",
-    "confidence": 71.17508879433001,
-    "last_alert_at": "2026-08-14T10:52:06.328678+00:00"
+    "direction": "BUY",
+    "confidence": 73.4686162025221,
+    "last_alert_at": "2026-08-20T08:17:18.480775+00:00"
   },
   "crypto:GOAT": {
     "direction": "SELL",
@@ -325,9 +325,9 @@
     "last_alert_at": "2026-08-17T13:31:55.775887+00:00"
   },
   "crypto:BCH": {
-    "direction": "SELL",
-    "confidence": 70.50487580569745,
-    "last_alert_at": "2026-08-14T14:41:49.710040+00:00"
+    "direction": "BUY",
+    "confidence": 72.5961150649221,
+    "last_alert_at": "2026-08-20T08:17:19.976758+00:00"
   },
   "crypto:ENA": {
     "direction": "BUY",
@@ -701,8 +701,8 @@
   },
   "crypto:DOGE": {
     "direction": "BUY",
-    "confidence": 72.24949482921238,
-    "last_alert_at": "2026-08-19T22:52:14.950283+00:00"
+    "confidence": 76.86264923769215,
+    "last_alert_at": "2026-08-20T08:17:18.982413+00:00"
   },
   "crypto:XLM": {
     "direction": "BUY",
@@ -748,5 +748,15 @@
     "direction": "BUY",
     "confidence": 81.98239451515997,
     "last_alert_at": "2026-08-20T06:32:08.678844+00:00"
+  },
+  "crypto:SUSHI": {
+    "direction": "BUY",
+    "confidence": 73.78283336948368,
+    "last_alert_at": "2026-08-20T08:17:19.476397+00:00"
+  },
+  "crypto:BNB": {
+    "direction": "BUY",
+    "confidence": 74.4670222800717,
+    "last_alert_at": "2026-08-20T08:17:20.722466+00:00"
   }
 }
