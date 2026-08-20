@@ -738,5 +738,10 @@
     "direction": "BUY",
     "confidence": 73.72764019640101,
     "last_alert_at": "2026-08-20T04:16:53.212281+00:00"
+  },
+  "crypto:ASTER": {
+    "direction": "BUY",
+    "confidence": 75.15557531176333,
+    "last_alert_at": "2026-08-20T05:41:53.401726+00:00"
   }
 }
