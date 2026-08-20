@@ -723,5 +723,10 @@
     "direction": "BUY",
     "confidence": 72.22754524603997,
     "last_alert_at": "2026-08-20T00:57:09.447212+00:00"
+  },
+  "crypto:EIGEN": {
+    "direction": "BUY",
+    "confidence": 71.58105695015207,
+    "last_alert_at": "2026-08-20T02:06:55.364794+00:00"
   }
 }
