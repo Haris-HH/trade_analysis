@@ -733,5 +733,10 @@
     "direction": "BUY",
     "confidence": 72.49256842634226,
     "last_alert_at": "2026-08-20T03:26:57.354273+00:00"
+  },
+  "crypto:NEIRO": {
+    "direction": "BUY",
+    "confidence": 73.72764019640101,
+    "last_alert_at": "2026-08-20T04:16:53.212281+00:00"
   }
 }
