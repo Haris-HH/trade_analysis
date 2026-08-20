@@ -21,8 +21,8 @@
   },
   "crypto:PUMP": {
     "direction": "BUY",
-    "confidence": 77.75486968162991,
-    "last_alert_at": "2026-08-20T13:57:25.351763+00:00"
+    "confidence": 73.60666918147571,
+    "last_alert_at": "2026-08-20T18:55:25.151734+00:00"
   },
   "crypto:KUB": {
     "direction": "BUY",
@@ -396,8 +396,8 @@
   },
   "crypto:PEOPLE": {
     "direction": "BUY",
-    "confidence": 87.81669781401756,
-    "last_alert_at": "2026-08-20T14:49:43.704807+00:00"
+    "confidence": 82.61507650564711,
+    "last_alert_at": "2026-08-20T18:55:25.658760+00:00"
   },
   "crypto:ETHFI": {
     "direction": "BUY",
