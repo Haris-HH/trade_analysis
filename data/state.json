@@ -171,8 +171,8 @@
   },
   "crypto:AGI": {
     "direction": "SELL",
-    "confidence": 70.96285996782966,
-    "last_alert_at": "2026-08-16T03:39:11.630232+00:00"
+    "confidence": 70.50894842703977,
+    "last_alert_at": "2026-08-20T21:51:59.606119+00:00"
   },
   "crypto:ZRC": {
     "direction": "SELL",
@@ -366,8 +366,8 @@
   },
   "crypto:AVA": {
     "direction": "BUY",
-    "confidence": 72.76934742774273,
-    "last_alert_at": "2026-08-20T08:47:47.297669+00:00"
+    "confidence": 77.47896032858117,
+    "last_alert_at": "2026-08-20T21:51:59.137328+00:00"
   },
   "crypto:LINK": {
     "direction": "BUY",
