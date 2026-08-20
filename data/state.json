@@ -656,8 +656,8 @@
   },
   "crypto:FLOKI": {
     "direction": "BUY",
-    "confidence": 72.10234035911688,
-    "last_alert_at": "2026-08-20T07:52:13.587898+00:00"
+    "confidence": 77.0525400865324,
+    "last_alert_at": "2026-08-20T16:52:46.619239+00:00"
   },
   "crypto:TOSHI": {
     "direction": "BUY",
@@ -766,13 +766,13 @@
   },
   "crypto:WIF": {
     "direction": "BUY",
-    "confidence": 70.84871276874341,
-    "last_alert_at": "2026-08-20T12:37:10.719018+00:00"
+    "confidence": 70.35687457089955,
+    "last_alert_at": "2026-08-20T16:52:45.935273+00:00"
   },
   "crypto:DOOD": {
     "direction": "BUY",
-    "confidence": 71.7713253490493,
-    "last_alert_at": "2026-08-20T08:42:49.224625+00:00"
+    "confidence": 74.05946510807541,
+    "last_alert_at": "2026-08-20T16:52:47.405728+00:00"
   },
   "crypto:POPCAT": {
     "direction": "BUY",
@@ -868,5 +868,10 @@
     "direction": "BUY",
     "confidence": 70.99886312769351,
     "last_alert_at": "2026-08-20T16:47:31.023231+00:00"
+  },
+  "crypto:YB": {
+    "direction": "BUY",
+    "confidence": 71.15228804082098,
+    "last_alert_at": "2026-08-20T16:52:45.240940+00:00"
   }
 }
