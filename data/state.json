@@ -21,8 +21,8 @@
   },
   "crypto:PUMP": {
     "direction": "BUY",
-    "confidence": 71.57359670199284,
-    "last_alert_at": "2026-08-20T03:51:49.585122+00:00"
+    "confidence": 74.2960488303292,
+    "last_alert_at": "2026-08-20T09:37:39.596434+00:00"
   },
   "crypto:KUB": {
     "direction": "BUY",
@@ -506,8 +506,8 @@
   },
   "crypto:HYPE": {
     "direction": "BUY",
-    "confidence": 71.93763970428893,
-    "last_alert_at": "2026-08-20T04:47:02.635630+00:00"
+    "confidence": 84.1048368314034,
+    "last_alert_at": "2026-08-20T09:37:38.453214+00:00"
   },
   "stock:SENA.BK": {
     "direction": "SELL",
@@ -535,9 +535,9 @@
     "last_alert_at": "2026-08-18T06:41:48.930042+00:00"
   },
   "crypto:MEME": {
-    "direction": "SELL",
-    "confidence": 76.71271515741363,
-    "last_alert_at": "2026-08-18T02:51:55.597537+00:00"
+    "direction": "BUY",
+    "confidence": 72.87727178662708,
+    "last_alert_at": "2026-08-20T09:37:39.015432+00:00"
   },
   "crypto:TAO": {
     "direction": "BUY",
