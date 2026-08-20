@@ -5,9 +5,9 @@
     "last_alert_at": "2026-08-20T05:26:44.255030+00:00"
   },
   "crypto:ADA": {
-    "direction": "SELL",
-    "confidence": 71.51271179407547,
-    "last_alert_at": "2026-08-14T14:56:58.961485+00:00"
+    "direction": "BUY",
+    "confidence": 74.28164269169265,
+    "last_alert_at": "2026-08-20T08:47:46.814663+00:00"
   },
   "crypto:ELIZAOS": {
     "direction": "SELL",
@@ -150,9 +150,9 @@
     "last_alert_at": "2026-08-19T02:36:47.367851+00:00"
   },
   "crypto:AVAX": {
-    "direction": "SELL",
-    "confidence": 71.13527537457725,
-    "last_alert_at": "2026-08-11T17:52:06.557738+00:00"
+    "direction": "BUY",
+    "confidence": 73.21984743459885,
+    "last_alert_at": "2026-08-20T08:47:45.844218+00:00"
   },
   "crypto:PONKE": {
     "direction": "SELL",
@@ -365,9 +365,9 @@
     "last_alert_at": "2026-08-20T01:52:21.002413+00:00"
   },
   "crypto:AVA": {
-    "direction": "SELL",
-    "confidence": 72.29403932946116,
-    "last_alert_at": "2026-08-14T23:55:20.220413+00:00"
+    "direction": "BUY",
+    "confidence": 72.76934742774273,
+    "last_alert_at": "2026-08-20T08:47:47.297669+00:00"
   },
   "crypto:LINK": {
     "direction": "BUY",
@@ -671,8 +671,8 @@
   },
   "crypto:PEPE": {
     "direction": "BUY",
-    "confidence": 77.05073326077304,
-    "last_alert_at": "2026-08-20T04:47:03.359171+00:00"
+    "confidence": 87.25491286639797,
+    "last_alert_at": "2026-08-20T08:47:47.773769+00:00"
   },
   "crypto:MOG": {
     "direction": "BUY",
@@ -726,8 +726,8 @@
   },
   "crypto:EIGEN": {
     "direction": "BUY",
-    "confidence": 71.58105695015207,
-    "last_alert_at": "2026-08-20T02:06:55.364794+00:00"
+    "confidence": 71.6775683553228,
+    "last_alert_at": "2026-08-20T08:47:46.328491+00:00"
   },
   "crypto:ETH": {
     "direction": "BUY",
