@@ -786,8 +786,8 @@
   },
   "crypto:SKR": {
     "direction": "BUY",
-    "confidence": 73.61452791594466,
-    "last_alert_at": "2026-08-20T16:47:30.567560+00:00"
+    "confidence": 72.1679984305042,
+    "last_alert_at": "2026-08-20T21:41:59.978890+00:00"
   },
   "crypto:NEXO": {
     "direction": "BUY",
@@ -893,5 +893,10 @@
     "direction": "BUY",
     "confidence": 76.66082467322727,
     "last_alert_at": "2026-08-20T21:16:55.106553+00:00"
+  },
+  "crypto:ANIME": {
+    "direction": "BUY",
+    "confidence": 75.54044651928996,
+    "last_alert_at": "2026-08-20T21:41:59.507275+00:00"
   }
 }
