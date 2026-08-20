@@ -611,8 +611,8 @@
   },
   "crypto:CAKE": {
     "direction": "BUY",
-    "confidence": 75.92175694491112,
-    "last_alert_at": "2026-08-19T21:17:11.094194+00:00"
+    "confidence": 75.77081201831494,
+    "last_alert_at": "2026-08-20T22:02:19.030410+00:00"
   },
   "crypto:SPX": {
     "direction": "BUY",
@@ -751,8 +751,8 @@
   },
   "crypto:SUSHI": {
     "direction": "BUY",
-    "confidence": 72.03006440997048,
-    "last_alert_at": "2026-08-20T12:32:24.530169+00:00"
+    "confidence": 84.33168869273251,
+    "last_alert_at": "2026-08-20T22:02:19.618180+00:00"
   },
   "crypto:BNB": {
     "direction": "BUY",
