@@ -241,8 +241,8 @@
   },
   "crypto:BR": {
     "direction": "BUY",
-    "confidence": 74.27713338287508,
-    "last_alert_at": "2026-08-20T11:47:26.421500+00:00"
+    "confidence": 77.50099994032134,
+    "last_alert_at": "2026-08-20T15:52:42.114882+00:00"
   },
   "crypto:WET": {
     "direction": "BUY",
@@ -706,8 +706,8 @@
   },
   "crypto:XLM": {
     "direction": "BUY",
-    "confidence": 81.29068773029549,
-    "last_alert_at": "2026-08-20T08:42:47.903095+00:00"
+    "confidence": 70.29057090013386,
+    "last_alert_at": "2026-08-20T15:52:41.581474+00:00"
   },
   "crypto:VELO": {
     "direction": "BUY",
