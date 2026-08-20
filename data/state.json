@@ -305,9 +305,9 @@
     "last_alert_at": "2026-08-20T08:17:18.480775+00:00"
   },
   "crypto:GOAT": {
-    "direction": "SELL",
-    "confidence": 80.75642183341577,
-    "last_alert_at": "2026-08-14T12:16:51.049916+00:00"
+    "direction": "BUY",
+    "confidence": 74.23160298002931,
+    "last_alert_at": "2026-08-20T09:57:39.088093+00:00"
   },
   "crypto:GMT": {
     "direction": "SELL",
