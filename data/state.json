@@ -761,8 +761,8 @@
   },
   "crypto:AIXBT": {
     "direction": "BUY",
-    "confidence": 70.22507083849918,
-    "last_alert_at": "2026-08-20T12:47:27.054599+00:00"
+    "confidence": 80.59096772652171,
+    "last_alert_at": "2026-08-20T23:32:19.985565+00:00"
   },
   "crypto:WIF": {
     "direction": "BUY",
@@ -836,8 +836,8 @@
   },
   "crypto:MANA": {
     "direction": "BUY",
-    "confidence": 73.68281388080216,
-    "last_alert_at": "2026-08-20T15:32:29.088839+00:00"
+    "confidence": 79.35825708598078,
+    "last_alert_at": "2026-08-20T23:32:19.519607+00:00"
   },
   "crypto:SAND": {
     "direction": "BUY",
@@ -898,5 +898,10 @@
     "direction": "BUY",
     "confidence": 75.54044651928996,
     "last_alert_at": "2026-08-20T21:41:59.507275+00:00"
+  },
+  "crypto:DYDX": {
+    "direction": "BUY",
+    "confidence": 77.84188125337663,
+    "last_alert_at": "2026-08-20T23:32:20.447366+00:00"
   }
 }
