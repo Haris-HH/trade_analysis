@@ -81,8 +81,8 @@
   },
   "crypto:AZTEC": {
     "direction": "BUY",
-    "confidence": 78.21249073926896,
-    "last_alert_at": "2026-08-19T20:55:58.140443+00:00"
+    "confidence": 72.65995207492891,
+    "last_alert_at": "2026-08-20T09:42:29.864711+00:00"
   },
   "crypto:LIT": {
     "direction": "BUY",
@@ -91,8 +91,8 @@
   },
   "crypto:NEAR": {
     "direction": "BUY",
-    "confidence": 71.4043404970673,
-    "last_alert_at": "2026-08-20T01:57:02.256285+00:00"
+    "confidence": 73.1407385654407,
+    "last_alert_at": "2026-08-20T09:42:28.437211+00:00"
   },
   "crypto:ONDO": {
     "direction": "SELL",
@@ -596,8 +596,8 @@
   },
   "crypto:G": {
     "direction": "BUY",
-    "confidence": 71.31660321595159,
-    "last_alert_at": "2026-08-19T07:56:43.577264+00:00"
+    "confidence": 72.38567165166403,
+    "last_alert_at": "2026-08-20T09:42:29.384477+00:00"
   },
   "crypto:PYBOBO": {
     "direction": "SELL",
@@ -788,5 +788,10 @@
     "direction": "BUY",
     "confidence": 72.12625010715949,
     "last_alert_at": "2026-08-20T09:27:20.195773+00:00"
+  },
+  "crypto:NEXO": {
+    "direction": "BUY",
+    "confidence": 72.70478075976648,
+    "last_alert_at": "2026-08-20T09:42:28.912588+00:00"
   }
 }
