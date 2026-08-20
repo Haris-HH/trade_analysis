@@ -271,8 +271,8 @@
   },
   "crypto:BABYDOGE": {
     "direction": "BUY",
-    "confidence": 70.72340551816131,
-    "last_alert_at": "2026-08-20T08:27:23.838932+00:00"
+    "confidence": 71.8635985150036,
+    "last_alert_at": "2026-08-20T15:42:42.984430+00:00"
   },
   "crypto:MOVR": {
     "direction": "SELL",
@@ -376,8 +376,8 @@
   },
   "crypto:PIEVERSE": {
     "direction": "BUY",
-    "confidence": 80.7385799130949,
-    "last_alert_at": "2026-08-18T00:56:43.617154+00:00"
+    "confidence": 79.18363969715693,
+    "last_alert_at": "2026-08-20T15:42:41.854505+00:00"
   },
   "crypto:ALCH": {
     "direction": "BUY",
@@ -391,8 +391,8 @@
   },
   "crypto:CHIP": {
     "direction": "BUY",
-    "confidence": 72.29349182127298,
-    "last_alert_at": "2026-08-20T11:42:30.130809+00:00"
+    "confidence": 82.09060646078589,
+    "last_alert_at": "2026-08-20T15:42:42.420264+00:00"
   },
   "crypto:PEOPLE": {
     "direction": "BUY",
