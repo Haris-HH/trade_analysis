@@ -251,8 +251,8 @@
   },
   "crypto:MPLX": {
     "direction": "BUY",
-    "confidence": 72.6758842649866,
-    "last_alert_at": "2026-08-19T19:36:34.158113+00:00"
+    "confidence": 71.25130718972021,
+    "last_alert_at": "2026-08-20T00:57:08.773520+00:00"
   },
   "crypto:XAI": {
     "direction": "BUY",
@@ -371,8 +371,8 @@
   },
   "crypto:LINK": {
     "direction": "BUY",
-    "confidence": 81.8862441511875,
-    "last_alert_at": "2026-08-19T20:56:00.636179+00:00"
+    "confidence": 76.24257094485114,
+    "last_alert_at": "2026-08-20T00:57:10.098086+00:00"
   },
   "crypto:PIEVERSE": {
     "direction": "BUY",
@@ -718,5 +718,10 @@
     "direction": "BUY",
     "confidence": 74.95743884304491,
     "last_alert_at": "2026-08-20T00:42:07.582706+00:00"
+  },
+  "crypto:PNUT": {
+    "direction": "BUY",
+    "confidence": 72.22754524603997,
+    "last_alert_at": "2026-08-20T00:57:09.447212+00:00"
   }
 }
