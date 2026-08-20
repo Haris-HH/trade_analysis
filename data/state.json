@@ -131,8 +131,8 @@
   },
   "crypto:BRETT": {
     "direction": "BUY",
-    "confidence": 73.3824584069638,
-    "last_alert_at": "2026-08-19T20:55:59.235299+00:00"
+    "confidence": 74.18337893073651,
+    "last_alert_at": "2026-08-20T09:52:33.319774+00:00"
   },
   "crypto:UNI": {
     "direction": "BUY",
@@ -741,8 +741,8 @@
   },
   "crypto:ASTER": {
     "direction": "BUY",
-    "confidence": 75.15557531176333,
-    "last_alert_at": "2026-08-20T05:41:53.401726+00:00"
+    "confidence": 78.52512203271237,
+    "last_alert_at": "2026-08-20T09:52:32.814301+00:00"
   },
   "crypto:RED": {
     "direction": "BUY",
