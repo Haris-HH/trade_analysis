@@ -6,8 +6,8 @@
   },
   "crypto:ADA": {
     "direction": "BUY",
-    "confidence": 74.28164269169265,
-    "last_alert_at": "2026-08-20T08:47:46.814663+00:00"
+    "confidence": 70.54740098631072,
+    "last_alert_at": "2026-08-20T14:27:00.228047+00:00"
   },
   "crypto:ELIZAOS": {
     "direction": "SELL",
@@ -306,8 +306,8 @@
   },
   "crypto:GOAT": {
     "direction": "BUY",
-    "confidence": 74.23160298002931,
-    "last_alert_at": "2026-08-20T09:57:39.088093+00:00"
+    "confidence": 80.05333717110129,
+    "last_alert_at": "2026-08-20T14:26:59.584898+00:00"
   },
   "crypto:GMT": {
     "direction": "SELL",
