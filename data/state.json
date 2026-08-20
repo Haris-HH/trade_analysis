@@ -111,8 +111,8 @@
   },
   "crypto:HBAR": {
     "direction": "BUY",
-    "confidence": 70.50434633809823,
-    "last_alert_at": "2026-08-19T22:02:11.463942+00:00"
+    "confidence": 72.31715279006791,
+    "last_alert_at": "2026-08-20T02:47:00.243486+00:00"
   },
   "crypto:RNDR": {
     "direction": "SELL",
