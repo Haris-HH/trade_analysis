@@ -151,8 +151,8 @@
   },
   "crypto:AVAX": {
     "direction": "BUY",
-    "confidence": 73.21984743459885,
-    "last_alert_at": "2026-08-20T08:47:45.844218+00:00"
+    "confidence": 80.60541165837425,
+    "last_alert_at": "2026-08-20T15:32:30.615215+00:00"
   },
   "crypto:PONKE": {
     "direction": "SELL",
@@ -530,9 +530,9 @@
     "last_alert_at": "2026-08-20T00:52:13.644029+00:00"
   },
   "crypto:GALA": {
-    "direction": "SELL",
-    "confidence": 76.34225078828318,
-    "last_alert_at": "2026-08-18T06:41:48.930042+00:00"
+    "direction": "BUY",
+    "confidence": 72.95768132805695,
+    "last_alert_at": "2026-08-20T15:32:29.602261+00:00"
   },
   "crypto:MEME": {
     "direction": "BUY",
@@ -671,8 +671,8 @@
   },
   "crypto:PEPE": {
     "direction": "BUY",
-    "confidence": 87.25491286639797,
-    "last_alert_at": "2026-08-20T08:47:47.773769+00:00"
+    "confidence": 72.11731253291153,
+    "last_alert_at": "2026-08-20T15:32:30.113423+00:00"
   },
   "crypto:MOG": {
     "direction": "BUY",
@@ -833,5 +833,10 @@
     "direction": "BUY",
     "confidence": 74.07286913809837,
     "last_alert_at": "2026-08-20T15:07:06.975516+00:00"
+  },
+  "crypto:MANA": {
+    "direction": "BUY",
+    "confidence": 73.68281388080216,
+    "last_alert_at": "2026-08-20T15:32:29.088839+00:00"
   }
 }
