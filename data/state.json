@@ -401,8 +401,8 @@
   },
   "crypto:ETHFI": {
     "direction": "BUY",
-    "confidence": 71.58991427916416,
-    "last_alert_at": "2026-08-17T05:16:49.354624+00:00"
+    "confidence": 75.44827060454979,
+    "last_alert_at": "2026-08-20T07:16:49.012803+00:00"
   },
   "crypto:PLN": {
     "direction": "SELL",
