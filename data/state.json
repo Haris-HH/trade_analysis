@@ -606,8 +606,8 @@
   },
   "crypto:SOL": {
     "direction": "BUY",
-    "confidence": 70.19172351782979,
-    "last_alert_at": "2026-08-19T22:57:15.555204+00:00"
+    "confidence": 70.27709322784969,
+    "last_alert_at": "2026-08-20T06:46:59.144227+00:00"
   },
   "crypto:CAKE": {
     "direction": "BUY",
@@ -711,8 +711,8 @@
   },
   "crypto:VELO": {
     "direction": "BUY",
-    "confidence": 70.97334096938994,
-    "last_alert_at": "2026-08-20T00:42:07.129837+00:00"
+    "confidence": 72.98626080918353,
+    "last_alert_at": "2026-08-20T06:46:58.662654+00:00"
   },
   "crypto:OP": {
     "direction": "BUY",
