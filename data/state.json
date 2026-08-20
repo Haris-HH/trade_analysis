@@ -21,8 +21,8 @@
   },
   "crypto:PUMP": {
     "direction": "BUY",
-    "confidence": 73.60666918147571,
-    "last_alert_at": "2026-08-20T18:55:25.151734+00:00"
+    "confidence": 70.42182360543293,
+    "last_alert_at": "2026-08-20T23:27:01.420574+00:00"
   },
   "crypto:KUB": {
     "direction": "BUY",
@@ -105,9 +105,9 @@
     "last_alert_at": "2026-08-20T19:51:55.429503+00:00"
   },
   "crypto:IOST": {
-    "direction": "SELL",
-    "confidence": 72.99595976501652,
-    "last_alert_at": "2026-08-12T14:36:46.398320+00:00"
+    "direction": "BUY",
+    "confidence": 70.48348685732314,
+    "last_alert_at": "2026-08-20T23:27:00.771297+00:00"
   },
   "crypto:HBAR": {
     "direction": "BUY",
@@ -541,8 +541,8 @@
   },
   "crypto:TAO": {
     "direction": "BUY",
-    "confidence": 79.77956514575074,
-    "last_alert_at": "2026-08-20T12:27:14.266557+00:00"
+    "confidence": 78.39987672599946,
+    "last_alert_at": "2026-08-20T23:27:02.087895+00:00"
   },
   "crypto:SUI": {
     "direction": "BUY",
