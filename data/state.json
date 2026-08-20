@@ -686,8 +686,8 @@
   },
   "crypto:MEW": {
     "direction": "BUY",
-    "confidence": 74.32997737679963,
-    "last_alert_at": "2026-08-20T13:57:25.833281+00:00"
+    "confidence": 70.51948877079701,
+    "last_alert_at": "2026-08-20T19:11:55.598053+00:00"
   },
   "crypto:SHIB": {
     "direction": "BUY",
@@ -831,8 +831,8 @@
   },
   "crypto:BREV": {
     "direction": "BUY",
-    "confidence": 74.07286913809837,
-    "last_alert_at": "2026-08-20T15:07:06.975516+00:00"
+    "confidence": 75.84846492203042,
+    "last_alert_at": "2026-08-20T19:11:54.923716+00:00"
   },
   "crypto:MANA": {
     "direction": "BUY",
