@@ -728,5 +728,10 @@
     "direction": "BUY",
     "confidence": 71.58105695015207,
     "last_alert_at": "2026-08-20T02:06:55.364794+00:00"
+  },
+  "crypto:ETH": {
+    "direction": "BUY",
+    "confidence": 72.49256842634226,
+    "last_alert_at": "2026-08-20T03:26:57.354273+00:00"
   }
 }
