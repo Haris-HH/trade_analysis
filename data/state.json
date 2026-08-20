@@ -100,9 +100,9 @@
     "last_alert_at": "2026-08-20T16:02:43.024487+00:00"
   },
   "crypto:HOLO": {
-    "direction": "SELL",
-    "confidence": 78.29234267602132,
-    "last_alert_at": "2026-08-17T22:41:50.157662+00:00"
+    "direction": "BUY",
+    "confidence": 75.16727436190448,
+    "last_alert_at": "2026-08-20T17:07:02.310967+00:00"
   },
   "crypto:IOST": {
     "direction": "SELL",
@@ -310,9 +310,9 @@
     "last_alert_at": "2026-08-20T14:26:59.584898+00:00"
   },
   "crypto:GMT": {
-    "direction": "SELL",
-    "confidence": 71.839387137924,
-    "last_alert_at": "2026-08-18T03:32:00.522643+00:00"
+    "direction": "BUY",
+    "confidence": 73.65459022610482,
+    "last_alert_at": "2026-08-20T17:07:02.817000+00:00"
   },
   "stock:STX": {
     "direction": "BUY",
