@@ -396,8 +396,8 @@
   },
   "crypto:PEOPLE": {
     "direction": "BUY",
-    "confidence": 76.48059598304303,
-    "last_alert_at": "2026-08-20T13:26:57.083108+00:00"
+    "confidence": 87.81669781401756,
+    "last_alert_at": "2026-08-20T14:49:43.704807+00:00"
   },
   "crypto:ETHFI": {
     "direction": "BUY",
@@ -490,9 +490,9 @@
     "last_alert_at": "2026-08-19T11:51:52.102722+00:00"
   },
   "crypto:SD": {
-    "direction": "SELL",
-    "confidence": 72.24940377674216,
-    "last_alert_at": "2026-08-16T12:46:52.367489+00:00"
+    "direction": "BUY",
+    "confidence": 79.37206485332771,
+    "last_alert_at": "2026-08-20T14:49:43.196154+00:00"
   },
   "crypto:WLD": {
     "direction": "BUY",
