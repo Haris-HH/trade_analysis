@@ -36,8 +36,8 @@
   },
   "crypto:BONK": {
     "direction": "BUY",
-    "confidence": 70.58426266669073,
-    "last_alert_at": "2026-08-20T08:17:17.974357+00:00"
+    "confidence": 75.76998293895575,
+    "last_alert_at": "2026-08-20T12:37:10.195011+00:00"
   },
   "crypto:EDGE": {
     "direction": "BUY",
@@ -766,8 +766,8 @@
   },
   "crypto:WIF": {
     "direction": "BUY",
-    "confidence": 74.78261030887049,
-    "last_alert_at": "2026-08-20T08:27:22.908046+00:00"
+    "confidence": 70.84871276874341,
+    "last_alert_at": "2026-08-20T12:37:10.719018+00:00"
   },
   "crypto:DOOD": {
     "direction": "BUY",
