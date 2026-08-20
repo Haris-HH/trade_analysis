@@ -1,8 +1,8 @@
 {
   "crypto:CRV": {
     "direction": "BUY",
-    "confidence": 81.77908911124142,
-    "last_alert_at": "2026-08-12T07:36:43.905293+00:00"
+    "confidence": 72.55916860065209,
+    "last_alert_at": "2026-08-20T05:26:44.255030+00:00"
   },
   "crypto:ADA": {
     "direction": "SELL",
