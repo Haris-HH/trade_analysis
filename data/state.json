@@ -798,5 +798,10 @@
     "direction": "BUY",
     "confidence": 70.78366737804582,
     "last_alert_at": "2026-08-20T10:12:02.095779+00:00"
+  },
+  "crypto:SIX": {
+    "direction": "BUY",
+    "confidence": 72.66142117158941,
+    "last_alert_at": "2026-08-20T12:07:03.273887+00:00"
   }
 }
