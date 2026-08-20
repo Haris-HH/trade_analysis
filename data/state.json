@@ -331,8 +331,8 @@
   },
   "crypto:ENA": {
     "direction": "BUY",
-    "confidence": 76.94836495288368,
-    "last_alert_at": "2026-08-20T15:04:21.091417+00:00"
+    "confidence": 88.80859946014678,
+    "last_alert_at": "2026-08-20T17:37:30.465399+00:00"
   },
   "crypto:CHZ": {
     "direction": "SELL",
@@ -726,8 +726,8 @@
   },
   "crypto:EIGEN": {
     "direction": "BUY",
-    "confidence": 71.6775683553228,
-    "last_alert_at": "2026-08-20T08:47:46.328491+00:00"
+    "confidence": 80.4198002727939,
+    "last_alert_at": "2026-08-20T17:37:29.336671+00:00"
   },
   "crypto:ETH": {
     "direction": "BUY",
@@ -796,8 +796,8 @@
   },
   "crypto:ZORA": {
     "direction": "BUY",
-    "confidence": 70.78366737804582,
-    "last_alert_at": "2026-08-20T10:12:02.095779+00:00"
+    "confidence": 73.95603996275976,
+    "last_alert_at": "2026-08-20T17:37:29.914212+00:00"
   },
   "crypto:SIX": {
     "direction": "BUY",
