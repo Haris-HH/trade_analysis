@@ -181,8 +181,8 @@
   },
   "crypto:VIC": {
     "direction": "SELL",
-    "confidence": 83.05173636476754,
-    "last_alert_at": "2026-08-19T05:56:56.236754+00:00"
+    "confidence": 76.77498970163023,
+    "last_alert_at": "2026-08-20T05:01:58.199337+00:00"
   },
   "crypto:BMT": {
     "direction": "SELL",
@@ -251,8 +251,8 @@
   },
   "crypto:MPLX": {
     "direction": "BUY",
-    "confidence": 71.25130718972021,
-    "last_alert_at": "2026-08-20T00:57:08.773520+00:00"
+    "confidence": 70.70020435752986,
+    "last_alert_at": "2026-08-20T05:01:58.679162+00:00"
   },
   "crypto:XAI": {
     "direction": "BUY",
