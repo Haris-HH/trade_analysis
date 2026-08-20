@@ -216,8 +216,8 @@
   },
   "crypto:HFT": {
     "direction": "SELL",
-    "confidence": 70.44441508110255,
-    "last_alert_at": "2026-08-19T07:56:43.061145+00:00"
+    "confidence": 72.6772364671403,
+    "last_alert_at": "2026-08-20T07:37:00.926498+00:00"
   },
   "crypto:PORTAL": {
     "direction": "SELL",
@@ -241,8 +241,8 @@
   },
   "crypto:BR": {
     "direction": "BUY",
-    "confidence": 75.75092932710764,
-    "last_alert_at": "2026-08-19T07:21:39.955538+00:00"
+    "confidence": 70.61011011740973,
+    "last_alert_at": "2026-08-20T07:37:02.217648+00:00"
   },
   "crypto:WET": {
     "direction": "BUY",
@@ -601,8 +601,8 @@
   },
   "crypto:PYBOBO": {
     "direction": "SELL",
-    "confidence": 72.84843906993135,
-    "last_alert_at": "2026-08-19T21:42:19.522833+00:00"
+    "confidence": 70.78246680026506,
+    "last_alert_at": "2026-08-20T07:37:01.521451+00:00"
   },
   "crypto:SOL": {
     "direction": "BUY",
