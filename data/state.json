@@ -485,9 +485,9 @@
     "last_alert_at": "2026-08-16T13:31:58.018823+00:00"
   },
   "crypto:JASMY": {
-    "direction": "SELL",
-    "confidence": 76.25490153816949,
-    "last_alert_at": "2026-08-19T11:51:52.102722+00:00"
+    "direction": "BUY",
+    "confidence": 74.1775548109469,
+    "last_alert_at": "2026-08-20T17:12:05.190469+00:00"
   },
   "crypto:SD": {
     "direction": "BUY",
