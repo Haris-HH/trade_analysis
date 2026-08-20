@@ -381,8 +381,8 @@
   },
   "crypto:ALCH": {
     "direction": "BUY",
-    "confidence": 76.08808894626415,
-    "last_alert_at": "2026-08-20T07:47:04.362822+00:00"
+    "confidence": 77.77349153945372,
+    "last_alert_at": "2026-08-20T17:52:18.748597+00:00"
   },
   "crypto:EPIC": {
     "direction": "BUY",
@@ -435,9 +435,9 @@
     "last_alert_at": "2026-08-19T14:42:01.219587+00:00"
   },
   "crypto:FET": {
-    "direction": "SELL",
-    "confidence": 70.10901418492193,
-    "last_alert_at": "2026-08-16T13:21:46.409456+00:00"
+    "direction": "BUY",
+    "confidence": 71.29043601009704,
+    "last_alert_at": "2026-08-20T17:52:18.275794+00:00"
   },
   "crypto:TA": {
     "direction": "SELL",
