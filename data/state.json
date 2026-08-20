@@ -716,8 +716,8 @@
   },
   "crypto:OP": {
     "direction": "BUY",
-    "confidence": 78.6700945608288,
-    "last_alert_at": "2026-08-20T08:22:40.953749+00:00"
+    "confidence": 71.71106623519358,
+    "last_alert_at": "2026-08-20T14:22:02.757547+00:00"
   },
   "crypto:PNUT": {
     "direction": "BUY",
@@ -808,5 +808,10 @@
     "direction": "BUY",
     "confidence": 72.4827620008837,
     "last_alert_at": "2026-08-20T12:27:15.342085+00:00"
+  },
+  "crypto:CPOOL": {
+    "direction": "BUY",
+    "confidence": 75.76310913748156,
+    "last_alert_at": "2026-08-20T14:22:02.252189+00:00"
   }
 }
