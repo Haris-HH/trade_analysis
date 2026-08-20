@@ -26,8 +26,8 @@
   },
   "crypto:KUB": {
     "direction": "BUY",
-    "confidence": 72.8846485813963,
-    "last_alert_at": "2026-08-20T03:31:56.062761+00:00"
+    "confidence": 75.30654842396198,
+    "last_alert_at": "2026-08-20T09:22:20.122502+00:00"
   },
   "crypto:MET": {
     "direction": "BUY",
@@ -778,5 +778,10 @@
     "direction": "BUY",
     "confidence": 70.62543950489501,
     "last_alert_at": "2026-08-20T08:57:41.270646+00:00"
+  },
+  "crypto:FLOCK": {
+    "direction": "BUY",
+    "confidence": 77.48203408381082,
+    "last_alert_at": "2026-08-20T09:22:19.603933+00:00"
   }
 }
