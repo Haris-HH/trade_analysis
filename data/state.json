@@ -411,8 +411,8 @@
   },
   "crypto:ZAMA": {
     "direction": "BUY",
-    "confidence": 71.24391092122656,
-    "last_alert_at": "2026-08-19T21:52:15.454306+00:00"
+    "confidence": 71.19317259989981,
+    "last_alert_at": "2026-08-20T13:52:18.185061+00:00"
   },
   "crypto:PLUME": {
     "direction": "BUY",
@@ -721,8 +721,8 @@
   },
   "crypto:PNUT": {
     "direction": "BUY",
-    "confidence": 73.41583428878307,
-    "last_alert_at": "2026-08-20T08:57:41.757733+00:00"
+    "confidence": 71.10319790256183,
+    "last_alert_at": "2026-08-20T13:52:18.665704+00:00"
   },
   "crypto:EIGEN": {
     "direction": "BUY",
