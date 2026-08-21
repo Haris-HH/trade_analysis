@@ -526,8 +526,8 @@
   },
   "crypto:VVV": {
     "direction": "BUY",
-    "confidence": 71.32781184167709,
-    "last_alert_at": "2026-08-21T05:21:53.341573+00:00"
+    "confidence": 81.79375082464644,
+    "last_alert_at": "2026-08-21T06:57:28.220426+00:00"
   },
   "crypto:GALA": {
     "direction": "BUY",
@@ -611,8 +611,8 @@
   },
   "crypto:CAKE": {
     "direction": "BUY",
-    "confidence": 75.77081201831494,
-    "last_alert_at": "2026-08-20T22:02:19.030410+00:00"
+    "confidence": 73.35445941145409,
+    "last_alert_at": "2026-08-21T06:57:27.153639+00:00"
   },
   "crypto:SPX": {
     "direction": "BUY",
@@ -896,8 +896,8 @@
   },
   "crypto:ANIME": {
     "direction": "BUY",
-    "confidence": 77.27466982586103,
-    "last_alert_at": "2026-08-21T01:47:26.971742+00:00"
+    "confidence": 75.17317112805387,
+    "last_alert_at": "2026-08-21T06:57:27.704075+00:00"
   },
   "crypto:DYDX": {
     "direction": "BUY",
