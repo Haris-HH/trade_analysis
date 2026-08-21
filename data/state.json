@@ -91,8 +91,8 @@
   },
   "crypto:NEAR": {
     "direction": "BUY",
-    "confidence": 70.61175538191397,
-    "last_alert_at": "2026-08-21T00:29:52.260134+00:00"
+    "confidence": 80.85980696651114,
+    "last_alert_at": "2026-08-21T03:52:18.306407+00:00"
   },
   "crypto:ONDO": {
     "direction": "BUY",
@@ -416,8 +416,8 @@
   },
   "crypto:PLUME": {
     "direction": "BUY",
-    "confidence": 75.27413215256229,
-    "last_alert_at": "2026-08-15T11:01:52.817532+00:00"
+    "confidence": 72.21171873826665,
+    "last_alert_at": "2026-08-21T03:52:18.964561+00:00"
   },
   "crypto:LDO": {
     "direction": "BUY",
