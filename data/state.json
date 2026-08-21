@@ -716,8 +716,8 @@
   },
   "crypto:OP": {
     "direction": "BUY",
-    "confidence": 88.97550087000997,
-    "last_alert_at": "2026-08-21T08:32:57.324958+00:00"
+    "confidence": 87.16573735845591,
+    "last_alert_at": "2026-08-21T12:37:38.543026+00:00"
   },
   "crypto:PNUT": {
     "direction": "BUY",
@@ -786,8 +786,8 @@
   },
   "crypto:SKR": {
     "direction": "BUY",
-    "confidence": 71.4219936864816,
-    "last_alert_at": "2026-08-21T06:02:14.922773+00:00"
+    "confidence": 71.603550675158,
+    "last_alert_at": "2026-08-21T12:37:39.209422+00:00"
   },
   "crypto:NEXO": {
     "direction": "BUY",
@@ -831,8 +831,8 @@
   },
   "crypto:BREV": {
     "direction": "BUY",
-    "confidence": 71.73420309886625,
-    "last_alert_at": "2026-08-21T09:17:54.913003+00:00"
+    "confidence": 82.40354942357185,
+    "last_alert_at": "2026-08-21T12:37:39.881451+00:00"
   },
   "crypto:MANA": {
     "direction": "BUY",
