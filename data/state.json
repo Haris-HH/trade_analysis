@@ -26,8 +26,8 @@
   },
   "crypto:KUB": {
     "direction": "BUY",
-    "confidence": 75.30654842396198,
-    "last_alert_at": "2026-08-20T09:22:20.122502+00:00"
+    "confidence": 75.6421336315687,
+    "last_alert_at": "2026-08-21T08:32:56.813015+00:00"
   },
   "crypto:MET": {
     "direction": "BUY",
@@ -696,8 +696,8 @@
   },
   "crypto:XRP": {
     "direction": "BUY",
-    "confidence": 75.78659562637071,
-    "last_alert_at": "2026-08-20T16:27:13.701633+00:00"
+    "confidence": 82.63224905091573,
+    "last_alert_at": "2026-08-21T08:32:58.334531+00:00"
   },
   "crypto:DOGE": {
     "direction": "BUY",
@@ -706,8 +706,8 @@
   },
   "crypto:XLM": {
     "direction": "BUY",
-    "confidence": 72.7174576128597,
-    "last_alert_at": "2026-08-21T08:17:44.698252+00:00"
+    "confidence": 86.25308597434228,
+    "last_alert_at": "2026-08-21T08:32:57.830719+00:00"
   },
   "crypto:VELO": {
     "direction": "BUY",
@@ -716,8 +716,8 @@
   },
   "crypto:OP": {
     "direction": "BUY",
-    "confidence": 72.53616516727172,
-    "last_alert_at": "2026-08-21T06:27:08.989846+00:00"
+    "confidence": 88.97550087000997,
+    "last_alert_at": "2026-08-21T08:32:57.324958+00:00"
   },
   "crypto:PNUT": {
     "direction": "BUY",
@@ -826,8 +826,8 @@
   },
   "crypto:POW": {
     "direction": "BUY",
-    "confidence": 74.27301780245537,
-    "last_alert_at": "2026-08-21T03:06:54.662562+00:00"
+    "confidence": 75.3578283691871,
+    "last_alert_at": "2026-08-21T08:32:56.297992+00:00"
   },
   "crypto:BREV": {
     "direction": "BUY",
