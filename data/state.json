@@ -185,9 +185,9 @@
     "last_alert_at": "2026-08-20T05:01:58.199337+00:00"
   },
   "crypto:BMT": {
-    "direction": "SELL",
-    "confidence": 86.58873473324464,
-    "last_alert_at": "2026-08-15T08:56:43.423157+00:00"
+    "direction": "BUY",
+    "confidence": 74.15775329853852,
+    "last_alert_at": "2026-08-21T01:06:59.070276+00:00"
   },
   "crypto:NXPC": {
     "direction": "BUY",
