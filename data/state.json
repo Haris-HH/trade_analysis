@@ -401,8 +401,8 @@
   },
   "crypto:ETHFI": {
     "direction": "BUY",
-    "confidence": 75.44827060454979,
-    "last_alert_at": "2026-08-20T07:16:49.012803+00:00"
+    "confidence": 78.95102474488499,
+    "last_alert_at": "2026-08-21T11:58:03.085946+00:00"
   },
   "crypto:PLN": {
     "direction": "BUY",
@@ -491,8 +491,8 @@
   },
   "crypto:SD": {
     "direction": "BUY",
-    "confidence": 79.37206485332771,
-    "last_alert_at": "2026-08-20T14:49:43.196154+00:00"
+    "confidence": 74.4593458891423,
+    "last_alert_at": "2026-08-21T11:58:04.021211+00:00"
   },
   "crypto:WLD": {
     "direction": "BUY",
@@ -536,8 +536,8 @@
   },
   "crypto:MEME": {
     "direction": "BUY",
-    "confidence": 86.97763378580245,
-    "last_alert_at": "2026-08-21T07:58:01.041754+00:00"
+    "confidence": 73.47656260098992,
+    "last_alert_at": "2026-08-21T11:58:02.589482+00:00"
   },
   "crypto:TAO": {
     "direction": "BUY",
@@ -666,8 +666,8 @@
   },
   "crypto:PENGU": {
     "direction": "BUY",
-    "confidence": 82.4352740643247,
-    "last_alert_at": "2026-08-21T07:57:59.776116+00:00"
+    "confidence": 75.83109391246995,
+    "last_alert_at": "2026-08-21T11:58:03.559768+00:00"
   },
   "crypto:PEPE": {
     "direction": "BUY",
@@ -941,8 +941,8 @@
   },
   "crypto:MAGIC": {
     "direction": "BUY",
-    "confidence": 71.53905635348977,
-    "last_alert_at": "2026-08-21T07:45:37.782006+00:00"
+    "confidence": 71.61346619894175,
+    "last_alert_at": "2026-08-21T11:58:04.494036+00:00"
   },
   "crypto:GRT": {
     "direction": "BUY",
