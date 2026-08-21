@@ -766,8 +766,8 @@
   },
   "crypto:WIF": {
     "direction": "BUY",
-    "confidence": 71.82714375904952,
-    "last_alert_at": "2026-08-21T12:27:40.697505+00:00"
+    "confidence": 70.36401585981837,
+    "last_alert_at": "2026-08-21T16:55:28.769832+00:00"
   },
   "crypto:DOOD": {
     "direction": "BUY",
