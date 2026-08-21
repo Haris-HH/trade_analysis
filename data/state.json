@@ -901,8 +901,8 @@
   },
   "crypto:DYDX": {
     "direction": "BUY",
-    "confidence": 77.84188125337663,
-    "last_alert_at": "2026-08-20T23:32:20.447366+00:00"
+    "confidence": 74.9187606527263,
+    "last_alert_at": "2026-08-21T03:37:15.809648+00:00"
   },
   "crypto:BTT": {
     "direction": "BUY",
