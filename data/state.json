@@ -6,8 +6,8 @@
   },
   "crypto:ADA": {
     "direction": "BUY",
-    "confidence": 87.00582838795019,
-    "last_alert_at": "2026-08-21T09:00:35.188373+00:00"
+    "confidence": 72.51347662311208,
+    "last_alert_at": "2026-08-21T22:12:36.455186+00:00"
   },
   "crypto:ELIZAOS": {
     "direction": "SELL",
@@ -91,8 +91,8 @@
   },
   "crypto:NEAR": {
     "direction": "BUY",
-    "confidence": 73.64735994731909,
-    "last_alert_at": "2026-08-21T09:12:56.965036+00:00"
+    "confidence": 72.41098647675341,
+    "last_alert_at": "2026-08-21T22:12:36.986786+00:00"
   },
   "crypto:ONDO": {
     "direction": "BUY",
