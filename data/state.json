@@ -331,8 +331,8 @@
   },
   "crypto:ENA": {
     "direction": "BUY",
-    "confidence": 88.80859946014678,
-    "last_alert_at": "2026-08-20T17:37:30.465399+00:00"
+    "confidence": 80.2665881682397,
+    "last_alert_at": "2026-08-21T09:33:18.853344+00:00"
   },
   "crypto:CHZ": {
     "direction": "BUY",
@@ -516,8 +516,8 @@
   },
   "crypto:POL": {
     "direction": "BUY",
-    "confidence": 71.45958290182683,
-    "last_alert_at": "2026-08-18T17:26:43.353633+00:00"
+    "confidence": 72.18759739215777,
+    "last_alert_at": "2026-08-21T09:33:18.275360+00:00"
   },
   "stock:DVN": {
     "direction": "BUY",
@@ -651,8 +651,8 @@
   },
   "crypto:TRUMP": {
     "direction": "BUY",
-    "confidence": 75.75781555775454,
-    "last_alert_at": "2026-08-21T05:32:16.198190+00:00"
+    "confidence": 71.46483137869771,
+    "last_alert_at": "2026-08-21T09:33:19.926371+00:00"
   },
   "crypto:FLOKI": {
     "direction": "BUY",
@@ -671,8 +671,8 @@
   },
   "crypto:PEPE": {
     "direction": "BUY",
-    "confidence": 73.20714113023722,
-    "last_alert_at": "2026-08-21T05:32:16.680066+00:00"
+    "confidence": 72.26482909203912,
+    "last_alert_at": "2026-08-21T09:33:20.994253+00:00"
   },
   "crypto:MOG": {
     "direction": "BUY",
@@ -726,8 +726,8 @@
   },
   "crypto:EIGEN": {
     "direction": "BUY",
-    "confidence": 82.13303485264102,
-    "last_alert_at": "2026-08-21T04:56:38.185475+00:00"
+    "confidence": 71.89287551658845,
+    "last_alert_at": "2026-08-21T09:33:19.379191+00:00"
   },
   "crypto:ETH": {
     "direction": "BUY",
@@ -936,8 +936,8 @@
   },
   "crypto:MOCA": {
     "direction": "BUY",
-    "confidence": 71.14729040217266,
-    "last_alert_at": "2026-08-21T07:32:53.481485+00:00"
+    "confidence": 82.98055104277996,
+    "last_alert_at": "2026-08-21T09:33:20.465294+00:00"
   },
   "crypto:MAGIC": {
     "direction": "BUY",
