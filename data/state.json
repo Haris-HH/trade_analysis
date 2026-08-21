@@ -531,8 +531,8 @@
   },
   "crypto:GALA": {
     "direction": "BUY",
-    "confidence": 81.87831360471748,
-    "last_alert_at": "2026-08-21T07:45:37.781710+00:00"
+    "confidence": 81.41038210739464,
+    "last_alert_at": "2026-08-21T12:43:32.828458+00:00"
   },
   "crypto:MEME": {
     "direction": "BUY",
@@ -806,8 +806,8 @@
   },
   "crypto:STRK": {
     "direction": "BUY",
-    "confidence": 72.42537372276577,
-    "last_alert_at": "2026-08-21T12:32:44.213605+00:00"
+    "confidence": 82.7559222964205,
+    "last_alert_at": "2026-08-21T12:43:32.147072+00:00"
   },
   "crypto:CPOOL": {
     "direction": "BUY",
