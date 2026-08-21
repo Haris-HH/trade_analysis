@@ -35,7 +35,7 @@ sys.path.insert(0, os.path.dirname(__file__))
 
 import json
 
-from lib import bitkub_source, stock_source, indicators, news_source, scoring, state_store, telegram_notify, chart, price_target
+from lib import bitkub_source, stock_source, indicators, news_source, scoring, state_store, telegram_notify, chart, price_target, positions_store, auto_trader
 from lib.universe import STOCK_NAMES
 from lib.scoring import Factor
 
@@ -48,6 +48,8 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 OUTPUT_PATH = os.path.join(ROOT, "public", "data", "latest.json")
 STATE_PATH = os.path.join(ROOT, "data", "state.json")
 ALERT_SETTINGS_PATH = os.path.join(ROOT, "data", "alert_settings.json")
+POSITIONS_PATH = os.path.join(ROOT, "data", "positions.json")
+TRADE_LOG_PATH = os.path.join(ROOT, "data", "trade_log.json")
 
 
 def load_alert_mode() -> str:
@@ -268,6 +270,7 @@ def reverify_candidates(candidates: list[dict]) -> list[dict]:
 
 def main() -> None:
     state = state_store.load_state(STATE_PATH)
+    positions = positions_store.load_positions(POSITIONS_PATH)
     alert_mode = load_alert_mode()
     print(f"Alert mode: {alert_mode}")
     universe = build_universe()
@@ -311,6 +314,13 @@ def main() -> None:
     for r in results:
         r.setdefault("verified", False)
         r["last_alert_at"] = state.get(f"{r['market']}:{r['raw_key']}", {}).get("last_alert_at")
+
+    trades = auto_trader.run(results, positions)
+    for trade in trades:
+        positions_store.append_trade_log(TRADE_LOG_PATH, trade)
+    positions_store.save_positions(POSITIONS_PATH, positions)
+
+    for r in results:
         r.pop("raw_key", None)
 
     crypto_count = sum(1 for u in universe if u["market"] == "crypto")
@@ -322,6 +332,7 @@ def main() -> None:
         "min_confidence_threshold": MIN_CONFIDENCE,
         "watchlist_counts": {"crypto": crypto_count, "stock": stock_count},
         "signals": results,
+        "open_positions": positions,
     }
 
     os.makedirs(os.path.dirname(OUTPUT_PATH), exist_ok=True)
@@ -329,7 +340,7 @@ def main() -> None:
         json.dump(output, f, indent=2, ensure_ascii=False)
 
     state_store.save_state(STATE_PATH, state)
-    print(f"Done. {len(results)} symbols scanned, {alerts_sent} Telegram alert(s) sent.")
+    print(f"Done. {len(results)} symbols scanned, {alerts_sent} Telegram alert(s) sent, {len(trades)} auto-trade(s) executed.")
 
 
 if __name__ == "__main__":

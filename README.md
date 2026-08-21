@@ -35,7 +35,12 @@ GitHub Actions (every 5 min, free)
       8. Still ≥ 70% + not vetoed + direction unchanged + not in cooldown →
          send an explicit BUY NOW / SELL NOW Telegram alert with an estimated
          price target + date
-  → commits public/data/latest.json + data/state.json back to the repo
+      9. (Optional, off by default) Auto-trader: places a real Bitkub market
+         BUY for double-checked crypto candidates ≥ a stricter confidence bar,
+         and auto-sells any open position at +5% take-profit or -8%
+         stop-loss — see "Auto-trading" below
+  → commits public/data/latest.json + data/state.json + data/positions.json +
+    data/trade_log.json back to the repo
   → push triggers Vercel to redeploy the dashboard (free Hobby plan)
 ```
 
@@ -138,6 +143,63 @@ risk:reward ratio** — the same ATR-scaled stop (`ATR_STOP_MULTIPLE` = 1.5x)
 already computed internally for the risk:reward veto check (see "Signal
 engine" above), just surfaced directly instead of only being used to decide
 whether to veto the signal.
+
+### Auto-trading (optional, off by default)
+
+[`scripts/lib/auto_trader.py`](scripts/lib/auto_trader.py) can place real
+Bitkub market orders using the same indicator-driven signal engine described
+above — it doesn't run a separate analysis, it reuses whichever crypto
+signals just cleared the double-check re-verification pass that Telegram
+BUY-NOW alerts use (`indicators.py` + `scoring.py`'s regime-aware confluence
+engine, ATR-based stop/target, veto rules).
+
+- **Entry (BUY):** a crypto symbol whose signal survived re-verification —
+  `direction == BUY`, not vetoed, confidence ≥ `AUTO_TRADE_MIN_CONFIDENCE`
+  (default 75, stricter than the 70% alert bar since real money is on the
+  line) — triggers a market buy of `AUTO_TRADE_AMOUNT_THB` (default 100 THB),
+  as long as that ticker isn't already held and `AUTO_TRADE_MAX_POSITIONS`
+  (default 3) isn't already reached.
+- **Exit (SELL):** every open position is checked against the current scan's
+  price and closed automatically — take-profit at
+  `AUTO_TRADE_TAKE_PROFIT_PCT` (default **+5%**), or stop-loss at
+  `AUTO_TRADE_STOP_LOSS_PCT` (default -8%, protects capital if a position
+  keeps losing — set to `0` to disable and only ever exit at take-profit).
+- Positions persist in [`data/positions.json`](data/positions.json)
+  (committed by the Action, same pattern as `data/state.json`); every
+  executed trade is appended to [`data/trade_log.json`](data/trade_log.json)
+  for a permanent audit trail. Both are also included as `open_positions` /
+  implicitly reflected in `public/data/latest.json` for the current state.
+- Every executed trade sends its own Telegram message (🤖 Auto-trade
+  BUY/SELL), separate from the signal alert.
+
+**Off by default, two independent switches:**
+
+1. `BITKUB_API_KEY` / `BITKUB_API_SECRET` must be set — create the key at
+   [bitkub.com](https://www.bitkub.com) under **API Management**, scoped to
+   **Trade** permission only (never enable withdrawal on a bot key), and
+   IP-whitelist it if you can.
+2. `AUTO_TRADE_ENABLED` must be exactly `"1"` — even with valid keys above,
+   nothing trades until this is explicitly set.
+
+Test first with `DRY_RUN=1` (the same flag already used for Telegram) — it
+logs every order the bot *would* place, and the would-be Telegram messages,
+without calling Bitkub or spending real money:
+
+```bash
+BITKUB_API_KEY=... BITKUB_API_SECRET=... AUTO_TRADE_ENABLED=1 DRY_RUN=1 python scripts/main.py
+```
+
+Add these as **GitHub Actions secrets** the same way as `TELEGRAM_BOT_TOKEN`
+(Settings → Secrets and variables → Actions):
+`BITKUB_API_KEY`, `BITKUB_API_SECRET`, `AUTO_TRADE_ENABLED`, and optionally
+`AUTO_TRADE_AMOUNT_THB` / `AUTO_TRADE_MAX_POSITIONS` /
+`AUTO_TRADE_MIN_CONFIDENCE` / `AUTO_TRADE_TAKE_PROFIT_PCT` /
+`AUTO_TRADE_STOP_LOSS_PCT` to override the defaults above.
+
+> ⚠️ This places real orders with real money once enabled. The signal engine
+> is a heuristic (see disclaimer above) — it can and will be wrong. Start
+> with a small `AUTO_TRADE_AMOUNT_THB`, verify behavior with `DRY_RUN=1`
+> first, and never risk more than you can afford to lose entirely.
 
 ### Charts
 
@@ -252,7 +314,17 @@ results. That needs its own token, separate from the Action's `GITHUB_TOKEN` sec
 Without these two set, the radio buttons still render but saving fails with a clear
 error instead of silently doing nothing.
 
-### 6. Local development
+### 6. (Optional) Enable auto-trading
+
+Off by default — see "Auto-trading" above for how it works and the risks. To
+enable it, add these as **GitHub Actions secrets** (Settings → Secrets and
+variables → Actions):
+
+- `BITKUB_API_KEY` / `BITKUB_API_SECRET` — from [bitkub.com](https://www.bitkub.com) → API Management, **Trade permission only**, no withdrawal
+- `AUTO_TRADE_ENABLED` — set to `1` to actually trade (test with `DRY_RUN=1` locally first, see step 7)
+- Optionally override `AUTO_TRADE_AMOUNT_THB`, `AUTO_TRADE_MAX_POSITIONS`, `AUTO_TRADE_MIN_CONFIDENCE`, `AUTO_TRADE_TAKE_PROFIT_PCT`, `AUTO_TRADE_STOP_LOSS_PCT`
+
+### 7. Local development
 
 ```bash
 npm install
@@ -277,6 +349,9 @@ DRY_RUN=1 python scripts/main.py   # scans + logs would-be Telegram messages, do
   Telegram alert; editable via the dashboard's radio buttons (see setup step 5) or by hand
 - `scripts/lib/universe.py`: the stock watchlists (crypto is fetched live, see above)
 - `.github/workflows/analyze.yml`: cron schedule (`*/5 * * * *`)
+- `scripts/lib/auto_trader.py` (see "Auto-trading" above, off by default): `AUTO_TRADE_ENABLED` (must be `"1"`),
+  `AUTO_TRADE_AMOUNT_THB` (100), `AUTO_TRADE_MAX_POSITIONS` (3), `AUTO_TRADE_MIN_CONFIDENCE` (75),
+  `AUTO_TRADE_TAKE_PROFIT_PCT` (5), `AUTO_TRADE_STOP_LOSS_PCT` (8, `0` disables it)
 
 ## Disclaimer
 

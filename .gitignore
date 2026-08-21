@@ -7,3 +7,5 @@ __pycache__/
 *.pyc
 .venv/
 venv/
+Bitkub_Token.txt
+tsconfig.tsbuildinfo
