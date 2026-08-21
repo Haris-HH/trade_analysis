@@ -361,8 +361,8 @@
   },
   "crypto:DEGEN": {
     "direction": "BUY",
-    "confidence": 70.78189403656704,
-    "last_alert_at": "2026-08-21T05:32:17.153621+00:00"
+    "confidence": 70.58530354250755,
+    "last_alert_at": "2026-08-21T09:36:31.639264+00:00"
   },
   "crypto:AVA": {
     "direction": "BUY",
@@ -661,8 +661,8 @@
   },
   "crypto:TOSHI": {
     "direction": "BUY",
-    "confidence": 77.31583571082875,
-    "last_alert_at": "2026-08-21T05:02:14.843788+00:00"
+    "confidence": 70.54805107867072,
+    "last_alert_at": "2026-08-21T09:36:30.949745+00:00"
   },
   "crypto:PENGU": {
     "direction": "BUY",
@@ -686,8 +686,8 @@
   },
   "crypto:MEW": {
     "direction": "BUY",
-    "confidence": 75.73327402521912,
-    "last_alert_at": "2026-08-20T23:57:26.245357+00:00"
+    "confidence": 78.044207732243,
+    "last_alert_at": "2026-08-21T09:36:30.266194+00:00"
   },
   "crypto:SHIB": {
     "direction": "BUY",
