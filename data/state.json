@@ -701,8 +701,8 @@
   },
   "crypto:DOGE": {
     "direction": "BUY",
-    "confidence": 74.97005671392432,
-    "last_alert_at": "2026-08-21T01:37:18.614063+00:00"
+    "confidence": 70.31824823256456,
+    "last_alert_at": "2026-08-21T06:32:27.020282+00:00"
   },
   "crypto:XLM": {
     "direction": "BUY",
@@ -928,5 +928,10 @@
     "direction": "BUY",
     "confidence": 81.60614372635459,
     "last_alert_at": "2026-08-21T06:12:12.322012+00:00"
+  },
+  "crypto:GRAM": {
+    "direction": "BUY",
+    "confidence": 71.22344032922933,
+    "last_alert_at": "2026-08-21T06:32:27.547666+00:00"
   }
 }
