@@ -526,8 +526,8 @@
   },
   "crypto:VVV": {
     "direction": "BUY",
-    "confidence": 75.96815562224897,
-    "last_alert_at": "2026-08-20T00:52:13.644029+00:00"
+    "confidence": 71.32781184167709,
+    "last_alert_at": "2026-08-21T05:21:53.341573+00:00"
   },
   "crypto:GALA": {
     "direction": "BUY",
@@ -606,8 +606,8 @@
   },
   "crypto:SOL": {
     "direction": "BUY",
-    "confidence": 76.70889266391791,
-    "last_alert_at": "2026-08-20T11:42:28.680325+00:00"
+    "confidence": 73.97823733788836,
+    "last_alert_at": "2026-08-21T05:21:53.807907+00:00"
   },
   "crypto:CAKE": {
     "direction": "BUY",
