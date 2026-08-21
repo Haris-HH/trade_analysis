@@ -371,8 +371,8 @@
   },
   "crypto:LINK": {
     "direction": "BUY",
-    "confidence": 81.33207053418677,
-    "last_alert_at": "2026-08-21T07:19:38.422636+00:00"
+    "confidence": 70.8106139808006,
+    "last_alert_at": "2026-08-21T21:57:21.208128+00:00"
   },
   "crypto:PIEVERSE": {
     "direction": "BUY",
@@ -771,8 +771,8 @@
   },
   "crypto:DOOD": {
     "direction": "BUY",
-    "confidence": 70.93597059508893,
-    "last_alert_at": "2026-08-21T12:32:44.753956+00:00"
+    "confidence": 73.78575914555046,
+    "last_alert_at": "2026-08-21T21:57:20.298074+00:00"
   },
   "crypto:POPCAT": {
     "direction": "BUY",
@@ -811,8 +811,8 @@
   },
   "crypto:CPOOL": {
     "direction": "BUY",
-    "confidence": 89.25450714625214,
-    "last_alert_at": "2026-08-21T11:07:54.632664+00:00"
+    "confidence": 71.59456791092462,
+    "last_alert_at": "2026-08-21T21:57:20.747982+00:00"
   },
   "crypto:XPL": {
     "direction": "BUY",
@@ -976,8 +976,8 @@
   },
   "crypto:AGLD": {
     "direction": "BUY",
-    "confidence": 70.27284391581513,
-    "last_alert_at": "2026-08-21T17:17:21.408652+00:00"
+    "confidence": 75.12833885036632,
+    "last_alert_at": "2026-08-21T21:57:21.661793+00:00"
   },
   "crypto:FORT": {
     "direction": "BUY",
