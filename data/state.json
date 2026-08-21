@@ -336,8 +336,8 @@
   },
   "crypto:CHZ": {
     "direction": "BUY",
-    "confidence": 82.11196873393706,
-    "last_alert_at": "2026-08-21T09:27:59.864689+00:00"
+    "confidence": 76.88908736320245,
+    "last_alert_at": "2026-08-21T13:32:44.042730+00:00"
   },
   "crypto:APEX": {
     "direction": "BUY",
@@ -506,8 +506,8 @@
   },
   "crypto:HYPE": {
     "direction": "BUY",
-    "confidence": 84.1048368314034,
-    "last_alert_at": "2026-08-20T09:37:38.453214+00:00"
+    "confidence": 83.07556196138403,
+    "last_alert_at": "2026-08-21T13:32:44.798097+00:00"
   },
   "stock:SENA.BK": {
     "direction": "SELL",
@@ -916,8 +916,8 @@
   },
   "crypto:IMX": {
     "direction": "BUY",
-    "confidence": 78.54615800839987,
-    "last_alert_at": "2026-08-21T08:48:06.878248+00:00"
+    "confidence": 75.79389348757263,
+    "last_alert_at": "2026-08-21T13:32:45.513428+00:00"
   },
   "crypto:KNC": {
     "direction": "BUY",
