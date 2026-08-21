@@ -616,8 +616,8 @@
   },
   "crypto:SPX": {
     "direction": "BUY",
-    "confidence": 78.27760964719789,
-    "last_alert_at": "2026-08-20T10:57:17.820336+00:00"
+    "confidence": 73.36971987635143,
+    "last_alert_at": "2026-08-21T02:37:10.728967+00:00"
   },
   "crypto:ARB": {
     "direction": "BUY",
