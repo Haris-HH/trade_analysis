@@ -131,8 +131,8 @@
   },
   "crypto:BRETT": {
     "direction": "BUY",
-    "confidence": 73.36522406844985,
-    "last_alert_at": "2026-08-21T07:19:37.946978+00:00"
+    "confidence": 83.47608144044716,
+    "last_alert_at": "2026-08-21T07:32:51.579077+00:00"
   },
   "crypto:UNI": {
     "direction": "BUY",
@@ -536,8 +536,8 @@
   },
   "crypto:MEME": {
     "direction": "BUY",
-    "confidence": 73.43309422214436,
-    "last_alert_at": "2026-08-20T15:27:18.420837+00:00"
+    "confidence": 71.7256141365466,
+    "last_alert_at": "2026-08-21T07:32:52.790893+00:00"
   },
   "crypto:TAO": {
     "direction": "BUY",
@@ -766,8 +766,8 @@
   },
   "crypto:WIF": {
     "direction": "BUY",
-    "confidence": 70.35687457089955,
-    "last_alert_at": "2026-08-20T16:52:45.935273+00:00"
+    "confidence": 71.11560990028883,
+    "last_alert_at": "2026-08-21T07:32:52.183536+00:00"
   },
   "crypto:DOOD": {
     "direction": "BUY",
@@ -856,8 +856,8 @@
   },
   "crypto:BEAM": {
     "direction": "BUY",
-    "confidence": 74.09146521560079,
-    "last_alert_at": "2026-08-20T16:42:28.917902+00:00"
+    "confidence": 71.15628157643043,
+    "last_alert_at": "2026-08-21T07:32:54.696706+00:00"
   },
   "crypto:DOT": {
     "direction": "BUY",
@@ -906,8 +906,8 @@
   },
   "crypto:BTT": {
     "direction": "BUY",
-    "confidence": 70.67768754254428,
-    "last_alert_at": "2026-08-21T01:57:26.657226+00:00"
+    "confidence": 72.35168101220209,
+    "last_alert_at": "2026-08-21T07:32:54.101086+00:00"
   },
   "crypto:AAVE": {
     "direction": "BUY",
@@ -933,5 +933,10 @@
     "direction": "BUY",
     "confidence": 71.22344032922933,
     "last_alert_at": "2026-08-21T06:32:27.547666+00:00"
+  },
+  "crypto:MOCA": {
+    "direction": "BUY",
+    "confidence": 71.14729040217266,
+    "last_alert_at": "2026-08-21T07:32:53.481485+00:00"
   }
 }
