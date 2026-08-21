@@ -611,8 +611,8 @@
   },
   "crypto:CAKE": {
     "direction": "BUY",
-    "confidence": 83.65112781420632,
-    "last_alert_at": "2026-08-21T08:43:31.042558+00:00"
+    "confidence": 78.5655308446424,
+    "last_alert_at": "2026-08-21T13:53:03.026481+00:00"
   },
   "crypto:SPX": {
     "direction": "BUY",
@@ -776,8 +776,8 @@
   },
   "crypto:POPCAT": {
     "direction": "BUY",
-    "confidence": 70.57257116138672,
-    "last_alert_at": "2026-08-21T07:45:37.781886+00:00"
+    "confidence": 79.45924202732223,
+    "last_alert_at": "2026-08-21T13:53:02.369239+00:00"
   },
   "crypto:FLOCK": {
     "direction": "BUY",
