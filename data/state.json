@@ -311,8 +311,8 @@
   },
   "crypto:GMT": {
     "direction": "BUY",
-    "confidence": 70.22446880374126,
-    "last_alert_at": "2026-08-21T00:17:37.285289+00:00"
+    "confidence": 74.12252833737507,
+    "last_alert_at": "2026-08-21T08:48:10.948134+00:00"
   },
   "stock:STX": {
     "direction": "BUY",
@@ -405,9 +405,9 @@
     "last_alert_at": "2026-08-20T07:16:49.012803+00:00"
   },
   "crypto:PLN": {
-    "direction": "SELL",
-    "confidence": 72.49966066924686,
-    "last_alert_at": "2026-08-19T12:51:46.356321+00:00"
+    "direction": "BUY",
+    "confidence": 74.03812847818864,
+    "last_alert_at": "2026-08-21T08:48:10.306120+00:00"
   },
   "crypto:ZAMA": {
     "direction": "BUY",
@@ -451,8 +451,8 @@
   },
   "crypto:ZENT": {
     "direction": "BUY",
-    "confidence": 70.34392107517333,
-    "last_alert_at": "2026-08-21T04:47:10.047930+00:00"
+    "confidence": 72.15339039470885,
+    "last_alert_at": "2026-08-21T08:48:09.628980+00:00"
   },
   "crypto:OPG": {
     "direction": "BUY",
@@ -676,8 +676,8 @@
   },
   "crypto:MOG": {
     "direction": "BUY",
-    "confidence": 73.01292765875354,
-    "last_alert_at": "2026-08-21T00:22:21.796207+00:00"
+    "confidence": 73.38065499229974,
+    "last_alert_at": "2026-08-21T08:48:11.622965+00:00"
   },
   "crypto:JUP": {
     "direction": "BUY",
@@ -701,8 +701,8 @@
   },
   "crypto:DOGE": {
     "direction": "BUY",
-    "confidence": 70.31824823256456,
-    "last_alert_at": "2026-08-21T06:32:27.020282+00:00"
+    "confidence": 81.54232289671697,
+    "last_alert_at": "2026-08-21T08:48:08.327525+00:00"
   },
   "crypto:XLM": {
     "direction": "BUY",
@@ -916,8 +916,8 @@
   },
   "crypto:IMX": {
     "direction": "BUY",
-    "confidence": 70.16498642467973,
-    "last_alert_at": "2026-08-21T03:16:19.600615+00:00"
+    "confidence": 78.54615800839987,
+    "last_alert_at": "2026-08-21T08:48:06.878248+00:00"
   },
   "crypto:KNC": {
     "direction": "BUY",
@@ -946,7 +946,12 @@
   },
   "crypto:GRT": {
     "direction": "BUY",
-    "confidence": 75.60637029236375,
-    "last_alert_at": "2026-08-21T07:57:58.530271+00:00"
+    "confidence": 85.78322906095225,
+    "last_alert_at": "2026-08-21T08:48:08.954594+00:00"
+  },
+  "crypto:ENJ": {
+    "direction": "BUY",
+    "confidence": 76.59161719371762,
+    "last_alert_at": "2026-08-21T08:48:07.672068+00:00"
   }
 }
