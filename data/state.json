@@ -331,8 +331,8 @@
   },
   "crypto:ENA": {
     "direction": "BUY",
-    "confidence": 80.2665881682397,
-    "last_alert_at": "2026-08-21T09:33:18.853344+00:00"
+    "confidence": 81.05146772817643,
+    "last_alert_at": "2026-08-21T13:37:28.468356+00:00"
   },
   "crypto:CHZ": {
     "direction": "BUY",
@@ -726,8 +726,8 @@
   },
   "crypto:EIGEN": {
     "direction": "BUY",
-    "confidence": 71.89287551658845,
-    "last_alert_at": "2026-08-21T09:33:19.379191+00:00"
+    "confidence": 77.44665641374101,
+    "last_alert_at": "2026-08-21T13:37:28.970577+00:00"
   },
   "crypto:ETH": {
     "direction": "BUY",
@@ -936,8 +936,8 @@
   },
   "crypto:MOCA": {
     "direction": "BUY",
-    "confidence": 82.98055104277996,
-    "last_alert_at": "2026-08-21T09:33:20.465294+00:00"
+    "confidence": 79.90402685487852,
+    "last_alert_at": "2026-08-21T13:37:29.446990+00:00"
   },
   "crypto:MAGIC": {
     "direction": "BUY",
