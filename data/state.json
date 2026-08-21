@@ -86,8 +86,8 @@
   },
   "crypto:LIT": {
     "direction": "BUY",
-    "confidence": 72.33399194387235,
-    "last_alert_at": "2026-08-21T13:56:14.950008+00:00"
+    "confidence": 71.97682004747007,
+    "last_alert_at": "2026-08-21T13:59:21.704910+00:00"
   },
   "crypto:NEAR": {
     "direction": "BUY",
@@ -671,8 +671,8 @@
   },
   "crypto:PEPE": {
     "direction": "BUY",
-    "confidence": 83.33018177202331,
-    "last_alert_at": "2026-08-21T09:48:53.927286+00:00"
+    "confidence": 70.4166092426477,
+    "last_alert_at": "2026-08-21T13:59:22.279256+00:00"
   },
   "crypto:MOG": {
     "direction": "BUY",
