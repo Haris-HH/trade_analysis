@@ -285,9 +285,9 @@
     "last_alert_at": "2026-08-17T04:26:45.556701+00:00"
   },
   "crypto:ZKP": {
-    "direction": "SELL",
-    "confidence": 72.9524992828659,
-    "last_alert_at": "2026-08-14T14:56:57.002131+00:00"
+    "direction": "BUY",
+    "confidence": 72.4885178043166,
+    "last_alert_at": "2026-08-21T06:22:17.364616+00:00"
   },
   "crypto:SOON": {
     "direction": "SELL",
@@ -546,8 +546,8 @@
   },
   "crypto:SUI": {
     "direction": "BUY",
-    "confidence": 76.26753344719857,
-    "last_alert_at": "2026-08-21T02:22:10.299030+00:00"
+    "confidence": 73.73874980026375,
+    "last_alert_at": "2026-08-21T06:22:18.311270+00:00"
   },
   "crypto:CFG": {
     "direction": "SELL",
@@ -656,8 +656,8 @@
   },
   "crypto:FLOKI": {
     "direction": "BUY",
-    "confidence": 79.40616960431377,
-    "last_alert_at": "2026-08-21T02:22:09.783851+00:00"
+    "confidence": 83.3179237806377,
+    "last_alert_at": "2026-08-21T06:22:17.827800+00:00"
   },
   "crypto:TOSHI": {
     "direction": "BUY",
