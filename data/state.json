@@ -36,8 +36,8 @@
   },
   "crypto:BONK": {
     "direction": "BUY",
-    "confidence": 71.46808421412813,
-    "last_alert_at": "2026-08-21T11:47:59.701664+00:00"
+    "confidence": 80.75490236694061,
+    "last_alert_at": "2026-08-21T16:37:25.847841+00:00"
   },
   "crypto:EDGE": {
     "direction": "BUY",
@@ -81,8 +81,8 @@
   },
   "crypto:AZTEC": {
     "direction": "BUY",
-    "confidence": 72.65995207492891,
-    "last_alert_at": "2026-08-20T09:42:29.864711+00:00"
+    "confidence": 70.76463941144745,
+    "last_alert_at": "2026-08-21T16:37:25.337220+00:00"
   },
   "crypto:LIT": {
     "direction": "BUY",
