@@ -170,9 +170,9 @@
     "last_alert_at": "2026-08-11T20:16:52.114129+00:00"
   },
   "crypto:AGI": {
-    "direction": "SELL",
-    "confidence": 70.50894842703977,
-    "last_alert_at": "2026-08-20T21:51:59.606119+00:00"
+    "direction": "BUY",
+    "confidence": 84.95986869081213,
+    "last_alert_at": "2026-08-21T15:22:41.116629+00:00"
   },
   "crypto:ZRC": {
     "direction": "SELL",
