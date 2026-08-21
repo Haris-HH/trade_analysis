@@ -151,8 +151,8 @@
   },
   "crypto:AVAX": {
     "direction": "BUY",
-    "confidence": 80.60541165837425,
-    "last_alert_at": "2026-08-20T15:32:30.615215+00:00"
+    "confidence": 86.93323555773819,
+    "last_alert_at": "2026-08-21T07:45:37.781791+00:00"
   },
   "crypto:PONKE": {
     "direction": "SELL",
@@ -196,8 +196,8 @@
   },
   "crypto:JFIN": {
     "direction": "BUY",
-    "confidence": 76.64201463245946,
-    "last_alert_at": "2026-08-21T02:42:15.006394+00:00"
+    "confidence": 76.31341921426834,
+    "last_alert_at": "2026-08-21T07:45:37.781653+00:00"
   },
   "crypto:KAITO": {
     "direction": "SELL",
@@ -531,8 +531,8 @@
   },
   "crypto:GALA": {
     "direction": "BUY",
-    "confidence": 70.23701378575898,
-    "last_alert_at": "2026-08-21T07:27:16.439144+00:00"
+    "confidence": 81.87831360471748,
+    "last_alert_at": "2026-08-21T07:45:37.781710+00:00"
   },
   "crypto:MEME": {
     "direction": "BUY",
@@ -691,8 +691,8 @@
   },
   "crypto:SHIB": {
     "direction": "BUY",
-    "confidence": 72.01916801941117,
-    "last_alert_at": "2026-08-20T16:57:45.233112+00:00"
+    "confidence": 72.34464246860283,
+    "last_alert_at": "2026-08-21T07:45:37.781850+00:00"
   },
   "crypto:XRP": {
     "direction": "BUY",
@@ -771,13 +771,13 @@
   },
   "crypto:DOOD": {
     "direction": "BUY",
-    "confidence": 70.7648223166875,
-    "last_alert_at": "2026-08-20T20:57:00.819896+00:00"
+    "confidence": 75.47461237521118,
+    "last_alert_at": "2026-08-21T07:45:37.781962+00:00"
   },
   "crypto:POPCAT": {
     "direction": "BUY",
-    "confidence": 85.80532105305217,
-    "last_alert_at": "2026-08-20T15:27:17.790314+00:00"
+    "confidence": 70.57257116138672,
+    "last_alert_at": "2026-08-21T07:45:37.781886+00:00"
   },
   "crypto:FLOCK": {
     "direction": "BUY",
@@ -901,8 +901,8 @@
   },
   "crypto:DYDX": {
     "direction": "BUY",
-    "confidence": 74.9187606527263,
-    "last_alert_at": "2026-08-21T03:37:15.809648+00:00"
+    "confidence": 83.4716404709249,
+    "last_alert_at": "2026-08-21T07:45:37.781608+00:00"
   },
   "crypto:BTT": {
     "direction": "BUY",
@@ -938,5 +938,10 @@
     "direction": "BUY",
     "confidence": 71.14729040217266,
     "last_alert_at": "2026-08-21T07:32:53.481485+00:00"
+  },
+  "crypto:MAGIC": {
+    "direction": "BUY",
+    "confidence": 71.53905635348977,
+    "last_alert_at": "2026-08-21T07:45:37.782006+00:00"
   }
 }
