@@ -171,8 +171,8 @@
   },
   "crypto:AGI": {
     "direction": "BUY",
-    "confidence": 84.95986869081213,
-    "last_alert_at": "2026-08-21T15:22:41.116629+00:00"
+    "confidence": 73.43406157795972,
+    "last_alert_at": "2026-08-21T20:57:07.648320+00:00"
   },
   "crypto:ZRC": {
     "direction": "SELL",
@@ -231,8 +231,8 @@
   },
   "crypto:ROBO": {
     "direction": "BUY",
-    "confidence": 70.52463470135388,
-    "last_alert_at": "2026-08-21T17:55:03.183962+00:00"
+    "confidence": 81.45408754129946,
+    "last_alert_at": "2026-08-21T20:57:07.183706+00:00"
   },
   "crypto:ZIL": {
     "direction": "BUY",
@@ -531,8 +531,8 @@
   },
   "crypto:GALA": {
     "direction": "BUY",
-    "confidence": 73.40026446579797,
-    "last_alert_at": "2026-08-21T16:47:28.292474+00:00"
+    "confidence": 71.31187946475875,
+    "last_alert_at": "2026-08-21T20:57:06.722151+00:00"
   },
   "crypto:MEME": {
     "direction": "BUY",
@@ -691,8 +691,8 @@
   },
   "crypto:SHIB": {
     "direction": "BUY",
-    "confidence": 76.92751378261991,
-    "last_alert_at": "2026-08-21T14:57:49.251699+00:00"
+    "confidence": 73.23846124150143,
+    "last_alert_at": "2026-08-21T20:57:06.270509+00:00"
   },
   "crypto:XRP": {
     "direction": "BUY",
