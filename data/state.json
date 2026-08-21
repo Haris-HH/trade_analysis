@@ -913,5 +913,10 @@
     "direction": "BUY",
     "confidence": 77.39778842155604,
     "last_alert_at": "2026-08-21T02:42:15.503726+00:00"
+  },
+  "crypto:IMX": {
+    "direction": "BUY",
+    "confidence": 70.16498642467973,
+    "last_alert_at": "2026-08-21T03:16:19.600615+00:00"
   }
 }
