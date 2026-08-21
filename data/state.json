@@ -65,9 +65,9 @@
     "last_alert_at": "2026-08-21T14:57:48.781744+00:00"
   },
   "crypto:BICO": {
-    "direction": "SELL",
-    "confidence": 76.22536887595764,
-    "last_alert_at": "2026-08-19T15:52:05.633781+00:00"
+    "direction": "BUY",
+    "confidence": 76.01742178019362,
+    "last_alert_at": "2026-08-21T17:47:18.329711+00:00"
   },
   "crypto:LUNA": {
     "direction": "BUY",
@@ -686,8 +686,8 @@
   },
   "crypto:MEW": {
     "direction": "BUY",
-    "confidence": 74.71196163216926,
-    "last_alert_at": "2026-08-21T13:42:51.847109+00:00"
+    "confidence": 80.04751164724794,
+    "last_alert_at": "2026-08-21T17:47:19.027937+00:00"
   },
   "crypto:SHIB": {
     "direction": "BUY",
