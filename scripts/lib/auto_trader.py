@@ -23,13 +23,28 @@ import os
 
 from . import bitkub_trade, positions_store, telegram_notify
 
+
+def _env_float(name: str, default: float) -> float:
+    # A GitHub Actions secret that was never set still shows up as an env
+    # var with an EMPTY STRING value, not a missing key — os.environ.get's
+    # default only kicks in when the key is absent entirely, so an empty
+    # string here must be treated the same as unset or float("") crashes.
+    val = os.environ.get(name)
+    return float(val) if val else default
+
+
+def _env_int(name: str, default: int) -> int:
+    val = os.environ.get(name)
+    return int(val) if val else default
+
+
 ENABLED = os.environ.get("AUTO_TRADE_ENABLED") == "1"
 DRY_RUN = os.environ.get("DRY_RUN") == "1"
-TRADE_AMOUNT_THB = float(os.environ.get("AUTO_TRADE_AMOUNT_THB", "100"))
-MAX_POSITIONS = int(os.environ.get("AUTO_TRADE_MAX_POSITIONS", "3"))
-MIN_CONFIDENCE = float(os.environ.get("AUTO_TRADE_MIN_CONFIDENCE", "75"))
-TAKE_PROFIT_PCT = float(os.environ.get("AUTO_TRADE_TAKE_PROFIT_PCT", "5")) / 100
-STOP_LOSS_PCT = float(os.environ.get("AUTO_TRADE_STOP_LOSS_PCT", "8")) / 100
+TRADE_AMOUNT_THB = _env_float("AUTO_TRADE_AMOUNT_THB", 100)
+MAX_POSITIONS = _env_int("AUTO_TRADE_MAX_POSITIONS", 3)
+MIN_CONFIDENCE = _env_float("AUTO_TRADE_MIN_CONFIDENCE", 75)
+TAKE_PROFIT_PCT = _env_float("AUTO_TRADE_TAKE_PROFIT_PCT", 5) / 100
+STOP_LOSS_PCT = _env_float("AUTO_TRADE_STOP_LOSS_PCT", 8) / 100
 
 
 def _fmt(v: float) -> str:
