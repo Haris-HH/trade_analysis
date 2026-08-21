@@ -1003,5 +1003,10 @@
     "direction": "BUY",
     "confidence": 71.1991532779668,
     "last_alert_at": "2026-08-21T13:47:59.414322+00:00"
+  },
+  "crypto:LINEA": {
+    "direction": "BUY",
+    "confidence": 85.57039186800974,
+    "last_alert_at": "2026-08-21T14:42:26.241581+00:00"
   }
 }
