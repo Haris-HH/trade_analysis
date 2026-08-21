@@ -371,8 +371,8 @@
   },
   "crypto:LINK": {
     "direction": "BUY",
-    "confidence": 70.8106139808006,
-    "last_alert_at": "2026-08-21T21:59:40.207409+00:00"
+    "confidence": 82.0391878641775,
+    "last_alert_at": "2026-08-21T22:27:20.360895+00:00"
   },
   "crypto:PIEVERSE": {
     "direction": "BUY",
@@ -526,8 +526,8 @@
   },
   "crypto:VVV": {
     "direction": "BUY",
-    "confidence": 81.79375082464644,
-    "last_alert_at": "2026-08-21T06:57:28.220426+00:00"
+    "confidence": 72.91755135915339,
+    "last_alert_at": "2026-08-21T22:27:21.713795+00:00"
   },
   "crypto:GALA": {
     "direction": "BUY",
@@ -806,8 +806,8 @@
   },
   "crypto:STRK": {
     "direction": "BUY",
-    "confidence": 73.93612408195796,
-    "last_alert_at": "2026-08-21T16:52:28.226704+00:00"
+    "confidence": 71.73029603539183,
+    "last_alert_at": "2026-08-21T22:27:21.035643+00:00"
   },
   "crypto:CPOOL": {
     "direction": "BUY",
