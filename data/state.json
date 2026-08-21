@@ -256,8 +256,8 @@
   },
   "crypto:XAI": {
     "direction": "BUY",
-    "confidence": 74.92243000745106,
-    "last_alert_at": "2026-08-16T20:16:38.485476+00:00"
+    "confidence": 70.27441611808905,
+    "last_alert_at": "2026-08-21T08:57:18.324834+00:00"
   },
   "crypto:SPEC": {
     "direction": "SELL",
@@ -721,8 +721,8 @@
   },
   "crypto:PNUT": {
     "direction": "BUY",
-    "confidence": 70.46469724665516,
-    "last_alert_at": "2026-08-21T08:27:49.151210+00:00"
+    "confidence": 80.65328107085962,
+    "last_alert_at": "2026-08-21T08:57:17.226922+00:00"
   },
   "crypto:EIGEN": {
     "direction": "BUY",
@@ -846,8 +846,8 @@
   },
   "crypto:ZIG": {
     "direction": "BUY",
-    "confidence": 82.37838573565914,
-    "last_alert_at": "2026-08-20T16:27:12.999832+00:00"
+    "confidence": 83.64057662962666,
+    "last_alert_at": "2026-08-21T08:57:18.842947+00:00"
   },
   "crypto:ABT": {
     "direction": "BUY",
@@ -911,8 +911,8 @@
   },
   "crypto:AAVE": {
     "direction": "BUY",
-    "confidence": 77.39778842155604,
-    "last_alert_at": "2026-08-21T02:42:15.503726+00:00"
+    "confidence": 70.98545590598326,
+    "last_alert_at": "2026-08-21T08:57:16.632422+00:00"
   },
   "crypto:IMX": {
     "direction": "BUY",
@@ -958,5 +958,10 @@
     "direction": "BUY",
     "confidence": 71.19596896916403,
     "last_alert_at": "2026-08-21T08:53:10.950445+00:00"
+  },
+  "crypto:FLUID": {
+    "direction": "BUY",
+    "confidence": 76.76687549786739,
+    "last_alert_at": "2026-08-21T08:57:17.786262+00:00"
   }
 }
