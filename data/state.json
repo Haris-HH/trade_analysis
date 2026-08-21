@@ -101,8 +101,8 @@
   },
   "crypto:HOLO": {
     "direction": "BUY",
-    "confidence": 80.79227657234523,
-    "last_alert_at": "2026-08-20T23:52:24.221903+00:00"
+    "confidence": 73.5780781601084,
+    "last_alert_at": "2026-08-21T05:54:51.335902+00:00"
   },
   "crypto:IOST": {
     "direction": "BUY",
@@ -561,8 +561,8 @@
   },
   "crypto:DMC": {
     "direction": "SELL",
-    "confidence": 72.93627053965743,
-    "last_alert_at": "2026-08-18T20:31:52.297551+00:00"
+    "confidence": 76.92998581982988,
+    "last_alert_at": "2026-08-21T05:54:49.818343+00:00"
   },
   "stock:BGRIM.BK": {
     "direction": "BUY",
@@ -756,13 +756,13 @@
   },
   "crypto:BNB": {
     "direction": "BUY",
-    "confidence": 75.05856885566958,
-    "last_alert_at": "2026-08-20T23:22:00.806101+00:00"
+    "confidence": 71.23909632159953,
+    "last_alert_at": "2026-08-21T05:54:50.829190+00:00"
   },
   "crypto:AIXBT": {
     "direction": "BUY",
-    "confidence": 80.59096772652171,
-    "last_alert_at": "2026-08-20T23:32:19.985565+00:00"
+    "confidence": 70.00998025551331,
+    "last_alert_at": "2026-08-21T05:54:50.308644+00:00"
   },
   "crypto:WIF": {
     "direction": "BUY",
