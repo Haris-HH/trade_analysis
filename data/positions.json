@@ -1,1 +1,50 @@
-{}
+{
+  "LINK": {
+    "entry_price": 373.21757739176246,
+    "cost_thb": 299.25,
+    "coin_amount": 0.80181111,
+    "order_id": "reconciled-2026-08-21",
+    "opened_at": "2026-08-21T07:20:00+00:00",
+    "buy_confidence": null
+  },
+  "DYDX": {
+    "entry_price": 3.8799999999896273,
+    "cost_thb": 299.25,
+    "coin_amount": 77.12628866,
+    "order_id": "reconciled-2026-08-21",
+    "opened_at": "2026-08-21T07:20:00+00:00",
+    "buy_confidence": null
+  },
+  "EIGEN": {
+    "entry_price": 6.883175675200806,
+    "cost_thb": 299.25,
+    "coin_amount": 43.47557205,
+    "order_id": "reconciled-2026-08-21",
+    "opened_at": "2026-08-21T07:20:00+00:00",
+    "buy_confidence": null
+  },
+  "TAO": {
+    "entry_price": 7280.498445914654,
+    "cost_thb": 399.0,
+    "coin_amount": 0.05480394,
+    "order_id": "reconciled-2026-08-21",
+    "opened_at": "2026-08-21T07:20:00+00:00",
+    "buy_confidence": null
+  },
+  "UNI": {
+    "entry_price": 128.53871760780825,
+    "cost_thb": 299.25,
+    "coin_amount": 2.32809231,
+    "order_id": "reconciled-2026-08-21",
+    "opened_at": "2026-08-21T07:20:00+00:00",
+    "buy_confidence": null
+  },
+  "XPL": {
+    "entry_price": 3.1101658800055425,
+    "cost_thb": 299.25,
+    "coin_amount": 96.21673298,
+    "order_id": "reconciled-2026-08-21",
+    "opened_at": "2026-08-21T07:20:00+00:00",
+    "buy_confidence": null
+  }
+}

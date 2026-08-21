@@ -1,1 +1,50 @@
-[]
+[
+  {
+    "ticker": "LINK",
+    "side": "reconcile",
+    "note": "aggregated 3 untracked live buy(s) placed 2026-08-21 before the fill-tracking fix",
+    "coin_amount": 0.80181111,
+    "cost_thb": 299.25,
+    "at": "2026-08-21T07:40:04.670034+00:00"
+  },
+  {
+    "ticker": "DYDX",
+    "side": "reconcile",
+    "note": "aggregated 3 untracked live buy(s) placed 2026-08-21 before the fill-tracking fix",
+    "coin_amount": 77.12628866,
+    "cost_thb": 299.25,
+    "at": "2026-08-21T07:40:04.676545+00:00"
+  },
+  {
+    "ticker": "EIGEN",
+    "side": "reconcile",
+    "note": "aggregated 3 untracked live buy(s) placed 2026-08-21 before the fill-tracking fix",
+    "coin_amount": 43.47557205,
+    "cost_thb": 299.25,
+    "at": "2026-08-21T07:40:04.684544+00:00"
+  },
+  {
+    "ticker": "TAO",
+    "side": "reconcile",
+    "note": "aggregated 4 untracked live buy(s) placed 2026-08-21 before the fill-tracking fix",
+    "coin_amount": 0.05480394,
+    "cost_thb": 399.0,
+    "at": "2026-08-21T07:40:04.690054+00:00"
+  },
+  {
+    "ticker": "UNI",
+    "side": "reconcile",
+    "note": "aggregated 3 untracked live buy(s) placed 2026-08-21 before the fill-tracking fix",
+    "coin_amount": 2.32809231,
+    "cost_thb": 299.25,
+    "at": "2026-08-21T07:40:04.696714+00:00"
+  },
+  {
+    "ticker": "XPL",
+    "side": "reconcile",
+    "note": "aggregated 3 untracked live buy(s) placed 2026-08-21 before the fill-tracking fix",
+    "coin_amount": 96.21673298,
+    "cost_thb": 299.25,
+    "at": "2026-08-21T07:40:04.703715+00:00"
+  }
+]
