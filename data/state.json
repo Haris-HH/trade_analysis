@@ -451,8 +451,8 @@
   },
   "crypto:ZENT": {
     "direction": "BUY",
-    "confidence": 72.15339039470885,
-    "last_alert_at": "2026-08-21T08:48:09.628980+00:00"
+    "confidence": 70.1649765633671,
+    "last_alert_at": "2026-08-21T13:05:31.078679+00:00"
   },
   "crypto:OPG": {
     "direction": "BUY",
@@ -796,8 +796,8 @@
   },
   "crypto:ZORA": {
     "direction": "BUY",
-    "confidence": 84.18550216754771,
-    "last_alert_at": "2026-08-21T03:22:09.325680+00:00"
+    "confidence": 83.96149299229246,
+    "last_alert_at": "2026-08-21T13:05:31.636276+00:00"
   },
   "crypto:SIX": {
     "direction": "BUY",
@@ -862,7 +862,7 @@
   "crypto:DOT": {
     "direction": "BUY",
     "confidence": 76.90877639037717,
-    "last_alert_at": "2026-08-21T13:02:57.081185+00:00"
+    "last_alert_at": "2026-08-21T13:05:32.203051+00:00"
   },
   "crypto:FIDA": {
     "direction": "BUY",
