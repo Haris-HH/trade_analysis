@@ -341,8 +341,8 @@
   },
   "crypto:APEX": {
     "direction": "BUY",
-    "confidence": 72.70393697019944,
-    "last_alert_at": "2026-08-21T08:17:46.069905+00:00"
+    "confidence": 86.46379520563212,
+    "last_alert_at": "2026-08-21T08:27:49.676292+00:00"
   },
   "crypto:MAVIA": {
     "direction": "BUY",
@@ -721,8 +721,8 @@
   },
   "crypto:PNUT": {
     "direction": "BUY",
-    "confidence": 71.10319790256183,
-    "last_alert_at": "2026-08-20T13:52:18.665704+00:00"
+    "confidence": 70.46469724665516,
+    "last_alert_at": "2026-08-21T08:27:49.151210+00:00"
   },
   "crypto:EIGEN": {
     "direction": "BUY",
@@ -741,8 +741,8 @@
   },
   "crypto:ASTER": {
     "direction": "BUY",
-    "confidence": 79.52964453314694,
-    "last_alert_at": "2026-08-21T07:51:28.467422+00:00"
+    "confidence": 89.67980946006058,
+    "last_alert_at": "2026-08-21T08:27:48.674704+00:00"
   },
   "crypto:RED": {
     "direction": "BUY",
@@ -791,8 +791,8 @@
   },
   "crypto:NEXO": {
     "direction": "BUY",
-    "confidence": 71.54801498071555,
-    "last_alert_at": "2026-08-21T08:07:27.543713+00:00"
+    "confidence": 82.87291025535863,
+    "last_alert_at": "2026-08-21T08:27:48.198517+00:00"
   },
   "crypto:ZORA": {
     "direction": "BUY",
