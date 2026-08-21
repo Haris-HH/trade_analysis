@@ -781,8 +781,8 @@
   },
   "crypto:FLOCK": {
     "direction": "BUY",
-    "confidence": 88.09387923647319,
-    "last_alert_at": "2026-08-21T10:05:48.626086+00:00"
+    "confidence": 81.41376381845527,
+    "last_alert_at": "2026-08-21T17:07:50.456231+00:00"
   },
   "crypto:SKR": {
     "direction": "BUY",
