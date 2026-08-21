@@ -311,8 +311,8 @@
   },
   "crypto:GMT": {
     "direction": "BUY",
-    "confidence": 73.65459022610482,
-    "last_alert_at": "2026-08-20T17:07:02.817000+00:00"
+    "confidence": 70.22446880374126,
+    "last_alert_at": "2026-08-21T00:17:37.285289+00:00"
   },
   "stock:STX": {
     "direction": "BUY",
@@ -326,8 +326,8 @@
   },
   "crypto:BCH": {
     "direction": "BUY",
-    "confidence": 70.54109990983778,
-    "last_alert_at": "2026-08-20T15:07:07.615713+00:00"
+    "confidence": 70.00171813868997,
+    "last_alert_at": "2026-08-21T00:17:38.265810+00:00"
   },
   "crypto:ENA": {
     "direction": "BUY",
@@ -335,9 +335,9 @@
     "last_alert_at": "2026-08-20T17:37:30.465399+00:00"
   },
   "crypto:CHZ": {
-    "direction": "SELL",
-    "confidence": 70.37977716737457,
-    "last_alert_at": "2026-08-18T03:02:01.899076+00:00"
+    "direction": "BUY",
+    "confidence": 75.62808866441434,
+    "last_alert_at": "2026-08-21T00:17:37.751574+00:00"
   },
   "crypto:APEX": {
     "direction": "BUY",
