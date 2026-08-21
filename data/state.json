@@ -963,5 +963,15 @@
     "direction": "BUY",
     "confidence": 76.76687549786739,
     "last_alert_at": "2026-08-21T08:57:17.786262+00:00"
+  },
+  "crypto:STO": {
+    "direction": "BUY",
+    "confidence": 72.1625097601829,
+    "last_alert_at": "2026-08-21T09:44:16.448877+00:00"
+  },
+  "crypto:CGPT": {
+    "direction": "BUY",
+    "confidence": 75.62196875056489,
+    "last_alert_at": "2026-08-21T09:44:17.062078+00:00"
   }
 }
