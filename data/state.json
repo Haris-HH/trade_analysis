@@ -911,8 +911,8 @@
   },
   "crypto:AAVE": {
     "direction": "BUY",
-    "confidence": 70.98545590598326,
-    "last_alert_at": "2026-08-21T08:57:16.632422+00:00"
+    "confidence": 76.6305046814799,
+    "last_alert_at": "2026-08-21T21:02:10.246603+00:00"
   },
   "crypto:IMX": {
     "direction": "BUY",
@@ -951,8 +951,8 @@
   },
   "crypto:ENJ": {
     "direction": "BUY",
-    "confidence": 72.55838903577202,
-    "last_alert_at": "2026-08-21T12:58:18.564827+00:00"
+    "confidence": 77.87433629026108,
+    "last_alert_at": "2026-08-21T21:02:10.693742+00:00"
   },
   "crypto:ACH": {
     "direction": "BUY",
