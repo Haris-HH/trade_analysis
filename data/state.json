@@ -311,8 +311,8 @@
   },
   "crypto:GMT": {
     "direction": "BUY",
-    "confidence": 74.12252833737507,
-    "last_alert_at": "2026-08-21T08:48:10.948134+00:00"
+    "confidence": 70.13052495397358,
+    "last_alert_at": "2026-08-21T13:02:57.561971+00:00"
   },
   "stock:STX": {
     "direction": "BUY",
@@ -861,8 +861,8 @@
   },
   "crypto:DOT": {
     "direction": "BUY",
-    "confidence": 83.46896548703235,
-    "last_alert_at": "2026-08-21T08:43:29.627150+00:00"
+    "confidence": 76.90877639037717,
+    "last_alert_at": "2026-08-21T13:02:57.081185+00:00"
   },
   "crypto:FIDA": {
     "direction": "BUY",
