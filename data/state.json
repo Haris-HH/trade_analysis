@@ -256,8 +256,8 @@
   },
   "crypto:XAI": {
     "direction": "BUY",
-    "confidence": 70.27441611808905,
-    "last_alert_at": "2026-08-21T08:57:18.324834+00:00"
+    "confidence": 76.55468463581066,
+    "last_alert_at": "2026-08-21T12:58:21.933459+00:00"
   },
   "crypto:SPEC": {
     "direction": "SELL",
@@ -376,8 +376,8 @@
   },
   "crypto:PIEVERSE": {
     "direction": "BUY",
-    "confidence": 85.47878530759655,
-    "last_alert_at": "2026-08-21T08:53:10.444117+00:00"
+    "confidence": 81.28491754223407,
+    "last_alert_at": "2026-08-21T12:58:19.847626+00:00"
   },
   "crypto:ALCH": {
     "direction": "BUY",
@@ -561,8 +561,8 @@
   },
   "crypto:DMC": {
     "direction": "SELL",
-    "confidence": 76.92998581982988,
-    "last_alert_at": "2026-08-21T05:54:49.818343+00:00"
+    "confidence": 72.17971555386735,
+    "last_alert_at": "2026-08-21T12:58:17.887668+00:00"
   },
   "stock:BGRIM.BK": {
     "direction": "BUY",
@@ -681,8 +681,8 @@
   },
   "crypto:JUP": {
     "direction": "BUY",
-    "confidence": 73.16894727650543,
-    "last_alert_at": "2026-08-21T08:53:11.706200+00:00"
+    "confidence": 79.39611266595665,
+    "last_alert_at": "2026-08-21T12:58:19.196707+00:00"
   },
   "crypto:MEW": {
     "direction": "BUY",
@@ -951,18 +951,18 @@
   },
   "crypto:ENJ": {
     "direction": "BUY",
-    "confidence": 76.59161719371762,
-    "last_alert_at": "2026-08-21T08:48:07.672068+00:00"
+    "confidence": 72.55838903577202,
+    "last_alert_at": "2026-08-21T12:58:18.564827+00:00"
   },
   "crypto:ACH": {
     "direction": "BUY",
-    "confidence": 71.19596896916403,
-    "last_alert_at": "2026-08-21T08:53:10.950445+00:00"
+    "confidence": 79.18900878409748,
+    "last_alert_at": "2026-08-21T12:58:21.317716+00:00"
   },
   "crypto:FLUID": {
     "direction": "BUY",
-    "confidence": 76.76687549786739,
-    "last_alert_at": "2026-08-21T08:57:17.786262+00:00"
+    "confidence": 84.06457519293022,
+    "last_alert_at": "2026-08-21T12:58:20.661848+00:00"
   },
   "crypto:STO": {
     "direction": "BUY",
