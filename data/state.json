@@ -436,8 +436,8 @@
   },
   "crypto:FET": {
     "direction": "BUY",
-    "confidence": 71.1485455346833,
-    "last_alert_at": "2026-08-21T09:00:35.821743+00:00"
+    "confidence": 81.71275347131653,
+    "last_alert_at": "2026-08-21T09:54:07.560678+00:00"
   },
   "crypto:TA": {
     "direction": "SELL",
@@ -841,8 +841,8 @@
   },
   "crypto:SAND": {
     "direction": "BUY",
-    "confidence": 83.88812008374242,
-    "last_alert_at": "2026-08-21T05:52:25.458777+00:00"
+    "confidence": 75.77437875257942,
+    "last_alert_at": "2026-08-21T09:54:06.933138+00:00"
   },
   "crypto:ZIG": {
     "direction": "BUY",
