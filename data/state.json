@@ -716,8 +716,8 @@
   },
   "crypto:OP": {
     "direction": "BUY",
-    "confidence": 72.43909113869125,
-    "last_alert_at": "2026-08-21T22:07:23.175929+00:00"
+    "confidence": 82.58170075707382,
+    "last_alert_at": "2026-08-21T23:27:29.049263+00:00"
   },
   "crypto:PNUT": {
     "direction": "BUY",
@@ -906,8 +906,8 @@
   },
   "crypto:BTT": {
     "direction": "BUY",
-    "confidence": 72.35168101220209,
-    "last_alert_at": "2026-08-21T07:32:54.101086+00:00"
+    "confidence": 79.30139950395838,
+    "last_alert_at": "2026-08-21T23:27:28.480038+00:00"
   },
   "crypto:AAVE": {
     "direction": "BUY",
