@@ -666,8 +666,8 @@
   },
   "crypto:PENGU": {
     "direction": "BUY",
-    "confidence": 72.07591222953444,
-    "last_alert_at": "2026-08-21T16:32:39.273351+00:00"
+    "confidence": 71.28905519285287,
+    "last_alert_at": "2026-08-21T22:52:36.683051+00:00"
   },
   "crypto:PEPE": {
     "direction": "BUY",
@@ -706,8 +706,8 @@
   },
   "crypto:XLM": {
     "direction": "BUY",
-    "confidence": 72.52081228287558,
-    "last_alert_at": "2026-08-21T22:32:48.024113+00:00"
+    "confidence": 84.51006731685186,
+    "last_alert_at": "2026-08-21T22:52:36.146290+00:00"
   },
   "crypto:VELO": {
     "direction": "BUY",
