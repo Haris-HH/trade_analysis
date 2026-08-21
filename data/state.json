@@ -41,8 +41,8 @@
   },
   "crypto:EDGE": {
     "direction": "BUY",
-    "confidence": 71.6403645623459,
-    "last_alert_at": "2026-08-21T11:27:53.144268+00:00"
+    "confidence": 81.99238510834445,
+    "last_alert_at": "2026-08-21T11:53:31.639080+00:00"
   },
   "crypto:SCRT": {
     "direction": "SELL",
@@ -206,8 +206,8 @@
   },
   "crypto:BIRB": {
     "direction": "BUY",
-    "confidence": 70.95668544357206,
-    "last_alert_at": "2026-08-21T09:58:29.117919+00:00"
+    "confidence": 82.12704091432109,
+    "last_alert_at": "2026-08-21T11:53:31.178430+00:00"
   },
   "crypto:FHE": {
     "direction": "BUY",
@@ -586,8 +586,8 @@
   },
   "crypto:HEMI": {
     "direction": "BUY",
-    "confidence": 84.04115054735091,
-    "last_alert_at": "2026-08-21T03:32:10.424378+00:00"
+    "confidence": 83.85466632312949,
+    "last_alert_at": "2026-08-21T11:53:30.243976+00:00"
   },
   "crypto:MASK": {
     "direction": "BUY",
@@ -651,8 +651,8 @@
   },
   "crypto:TRUMP": {
     "direction": "BUY",
-    "confidence": 71.46483137869771,
-    "last_alert_at": "2026-08-21T09:33:19.926371+00:00"
+    "confidence": 81.60252328145522,
+    "last_alert_at": "2026-08-21T11:53:30.714648+00:00"
   },
   "crypto:FLOKI": {
     "direction": "BUY",
