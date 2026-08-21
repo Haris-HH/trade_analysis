@@ -586,8 +586,8 @@
   },
   "crypto:HEMI": {
     "direction": "BUY",
-    "confidence": 70.95475001168252,
-    "last_alert_at": "2026-08-19T15:52:05.061161+00:00"
+    "confidence": 73.40304140598545,
+    "last_alert_at": "2026-08-21T03:06:54.199109+00:00"
   },
   "crypto:MASK": {
     "direction": "BUY",
@@ -826,8 +826,8 @@
   },
   "crypto:POW": {
     "direction": "BUY",
-    "confidence": 79.41182139285367,
-    "last_alert_at": "2026-08-20T23:02:17.601815+00:00"
+    "confidence": 74.27301780245537,
+    "last_alert_at": "2026-08-21T03:06:54.662562+00:00"
   },
   "crypto:BREV": {
     "direction": "BUY",
