@@ -200,9 +200,9 @@
     "last_alert_at": "2026-08-21T07:45:37.781653+00:00"
   },
   "crypto:KAITO": {
-    "direction": "SELL",
-    "confidence": 75.82085835546246,
-    "last_alert_at": "2026-08-17T22:36:50.453771+00:00"
+    "direction": "BUY",
+    "confidence": 73.05862054205588,
+    "last_alert_at": "2026-08-21T08:53:09.449033+00:00"
   },
   "crypto:BIRB": {
     "direction": "BUY",
@@ -376,8 +376,8 @@
   },
   "crypto:PIEVERSE": {
     "direction": "BUY",
-    "confidence": 78.94055081386793,
-    "last_alert_at": "2026-08-21T04:32:07.319700+00:00"
+    "confidence": 85.47878530759655,
+    "last_alert_at": "2026-08-21T08:53:10.444117+00:00"
   },
   "crypto:ALCH": {
     "direction": "BUY",
@@ -421,8 +421,8 @@
   },
   "crypto:LDO": {
     "direction": "BUY",
-    "confidence": 75.80496185081464,
-    "last_alert_at": "2026-08-15T13:41:50.093586+00:00"
+    "confidence": 72.38681473776185,
+    "last_alert_at": "2026-08-21T08:53:09.932672+00:00"
   },
   "crypto:BOME": {
     "direction": "BUY",
@@ -496,8 +496,8 @@
   },
   "crypto:WLD": {
     "direction": "BUY",
-    "confidence": 72.11712736006454,
-    "last_alert_at": "2026-08-21T00:22:21.165333+00:00"
+    "confidence": 71.33376447258273,
+    "last_alert_at": "2026-08-21T08:53:08.966349+00:00"
   },
   "crypto:OPEN": {
     "direction": "SELL",
@@ -681,8 +681,8 @@
   },
   "crypto:JUP": {
     "direction": "BUY",
-    "confidence": 74.01571486541364,
-    "last_alert_at": "2026-08-20T16:12:17.616580+00:00"
+    "confidence": 73.16894727650543,
+    "last_alert_at": "2026-08-21T08:53:11.706200+00:00"
   },
   "crypto:MEW": {
     "direction": "BUY",
@@ -953,5 +953,10 @@
     "direction": "BUY",
     "confidence": 76.59161719371762,
     "last_alert_at": "2026-08-21T08:48:07.672068+00:00"
+  },
+  "crypto:ACH": {
+    "direction": "BUY",
+    "confidence": 71.19596896916403,
+    "last_alert_at": "2026-08-21T08:53:10.950445+00:00"
   }
 }
