@@ -983,5 +983,10 @@
     "direction": "BUY",
     "confidence": 77.06343450547173,
     "last_alert_at": "2026-08-21T10:27:33.369893+00:00"
+  },
+  "crypto:STG": {
+    "direction": "BUY",
+    "confidence": 82.57258469735105,
+    "last_alert_at": "2026-08-21T12:03:48.415928+00:00"
   }
 }
