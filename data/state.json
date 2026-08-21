@@ -676,8 +676,8 @@
   },
   "crypto:MOG": {
     "direction": "BUY",
-    "confidence": 73.38065499229974,
-    "last_alert_at": "2026-08-21T08:48:11.622965+00:00"
+    "confidence": 82.7079103182468,
+    "last_alert_at": "2026-08-21T22:07:23.694960+00:00"
   },
   "crypto:JUP": {
     "direction": "BUY",
@@ -716,8 +716,8 @@
   },
   "crypto:OP": {
     "direction": "BUY",
-    "confidence": 74.44198816999395,
-    "last_alert_at": "2026-08-21T16:42:25.292687+00:00"
+    "confidence": 72.43909113869125,
+    "last_alert_at": "2026-08-21T22:07:23.175929+00:00"
   },
   "crypto:PNUT": {
     "direction": "BUY",
