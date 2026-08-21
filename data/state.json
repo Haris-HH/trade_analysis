@@ -71,8 +71,8 @@
   },
   "crypto:LUNA": {
     "direction": "BUY",
-    "confidence": 82.16837030247103,
-    "last_alert_at": "2026-08-21T13:42:51.191301+00:00"
+    "confidence": 72.97707886523254,
+    "last_alert_at": "2026-08-21T17:52:34.266719+00:00"
   },
   "crypto:SQD": {
     "direction": "SELL",
@@ -231,8 +231,8 @@
   },
   "crypto:ROBO": {
     "direction": "BUY",
-    "confidence": 81.15276184961539,
-    "last_alert_at": "2026-08-21T12:48:20.277297+00:00"
+    "confidence": 71.59686924296179,
+    "last_alert_at": "2026-08-21T17:52:34.855708+00:00"
   },
   "crypto:ZIL": {
     "direction": "BUY",
@@ -611,8 +611,8 @@
   },
   "crypto:CAKE": {
     "direction": "BUY",
-    "confidence": 77.60783479446832,
-    "last_alert_at": "2026-08-21T13:56:14.389822+00:00"
+    "confidence": 87.95588882926978,
+    "last_alert_at": "2026-08-21T17:52:33.691141+00:00"
   },
   "crypto:SPX": {
     "direction": "BUY",
