@@ -6,8 +6,8 @@
   },
   "crypto:ADA": {
     "direction": "BUY",
-    "confidence": 76.61856484330207,
-    "last_alert_at": "2026-08-21T07:57:57.909099+00:00"
+    "confidence": 87.00582838795019,
+    "last_alert_at": "2026-08-21T09:00:35.188373+00:00"
   },
   "crypto:ELIZAOS": {
     "direction": "SELL",
@@ -436,8 +436,8 @@
   },
   "crypto:FET": {
     "direction": "BUY",
-    "confidence": 78.92771128139802,
-    "last_alert_at": "2026-08-21T02:57:14.279024+00:00"
+    "confidence": 71.1485455346833,
+    "last_alert_at": "2026-08-21T09:00:35.821743+00:00"
   },
   "crypto:TA": {
     "direction": "SELL",
