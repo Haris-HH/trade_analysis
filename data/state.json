@@ -771,8 +771,8 @@
   },
   "crypto:DOOD": {
     "direction": "BUY",
-    "confidence": 75.47461237521118,
-    "last_alert_at": "2026-08-21T07:45:37.781962+00:00"
+    "confidence": 70.93597059508893,
+    "last_alert_at": "2026-08-21T12:32:44.753956+00:00"
   },
   "crypto:POPCAT": {
     "direction": "BUY",
@@ -806,8 +806,8 @@
   },
   "crypto:STRK": {
     "direction": "BUY",
-    "confidence": 76.35324228010637,
-    "last_alert_at": "2026-08-21T07:58:01.657000+00:00"
+    "confidence": 72.42537372276577,
+    "last_alert_at": "2026-08-21T12:32:44.213605+00:00"
   },
   "crypto:CPOOL": {
     "direction": "BUY",
