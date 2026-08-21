@@ -295,9 +295,9 @@
     "last_alert_at": "2026-08-16T17:56:44.569778+00:00"
   },
   "crypto:SIGN": {
-    "direction": "SELL",
-    "confidence": 71.86842494277815,
-    "last_alert_at": "2026-08-14T10:52:05.856549+00:00"
+    "direction": "BUY",
+    "confidence": 70.73357635401067,
+    "last_alert_at": "2026-08-21T09:28:00.405390+00:00"
   },
   "crypto:CHILLGUY": {
     "direction": "BUY",
@@ -336,8 +336,8 @@
   },
   "crypto:CHZ": {
     "direction": "BUY",
-    "confidence": 76.68162527348355,
-    "last_alert_at": "2026-08-21T05:26:54.358341+00:00"
+    "confidence": 82.11196873393706,
+    "last_alert_at": "2026-08-21T09:27:59.864689+00:00"
   },
   "crypto:APEX": {
     "direction": "BUY",
