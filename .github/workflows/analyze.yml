@@ -60,10 +60,14 @@ jobs:
           # 2026-08-21), retry with a rebase that prefers this run's freshly
           # computed data files over whatever else changed them, instead of
           # just failing and discarding this run's real trade state.
+          # NOTE: during `rebase` (unlike `merge`), -X ours/theirs is inverted:
+          # "ours" means the branch being rebased ONTO (origin/main, i.e. the
+          # stale data), "theirs" means the commits being replayed (this run's
+          # fresh data). We want our fresh data to win, so it's -X theirs.
           for attempt in 1 2 3; do
             git push && exit 0
             echo "push failed (attempt $attempt), rebasing onto origin/main..."
             git fetch origin main
-            git rebase -X ours origin/main
+            git rebase -X theirs origin/main
           done
           git push
