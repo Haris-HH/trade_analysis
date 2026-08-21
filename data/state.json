@@ -416,8 +416,8 @@
   },
   "crypto:PLUME": {
     "direction": "BUY",
-    "confidence": 72.21171873826665,
-    "last_alert_at": "2026-08-21T03:52:18.964561+00:00"
+    "confidence": 71.13925001670856,
+    "last_alert_at": "2026-08-21T11:37:40.337156+00:00"
   },
   "crypto:LDO": {
     "direction": "BUY",
@@ -446,8 +446,8 @@
   },
   "crypto:BASED": {
     "direction": "BUY",
-    "confidence": 71.68713151137514,
-    "last_alert_at": "2026-08-21T10:45:43.119805+00:00"
+    "confidence": 84.34601219196801,
+    "last_alert_at": "2026-08-21T11:37:41.031869+00:00"
   },
   "crypto:ZENT": {
     "direction": "BUY",
