@@ -36,8 +36,8 @@
   },
   "crypto:BONK": {
     "direction": "BUY",
-    "confidence": 86.29820211701751,
-    "last_alert_at": "2026-08-21T07:19:36.969279+00:00"
+    "confidence": 71.46808421412813,
+    "last_alert_at": "2026-08-21T11:47:59.701664+00:00"
   },
   "crypto:EDGE": {
     "direction": "BUY",
@@ -231,8 +231,8 @@
   },
   "crypto:ROBO": {
     "direction": "BUY",
-    "confidence": 72.48973036105555,
-    "last_alert_at": "2026-08-20T13:32:11.715200+00:00"
+    "confidence": 70.7604178202958,
+    "last_alert_at": "2026-08-21T11:48:00.202964+00:00"
   },
   "crypto:ZIL": {
     "direction": "BUY",
@@ -326,8 +326,8 @@
   },
   "crypto:BCH": {
     "direction": "BUY",
-    "confidence": 86.97524352191908,
-    "last_alert_at": "2026-08-21T01:52:44.636443+00:00"
+    "confidence": 70.26677681956245,
+    "last_alert_at": "2026-08-21T11:47:59.186805+00:00"
   },
   "crypto:ENA": {
     "direction": "BUY",
