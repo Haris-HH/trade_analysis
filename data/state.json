@@ -1,13 +1,13 @@
 {
   "crypto:CRV": {
     "direction": "BUY",
-    "confidence": 80.86784617145611,
-    "last_alert_at": "2026-08-20T20:57:01.343575+00:00"
+    "confidence": 84.56354590254973,
+    "last_alert_at": "2026-08-21T00:57:16.661064+00:00"
   },
   "crypto:ADA": {
     "direction": "BUY",
-    "confidence": 86.26998388440659,
-    "last_alert_at": "2026-08-20T16:47:30.097319+00:00"
+    "confidence": 71.98540533589401,
+    "last_alert_at": "2026-08-21T00:57:16.192371+00:00"
   },
   "crypto:ELIZAOS": {
     "direction": "SELL",
@@ -391,8 +391,8 @@
   },
   "crypto:CHIP": {
     "direction": "BUY",
-    "confidence": 73.74607899244509,
-    "last_alert_at": "2026-08-20T23:37:17.090037+00:00"
+    "confidence": 84.84675699505324,
+    "last_alert_at": "2026-08-21T00:57:17.185335+00:00"
   },
   "crypto:PEOPLE": {
     "direction": "BUY",
@@ -486,8 +486,8 @@
   },
   "crypto:JASMY": {
     "direction": "BUY",
-    "confidence": 74.1775548109469,
-    "last_alert_at": "2026-08-20T17:12:05.190469+00:00"
+    "confidence": 71.37670876192483,
+    "last_alert_at": "2026-08-21T00:57:17.650339+00:00"
   },
   "crypto:SD": {
     "direction": "BUY",
