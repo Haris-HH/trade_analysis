@@ -280,9 +280,9 @@
     "last_alert_at": "2026-08-19T04:06:41.441754+00:00"
   },
   "crypto:ELSA": {
-    "direction": "SELL",
-    "confidence": 70.30211265561724,
-    "last_alert_at": "2026-08-17T04:26:45.556701+00:00"
+    "direction": "BUY",
+    "confidence": 70.53899968049664,
+    "last_alert_at": "2026-08-21T13:47:58.773887+00:00"
   },
   "crypto:ZKP": {
     "direction": "BUY",
@@ -696,8 +696,8 @@
   },
   "crypto:XRP": {
     "direction": "BUY",
-    "confidence": 82.63224905091573,
-    "last_alert_at": "2026-08-21T08:32:58.334531+00:00"
+    "confidence": 71.40971533962016,
+    "last_alert_at": "2026-08-21T13:47:58.132808+00:00"
   },
   "crypto:DOGE": {
     "direction": "BUY",
@@ -741,8 +741,8 @@
   },
   "crypto:ASTER": {
     "direction": "BUY",
-    "confidence": 89.67980946006058,
-    "last_alert_at": "2026-08-21T08:27:48.674704+00:00"
+    "confidence": 71.09141046508284,
+    "last_alert_at": "2026-08-21T13:47:57.480716+00:00"
   },
   "crypto:RED": {
     "direction": "BUY",
@@ -998,5 +998,10 @@
     "direction": "BUY",
     "confidence": 77.13644410204773,
     "last_alert_at": "2026-08-21T13:22:30.315434+00:00"
+  },
+  "crypto:OBT": {
+    "direction": "BUY",
+    "confidence": 71.1991532779668,
+    "last_alert_at": "2026-08-21T13:47:59.414322+00:00"
   }
 }
