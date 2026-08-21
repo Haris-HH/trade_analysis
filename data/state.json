@@ -918,5 +918,10 @@
     "direction": "BUY",
     "confidence": 70.16498642467973,
     "last_alert_at": "2026-08-21T03:16:19.600615+00:00"
+  },
+  "crypto:KNC": {
+    "direction": "BUY",
+    "confidence": 73.76183399651512,
+    "last_alert_at": "2026-08-21T03:47:15.961175+00:00"
   }
 }
