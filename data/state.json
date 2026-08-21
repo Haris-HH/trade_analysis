@@ -421,8 +421,8 @@
   },
   "crypto:LDO": {
     "direction": "BUY",
-    "confidence": 72.38681473776185,
-    "last_alert_at": "2026-08-21T08:53:09.932672+00:00"
+    "confidence": 83.30970677820665,
+    "last_alert_at": "2026-08-21T10:22:33.950653+00:00"
   },
   "crypto:BOME": {
     "direction": "BUY",
@@ -656,8 +656,8 @@
   },
   "crypto:FLOKI": {
     "direction": "BUY",
-    "confidence": 83.3179237806377,
-    "last_alert_at": "2026-08-21T06:22:17.827800+00:00"
+    "confidence": 77.27959573898795,
+    "last_alert_at": "2026-08-21T10:22:33.489076+00:00"
   },
   "crypto:TOSHI": {
     "direction": "BUY",
