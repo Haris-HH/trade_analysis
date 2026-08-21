@@ -396,8 +396,8 @@
   },
   "crypto:PEOPLE": {
     "direction": "BUY",
-    "confidence": 73.84834772677874,
-    "last_alert_at": "2026-08-20T22:57:16.602070+00:00"
+    "confidence": 76.40273845283352,
+    "last_alert_at": "2026-08-21T07:51:29.133558+00:00"
   },
   "crypto:ETHFI": {
     "direction": "BUY",
@@ -621,8 +621,8 @@
   },
   "crypto:ARB": {
     "direction": "BUY",
-    "confidence": 73.1682572515218,
-    "last_alert_at": "2026-08-20T01:31:59.493999+00:00"
+    "confidence": 80.99023966269287,
+    "last_alert_at": "2026-08-21T07:51:27.748727+00:00"
   },
   "crypto:RPL": {
     "direction": "BUY",
@@ -741,8 +741,8 @@
   },
   "crypto:ASTER": {
     "direction": "BUY",
-    "confidence": 78.52512203271237,
-    "last_alert_at": "2026-08-20T09:52:32.814301+00:00"
+    "confidence": 79.52964453314694,
+    "last_alert_at": "2026-08-21T07:51:28.467422+00:00"
   },
   "crypto:RED": {
     "direction": "BUY",
