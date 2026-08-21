@@ -571,8 +571,8 @@
   },
   "crypto:TRIA": {
     "direction": "SELL",
-    "confidence": 73.21651632366142,
-    "last_alert_at": "2026-08-20T20:51:57.655122+00:00"
+    "confidence": 72.39852893705536,
+    "last_alert_at": "2026-08-21T01:47:27.921197+00:00"
   },
   "stock:BLDR": {
     "direction": "SELL",
@@ -786,8 +786,8 @@
   },
   "crypto:SKR": {
     "direction": "BUY",
-    "confidence": 72.1679984305042,
-    "last_alert_at": "2026-08-20T21:41:59.978890+00:00"
+    "confidence": 70.96286986056259,
+    "last_alert_at": "2026-08-21T01:47:27.423566+00:00"
   },
   "crypto:NEXO": {
     "direction": "BUY",
@@ -871,8 +871,8 @@
   },
   "crypto:YB": {
     "direction": "BUY",
-    "confidence": 86.19736575181916,
-    "last_alert_at": "2026-08-20T21:36:54.631901+00:00"
+    "confidence": 73.21284555557226,
+    "last_alert_at": "2026-08-21T01:47:26.524970+00:00"
   },
   "crypto:XDC": {
     "direction": "BUY",
@@ -896,8 +896,8 @@
   },
   "crypto:ANIME": {
     "direction": "BUY",
-    "confidence": 75.54044651928996,
-    "last_alert_at": "2026-08-20T21:41:59.507275+00:00"
+    "confidence": 77.27466982586103,
+    "last_alert_at": "2026-08-21T01:47:26.971742+00:00"
   },
   "crypto:DYDX": {
     "direction": "BUY",
