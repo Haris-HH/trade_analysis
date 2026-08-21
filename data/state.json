@@ -286,8 +286,8 @@
   },
   "crypto:ZKP": {
     "direction": "BUY",
-    "confidence": 70.4640885297684,
-    "last_alert_at": "2026-08-21T10:32:51.506534+00:00"
+    "confidence": 70.63691350008364,
+    "last_alert_at": "2026-08-21T14:37:21.364011+00:00"
   },
   "crypto:SOON": {
     "direction": "SELL",
@@ -841,8 +841,8 @@
   },
   "crypto:SAND": {
     "direction": "BUY",
-    "confidence": 86.5953696476032,
-    "last_alert_at": "2026-08-21T10:02:44.923092+00:00"
+    "confidence": 71.19251162624963,
+    "last_alert_at": "2026-08-21T14:37:20.669620+00:00"
   },
   "crypto:ZIG": {
     "direction": "BUY",
