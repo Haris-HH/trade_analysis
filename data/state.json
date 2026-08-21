@@ -841,8 +841,8 @@
   },
   "crypto:SAND": {
     "direction": "BUY",
-    "confidence": 75.77437875257942,
-    "last_alert_at": "2026-08-21T09:54:06.933138+00:00"
+    "confidence": 86.5953696476032,
+    "last_alert_at": "2026-08-21T10:02:44.923092+00:00"
   },
   "crypto:ZIG": {
     "direction": "BUY",
@@ -973,5 +973,10 @@
     "direction": "BUY",
     "confidence": 75.62196875056489,
     "last_alert_at": "2026-08-21T09:44:17.062078+00:00"
+  },
+  "crypto:AGLD": {
+    "direction": "BUY",
+    "confidence": 71.82073801570095,
+    "last_alert_at": "2026-08-21T10:02:45.586981+00:00"
   }
 }
