@@ -71,8 +71,8 @@
   },
   "crypto:LUNA": {
     "direction": "BUY",
-    "confidence": 71.13346343347949,
-    "last_alert_at": "2026-08-21T12:48:17.036983+00:00"
+    "confidence": 82.16837030247103,
+    "last_alert_at": "2026-08-21T13:42:51.191301+00:00"
   },
   "crypto:SQD": {
     "direction": "SELL",
@@ -296,8 +296,8 @@
   },
   "crypto:SIGN": {
     "direction": "BUY",
-    "confidence": 70.73357635401067,
-    "last_alert_at": "2026-08-21T09:28:00.405390+00:00"
+    "confidence": 71.60235659017773,
+    "last_alert_at": "2026-08-21T13:42:52.495469+00:00"
   },
   "crypto:CHILLGUY": {
     "direction": "BUY",
@@ -686,8 +686,8 @@
   },
   "crypto:MEW": {
     "direction": "BUY",
-    "confidence": 78.044207732243,
-    "last_alert_at": "2026-08-21T09:36:30.266194+00:00"
+    "confidence": 74.71196163216926,
+    "last_alert_at": "2026-08-21T13:42:51.847109+00:00"
   },
   "crypto:SHIB": {
     "direction": "BUY",
