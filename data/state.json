@@ -446,8 +446,8 @@
   },
   "crypto:BASED": {
     "direction": "BUY",
-    "confidence": 83.64201220874519,
-    "last_alert_at": "2026-08-21T11:40:23.660116+00:00"
+    "confidence": 73.57487180352307,
+    "last_alert_at": "2026-08-21T15:48:56.025756+00:00"
   },
   "crypto:ZENT": {
     "direction": "BUY",
@@ -747,7 +747,7 @@
   "crypto:RED": {
     "direction": "BUY",
     "confidence": 86.69076459508281,
-    "last_alert_at": "2026-08-21T15:46:25.763871+00:00"
+    "last_alert_at": "2026-08-21T15:48:54.670427+00:00"
   },
   "crypto:SUSHI": {
     "direction": "BUY",
@@ -887,7 +887,7 @@
   "crypto:ZETA": {
     "direction": "BUY",
     "confidence": 71.9886806673896,
-    "last_alert_at": "2026-08-21T15:46:26.242663+00:00"
+    "last_alert_at": "2026-08-21T15:48:55.356781+00:00"
   },
   "crypto:F": {
     "direction": "BUY",
