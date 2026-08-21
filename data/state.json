@@ -751,8 +751,8 @@
   },
   "crypto:SUSHI": {
     "direction": "BUY",
-    "confidence": 80.68677316614155,
-    "last_alert_at": "2026-08-21T02:02:28.087893+00:00"
+    "confidence": 85.39690215132424,
+    "last_alert_at": "2026-08-21T06:12:11.810224+00:00"
   },
   "crypto:BNB": {
     "direction": "BUY",
@@ -923,5 +923,10 @@
     "direction": "BUY",
     "confidence": 73.76183399651512,
     "last_alert_at": "2026-08-21T03:47:15.961175+00:00"
+  },
+  "crypto:KSM": {
+    "direction": "BUY",
+    "confidence": 81.60614372635459,
+    "last_alert_at": "2026-08-21T06:12:12.322012+00:00"
   }
 }
