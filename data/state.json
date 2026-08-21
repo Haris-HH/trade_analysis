@@ -1013,5 +1013,10 @@
     "direction": "BUY",
     "confidence": 70.53650709339239,
     "last_alert_at": "2026-08-21T16:12:15.422676+00:00"
+  },
+  "crypto:GLM": {
+    "direction": "BUY",
+    "confidence": 72.9911795625919,
+    "last_alert_at": "2026-08-21T18:32:14.816533+00:00"
   }
 }
