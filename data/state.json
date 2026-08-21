@@ -36,8 +36,8 @@
   },
   "crypto:BONK": {
     "direction": "BUY",
-    "confidence": 70.91354168811147,
-    "last_alert_at": "2026-08-21T06:17:20.330315+00:00"
+    "confidence": 86.29820211701751,
+    "last_alert_at": "2026-08-21T07:19:36.969279+00:00"
   },
   "crypto:EDGE": {
     "direction": "BUY",
@@ -131,8 +131,8 @@
   },
   "crypto:BRETT": {
     "direction": "BUY",
-    "confidence": 74.18337893073651,
-    "last_alert_at": "2026-08-20T09:52:33.319774+00:00"
+    "confidence": 73.36522406844985,
+    "last_alert_at": "2026-08-21T07:19:37.946978+00:00"
   },
   "crypto:UNI": {
     "direction": "BUY",
@@ -371,8 +371,8 @@
   },
   "crypto:LINK": {
     "direction": "BUY",
-    "confidence": 79.15102503784964,
-    "last_alert_at": "2026-08-21T02:32:16.166159+00:00"
+    "confidence": 81.33207053418677,
+    "last_alert_at": "2026-08-21T07:19:38.422636+00:00"
   },
   "crypto:PIEVERSE": {
     "direction": "BUY",
@@ -541,8 +541,8 @@
   },
   "crypto:TAO": {
     "direction": "BUY",
-    "confidence": 78.39987672599946,
-    "last_alert_at": "2026-08-20T23:27:02.087895+00:00"
+    "confidence": 78.18689632449191,
+    "last_alert_at": "2026-08-21T07:19:36.489339+00:00"
   },
   "crypto:SUI": {
     "direction": "BUY",
@@ -591,8 +591,8 @@
   },
   "crypto:MASK": {
     "direction": "BUY",
-    "confidence": 75.20118540255135,
-    "last_alert_at": "2026-08-20T20:36:55.041484+00:00"
+    "confidence": 76.8371908493168,
+    "last_alert_at": "2026-08-21T07:19:37.454250+00:00"
   },
   "crypto:G": {
     "direction": "BUY",
