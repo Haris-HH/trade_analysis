@@ -111,8 +111,8 @@
   },
   "crypto:HBAR": {
     "direction": "BUY",
-    "confidence": 79.02255415825374,
-    "last_alert_at": "2026-08-21T15:32:43.638752+00:00"
+    "confidence": 72.37175312108275,
+    "last_alert_at": "2026-08-21T22:57:59.667400+00:00"
   },
   "crypto:RNDR": {
     "direction": "SELL",
@@ -296,8 +296,8 @@
   },
   "crypto:SIGN": {
     "direction": "BUY",
-    "confidence": 71.60235659017773,
-    "last_alert_at": "2026-08-21T13:42:52.495469+00:00"
+    "confidence": 80.31272037016008,
+    "last_alert_at": "2026-08-21T22:58:01.776168+00:00"
   },
   "crypto:CHILLGUY": {
     "direction": "BUY",
@@ -411,8 +411,8 @@
   },
   "crypto:ZAMA": {
     "direction": "BUY",
-    "confidence": 73.20989434573418,
-    "last_alert_at": "2026-08-21T01:32:18.398529+00:00"
+    "confidence": 72.5171937478336,
+    "last_alert_at": "2026-08-21T22:58:01.076403+00:00"
   },
   "crypto:PLUME": {
     "direction": "BUY",
@@ -661,8 +661,8 @@
   },
   "crypto:TOSHI": {
     "direction": "BUY",
-    "confidence": 70.54805107867072,
-    "last_alert_at": "2026-08-21T09:36:30.949745+00:00"
+    "confidence": 79.36168853146489,
+    "last_alert_at": "2026-08-21T22:58:00.366671+00:00"
   },
   "crypto:PENGU": {
     "direction": "BUY",
@@ -671,8 +671,8 @@
   },
   "crypto:PEPE": {
     "direction": "BUY",
-    "confidence": 81.2738878890556,
-    "last_alert_at": "2026-08-21T22:55:22.031320+00:00"
+    "confidence": 83.83088684914603,
+    "last_alert_at": "2026-08-21T22:58:02.469366+00:00"
   },
   "crypto:MOG": {
     "direction": "BUY",
