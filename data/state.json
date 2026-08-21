@@ -1,8 +1,8 @@
 {
   "crypto:CRV": {
     "direction": "BUY",
-    "confidence": 72.64271247532731,
-    "last_alert_at": "2026-08-21T08:43:28.428207+00:00"
+    "confidence": 71.0136436024435,
+    "last_alert_at": "2026-08-21T12:48:19.213005+00:00"
   },
   "crypto:ADA": {
     "direction": "BUY",
@@ -71,8 +71,8 @@
   },
   "crypto:LUNA": {
     "direction": "BUY",
-    "confidence": 80.39372096553527,
-    "last_alert_at": "2026-08-21T08:38:09.200891+00:00"
+    "confidence": 71.13346343347949,
+    "last_alert_at": "2026-08-21T12:48:17.036983+00:00"
   },
   "crypto:SQD": {
     "direction": "SELL",
@@ -106,8 +106,8 @@
   },
   "crypto:IOST": {
     "direction": "BUY",
-    "confidence": 70.62009773804311,
-    "last_alert_at": "2026-08-21T08:43:29.026966+00:00"
+    "confidence": 77.73523154939446,
+    "last_alert_at": "2026-08-21T12:48:18.097338+00:00"
   },
   "crypto:HBAR": {
     "direction": "BUY",
@@ -231,8 +231,8 @@
   },
   "crypto:ROBO": {
     "direction": "BUY",
-    "confidence": 70.7604178202958,
-    "last_alert_at": "2026-08-21T11:48:00.202964+00:00"
+    "confidence": 81.15276184961539,
+    "last_alert_at": "2026-08-21T12:48:20.277297+00:00"
   },
   "crypto:ZIL": {
     "direction": "BUY",
@@ -301,8 +301,8 @@
   },
   "crypto:CHILLGUY": {
     "direction": "BUY",
-    "confidence": 72.62138381434708,
-    "last_alert_at": "2026-08-21T07:58:02.262932+00:00"
+    "confidence": 77.9527412800365,
+    "last_alert_at": "2026-08-21T12:48:19.743237+00:00"
   },
   "crypto:GOAT": {
     "direction": "BUY",
@@ -621,8 +621,8 @@
   },
   "crypto:ARB": {
     "direction": "BUY",
-    "confidence": 80.99023966269287,
-    "last_alert_at": "2026-08-21T07:51:27.748727+00:00"
+    "confidence": 80.27144282308721,
+    "last_alert_at": "2026-08-21T12:48:17.581995+00:00"
   },
   "crypto:RPL": {
     "direction": "BUY",
@@ -791,8 +791,8 @@
   },
   "crypto:NEXO": {
     "direction": "BUY",
-    "confidence": 82.87291025535863,
-    "last_alert_at": "2026-08-21T08:27:48.198517+00:00"
+    "confidence": 70.60456051350207,
+    "last_alert_at": "2026-08-21T12:48:18.680400+00:00"
   },
   "crypto:ZORA": {
     "direction": "BUY",
