@@ -1008,5 +1008,10 @@
     "direction": "BUY",
     "confidence": 85.57039186800974,
     "last_alert_at": "2026-08-21T14:42:26.241581+00:00"
+  },
+  "crypto:APE": {
+    "direction": "BUY",
+    "confidence": 70.53650709339239,
+    "last_alert_at": "2026-08-21T16:12:15.422676+00:00"
   }
 }
