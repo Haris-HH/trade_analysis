@@ -41,8 +41,8 @@
   },
   "crypto:EDGE": {
     "direction": "BUY",
-    "confidence": 85.47121412219397,
-    "last_alert_at": "2026-08-20T07:32:05.591764+00:00"
+    "confidence": 71.6403645623459,
+    "last_alert_at": "2026-08-21T11:27:53.144268+00:00"
   },
   "crypto:SCRT": {
     "direction": "SELL",
@@ -486,8 +486,8 @@
   },
   "crypto:JASMY": {
     "direction": "BUY",
-    "confidence": 71.37670876192483,
-    "last_alert_at": "2026-08-21T00:57:17.650339+00:00"
+    "confidence": 77.44151954884379,
+    "last_alert_at": "2026-08-21T11:27:51.696307+00:00"
   },
   "crypto:SD": {
     "direction": "BUY",
@@ -591,8 +591,8 @@
   },
   "crypto:MASK": {
     "direction": "BUY",
-    "confidence": 76.8371908493168,
-    "last_alert_at": "2026-08-21T07:19:37.454250+00:00"
+    "confidence": 79.61682000052267,
+    "last_alert_at": "2026-08-21T11:27:52.655363+00:00"
   },
   "crypto:G": {
     "direction": "BUY",
@@ -896,8 +896,8 @@
   },
   "crypto:ANIME": {
     "direction": "BUY",
-    "confidence": 75.17317112805387,
-    "last_alert_at": "2026-08-21T06:57:27.704075+00:00"
+    "confidence": 72.86036853453544,
+    "last_alert_at": "2026-08-21T11:27:52.182411+00:00"
   },
   "crypto:DYDX": {
     "direction": "BUY",
