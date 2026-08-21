@@ -591,8 +591,8 @@
   },
   "crypto:MASK": {
     "direction": "BUY",
-    "confidence": 79.61682000052267,
-    "last_alert_at": "2026-08-21T11:27:52.655363+00:00"
+    "confidence": 82.0882569964835,
+    "last_alert_at": "2026-08-21T15:52:41.707912+00:00"
   },
   "crypto:G": {
     "direction": "BUY",
@@ -826,8 +826,8 @@
   },
   "crypto:POW": {
     "direction": "BUY",
-    "confidence": 75.3578283691871,
-    "last_alert_at": "2026-08-21T08:32:56.297992+00:00"
+    "confidence": 78.11280606230402,
+    "last_alert_at": "2026-08-21T15:52:41.253594+00:00"
   },
   "crypto:BREV": {
     "direction": "BUY",
