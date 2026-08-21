@@ -496,8 +496,8 @@
   },
   "crypto:WLD": {
     "direction": "BUY",
-    "confidence": 79.26970043327081,
-    "last_alert_at": "2026-08-20T08:22:42.156970+00:00"
+    "confidence": 72.11712736006454,
+    "last_alert_at": "2026-08-21T00:22:21.165333+00:00"
   },
   "crypto:OPEN": {
     "direction": "SELL",
@@ -676,8 +676,8 @@
   },
   "crypto:MOG": {
     "direction": "BUY",
-    "confidence": 75.53898423374699,
-    "last_alert_at": "2026-08-20T16:32:30.791528+00:00"
+    "confidence": 73.01292765875354,
+    "last_alert_at": "2026-08-21T00:22:21.796207+00:00"
   },
   "crypto:JUP": {
     "direction": "BUY",
@@ -716,8 +716,8 @@
   },
   "crypto:OP": {
     "direction": "BUY",
-    "confidence": 73.90419535221166,
-    "last_alert_at": "2026-08-20T20:21:55.372699+00:00"
+    "confidence": 73.60745609367952,
+    "last_alert_at": "2026-08-21T00:22:22.429931+00:00"
   },
   "crypto:PNUT": {
     "direction": "BUY",
