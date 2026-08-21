@@ -626,8 +626,8 @@
   },
   "crypto:RPL": {
     "direction": "BUY",
-    "confidence": 84.27733566099423,
-    "last_alert_at": "2026-08-20T00:47:11.335322+00:00"
+    "confidence": 77.51164083776105,
+    "last_alert_at": "2026-08-21T14:02:51.809520+00:00"
   },
   "stock:Q": {
     "direction": "SELL",
@@ -901,8 +901,8 @@
   },
   "crypto:DYDX": {
     "direction": "BUY",
-    "confidence": 83.4716404709249,
-    "last_alert_at": "2026-08-21T07:45:37.781608+00:00"
+    "confidence": 73.46677976747647,
+    "last_alert_at": "2026-08-21T14:02:51.352229+00:00"
   },
   "crypto:BTT": {
     "direction": "BUY",
