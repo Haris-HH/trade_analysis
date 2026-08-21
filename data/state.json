@@ -341,8 +341,8 @@
   },
   "crypto:APEX": {
     "direction": "BUY",
-    "confidence": 86.46379520563212,
-    "last_alert_at": "2026-08-21T08:27:49.676292+00:00"
+    "confidence": 71.81746492073756,
+    "last_alert_at": "2026-08-21T15:27:39.807746+00:00"
   },
   "crypto:MAVIA": {
     "direction": "BUY",
@@ -891,8 +891,8 @@
   },
   "crypto:F": {
     "direction": "BUY",
-    "confidence": 76.87528098266228,
-    "last_alert_at": "2026-08-21T10:53:13.608334+00:00"
+    "confidence": 77.20966248336198,
+    "last_alert_at": "2026-08-21T15:27:39.124932+00:00"
   },
   "crypto:ANIME": {
     "direction": "BUY",
