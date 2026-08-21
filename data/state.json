@@ -580,9 +580,9 @@
     "last_alert_at": "2026-08-18T20:01:55.848345+00:00"
   },
   "crypto:PRCL": {
-    "direction": "BUY",
-    "confidence": 78.02256297302706,
-    "last_alert_at": "2026-08-18T22:26:39.047195+00:00"
+    "direction": "SELL",
+    "confidence": 73.31147412852383,
+    "last_alert_at": "2026-08-21T03:57:16.723808+00:00"
   },
   "crypto:HEMI": {
     "direction": "BUY",
