@@ -20,8 +20,12 @@ sending them to Bitkub — use it to validate behavior before going live.
 from __future__ import annotations
 
 import os
+import time
 
-from . import bitkub_trade, positions_store, telegram_notify
+from . import bitkub_source, bitkub_trade, positions_store, telegram_notify
+
+FILL_RETRY_ATTEMPTS = 4
+FILL_RETRY_DELAY_SECONDS = 1.5
 
 
 def _env_float(name: str, default: float) -> float:
@@ -69,6 +73,28 @@ def _current_prices(results: list[dict]) -> dict[str, float]:
     return {r["raw_key"]: r["price"] for r in results if r["market"] == "crypto" and r.get("price")}
 
 
+def _resolve_fill(ticker: str, order_id: str | None, side: str, fallback: dict) -> dict:
+    """Poll order-info for the authoritative fill (place-bid/ask's own
+    response doesn't reliably carry it — see bitkub_trade.resolve_fill).
+    Falls back to a price-based estimate, loudly, rather than ever treating
+    a successfully placed order (money already moved) as if it never
+    happened — that silent-drop is exactly what left real buys untracked
+    on 2026-08-21."""
+    if order_id:
+        for attempt in range(FILL_RETRY_ATTEMPTS):
+            try:
+                fill = bitkub_trade.resolve_fill(ticker, order_id, side)
+                if fill:
+                    return fill
+            except Exception as exc:
+                print(f"[auto-trade] order-info lookup for {ticker} {order_id} failed (attempt {attempt + 1}): {exc}")
+            if attempt < FILL_RETRY_ATTEMPTS - 1:
+                time.sleep(FILL_RETRY_DELAY_SECONDS)
+    print(f"[auto-trade] WARNING: could not confirm fill for {ticker} order {order_id} — "
+          f"using a price-based estimate, VERIFY ON BITKUB MANUALLY")
+    return fallback
+
+
 def _try_close(ticker: str, position: dict, price: float, reason: str) -> dict | None:
     pnl_pct = (price - position["entry_price"]) / position["entry_price"]
     try:
@@ -76,8 +102,9 @@ def _try_close(ticker: str, position: dict, price: float, reason: str) -> dict |
             proceeds_thb, order_id = position["coin_amount"] * price, "dry-run"
         else:
             result = bitkub_trade.place_market_sell(ticker, position["coin_amount"])
-            proceeds_thb = float(result.get("rec", position["coin_amount"] * price))
             order_id = result.get("id")
+            fill = _resolve_fill(ticker, order_id, "sell", {"thb": position["coin_amount"] * price})
+            proceeds_thb = fill["thb"]
     except Exception as exc:
         print(f"[auto-trade] SELL {ticker} failed: {exc}")
         return None
@@ -102,10 +129,11 @@ def _try_open(ticker: str, price: float, confidence: float) -> dict | None:
             coin_amount, order_id = TRADE_AMOUNT_THB / price, "dry-run"
         else:
             result = bitkub_trade.place_market_buy(ticker, TRADE_AMOUNT_THB)
-            coin_amount = float(result.get("rec", 0))
             order_id = result.get("id")
+            fill = _resolve_fill(ticker, order_id, "buy", {"coin": TRADE_AMOUNT_THB / price})
+            coin_amount = fill["coin"]
         if coin_amount <= 0:
-            print(f"[auto-trade] BUY {ticker} returned zero coin amount, skipping")
+            print(f"[auto-trade] BUY {ticker} filled for zero coin, skipping")
             return None
     except Exception as exc:
         print(f"[auto-trade] BUY {ticker} failed: {exc}")
@@ -162,6 +190,10 @@ def run(results: list[dict], positions: dict) -> list[dict]:
             and r["direction"] == "BUY"
             and not r.get("vetoed")
             and r["confidence"] >= MIN_CONFIDENCE
+            # "broker"-sourced coins are priced/listed normally but Bitkub's
+            # place-bid/place-ask reject them outright (error 61) — confirmed
+            # 2026-08-21 for BONK/FLOKI/NEIRO/BOME/BRETT.
+            and not bitkub_source.is_broker_sourced(r["raw_key"])
         ]
         candidates.sort(key=lambda r: -r["confidence"])
         for r in candidates:

@@ -84,9 +84,11 @@ def _signed_request(method: str, path: str, *, params: dict | None = None, body:
 def place_market_buy(ticker: str, amount_thb: float, client_id: str | None = None) -> dict:
     """Market-buy `amount_thb` worth of `ticker` (e.g. "BTC") against THB.
 
-    Returns Bitkub's order result, including `rec` — the coin amount actually
-    received net of fees, which is what the caller should record as the
-    position size (not amount_thb / current price)."""
+    The immediate response does NOT reliably carry a filled-quantity field
+    (verified 2026-08-21 against live orders — contradicts the `rec` field
+    shown in Bitkub's own example docs, which real responses didn't have).
+    Callers must look up the actual fill with resolve_fill() using the
+    returned `id`."""
     body = {"sym": f"{ticker.lower()}_thb", "amt": round(amount_thb, 2), "rat": 0, "typ": "market"}
     if client_id:
         body["client_id"] = client_id
@@ -94,10 +96,8 @@ def place_market_buy(ticker: str, amount_thb: float, client_id: str | None = Non
 
 
 def place_market_sell(ticker: str, amount_coin: float, client_id: str | None = None) -> dict:
-    """Market-sell `amount_coin` units of `ticker` back to THB.
-
-    Returns Bitkub's order result, including `rec` — the THB actually
-    received net of fees."""
+    """Market-sell `amount_coin` units of `ticker` back to THB. See
+    place_market_buy's docstring — same caveat, use resolve_fill()."""
     body = {"sym": f"{ticker.lower()}_thb", "amt": round(amount_coin, 8), "rat": 0, "typ": "market"}
     if client_id:
         body["client_id"] = client_id
@@ -105,11 +105,37 @@ def place_market_sell(ticker: str, amount_coin: float, client_id: str | None = N
 
 
 def get_order_info(ticker: str, order_id: str, side: str) -> dict:
-    """side: "buy" or "sell". Useful for manually double-checking a fill;
-    not called by the auto-trader itself (place-bid/place-ask already
-    return the filled amount for a market order)."""
+    """side: "buy" or "sell". Authoritative order status/fills, including a
+    `history` list of individual fills — this is what resolve_fill() reads."""
     params = {"sym": f"{ticker.lower()}_thb", "id": order_id, "sd": side}
     return _signed_request("GET", "/api/v3/market/order-info", params=params)
+
+
+def resolve_fill(ticker: str, order_id: str, side: str) -> dict | None:
+    """Authoritative fill amounts for a market order, from order-info's
+    `history` (verified against a live filled buy: each fill's `amount` is
+    in the currency the order was placed in — THB for a buy, coin for a
+    sell — with `rate` the fill price; a buy's `amount` already nets out
+    that fill's fee, e.g. a 100 THB order with 0.25 THB fee showed
+    `amount: 99.75`).
+
+    Returns None if the order has no fills yet (caller should retry) —
+    never raises for that case, since a market order that already returned
+    error=0 has definitely spent/received money and must not be silently
+    dropped."""
+    info = get_order_info(ticker, order_id, side)
+    history = info.get("history") or []
+    if not history:
+        return None
+    if side == "buy":
+        thb = sum(float(h["amount"]) for h in history)
+        coin = sum(float(h["amount"]) / float(h["rate"]) for h in history if h.get("rate"))
+    else:
+        coin = sum(float(h["amount"]) for h in history)
+        thb = sum(float(h["amount"]) * float(h["rate"]) - float(h.get("fee", 0)) for h in history if h.get("rate"))
+    if coin <= 0:
+        return None
+    return {"coin": coin, "thb": thb}
 
 
 def get_order_history(ticker: str, limit: int = 10) -> list:

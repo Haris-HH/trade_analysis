@@ -21,6 +21,16 @@ STABLECOIN_EXCLUDE = {
 }
 
 
+# Populated by get_universe() as a side effect (that endpoint already fetches
+# every field we need — no reason to hit it twice) and read by
+# is_broker_sourced() for the auto-trader. "broker"-sourced coins are listed
+# and priceable like any other market, but /api/v3/market/place-bid|place-ask
+# reject them outright (error 61: "This endpoint doesn't support broker
+# coins" — confirmed 2026-08-21 against a live order attempt), so the
+# auto-trader must not try to buy them.
+_source_cache: dict[str, str] = {}
+
+
 def get_universe() -> dict[str, str]:
     """Returns {ticker: display_name} for every active, non-stablecoin THB market
     on Bitkub. Uses the v3 symbols endpoint — the unversioned /api/market/symbols
@@ -39,7 +49,12 @@ def get_universe() -> dict[str, str]:
         description = row.get("description", "")
         name = description[len("Thai Baht to "):] if description.startswith("Thai Baht to ") else ticker
         universe[ticker] = name
+        _source_cache[ticker] = row.get("source", "exchange")
     return universe
+
+
+def is_broker_sourced(ticker: str) -> bool:
+    return _source_cache.get(ticker) == "broker"
 
 
 def get_klines(ticker: str, resolution: str = "60", bars: int = 150) -> pd.DataFrame:
