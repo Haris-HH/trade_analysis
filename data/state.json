@@ -891,8 +891,8 @@
   },
   "crypto:F": {
     "direction": "BUY",
-    "confidence": 76.66082467322727,
-    "last_alert_at": "2026-08-20T21:16:55.106553+00:00"
+    "confidence": 76.87528098266228,
+    "last_alert_at": "2026-08-21T10:53:13.608334+00:00"
   },
   "crypto:ANIME": {
     "direction": "BUY",
@@ -921,8 +921,8 @@
   },
   "crypto:KNC": {
     "direction": "BUY",
-    "confidence": 73.76183399651512,
-    "last_alert_at": "2026-08-21T03:47:15.961175+00:00"
+    "confidence": 83.76989228255515,
+    "last_alert_at": "2026-08-21T10:53:12.893659+00:00"
   },
   "crypto:KSM": {
     "direction": "BUY",
