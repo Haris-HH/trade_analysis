@@ -235,9 +235,9 @@
     "last_alert_at": "2026-08-20T13:32:11.715200+00:00"
   },
   "crypto:ZIL": {
-    "direction": "SELL",
-    "confidence": 76.29583586256726,
-    "last_alert_at": "2026-08-12T10:31:46.791861+00:00"
+    "direction": "BUY",
+    "confidence": 71.73471863887403,
+    "last_alert_at": "2026-08-21T08:17:45.351755+00:00"
   },
   "crypto:BR": {
     "direction": "BUY",
@@ -341,8 +341,8 @@
   },
   "crypto:APEX": {
     "direction": "BUY",
-    "confidence": 72.82778958426317,
-    "last_alert_at": "2026-08-20T15:37:25.062145+00:00"
+    "confidence": 72.70393697019944,
+    "last_alert_at": "2026-08-21T08:17:46.069905+00:00"
   },
   "crypto:MAVIA": {
     "direction": "BUY",
@@ -706,8 +706,8 @@
   },
   "crypto:XLM": {
     "direction": "BUY",
-    "confidence": 84.69127308470166,
-    "last_alert_at": "2026-08-20T16:57:43.571229+00:00"
+    "confidence": 72.7174576128597,
+    "last_alert_at": "2026-08-21T08:17:44.698252+00:00"
   },
   "crypto:VELO": {
     "direction": "BUY",
