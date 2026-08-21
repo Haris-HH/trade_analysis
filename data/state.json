@@ -36,8 +36,8 @@
   },
   "crypto:BONK": {
     "direction": "BUY",
-    "confidence": 72.17770508385276,
-    "last_alert_at": "2026-08-20T16:57:44.718152+00:00"
+    "confidence": 70.91354168811147,
+    "last_alert_at": "2026-08-21T06:17:20.330315+00:00"
   },
   "crypto:EDGE": {
     "direction": "BUY",
@@ -736,8 +736,8 @@
   },
   "crypto:NEIRO": {
     "direction": "BUY",
-    "confidence": 83.17671777120466,
-    "last_alert_at": "2026-08-20T10:51:54.882691+00:00"
+    "confidence": 82.89914529579697,
+    "last_alert_at": "2026-08-21T06:17:20.898739+00:00"
   },
   "crypto:ASTER": {
     "direction": "BUY",
