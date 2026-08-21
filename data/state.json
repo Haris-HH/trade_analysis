@@ -411,8 +411,8 @@
   },
   "crypto:ZAMA": {
     "direction": "BUY",
-    "confidence": 83.94106212297667,
-    "last_alert_at": "2026-08-21T23:37:35.437623+00:00"
+    "confidence": 84.7045995731995,
+    "last_alert_at": "2026-08-21T23:40:13.129811+00:00"
   },
   "crypto:PLUME": {
     "direction": "BUY",
@@ -956,8 +956,8 @@
   },
   "crypto:ACH": {
     "direction": "BUY",
-    "confidence": 71.78042482558423,
-    "last_alert_at": "2026-08-21T17:57:32.124616+00:00"
+    "confidence": 71.75693928416166,
+    "last_alert_at": "2026-08-21T23:40:13.689211+00:00"
   },
   "crypto:FLUID": {
     "direction": "BUY",
