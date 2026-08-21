@@ -136,8 +136,8 @@
   },
   "crypto:UNI": {
     "direction": "BUY",
-    "confidence": 75.66222547343628,
-    "last_alert_at": "2026-08-21T01:22:16.275903+00:00"
+    "confidence": 77.06623147485854,
+    "last_alert_at": "2026-08-21T07:27:15.955388+00:00"
   },
   "crypto:ES": {
     "direction": "SELL",
@@ -426,8 +426,8 @@
   },
   "crypto:BOME": {
     "direction": "BUY",
-    "confidence": 70.33754579658972,
-    "last_alert_at": "2026-08-20T12:22:12.911780+00:00"
+    "confidence": 78.15620417530839,
+    "last_alert_at": "2026-08-21T07:27:16.902453+00:00"
   },
   "crypto:EDEN": {
     "direction": "BUY",
@@ -531,8 +531,8 @@
   },
   "crypto:GALA": {
     "direction": "BUY",
-    "confidence": 78.13851316663676,
-    "last_alert_at": "2026-08-21T00:47:08.681998+00:00"
+    "confidence": 70.23701378575898,
+    "last_alert_at": "2026-08-21T07:27:16.439144+00:00"
   },
   "crypto:MEME": {
     "direction": "BUY",
