@@ -53,5 +53,17 @@ jobs:
           git config user.name "market-scan-bot"
           git config user.email "actions@users.noreply.github.com"
           git add public/data/latest.json data/state.json data/positions.json data/trade_log.json
-          git diff --cached --quiet || git commit -m "chore: update market scan data [skip ci]"
+          git diff --cached --quiet && exit 0
+          git commit -m "chore: update market scan data [skip ci]"
+          # If origin advanced since checkout (another push landed in between --
+          # this is what silently dropped a real trade's position update on
+          # 2026-08-21), retry with a rebase that prefers this run's freshly
+          # computed data files over whatever else changed them, instead of
+          # just failing and discarding this run's real trade state.
+          for attempt in 1 2 3; do
+            git push && exit 0
+            echo "push failed (attempt $attempt), rebasing onto origin/main..."
+            git fetch origin main
+            git rebase -X ours origin/main
+          done
           git push
