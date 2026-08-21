@@ -726,8 +726,8 @@
   },
   "crypto:EIGEN": {
     "direction": "BUY",
-    "confidence": 80.4198002727939,
-    "last_alert_at": "2026-08-20T17:37:29.336671+00:00"
+    "confidence": 70.6419899810848,
+    "last_alert_at": "2026-08-21T00:12:22.962874+00:00"
   },
   "crypto:ETH": {
     "direction": "BUY",
@@ -841,8 +841,8 @@
   },
   "crypto:SAND": {
     "direction": "BUY",
-    "confidence": 83.48432762018818,
-    "last_alert_at": "2026-08-20T16:12:18.863951+00:00"
+    "confidence": 71.57128103148933,
+    "last_alert_at": "2026-08-21T00:12:23.630050+00:00"
   },
   "crypto:ZIG": {
     "direction": "BUY",
