@@ -1,8 +1,8 @@
 {
   "crypto:CRV": {
     "direction": "BUY",
-    "confidence": 84.56354590254973,
-    "last_alert_at": "2026-08-21T00:57:16.661064+00:00"
+    "confidence": 72.64271247532731,
+    "last_alert_at": "2026-08-21T08:43:28.428207+00:00"
   },
   "crypto:ADA": {
     "direction": "BUY",
@@ -76,8 +76,8 @@
   },
   "crypto:SQD": {
     "direction": "SELL",
-    "confidence": 73.12160810852293,
-    "last_alert_at": "2026-08-18T04:36:41.215230+00:00"
+    "confidence": 70.43953614547654,
+    "last_alert_at": "2026-08-21T08:43:30.318844+00:00"
   },
   "crypto:AZTEC": {
     "direction": "BUY",
@@ -106,8 +106,8 @@
   },
   "crypto:IOST": {
     "direction": "BUY",
-    "confidence": 70.48348685732314,
-    "last_alert_at": "2026-08-20T23:27:00.771297+00:00"
+    "confidence": 70.62009773804311,
+    "last_alert_at": "2026-08-21T08:43:29.026966+00:00"
   },
   "crypto:HBAR": {
     "direction": "BUY",
@@ -611,8 +611,8 @@
   },
   "crypto:CAKE": {
     "direction": "BUY",
-    "confidence": 73.35445941145409,
-    "last_alert_at": "2026-08-21T06:57:27.153639+00:00"
+    "confidence": 83.65112781420632,
+    "last_alert_at": "2026-08-21T08:43:31.042558+00:00"
   },
   "crypto:SPX": {
     "direction": "BUY",
@@ -811,8 +811,8 @@
   },
   "crypto:CPOOL": {
     "direction": "BUY",
-    "confidence": 79.83933775023765,
-    "last_alert_at": "2026-08-20T19:22:04.608615+00:00"
+    "confidence": 74.32542790462855,
+    "last_alert_at": "2026-08-21T08:43:31.672338+00:00"
   },
   "crypto:XPL": {
     "direction": "BUY",
@@ -861,8 +861,8 @@
   },
   "crypto:DOT": {
     "direction": "BUY",
-    "confidence": 73.2523118708142,
-    "last_alert_at": "2026-08-21T08:12:43.888419+00:00"
+    "confidence": 83.46896548703235,
+    "last_alert_at": "2026-08-21T08:43:29.627150+00:00"
   },
   "crypto:FIDA": {
     "direction": "BUY",
