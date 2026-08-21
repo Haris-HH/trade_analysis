@@ -921,8 +921,8 @@
   },
   "crypto:KNC": {
     "direction": "BUY",
-    "confidence": 83.76989228255515,
-    "last_alert_at": "2026-08-21T10:53:12.893659+00:00"
+    "confidence": 74.90447256706354,
+    "last_alert_at": "2026-08-21T18:52:13.520448+00:00"
   },
   "crypto:KSM": {
     "direction": "BUY",
@@ -1018,5 +1018,10 @@
     "direction": "BUY",
     "confidence": 72.9911795625919,
     "last_alert_at": "2026-08-21T18:32:14.816533+00:00"
+  },
+  "crypto:CVC": {
+    "direction": "BUY",
+    "confidence": 74.14744399067014,
+    "last_alert_at": "2026-08-21T18:52:14.087469+00:00"
   }
 }
