@@ -71,8 +71,8 @@
   },
   "crypto:LUNA": {
     "direction": "BUY",
-    "confidence": 70.06323351207935,
-    "last_alert_at": "2026-08-21T07:57:57.190969+00:00"
+    "confidence": 80.39372096553527,
+    "last_alert_at": "2026-08-21T08:38:09.200891+00:00"
   },
   "crypto:SQD": {
     "direction": "SELL",
@@ -111,8 +111,8 @@
   },
   "crypto:HBAR": {
     "direction": "BUY",
-    "confidence": 74.39354122698951,
-    "last_alert_at": "2026-08-21T01:57:25.725252+00:00"
+    "confidence": 71.6420887454876,
+    "last_alert_at": "2026-08-21T08:38:08.606381+00:00"
   },
   "crypto:RNDR": {
     "direction": "SELL",
