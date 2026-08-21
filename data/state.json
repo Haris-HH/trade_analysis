@@ -96,8 +96,8 @@
   },
   "crypto:ONDO": {
     "direction": "BUY",
-    "confidence": 71.13525384211366,
-    "last_alert_at": "2026-08-20T16:02:43.024487+00:00"
+    "confidence": 72.10365426854109,
+    "last_alert_at": "2026-08-21T01:52:45.186494+00:00"
   },
   "crypto:HOLO": {
     "direction": "BUY",
@@ -326,8 +326,8 @@
   },
   "crypto:BCH": {
     "direction": "BUY",
-    "confidence": 70.00171813868997,
-    "last_alert_at": "2026-08-21T00:17:38.265810+00:00"
+    "confidence": 86.97524352191908,
+    "last_alert_at": "2026-08-21T01:52:44.636443+00:00"
   },
   "crypto:ENA": {
     "direction": "BUY",
@@ -791,8 +791,8 @@
   },
   "crypto:NEXO": {
     "direction": "BUY",
-    "confidence": 83.63059087145753,
-    "last_alert_at": "2026-08-20T11:47:25.818978+00:00"
+    "confidence": 90.0,
+    "last_alert_at": "2026-08-21T01:52:44.089296+00:00"
   },
   "crypto:ZORA": {
     "direction": "BUY",
