@@ -111,8 +111,8 @@
   },
   "crypto:HBAR": {
     "direction": "BUY",
-    "confidence": 71.6420887454876,
-    "last_alert_at": "2026-08-21T08:38:08.606381+00:00"
+    "confidence": 79.02255415825374,
+    "last_alert_at": "2026-08-21T15:32:43.638752+00:00"
   },
   "crypto:RNDR": {
     "direction": "SELL",
@@ -616,8 +616,8 @@
   },
   "crypto:SPX": {
     "direction": "BUY",
-    "confidence": 72.27401064895176,
-    "last_alert_at": "2026-08-21T06:52:27.975990+00:00"
+    "confidence": 75.02598187813734,
+    "last_alert_at": "2026-08-21T15:32:43.002442+00:00"
   },
   "crypto:ARB": {
     "direction": "BUY",
