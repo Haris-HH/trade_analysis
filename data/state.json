@@ -993,5 +993,10 @@
     "direction": "BUY",
     "confidence": 76.79054574277428,
     "last_alert_at": "2026-08-21T12:27:40.136884+00:00"
+  },
+  "crypto:AVL": {
+    "direction": "BUY",
+    "confidence": 77.13644410204773,
+    "last_alert_at": "2026-08-21T13:22:30.315434+00:00"
   }
 }
