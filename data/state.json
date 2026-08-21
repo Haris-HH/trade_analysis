@@ -681,8 +681,8 @@
   },
   "crypto:JUP": {
     "direction": "BUY",
-    "confidence": 79.39611266595665,
-    "last_alert_at": "2026-08-21T12:58:19.196707+00:00"
+    "confidence": 72.05902391707978,
+    "last_alert_at": "2026-08-21T17:57:31.571577+00:00"
   },
   "crypto:MEW": {
     "direction": "BUY",
@@ -956,8 +956,8 @@
   },
   "crypto:ACH": {
     "direction": "BUY",
-    "confidence": 79.18900878409748,
-    "last_alert_at": "2026-08-21T12:58:21.317716+00:00"
+    "confidence": 71.78042482558423,
+    "last_alert_at": "2026-08-21T17:57:32.124616+00:00"
   },
   "crypto:FLUID": {
     "direction": "BUY",
