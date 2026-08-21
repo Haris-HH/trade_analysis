@@ -21,8 +21,8 @@
   },
   "crypto:PUMP": {
     "direction": "BUY",
-    "confidence": 71.88845274655176,
-    "last_alert_at": "2026-08-21T11:12:25.559645+00:00"
+    "confidence": 82.82884303575138,
+    "last_alert_at": "2026-08-21T14:57:49.734630+00:00"
   },
   "crypto:KUB": {
     "direction": "BUY",
@@ -61,8 +61,8 @@
   },
   "crypto:RESOLV": {
     "direction": "BUY",
-    "confidence": 76.28020653118698,
-    "last_alert_at": "2026-08-21T09:48:52.514522+00:00"
+    "confidence": 78.12800006479614,
+    "last_alert_at": "2026-08-21T14:57:48.781744+00:00"
   },
   "crypto:BICO": {
     "direction": "SELL",
@@ -691,8 +691,8 @@
   },
   "crypto:SHIB": {
     "direction": "BUY",
-    "confidence": 72.34464246860283,
-    "last_alert_at": "2026-08-21T07:45:37.781850+00:00"
+    "confidence": 76.92751378261991,
+    "last_alert_at": "2026-08-21T14:57:49.251699+00:00"
   },
   "crypto:XRP": {
     "direction": "BUY",
