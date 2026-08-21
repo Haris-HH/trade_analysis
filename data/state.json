@@ -96,8 +96,8 @@
   },
   "crypto:ONDO": {
     "direction": "BUY",
-    "confidence": 72.59624191970791,
-    "last_alert_at": "2026-08-21T05:57:18.126059+00:00"
+    "confidence": 79.13051647091947,
+    "last_alert_at": "2026-08-21T09:58:27.690187+00:00"
   },
   "crypto:HOLO": {
     "direction": "BUY",
@@ -206,8 +206,8 @@
   },
   "crypto:BIRB": {
     "direction": "BUY",
-    "confidence": 70.82094920834726,
-    "last_alert_at": "2026-08-20T20:46:56.911303+00:00"
+    "confidence": 70.95668544357206,
+    "last_alert_at": "2026-08-21T09:58:29.117919+00:00"
   },
   "crypto:FHE": {
     "direction": "BUY",
@@ -381,8 +381,8 @@
   },
   "crypto:ALCH": {
     "direction": "BUY",
-    "confidence": 77.77349153945372,
-    "last_alert_at": "2026-08-20T17:52:18.748597+00:00"
+    "confidence": 74.09577135761245,
+    "last_alert_at": "2026-08-21T09:58:28.659309+00:00"
   },
   "crypto:EPIC": {
     "direction": "BUY",
@@ -761,8 +761,8 @@
   },
   "crypto:AIXBT": {
     "direction": "BUY",
-    "confidence": 70.00998025551331,
-    "last_alert_at": "2026-08-21T05:54:50.308644+00:00"
+    "confidence": 74.86273037877878,
+    "last_alert_at": "2026-08-21T09:58:28.169740+00:00"
   },
   "crypto:WIF": {
     "direction": "BUY",
