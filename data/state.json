@@ -246,8 +246,8 @@
   },
   "crypto:WET": {
     "direction": "BUY",
-    "confidence": 70.54944612967726,
-    "last_alert_at": "2026-08-20T15:55:43.361668+00:00"
+    "confidence": 79.22364104970103,
+    "last_alert_at": "2026-08-21T10:32:50.773766+00:00"
   },
   "crypto:MPLX": {
     "direction": "BUY",
@@ -286,8 +286,8 @@
   },
   "crypto:ZKP": {
     "direction": "BUY",
-    "confidence": 72.4885178043166,
-    "last_alert_at": "2026-08-21T06:22:17.364616+00:00"
+    "confidence": 70.4640885297684,
+    "last_alert_at": "2026-08-21T10:32:51.506534+00:00"
   },
   "crypto:SOON": {
     "direction": "SELL",
