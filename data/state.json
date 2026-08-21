@@ -16,8 +16,8 @@
   },
   "crypto:SNT": {
     "direction": "BUY",
-    "confidence": 89.2734347771477,
-    "last_alert_at": "2026-08-21T00:07:02.637317+00:00"
+    "confidence": 82.63200278988775,
+    "last_alert_at": "2026-08-21T04:56:38.839890+00:00"
   },
   "crypto:PUMP": {
     "direction": "BUY",
@@ -726,8 +726,8 @@
   },
   "crypto:EIGEN": {
     "direction": "BUY",
-    "confidence": 70.6419899810848,
-    "last_alert_at": "2026-08-21T00:12:22.962874+00:00"
+    "confidence": 82.13303485264102,
+    "last_alert_at": "2026-08-21T04:56:38.185475+00:00"
   },
   "crypto:ETH": {
     "direction": "BUY",
@@ -851,8 +851,8 @@
   },
   "crypto:ABT": {
     "direction": "BUY",
-    "confidence": 70.14339223429762,
-    "last_alert_at": "2026-08-20T21:57:04.609447+00:00"
+    "confidence": 81.87690758163045,
+    "last_alert_at": "2026-08-21T04:56:37.540774+00:00"
   },
   "crypto:BEAM": {
     "direction": "BUY",
