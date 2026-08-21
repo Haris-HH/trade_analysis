@@ -76,8 +76,8 @@
   },
   "crypto:SQD": {
     "direction": "SELL",
-    "confidence": 70.43953614547654,
-    "last_alert_at": "2026-08-21T08:43:30.318844+00:00"
+    "confidence": 74.33224660652802,
+    "last_alert_at": "2026-08-21T19:16:54.796570+00:00"
   },
   "crypto:AZTEC": {
     "direction": "BUY",
