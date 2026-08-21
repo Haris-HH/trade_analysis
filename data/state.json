@@ -978,5 +978,10 @@
     "direction": "BUY",
     "confidence": 71.82073801570095,
     "last_alert_at": "2026-08-21T10:02:45.586981+00:00"
+  },
+  "crypto:FORT": {
+    "direction": "BUY",
+    "confidence": 77.06343450547173,
+    "last_alert_at": "2026-08-21T10:27:33.369893+00:00"
   }
 }
