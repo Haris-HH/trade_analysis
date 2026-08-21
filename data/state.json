@@ -6,8 +6,8 @@
   },
   "crypto:ADA": {
     "direction": "BUY",
-    "confidence": 72.51347662311208,
-    "last_alert_at": "2026-08-21T22:12:36.455186+00:00"
+    "confidence": 84.32814286373944,
+    "last_alert_at": "2026-08-21T22:42:37.841894+00:00"
   },
   "crypto:ELIZAOS": {
     "direction": "SELL",
@@ -611,8 +611,8 @@
   },
   "crypto:CAKE": {
     "direction": "BUY",
-    "confidence": 87.95588882926978,
-    "last_alert_at": "2026-08-21T17:52:33.691141+00:00"
+    "confidence": 71.23319294632844,
+    "last_alert_at": "2026-08-21T22:42:38.348877+00:00"
   },
   "crypto:SPX": {
     "direction": "BUY",
