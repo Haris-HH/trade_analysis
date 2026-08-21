@@ -81,8 +81,8 @@
   },
   "crypto:AZTEC": {
     "direction": "BUY",
-    "confidence": 70.76463941144745,
-    "last_alert_at": "2026-08-21T16:37:25.337220+00:00"
+    "confidence": 72.33972530820118,
+    "last_alert_at": "2026-08-21T20:52:09.086264+00:00"
   },
   "crypto:LIT": {
     "direction": "BUY",
@@ -536,8 +536,8 @@
   },
   "crypto:MEME": {
     "direction": "BUY",
-    "confidence": 70.22263611700396,
-    "last_alert_at": "2026-08-21T16:47:27.599270+00:00"
+    "confidence": 72.02869283792855,
+    "last_alert_at": "2026-08-21T20:52:09.649477+00:00"
   },
   "crypto:TAO": {
     "direction": "BUY",
