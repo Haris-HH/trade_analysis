@@ -486,8 +486,8 @@
   },
   "crypto:JASMY": {
     "direction": "BUY",
-    "confidence": 82.07130553984693,
-    "last_alert_at": "2026-08-21T15:42:44.186559+00:00"
+    "confidence": 72.6118096873583,
+    "last_alert_at": "2026-08-21T21:36:20.449348+00:00"
   },
   "crypto:SD": {
     "direction": "BUY",
@@ -701,8 +701,8 @@
   },
   "crypto:DOGE": {
     "direction": "BUY",
-    "confidence": 71.33240596341842,
-    "last_alert_at": "2026-08-21T21:16:59.344004+00:00"
+    "confidence": 84.59201449934021,
+    "last_alert_at": "2026-08-21T21:36:19.922858+00:00"
   },
   "crypto:XLM": {
     "direction": "BUY",
