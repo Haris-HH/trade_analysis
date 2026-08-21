@@ -546,8 +546,8 @@
   },
   "crypto:SUI": {
     "direction": "BUY",
-    "confidence": 80.56885695851507,
-    "last_alert_at": "2026-08-20T08:52:50.492086+00:00"
+    "confidence": 76.26753344719857,
+    "last_alert_at": "2026-08-21T02:22:10.299030+00:00"
   },
   "crypto:CFG": {
     "direction": "SELL",
@@ -656,8 +656,8 @@
   },
   "crypto:FLOKI": {
     "direction": "BUY",
-    "confidence": 77.0525400865324,
-    "last_alert_at": "2026-08-20T16:52:46.619239+00:00"
+    "confidence": 79.40616960431377,
+    "last_alert_at": "2026-08-21T02:22:09.783851+00:00"
   },
   "crypto:TOSHI": {
     "direction": "BUY",
