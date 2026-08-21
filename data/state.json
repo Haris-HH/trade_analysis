@@ -821,8 +821,8 @@
   },
   "crypto:BTC": {
     "direction": "BUY",
-    "confidence": 79.41025596094741,
-    "last_alert_at": "2026-08-21T02:52:32.640354+00:00"
+    "confidence": 72.71324170377174,
+    "last_alert_at": "2026-08-21T09:07:32.516624+00:00"
   },
   "crypto:POW": {
     "direction": "BUY",
