@@ -531,13 +531,13 @@
   },
   "crypto:GALA": {
     "direction": "BUY",
-    "confidence": 81.41038210739464,
-    "last_alert_at": "2026-08-21T12:43:32.828458+00:00"
+    "confidence": 73.40026446579797,
+    "last_alert_at": "2026-08-21T16:47:28.292474+00:00"
   },
   "crypto:MEME": {
     "direction": "BUY",
-    "confidence": 73.47656260098992,
-    "last_alert_at": "2026-08-21T11:58:02.589482+00:00"
+    "confidence": 70.22263611700396,
+    "last_alert_at": "2026-08-21T16:47:27.599270+00:00"
   },
   "crypto:TAO": {
     "direction": "BUY",
