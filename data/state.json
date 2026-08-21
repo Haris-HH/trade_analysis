@@ -796,8 +796,8 @@
   },
   "crypto:ZORA": {
     "direction": "BUY",
-    "confidence": 77.83164839773545,
-    "last_alert_at": "2026-08-20T22:37:02.610790+00:00"
+    "confidence": 73.4346783031472,
+    "last_alert_at": "2026-08-21T02:52:33.300305+00:00"
   },
   "crypto:SIX": {
     "direction": "BUY",
@@ -821,8 +821,8 @@
   },
   "crypto:BTC": {
     "direction": "BUY",
-    "confidence": 75.00111171989204,
-    "last_alert_at": "2026-08-20T14:42:29.297565+00:00"
+    "confidence": 79.41025596094741,
+    "last_alert_at": "2026-08-21T02:52:32.640354+00:00"
   },
   "crypto:POW": {
     "direction": "BUY",
