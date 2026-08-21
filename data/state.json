@@ -606,8 +606,8 @@
   },
   "crypto:SOL": {
     "direction": "BUY",
-    "confidence": 74.14743196368107,
-    "last_alert_at": "2026-08-21T09:23:04.589999+00:00"
+    "confidence": 71.73703666818088,
+    "last_alert_at": "2026-08-21T22:37:35.684581+00:00"
   },
   "crypto:CAKE": {
     "direction": "BUY",
@@ -776,8 +776,8 @@
   },
   "crypto:POPCAT": {
     "direction": "BUY",
-    "confidence": 79.14141075059577,
-    "last_alert_at": "2026-08-21T18:12:10.298151+00:00"
+    "confidence": 76.79278140986553,
+    "last_alert_at": "2026-08-21T22:37:36.134994+00:00"
   },
   "crypto:FLOCK": {
     "direction": "BUY",
