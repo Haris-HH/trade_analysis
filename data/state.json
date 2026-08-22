@@ -401,8 +401,8 @@
   },
   "crypto:ETHFI": {
     "direction": "BUY",
-    "confidence": 79.7674918097569,
-    "last_alert_at": "2026-08-21T20:26:58.637177+00:00"
+    "confidence": 78.3709134093838,
+    "last_alert_at": "2026-08-22T05:17:35.255219+00:00"
   },
   "crypto:PLN": {
     "direction": "BUY",
@@ -1038,5 +1038,10 @@
     "direction": "BUY",
     "confidence": 76.65007844853359,
     "last_alert_at": "2026-08-22T04:53:58.809061+00:00"
+  },
+  "crypto:AERO": {
+    "direction": "BUY",
+    "confidence": 90.0,
+    "last_alert_at": "2026-08-22T05:17:35.784066+00:00"
   }
 }
