@@ -71,8 +71,8 @@
   },
   "crypto:LUNA": {
     "direction": "BUY",
-    "confidence": 70.95986672698398,
-    "last_alert_at": "2026-08-21T22:32:48.573045+00:00"
+    "confidence": 77.95909839768174,
+    "last_alert_at": "2026-08-22T02:53:07.771489+00:00"
   },
   "crypto:SQD": {
     "direction": "SELL",
@@ -336,8 +336,8 @@
   },
   "crypto:CHZ": {
     "direction": "BUY",
-    "confidence": 76.88908736320245,
-    "last_alert_at": "2026-08-21T13:32:44.042730+00:00"
+    "confidence": 88.56993950562386,
+    "last_alert_at": "2026-08-22T02:53:08.284293+00:00"
   },
   "crypto:APEX": {
     "direction": "BUY",
@@ -611,8 +611,8 @@
   },
   "crypto:CAKE": {
     "direction": "BUY",
-    "confidence": 71.23319294632844,
-    "last_alert_at": "2026-08-21T22:42:38.348877+00:00"
+    "confidence": 81.74803071260904,
+    "last_alert_at": "2026-08-22T02:53:09.292490+00:00"
   },
   "crypto:SPX": {
     "direction": "BUY",
@@ -856,8 +856,8 @@
   },
   "crypto:BEAM": {
     "direction": "BUY",
-    "confidence": 70.64701730344667,
-    "last_alert_at": "2026-08-21T21:59:41.598097+00:00"
+    "confidence": 73.35267639826867,
+    "last_alert_at": "2026-08-22T02:53:09.795835+00:00"
   },
   "crypto:DOT": {
     "direction": "BUY",
@@ -1028,5 +1028,10 @@
     "direction": "BUY",
     "confidence": 76.75384112445164,
     "last_alert_at": "2026-08-22T02:48:33.602287+00:00"
+  },
+  "crypto:GRASS": {
+    "direction": "BUY",
+    "confidence": 70.81689994577195,
+    "last_alert_at": "2026-08-22T02:53:08.785068+00:00"
   }
 }
