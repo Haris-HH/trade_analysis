@@ -71,8 +71,8 @@
   },
   "crypto:LUNA": {
     "direction": "BUY",
-    "confidence": 77.95909839768174,
-    "last_alert_at": "2026-08-22T02:53:07.771489+00:00"
+    "confidence": 89.16488715266087,
+    "last_alert_at": "2026-08-22T03:53:18.845829+00:00"
   },
   "crypto:SQD": {
     "direction": "SELL",
@@ -131,8 +131,8 @@
   },
   "crypto:BRETT": {
     "direction": "BUY",
-    "confidence": 74.51404725317356,
-    "last_alert_at": "2026-08-21T23:52:34.402690+00:00"
+    "confidence": 83.53361826615014,
+    "last_alert_at": "2026-08-22T03:53:21.846173+00:00"
   },
   "crypto:UNI": {
     "direction": "BUY",
@@ -311,8 +311,8 @@
   },
   "crypto:GMT": {
     "direction": "BUY",
-    "confidence": 74.12911674118926,
-    "last_alert_at": "2026-08-21T20:47:18.905136+00:00"
+    "confidence": 80.61087282382786,
+    "last_alert_at": "2026-08-22T03:53:22.439073+00:00"
   },
   "stock:STX": {
     "direction": "BUY",
@@ -436,8 +436,8 @@
   },
   "crypto:FET": {
     "direction": "BUY",
-    "confidence": 81.71275347131653,
-    "last_alert_at": "2026-08-21T09:54:07.560678+00:00"
+    "confidence": 70.3914507173373,
+    "last_alert_at": "2026-08-22T03:53:20.048516+00:00"
   },
   "crypto:TA": {
     "direction": "SELL",
@@ -481,8 +481,8 @@
   },
   "crypto:WLFI": {
     "direction": "BUY",
-    "confidence": 87.64071009698006,
-    "last_alert_at": "2026-08-16T13:31:58.018823+00:00"
+    "confidence": 74.49321228244298,
+    "last_alert_at": "2026-08-22T03:53:21.254628+00:00"
   },
   "crypto:JASMY": {
     "direction": "BUY",
@@ -596,8 +596,8 @@
   },
   "crypto:G": {
     "direction": "BUY",
-    "confidence": 72.38567165166403,
-    "last_alert_at": "2026-08-20T09:42:29.384477+00:00"
+    "confidence": 70.7868976582011,
+    "last_alert_at": "2026-08-22T03:53:19.444742+00:00"
   },
   "crypto:PYBOBO": {
     "direction": "SELL",
@@ -616,8 +616,8 @@
   },
   "crypto:SPX": {
     "direction": "BUY",
-    "confidence": 70.85134495142321,
-    "last_alert_at": "2026-08-22T00:52:42.957000+00:00"
+    "confidence": 81.31440990337178,
+    "last_alert_at": "2026-08-22T03:53:20.648469+00:00"
   },
   "crypto:ARB": {
     "direction": "BUY",
