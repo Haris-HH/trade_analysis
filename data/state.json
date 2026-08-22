@@ -31,8 +31,8 @@
   },
   "crypto:MET": {
     "direction": "BUY",
-    "confidence": 75.0386398056611,
-    "last_alert_at": "2026-08-22T03:27:07.913281+00:00"
+    "confidence": 73.80587032593834,
+    "last_alert_at": "2026-08-22T03:30:06.284169+00:00"
   },
   "crypto:BONK": {
     "direction": "BUY",
@@ -296,8 +296,8 @@
   },
   "crypto:SIGN": {
     "direction": "BUY",
-    "confidence": 80.27143685415264,
-    "last_alert_at": "2026-08-22T03:27:08.417228+00:00"
+    "confidence": 71.4354170365791,
+    "last_alert_at": "2026-08-22T03:30:06.751113+00:00"
   },
   "crypto:CHILLGUY": {
     "direction": "BUY",
@@ -671,8 +671,8 @@
   },
   "crypto:PEPE": {
     "direction": "BUY",
-    "confidence": 83.83088684914603,
-    "last_alert_at": "2026-08-21T22:58:02.469366+00:00"
+    "confidence": 72.95057426825397,
+    "last_alert_at": "2026-08-22T03:30:07.338341+00:00"
   },
   "crypto:MOG": {
     "direction": "BUY",
@@ -701,8 +701,8 @@
   },
   "crypto:DOGE": {
     "direction": "BUY",
-    "confidence": 71.25223021752109,
-    "last_alert_at": "2026-08-22T02:48:32.996794+00:00"
+    "confidence": 81.86794071547442,
+    "last_alert_at": "2026-08-22T03:30:05.327917+00:00"
   },
   "crypto:XLM": {
     "direction": "BUY",
@@ -716,8 +716,8 @@
   },
   "crypto:OP": {
     "direction": "BUY",
-    "confidence": 82.58170075707382,
-    "last_alert_at": "2026-08-21T23:27:29.049263+00:00"
+    "confidence": 90.0,
+    "last_alert_at": "2026-08-22T03:30:05.830670+00:00"
   },
   "crypto:PNUT": {
     "direction": "BUY",
@@ -976,8 +976,8 @@
   },
   "crypto:AGLD": {
     "direction": "BUY",
-    "confidence": 75.12833885036632,
-    "last_alert_at": "2026-08-21T21:59:41.143212+00:00"
+    "confidence": 73.70799128968703,
+    "last_alert_at": "2026-08-22T03:30:07.796566+00:00"
   },
   "crypto:FORT": {
     "direction": "BUY",
