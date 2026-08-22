@@ -751,8 +751,8 @@
   },
   "crypto:SUSHI": {
     "direction": "BUY",
-    "confidence": 72.66083688338252,
-    "last_alert_at": "2026-08-21T18:24:12.686254+00:00"
+    "confidence": 79.71468589628536,
+    "last_alert_at": "2026-08-22T00:37:29.805133+00:00"
   },
   "crypto:BNB": {
     "direction": "BUY",
@@ -831,8 +831,8 @@
   },
   "crypto:BREV": {
     "direction": "BUY",
-    "confidence": 82.40354942357185,
-    "last_alert_at": "2026-08-21T12:37:39.881451+00:00"
+    "confidence": 81.18595245032957,
+    "last_alert_at": "2026-08-22T00:37:30.275521+00:00"
   },
   "crypto:MANA": {
     "direction": "BUY",
@@ -946,8 +946,8 @@
   },
   "crypto:GRT": {
     "direction": "BUY",
-    "confidence": 85.78322906095225,
-    "last_alert_at": "2026-08-21T08:48:08.954594+00:00"
+    "confidence": 70.83478289945265,
+    "last_alert_at": "2026-08-22T00:37:29.340989+00:00"
   },
   "crypto:ENJ": {
     "direction": "BUY",
