@@ -151,8 +151,8 @@
   },
   "crypto:AVAX": {
     "direction": "BUY",
-    "confidence": 86.93323555773819,
-    "last_alert_at": "2026-08-21T07:45:37.781791+00:00"
+    "confidence": 75.77106421412718,
+    "last_alert_at": "2026-08-22T03:03:00.277055+00:00"
   },
   "crypto:PONKE": {
     "direction": "SELL",
@@ -626,8 +626,8 @@
   },
   "crypto:RPL": {
     "direction": "BUY",
-    "confidence": 77.51164083776105,
-    "last_alert_at": "2026-08-21T14:02:51.809520+00:00"
+    "confidence": 76.68040150861259,
+    "last_alert_at": "2026-08-22T03:03:00.914854+00:00"
   },
   "stock:Q": {
     "direction": "SELL",
