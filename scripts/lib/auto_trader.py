@@ -7,9 +7,14 @@ Telegram alerts into real Bitkub market orders.
   scoring.py's regime-aware confluence engine), with confidence >=
   MIN_CONFIDENCE and not vetoed. Only opens a position if that ticker isn't
   already held and MAX_POSITIONS isn't already reached.
-- SELL: every open position is checked against the *current* scan cycle's
-  price (no re-verification needed for an exit) and closed automatically at
-  TAKE_PROFIT_PCT gain or STOP_LOSS_PCT loss, whichever comes first.
+- SELL: a resting limit sell at the TAKE_PROFIT_PCT target is placed the
+  moment a position opens (and backfilled for any position missing one),
+  so Bitkub's own matching engine can catch it between polls instead of
+  this bot only noticing up to 5 minutes late. Every open position is also
+  checked against the *current* scan cycle's price for STOP_LOSS_PCT (which
+  cancels the resting order first, since a market exit and a limit order
+  must never both be live for the same coins) and, if no resting order
+  exists, as a take-profit fallback too.
 
 Disabled by default: AUTO_TRADE_ENABLED must be exactly "1", so real money
 is only ever risked once the user opts in explicitly with their own Bitkub
@@ -21,11 +26,17 @@ from __future__ import annotations
 
 import os
 import time
+from datetime import datetime, timezone
 
 from . import bitkub_source, bitkub_trade, positions_store, telegram_notify
 
 FILL_RETRY_ATTEMPTS = 4
 FILL_RETRY_DELAY_SECONDS = 1.5
+
+# A stuck position (e.g. broker-routed coin rejecting sell orders) gets
+# retried silently every scan cycle — re-notifying on every single retry
+# would spam Telegram every 5 minutes, so only re-alert this often.
+SELL_FAILURE_NOTIFY_COOLDOWN_SECONDS = 6 * 3600
 
 
 def _env_float(name: str, default: float) -> float:
@@ -95,6 +106,21 @@ def _resolve_fill(ticker: str, order_id: str | None, side: str, fallback: dict) 
     return fallback
 
 
+def _describe_sell_failure(exc: Exception, ticker: str) -> str:
+    """Translate a raw Bitkub exception into something a non-engineer can
+    act on. Error 61 ("broker" coins reject place-ask outright — see
+    bitkub_source.is_broker_sourced) is the one confirmed recurring cause;
+    everything else is surfaced as-is since we haven't seen it happen yet."""
+    if isinstance(exc, bitkub_trade.BitkubAPIError) and exc.code == 61:
+        return (
+            f"Bitkub routes {ticker} through its \"broker\" order book, which rejects "
+            f"sell orders outright (error 61) — this can't be closed automatically. "
+            f"Please sell it manually in the Bitkub app; the bot will keep watching and "
+            f"retrying every cycle until it succeeds."
+        )
+    return str(exc)
+
+
 def _try_close(ticker: str, position: dict, price: float, reason: str) -> dict | None:
     pnl_pct = (price - position["entry_price"]) / position["entry_price"]
     try:
@@ -107,6 +133,21 @@ def _try_close(ticker: str, position: dict, price: float, reason: str) -> dict |
             proceeds_thb = fill["thb"]
     except Exception as exc:
         print(f"[auto-trade] SELL {ticker} failed: {exc}")
+        # A failed sell isn't a one-off — it retries every scan cycle until
+        # it succeeds or the user intervenes manually, so notify (rate-limited)
+        # instead of leaving this only visible in a CI log nobody can reach.
+        last_notified = position.get("sell_failure_notified_at")
+        now = datetime.now(timezone.utc)
+        stale = not last_notified or (
+            now - datetime.fromisoformat(last_notified)
+        ).total_seconds() >= SELL_FAILURE_NOTIFY_COOLDOWN_SECONDS
+        if stale:
+            _notify(
+                f"⚠️ <b>Auto-trade SELL failed</b> ({reason})\n"
+                f"{ticker}/THB — target hit ({pnl_pct:+.2%}) but the sell order was rejected:\n"
+                f"{_describe_sell_failure(exc, ticker)}"
+            )
+            position["sell_failure_notified_at"] = now.isoformat()
         return None
 
     pnl_thb = proceeds_thb - position["cost_thb"]
@@ -119,6 +160,71 @@ def _try_close(ticker: str, position: dict, price: float, reason: str) -> dict |
     print(f"[auto-trade] SELL {ticker} ({reason}) pnl={pnl_pct:+.2%} ({pnl_thb:+,.2f} THB)")
     return {
         "ticker": ticker, "side": "sell", "reason": reason, "price": price,
+        "pnl_pct": pnl_pct, "pnl_thb": pnl_thb, "order_id": order_id,
+    }
+
+
+def _place_resting_tp_order(ticker: str, position: dict) -> None:
+    """Rest a limit sell at the take-profit target so Bitkub's matching
+    engine can fill it the instant price crosses, rather than this bot
+    only ever noticing up to 5 minutes late. Best-effort: on failure (e.g.
+    a broker-routed coin rejecting the order, same as place_market_sell)
+    the position simply falls back to the price-poll check below, same as
+    before this existed."""
+    tp_price = position["entry_price"] * (1 + TAKE_PROFIT_PCT)
+    try:
+        result = bitkub_trade.place_limit_sell(ticker, position["coin_amount"], tp_price)
+        position["tp_order_id"] = result.get("id")
+        print(f"[auto-trade] resting take-profit sell placed for {ticker} at {tp_price} (order {position['tp_order_id']})")
+    except Exception as exc:
+        print(f"[auto-trade] could not place resting take-profit order for {ticker}: {exc} — falling back to the 5-min poll")
+
+
+def _cancel_resting_tp_order(ticker: str, position: dict) -> None:
+    order_id = position.pop("tp_order_id", None)
+    if not order_id:
+        return
+    try:
+        bitkub_trade.cancel_order(ticker, order_id, "sell")
+        print(f"[auto-trade] cancelled resting take-profit order {order_id} for {ticker} to proceed with stop-loss")
+    except Exception as exc:
+        print(f"[auto-trade] failed to cancel resting take-profit order {order_id} for {ticker}: {exc}")
+
+
+def _check_resting_tp_fill(ticker: str, position: dict) -> dict | None:
+    """Returns a trade record if the resting take-profit limit order has
+    fully filled. Deliberately ignores partial fills (rare at these order
+    sizes) rather than half-closing a position's bookkeeping — a partial
+    fill just keeps waiting here until it either finishes or stop-loss
+    cancels the remainder."""
+    order_id = position.get("tp_order_id")
+    if not order_id:
+        return None
+    try:
+        info = bitkub_trade.get_order_info(ticker, order_id, "sell")
+    except Exception as exc:
+        print(f"[auto-trade] order-info check for {ticker} TP order {order_id} failed: {exc}")
+        return None
+    if info.get("status") != "filled":
+        return None
+    fill = bitkub_trade.resolve_fill(ticker, order_id, "sell")
+    if not fill or fill["coin"] <= 0:
+        return None
+
+    proceeds_thb = fill["thb"]
+    avg_rate = proceeds_thb / fill["coin"]
+    pnl_pct = (avg_rate - position["entry_price"]) / position["entry_price"]
+    pnl_thb = proceeds_thb - position["cost_thb"]
+    reason = "take-profit (resting order)"
+    _notify(
+        f"\U0001f916 <b>Auto-trade SELL</b> ({reason})\n"
+        f"{ticker}/THB — {fill['coin']:.8f} {ticker}\n"
+        f"เข้า {_fmt(position['entry_price'])} → ออก {_fmt(avg_rate)} ({pnl_pct:+.2%})\n"
+        f"กำไร/ขาดทุน: {pnl_thb:+,.2f} THB"
+    )
+    print(f"[auto-trade] SELL {ticker} ({reason}) pnl={pnl_pct:+.2%} ({pnl_thb:+,.2f} THB)")
+    return {
+        "ticker": ticker, "side": "sell", "reason": reason, "price": avg_rate,
         "pnl_pct": pnl_pct, "pnl_thb": pnl_thb, "order_id": order_id,
     }
 
@@ -164,17 +270,40 @@ def run(results: list[dict], positions: dict) -> list[dict]:
     # 1) Exits first, so a closed position frees a slot for a fresh entry
     #    in the same cycle instead of waiting for the next scan.
     for ticker in list(positions.keys()):
+        position = positions[ticker]
+
+        # Backfill a resting take-profit order for any position that
+        # doesn't have one yet (opened before this feature existed, or an
+        # earlier placement attempt failed) instead of only ever placing
+        # one for brand-new buys.
+        if not DRY_RUN and not position.get("tp_order_id"):
+            _place_resting_tp_order(ticker, position)
+
+        if position.get("tp_order_id") and not DRY_RUN:
+            trade = _check_resting_tp_fill(ticker, position)
+            if trade:
+                positions_store.close_position(positions, ticker)
+                trades.append(trade)
+                continue
+
         price = prices.get(ticker)
         if price is None:
             continue
-        position = positions[ticker]
         pnl_pct = (price - position["entry_price"]) / position["entry_price"]
-        if pnl_pct >= TAKE_PROFIT_PCT:
+        if pnl_pct >= TAKE_PROFIT_PCT and not position.get("tp_order_id"):
+            # Only take the market-sell TP path when there's no resting
+            # limit order already covering this — otherwise we'd race our
+            # own order and the second sell would fail on insufficient
+            # balance.
             reason = f"take-profit +{pnl_pct:.1%}"
         elif STOP_LOSS_PCT > 0 and pnl_pct <= -STOP_LOSS_PCT:
             reason = f"stop-loss {pnl_pct:.1%}"
         else:
             continue
+
+        if reason.startswith("stop-loss") and position.get("tp_order_id"):
+            _cancel_resting_tp_order(ticker, position)
+
         trade = _try_close(ticker, position, price, reason)
         if trade:
             positions_store.close_position(positions, ticker)
@@ -209,6 +338,11 @@ def run(results: list[dict], positions: dict) -> list[dict]:
                     cost_thb=trade["cost_thb"], coin_amount=trade["coin_amount"],
                     order_id=trade["order_id"], confidence=trade["confidence"],
                 )
+                # Rest the take-profit sell immediately, not on the next
+                # cycle, so a fast spike right after entry doesn't need to
+                # wait up to 5 minutes for this bot to notice it.
+                if not DRY_RUN:
+                    _place_resting_tp_order(ticker, positions[ticker])
                 trades.append(trade)
 
     return trades

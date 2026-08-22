@@ -104,9 +104,31 @@ def place_market_sell(ticker: str, amount_coin: float, client_id: str | None = N
     return _signed_request("POST", "/api/v3/market/place-ask", body=body)
 
 
+def place_limit_sell(ticker: str, amount_coin: float, rate: float, client_id: str | None = None) -> dict:
+    """Rest a limit sell for `amount_coin` units of `ticker` at `rate` THB
+    each. Used to place a take-profit order the instant a buy fills, so
+    Bitkub's own matching engine catches the target the moment price
+    crosses it instead of waiting for this bot's next 5-minute poll (which
+    could miss a spike that reverses before the next check)."""
+    body = {"sym": f"{ticker.lower()}_thb", "amt": round(amount_coin, 8), "rat": round(rate, 8), "typ": "limit"}
+    if client_id:
+        body["client_id"] = client_id
+    return _signed_request("POST", "/api/v3/market/place-ask", body=body)
+
+
+def cancel_order(ticker: str, order_id: str, side: str) -> dict:
+    """side: "buy" or "sell". Cancels a resting (unfilled or
+    partially-filled) order — used to pull a resting take-profit limit
+    sell before a stop-loss market sell, so the two can never both try to
+    sell the same coins out from under each other."""
+    body = {"sym": f"{ticker.lower()}_thb", "id": order_id, "sd": side}
+    return _signed_request("POST", "/api/v3/market/cancel-order", body=body)
+
+
 def get_order_info(ticker: str, order_id: str, side: str) -> dict:
     """side: "buy" or "sell". Authoritative order status/fills, including a
-    `history` list of individual fills — this is what resolve_fill() reads."""
+    `history` list of individual fills — this is what resolve_fill() reads.
+    `status` is one of "filled" / "unfilled" / "cancelled"."""
     params = {"sym": f"{ticker.lower()}_thb", "id": order_id, "sd": side}
     return _signed_request("GET", "/api/v3/market/order-info", params=params)
 
