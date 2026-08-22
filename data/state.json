@@ -96,8 +96,8 @@
   },
   "crypto:ONDO": {
     "direction": "BUY",
-    "confidence": 70.54467540675569,
-    "last_alert_at": "2026-08-22T01:37:23.379580+00:00"
+    "confidence": 84.67450944554787,
+    "last_alert_at": "2026-08-22T03:58:13.441713+00:00"
   },
   "crypto:HOLO": {
     "direction": "BUY",
@@ -551,8 +551,8 @@
   },
   "crypto:CFG": {
     "direction": "BUY",
-    "confidence": 72.39945880117078,
-    "last_alert_at": "2026-08-22T00:57:49.602265+00:00"
+    "confidence": 84.05700241041816,
+    "last_alert_at": "2026-08-22T03:58:16.306831+00:00"
   },
   "crypto:BLEND": {
     "direction": "BUY",
@@ -661,13 +661,13 @@
   },
   "crypto:TOSHI": {
     "direction": "BUY",
-    "confidence": 79.36168853146489,
-    "last_alert_at": "2026-08-21T22:58:00.366671+00:00"
+    "confidence": 77.87530650059172,
+    "last_alert_at": "2026-08-22T03:58:14.817118+00:00"
   },
   "crypto:PENGU": {
     "direction": "BUY",
-    "confidence": 72.24898347939316,
-    "last_alert_at": "2026-08-21T22:55:20.848846+00:00"
+    "confidence": 71.4983390452175,
+    "last_alert_at": "2026-08-22T03:58:13.902511+00:00"
   },
   "crypto:PEPE": {
     "direction": "BUY",
@@ -686,8 +686,8 @@
   },
   "crypto:MEW": {
     "direction": "BUY",
-    "confidence": 84.85566203334594,
-    "last_alert_at": "2026-08-21T23:57:35.319066+00:00"
+    "confidence": 76.9877848931575,
+    "last_alert_at": "2026-08-22T03:58:14.361406+00:00"
   },
   "crypto:SHIB": {
     "direction": "BUY",
@@ -706,8 +706,8 @@
   },
   "crypto:XLM": {
     "direction": "BUY",
-    "confidence": 73.3574369963491,
-    "last_alert_at": "2026-08-22T02:58:10.659056+00:00"
+    "confidence": 88.13223820961946,
+    "last_alert_at": "2026-08-22T03:58:12.981700+00:00"
   },
   "crypto:VELO": {
     "direction": "BUY",
@@ -771,8 +771,8 @@
   },
   "crypto:DOOD": {
     "direction": "BUY",
-    "confidence": 74.84305043523335,
-    "last_alert_at": "2026-08-21T21:59:39.284142+00:00"
+    "confidence": 77.84497168729811,
+    "last_alert_at": "2026-08-22T03:58:15.281958+00:00"
   },
   "crypto:POPCAT": {
     "direction": "BUY",
@@ -806,8 +806,8 @@
   },
   "crypto:STRK": {
     "direction": "BUY",
-    "confidence": 71.77985250710623,
-    "last_alert_at": "2026-08-22T02:27:34.019182+00:00"
+    "confidence": 82.32638746563869,
+    "last_alert_at": "2026-08-22T03:58:15.749490+00:00"
   },
   "crypto:CPOOL": {
     "direction": "BUY",
@@ -861,8 +861,8 @@
   },
   "crypto:DOT": {
     "direction": "BUY",
-    "confidence": 70.77348623644387,
-    "last_alert_at": "2026-08-22T03:33:05.974428+00:00"
+    "confidence": 82.14770803716952,
+    "last_alert_at": "2026-08-22T03:58:12.520072+00:00"
   },
   "crypto:FIDA": {
     "direction": "BUY",
@@ -971,8 +971,8 @@
   },
   "crypto:CGPT": {
     "direction": "BUY",
-    "confidence": 75.62196875056489,
-    "last_alert_at": "2026-08-21T09:44:17.062078+00:00"
+    "confidence": 71.77823522457301,
+    "last_alert_at": "2026-08-22T03:58:16.756163+00:00"
   },
   "crypto:AGLD": {
     "direction": "BUY",
