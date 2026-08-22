@@ -206,8 +206,8 @@
   },
   "crypto:BIRB": {
     "direction": "BUY",
-    "confidence": 76.83527069124753,
-    "last_alert_at": "2026-08-22T00:27:30.351753+00:00"
+    "confidence": 75.0535998705906,
+    "last_alert_at": "2026-08-22T06:56:01.302749+00:00"
   },
   "crypto:FHE": {
     "direction": "BUY",
@@ -506,8 +506,8 @@
   },
   "crypto:HYPE": {
     "direction": "BUY",
-    "confidence": 84.21686949219486,
-    "last_alert_at": "2026-08-22T02:40:19.256946+00:00"
+    "confidence": 77.6313032272848,
+    "last_alert_at": "2026-08-22T06:56:02.040156+00:00"
   },
   "stock:SENA.BK": {
     "direction": "SELL",
@@ -776,8 +776,8 @@
   },
   "crypto:POPCAT": {
     "direction": "BUY",
-    "confidence": 86.09361135239472,
-    "last_alert_at": "2026-08-22T02:37:41.694999+00:00"
+    "confidence": 73.49239890301389,
+    "last_alert_at": "2026-08-22T06:56:00.657854+00:00"
   },
   "crypto:FLOCK": {
     "direction": "BUY",
