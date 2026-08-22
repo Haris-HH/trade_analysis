@@ -104,5 +104,13 @@
     "order_id": "6a895e77ea32522f33277361met8y8",
     "confidence": 75.34161317563293,
     "at": "2026-08-22T08:31:54.986005+00:00"
+  },
+  {
+    "ticker": "NXPC",
+    "side": "reconcile",
+    "note": "balance check found NXPC not actually held on Bitkub (recorded 13.38926174, actual 0.00000000) — likely sold manually outside the bot; closing the tracked position automatically",
+    "coin_amount": 13.389261744966444,
+    "cost_thb": 100.0,
+    "at": "2026-08-22T08:36:44.290595+00:00"
   }
 ]

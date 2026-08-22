@@ -1,11 +1,1 @@
-{
-  "NXPC": {
-    "entry_price": 7.468671679197994,
-    "cost_thb": 100.0,
-    "coin_amount": 13.389261744966444,
-    "order_id": "6a895e77ea32522f33277361met8y8",
-    "opened_at": "2026-08-22T08:31:53.386322+00:00",
-    "buy_confidence": 75.34161317563293,
-    "tp_order_id": "6a895e7ad34a6712f644c901met8y8"
-  }
-}
+{}
