@@ -31,8 +31,8 @@
   },
   "crypto:MET": {
     "direction": "BUY",
-    "confidence": 73.80587032593834,
-    "last_alert_at": "2026-08-22T03:30:06.284169+00:00"
+    "confidence": 75.92537044701767,
+    "last_alert_at": "2026-08-22T07:31:52.462144+00:00"
   },
   "crypto:BONK": {
     "direction": "BUY",
@@ -206,8 +206,8 @@
   },
   "crypto:BIRB": {
     "direction": "BUY",
-    "confidence": 72.31283011493375,
-    "last_alert_at": "2026-08-22T06:57:59.142945+00:00"
+    "confidence": 83.2717605981029,
+    "last_alert_at": "2026-08-22T07:31:53.070175+00:00"
   },
   "crypto:FHE": {
     "direction": "BUY",
