@@ -201,8 +201,8 @@
   },
   "crypto:KAITO": {
     "direction": "BUY",
-    "confidence": 72.07572203187463,
-    "last_alert_at": "2026-08-21T23:07:15.617945+00:00"
+    "confidence": 83.046046407321,
+    "last_alert_at": "2026-08-22T00:47:35.169284+00:00"
   },
   "crypto:BIRB": {
     "direction": "BUY",
@@ -811,8 +811,8 @@
   },
   "crypto:CPOOL": {
     "direction": "BUY",
-    "confidence": 71.62320300011707,
-    "last_alert_at": "2026-08-21T21:59:40.657416+00:00"
+    "confidence": 84.57724278444924,
+    "last_alert_at": "2026-08-22T00:47:35.618879+00:00"
   },
   "crypto:XPL": {
     "direction": "BUY",
