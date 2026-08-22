@@ -61,8 +61,8 @@
   },
   "crypto:RESOLV": {
     "direction": "BUY",
-    "confidence": 78.12800006479614,
-    "last_alert_at": "2026-08-21T14:57:48.781744+00:00"
+    "confidence": 74.30204385423622,
+    "last_alert_at": "2026-08-22T03:48:08.849942+00:00"
   },
   "crypto:BICO": {
     "direction": "BUY",
@@ -366,8 +366,8 @@
   },
   "crypto:AVA": {
     "direction": "BUY",
-    "confidence": 75.05130132635237,
-    "last_alert_at": "2026-08-21T11:43:10.455373+00:00"
+    "confidence": 75.84756054493594,
+    "last_alert_at": "2026-08-22T03:48:10.586883+00:00"
   },
   "crypto:LINK": {
     "direction": "BUY",
@@ -411,8 +411,8 @@
   },
   "crypto:ZAMA": {
     "direction": "BUY",
-    "confidence": 84.7045995731995,
-    "last_alert_at": "2026-08-21T23:40:13.129811+00:00"
+    "confidence": 80.22637526474018,
+    "last_alert_at": "2026-08-22T03:48:09.996462+00:00"
   },
   "crypto:PLUME": {
     "direction": "BUY",
@@ -836,8 +836,8 @@
   },
   "crypto:MANA": {
     "direction": "BUY",
-    "confidence": 74.85235495863583,
-    "last_alert_at": "2026-08-21T17:12:20.212562+00:00"
+    "confidence": 70.43272427223161,
+    "last_alert_at": "2026-08-22T03:48:08.277101+00:00"
   },
   "crypto:SAND": {
     "direction": "BUY",
@@ -936,8 +936,8 @@
   },
   "crypto:MOCA": {
     "direction": "BUY",
-    "confidence": 79.90402685487852,
-    "last_alert_at": "2026-08-21T13:37:29.446990+00:00"
+    "confidence": 72.4255619772508,
+    "last_alert_at": "2026-08-22T03:48:09.429897+00:00"
   },
   "crypto:MAGIC": {
     "direction": "BUY",
