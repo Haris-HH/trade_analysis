@@ -37,7 +37,8 @@
     "coin_amount": 2.32809231,
     "order_id": "reconciled-2026-08-21",
     "opened_at": "2026-08-21T07:20:00+00:00",
-    "buy_confidence": null
+    "buy_confidence": null,
+    "sell_failure_notified_at": "2026-08-22T06:58:09.490922+00:00"
   },
   "XPL": {
     "entry_price": 3.1101658800055425,
