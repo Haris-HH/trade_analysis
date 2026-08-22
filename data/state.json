@@ -226,8 +226,8 @@
   },
   "crypto:PARTI": {
     "direction": "BUY",
-    "confidence": 81.18786519763292,
-    "last_alert_at": "2026-08-21T10:58:05.426647+00:00"
+    "confidence": 71.29765897083942,
+    "last_alert_at": "2026-08-22T03:33:07.247230+00:00"
   },
   "crypto:ROBO": {
     "direction": "BUY",
@@ -861,8 +861,8 @@
   },
   "crypto:DOT": {
     "direction": "BUY",
-    "confidence": 79.05263876117075,
-    "last_alert_at": "2026-08-21T23:32:57.944997+00:00"
+    "confidence": 70.77348623644387,
+    "last_alert_at": "2026-08-22T03:33:05.974428+00:00"
   },
   "crypto:FIDA": {
     "direction": "BUY",
@@ -886,8 +886,8 @@
   },
   "crypto:ZETA": {
     "direction": "BUY",
-    "confidence": 71.9886806673896,
-    "last_alert_at": "2026-08-21T15:48:55.356781+00:00"
+    "confidence": 73.50482882262153,
+    "last_alert_at": "2026-08-22T03:33:06.605506+00:00"
   },
   "crypto:F": {
     "direction": "BUY",
