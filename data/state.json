@@ -186,8 +186,8 @@
   },
   "crypto:BMT": {
     "direction": "BUY",
-    "confidence": 74.15775329853852,
-    "last_alert_at": "2026-08-21T01:06:59.070276+00:00"
+    "confidence": 71.5252457325802,
+    "last_alert_at": "2026-08-22T02:48:34.209679+00:00"
   },
   "crypto:NXPC": {
     "direction": "BUY",
@@ -381,8 +381,8 @@
   },
   "crypto:ALCH": {
     "direction": "BUY",
-    "confidence": 74.09577135761245,
-    "last_alert_at": "2026-08-21T09:58:28.659309+00:00"
+    "confidence": 71.6472241763687,
+    "last_alert_at": "2026-08-22T02:48:34.830001+00:00"
   },
   "crypto:EPIC": {
     "direction": "BUY",
@@ -606,8 +606,8 @@
   },
   "crypto:SOL": {
     "direction": "BUY",
-    "confidence": 84.05674670960988,
-    "last_alert_at": "2026-08-21T22:47:37.051055+00:00"
+    "confidence": 82.57748845829593,
+    "last_alert_at": "2026-08-22T02:48:31.709939+00:00"
   },
   "crypto:CAKE": {
     "direction": "BUY",
@@ -701,8 +701,8 @@
   },
   "crypto:DOGE": {
     "direction": "BUY",
-    "confidence": 85.63121187789623,
-    "last_alert_at": "2026-08-21T21:38:31.801591+00:00"
+    "confidence": 71.25223021752109,
+    "last_alert_at": "2026-08-22T02:48:32.996794+00:00"
   },
   "crypto:XLM": {
     "direction": "BUY",
@@ -756,8 +756,8 @@
   },
   "crypto:BNB": {
     "direction": "BUY",
-    "confidence": 88.98138243959343,
-    "last_alert_at": "2026-08-21T06:42:21.258752+00:00"
+    "confidence": 89.2840554220549,
+    "last_alert_at": "2026-08-22T02:48:32.383267+00:00"
   },
   "crypto:AIXBT": {
     "direction": "BUY",
@@ -1026,7 +1026,7 @@
   },
   "crypto:L3": {
     "direction": "BUY",
-    "confidence": 70.99694210674343,
-    "last_alert_at": "2026-08-21T19:51:53.614591+00:00"
+    "confidence": 76.75384112445164,
+    "last_alert_at": "2026-08-22T02:48:33.602287+00:00"
   }
 }
