@@ -711,8 +711,8 @@
   },
   "crypto:VELO": {
     "direction": "BUY",
-    "confidence": 77.23848951228275,
-    "last_alert_at": "2026-08-20T15:07:05.632467+00:00"
+    "confidence": 73.45188541163853,
+    "last_alert_at": "2026-08-22T03:12:41.984184+00:00"
   },
   "crypto:OP": {
     "direction": "BUY",
@@ -741,8 +741,8 @@
   },
   "crypto:ASTER": {
     "direction": "BUY",
-    "confidence": 71.09141046508284,
-    "last_alert_at": "2026-08-21T13:47:57.480716+00:00"
+    "confidence": 75.19432269532831,
+    "last_alert_at": "2026-08-22T03:12:42.853078+00:00"
   },
   "crypto:RED": {
     "direction": "BUY",
