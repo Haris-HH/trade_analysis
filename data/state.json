@@ -841,8 +841,8 @@
   },
   "crypto:SAND": {
     "direction": "BUY",
-    "confidence": 72.41061524729635,
-    "last_alert_at": "2026-08-22T00:22:13.594446+00:00"
+    "confidence": 73.73480575968641,
+    "last_alert_at": "2026-08-22T04:58:22.621400+00:00"
   },
   "crypto:ZIG": {
     "direction": "BUY",
@@ -891,8 +891,8 @@
   },
   "crypto:F": {
     "direction": "BUY",
-    "confidence": 76.30327063284672,
-    "last_alert_at": "2026-08-22T00:12:09.226375+00:00"
+    "confidence": 84.89350076112903,
+    "last_alert_at": "2026-08-22T04:58:23.154821+00:00"
   },
   "crypto:ANIME": {
     "direction": "BUY",
@@ -901,8 +901,8 @@
   },
   "crypto:DYDX": {
     "direction": "BUY",
-    "confidence": 73.46677976747647,
-    "last_alert_at": "2026-08-21T14:02:51.352229+00:00"
+    "confidence": 70.67586909413515,
+    "last_alert_at": "2026-08-22T04:58:22.091740+00:00"
   },
   "crypto:BTT": {
     "direction": "BUY",
@@ -971,8 +971,8 @@
   },
   "crypto:CGPT": {
     "direction": "BUY",
-    "confidence": 71.77823522457301,
-    "last_alert_at": "2026-08-22T03:58:16.756163+00:00"
+    "confidence": 82.17026660030143,
+    "last_alert_at": "2026-08-22T04:58:23.692231+00:00"
   },
   "crypto:AGLD": {
     "direction": "BUY",
