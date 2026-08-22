@@ -406,8 +406,8 @@
   },
   "crypto:PLN": {
     "direction": "BUY",
-    "confidence": 74.03812847818864,
-    "last_alert_at": "2026-08-21T08:48:10.306120+00:00"
+    "confidence": 78.31837894091589,
+    "last_alert_at": "2026-08-22T02:37:40.062912+00:00"
   },
   "crypto:ZAMA": {
     "direction": "BUY",
@@ -506,8 +506,8 @@
   },
   "crypto:HYPE": {
     "direction": "BUY",
-    "confidence": 70.12151932210215,
-    "last_alert_at": "2026-08-22T02:22:16.897330+00:00"
+    "confidence": 85.15109449776442,
+    "last_alert_at": "2026-08-22T02:37:40.603131+00:00"
   },
   "stock:SENA.BK": {
     "direction": "SELL",
@@ -516,8 +516,8 @@
   },
   "crypto:POL": {
     "direction": "BUY",
-    "confidence": 78.5871329608967,
-    "last_alert_at": "2026-08-21T22:17:27.127129+00:00"
+    "confidence": 71.04770816348538,
+    "last_alert_at": "2026-08-22T02:37:39.515900+00:00"
   },
   "stock:DVN": {
     "direction": "BUY",
@@ -761,8 +761,8 @@
   },
   "crypto:AIXBT": {
     "direction": "BUY",
-    "confidence": 74.86273037877878,
-    "last_alert_at": "2026-08-21T09:58:28.169740+00:00"
+    "confidence": 73.36811385304289,
+    "last_alert_at": "2026-08-22T02:37:41.125939+00:00"
   },
   "crypto:WIF": {
     "direction": "BUY",
@@ -776,8 +776,8 @@
   },
   "crypto:POPCAT": {
     "direction": "BUY",
-    "confidence": 76.79278140986553,
-    "last_alert_at": "2026-08-21T22:37:36.134994+00:00"
+    "confidence": 86.09361135239472,
+    "last_alert_at": "2026-08-22T02:37:41.694999+00:00"
   },
   "crypto:FLOCK": {
     "direction": "BUY",
