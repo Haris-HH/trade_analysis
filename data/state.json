@@ -111,8 +111,8 @@
   },
   "crypto:HBAR": {
     "direction": "BUY",
-    "confidence": 78.06606247967532,
-    "last_alert_at": "2026-08-22T02:58:11.203045+00:00"
+    "confidence": 88.60804676334457,
+    "last_alert_at": "2026-08-22T04:37:51.070378+00:00"
   },
   "crypto:RNDR": {
     "direction": "SELL",
@@ -481,8 +481,8 @@
   },
   "crypto:WLFI": {
     "direction": "BUY",
-    "confidence": 74.49321228244298,
-    "last_alert_at": "2026-08-22T03:53:21.254628+00:00"
+    "confidence": 84.553594062207,
+    "last_alert_at": "2026-08-22T04:37:51.527127+00:00"
   },
   "crypto:JASMY": {
     "direction": "BUY",
@@ -866,8 +866,8 @@
   },
   "crypto:FIDA": {
     "direction": "BUY",
-    "confidence": 70.99886312769351,
-    "last_alert_at": "2026-08-20T16:47:31.023231+00:00"
+    "confidence": 73.14526820227928,
+    "last_alert_at": "2026-08-22T04:37:51.981038+00:00"
   },
   "crypto:YB": {
     "direction": "BUY",
