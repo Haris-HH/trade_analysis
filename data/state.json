@@ -41,8 +41,8 @@
   },
   "crypto:EDGE": {
     "direction": "BUY",
-    "confidence": 81.99238510834445,
-    "last_alert_at": "2026-08-21T11:53:31.639080+00:00"
+    "confidence": 74.04556780254548,
+    "last_alert_at": "2026-08-22T00:57:50.092271+00:00"
   },
   "crypto:SCRT": {
     "direction": "SELL",
@@ -476,8 +476,8 @@
   },
   "crypto:STABLE": {
     "direction": "BUY",
-    "confidence": 71.65924302440902,
-    "last_alert_at": "2026-08-21T07:58:03.489193+00:00"
+    "confidence": 79.8109644148699,
+    "last_alert_at": "2026-08-22T00:57:50.563884+00:00"
   },
   "crypto:WLFI": {
     "direction": "BUY",
@@ -550,9 +550,9 @@
     "last_alert_at": "2026-08-21T21:47:15.253180+00:00"
   },
   "crypto:CFG": {
-    "direction": "SELL",
-    "confidence": 76.33268265045191,
-    "last_alert_at": "2026-08-19T13:46:57.196019+00:00"
+    "direction": "BUY",
+    "confidence": 72.39945880117078,
+    "last_alert_at": "2026-08-22T00:57:49.602265+00:00"
   },
   "crypto:BLEND": {
     "direction": "BUY",
@@ -651,8 +651,8 @@
   },
   "crypto:TRUMP": {
     "direction": "BUY",
-    "confidence": 78.66736294372365,
-    "last_alert_at": "2026-08-21T15:57:48.115834+00:00"
+    "confidence": 71.63059249916022,
+    "last_alert_at": "2026-08-22T00:57:49.093154+00:00"
   },
   "crypto:FLOKI": {
     "direction": "BUY",
