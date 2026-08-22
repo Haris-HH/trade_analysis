@@ -876,8 +876,8 @@
   },
   "crypto:XDC": {
     "direction": "BUY",
-    "confidence": 70.99574569598113,
-    "last_alert_at": "2026-08-21T23:47:34.143873+00:00"
+    "confidence": 71.25508394060392,
+    "last_alert_at": "2026-08-22T05:27:18.229521+00:00"
   },
   "stock:FCX": {
     "direction": "BUY",
@@ -926,8 +926,8 @@
   },
   "crypto:KSM": {
     "direction": "BUY",
-    "confidence": 72.6290296738585,
-    "last_alert_at": "2026-08-21T10:48:33.292710+00:00"
+    "confidence": 71.63309632279974,
+    "last_alert_at": "2026-08-22T05:27:17.763388+00:00"
   },
   "crypto:GRAM": {
     "direction": "BUY",
