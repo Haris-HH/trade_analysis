@@ -841,8 +841,8 @@
   },
   "crypto:SAND": {
     "direction": "BUY",
-    "confidence": 71.19251162624963,
-    "last_alert_at": "2026-08-21T14:37:20.669620+00:00"
+    "confidence": 72.41061524729635,
+    "last_alert_at": "2026-08-22T00:22:13.594446+00:00"
   },
   "crypto:ZIG": {
     "direction": "BUY",
@@ -871,8 +871,8 @@
   },
   "crypto:YB": {
     "direction": "BUY",
-    "confidence": 73.21284555557226,
-    "last_alert_at": "2026-08-21T01:47:26.524970+00:00"
+    "confidence": 85.57861847614436,
+    "last_alert_at": "2026-08-22T00:22:14.099707+00:00"
   },
   "crypto:XDC": {
     "direction": "BUY",
@@ -1011,8 +1011,8 @@
   },
   "crypto:APE": {
     "direction": "BUY",
-    "confidence": 70.53650709339239,
-    "last_alert_at": "2026-08-21T16:12:15.422676+00:00"
+    "confidence": 84.30761449614981,
+    "last_alert_at": "2026-08-22T00:22:13.070776+00:00"
   },
   "crypto:GLM": {
     "direction": "BUY",
