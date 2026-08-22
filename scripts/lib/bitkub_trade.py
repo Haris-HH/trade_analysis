@@ -55,7 +55,11 @@ def _sign(ts: int, method: str, path: str, payload: str) -> str:
     return hmac.new(_api_secret(), message.encode(), hashlib.sha256).hexdigest()
 
 
-def _signed_request(method: str, path: str, *, params: dict | None = None, body: dict | None = None) -> dict:
+def _signed_call(method: str, path: str, *, params: dict | None = None, body: dict | None = None) -> dict:
+    """Shared HMAC-signed request plumbing for both v3 and v4 endpoints —
+    the signing scheme (ts + method + path + payload) is identical between
+    them, only the response envelope differs (v3: {error, result}, v4:
+    {code, message, data}), so callers parse the raw JSON themselves."""
     ts = _server_time_ms()
     if method == "GET":
         query = f"?{urlencode(params)}" if params else ""
@@ -75,10 +79,24 @@ def _signed_request(method: str, path: str, *, params: dict | None = None, body:
     }
     resp = requests.request(method, f"{BASE_URL}{path}{query}", headers=headers, data=data, timeout=20)
     resp.raise_for_status()
-    result = resp.json()
+    return resp.json()
+
+
+def _signed_request(method: str, path: str, *, params: dict | None = None, body: dict | None = None) -> dict:
+    result = _signed_call(method, path, params=params, body=body)
     if result.get("error", 0) != 0:
         raise BitkubAPIError(result["error"], str(result.get("result", result)), path)
     return result["result"]
+
+
+def _signed_request_v4(method: str, path: str, *, params: dict | None = None, body: dict | None = None):
+    """v4 endpoints (e.g. wallet/balances) use {code, message, data} instead
+    of v3's {error, result} — code is the string "0" on success, an
+    alphanumeric error code like "V1007-CW" otherwise."""
+    result = _signed_call(method, path, params=params, body=body)
+    if result.get("code") not in (0, "0"):
+        raise BitkubAPIError(result.get("code"), result.get("message", str(result)), path)
+    return result.get("data")
 
 
 def place_market_buy(ticker: str, amount_thb: float, client_id: str | None = None) -> dict:
@@ -167,3 +185,14 @@ def get_order_history(ticker: str, limit: int = 10) -> list:
     the HMAC signature are being accepted without risking any funds."""
     params = {"sym": f"{ticker.lower()}_thb", "lmt": limit}
     return _signed_request("GET", "/api/v3/market/my-order-history", params=params)
+
+
+def get_wallet_balances() -> dict[str, float]:
+    """{currency: available_amount} for every currency in the account
+    (v3's market/wallet and market/balances were deprecated and removed
+    2026-05-26 — this is their v4 replacement). Used to verify a tracked
+    position is still actually held before trying to sell it, rather than
+    retrying a doomed sell forever if it was already sold manually outside
+    the bot (see 2026-08-22: LINK/DYDX/EIGEN/TAO/UNI/XPL desync)."""
+    data = _signed_request_v4("GET", "/api/v4/wallet/balances") or []
+    return {row["currency"]: float(row["available"]) for row in data}

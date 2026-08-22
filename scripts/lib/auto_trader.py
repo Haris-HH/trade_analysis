@@ -106,6 +106,61 @@ def _resolve_fill(ticker: str, order_id: str | None, side: str, fallback: dict) 
     return fallback
 
 
+DUST_THRESHOLD = 1e-8
+BALANCE_MATCH_TOLERANCE = 0.98  # allow for fee/rounding noise before treating as a real mismatch
+
+
+def _fetch_balances() -> dict[str, float] | None:
+    """None on failure so callers just skip reconciliation for this cycle
+    rather than blocking the normal sell/TP/SL logic — the existing
+    try/except around every Bitkub call already handles a doomed sell
+    safely, this is purely an early, cheaper way to catch the common case."""
+    try:
+        return bitkub_trade.get_wallet_balances()
+    except Exception as exc:
+        print(f"[auto-trade] could not fetch wallet balances for position reconciliation, skipping this check: {exc}")
+        return None
+
+
+def _reconcile_against_balance(ticker: str, position: dict, balances: dict[str, float]) -> dict | None:
+    """Cross-check a tracked position against the real Bitkub balance
+    before ever attempting to sell it. If the coin genuinely isn't held
+    anymore (sold manually outside the bot — see the 2026-08-22
+    LINK/DYDX/EIGEN/TAO/UNI/XPL desync, where every sell attempt failed
+    identically because there was nothing left to sell), close the
+    position immediately instead of retrying a doomed sell every cycle.
+    If only partially missing, shrink the recorded position to match
+    what's actually there so TP/SL math and future sells use the real
+    amount. Returns a trade record only for a full close."""
+    available = balances.get(ticker, 0.0)
+    recorded = position["coin_amount"]
+    if available >= recorded * BALANCE_MATCH_TOLERANCE:
+        return None
+
+    if available <= DUST_THRESHOLD:
+        note = (
+            f"balance check found {ticker} not actually held on Bitkub "
+            f"(recorded {recorded:.8f}, actual {available:.8f}) — likely sold "
+            f"manually outside the bot; closing the tracked position automatically"
+        )
+        print(f"[auto-trade] {note}")
+        _notify(f"⚠️ <b>Auto-trade position closed</b>\n{ticker}/THB — {note}")
+        return {
+            "ticker": ticker, "side": "reconcile", "note": note,
+            "coin_amount": recorded, "cost_thb": position["cost_thb"],
+        }
+
+    ratio = available / recorded
+    note = (
+        f"balance check found only {available:.8f} {ticker} actually held "
+        f"(recorded {recorded:.8f}) — shrinking the tracked position to match"
+    )
+    print(f"[auto-trade] {note}")
+    position["coin_amount"] = available
+    position["cost_thb"] *= ratio
+    return None
+
+
 def _describe_sell_failure(exc: Exception, ticker: str) -> str:
     """Translate a raw Bitkub exception into something a non-engineer can
     act on. Error 61 ("broker" coins reject place-ask outright — see
@@ -267,10 +322,21 @@ def run(results: list[dict], positions: dict) -> list[dict]:
     prices = _current_prices(results)
     trades: list[dict] = []
 
+    # One wallet-balances call covers every held ticker, so fetch it once
+    # up front rather than per-position.
+    balances = _fetch_balances() if (positions and not DRY_RUN) else None
+
     # 1) Exits first, so a closed position frees a slot for a fresh entry
     #    in the same cycle instead of waiting for the next scan.
     for ticker in list(positions.keys()):
         position = positions[ticker]
+
+        if balances is not None:
+            closed = _reconcile_against_balance(ticker, position, balances)
+            if closed:
+                positions_store.close_position(positions, ticker)
+                trades.append(closed)
+                continue
 
         # Backfill a resting take-profit order for any position that
         # doesn't have one yet (opened before this feature existed, or an
