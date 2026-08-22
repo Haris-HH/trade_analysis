@@ -46,5 +46,53 @@
     "coin_amount": 96.21673298,
     "cost_thb": 299.25,
     "at": "2026-08-21T07:40:04.703715+00:00"
+  },
+  {
+    "ticker": "LINK",
+    "side": "reconcile",
+    "note": "user confirmed manually sold outside the bot on Bitkub directly — auto-trader had no fill data for the actual sale, so pnl is not tracked here; see Bitkub order history for real proceeds",
+    "coin_amount": 0.80181111,
+    "cost_thb": 299.25,
+    "at": "2026-08-22T07:22:20.603265+00:00"
+  },
+  {
+    "ticker": "DYDX",
+    "side": "reconcile",
+    "note": "user confirmed manually sold outside the bot on Bitkub directly — auto-trader had no fill data for the actual sale, so pnl is not tracked here; see Bitkub order history for real proceeds",
+    "coin_amount": 77.12628866,
+    "cost_thb": 299.25,
+    "at": "2026-08-22T07:22:20.612775+00:00"
+  },
+  {
+    "ticker": "EIGEN",
+    "side": "reconcile",
+    "note": "user confirmed manually sold outside the bot on Bitkub directly — auto-trader had no fill data for the actual sale, so pnl is not tracked here; see Bitkub order history for real proceeds",
+    "coin_amount": 43.47557205,
+    "cost_thb": 299.25,
+    "at": "2026-08-22T07:22:20.622075+00:00"
+  },
+  {
+    "ticker": "TAO",
+    "side": "reconcile",
+    "note": "user confirmed manually sold outside the bot on Bitkub directly — auto-trader had no fill data for the actual sale, so pnl is not tracked here; see Bitkub order history for real proceeds",
+    "coin_amount": 0.05480394,
+    "cost_thb": 399.0,
+    "at": "2026-08-22T07:22:20.630098+00:00"
+  },
+  {
+    "ticker": "UNI",
+    "side": "reconcile",
+    "note": "user confirmed manually sold outside the bot on Bitkub directly — auto-trader had no fill data for the actual sale, so pnl is not tracked here; see Bitkub order history for real proceeds",
+    "coin_amount": 2.32809231,
+    "cost_thb": 299.25,
+    "at": "2026-08-22T07:22:20.637897+00:00"
+  },
+  {
+    "ticker": "XPL",
+    "side": "reconcile",
+    "note": "user confirmed manually sold outside the bot on Bitkub directly — auto-trader had no fill data for the actual sale, so pnl is not tracked here; see Bitkub order history for real proceeds",
+    "coin_amount": 96.21673298,
+    "cost_thb": 299.25,
+    "at": "2026-08-22T07:22:20.647935+00:00"
   }
 ]
