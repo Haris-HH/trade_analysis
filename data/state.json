@@ -281,8 +281,8 @@
   },
   "crypto:ELSA": {
     "direction": "BUY",
-    "confidence": 70.53899968049664,
-    "last_alert_at": "2026-08-21T13:47:58.773887+00:00"
+    "confidence": 75.07387108388892,
+    "last_alert_at": "2026-08-22T00:07:18.665248+00:00"
   },
   "crypto:ZKP": {
     "direction": "BUY",
@@ -555,9 +555,9 @@
     "last_alert_at": "2026-08-19T13:46:57.196019+00:00"
   },
   "crypto:BLEND": {
-    "direction": "SELL",
-    "confidence": 70.95775124966384,
-    "last_alert_at": "2026-08-19T02:11:54.116175+00:00"
+    "direction": "BUY",
+    "confidence": 74.62316530058949,
+    "last_alert_at": "2026-08-22T00:07:18.168824+00:00"
   },
   "crypto:DMC": {
     "direction": "SELL",
