@@ -296,8 +296,8 @@
   },
   "crypto:SIGN": {
     "direction": "BUY",
-    "confidence": 81.97032215758576,
-    "last_alert_at": "2026-08-22T03:42:57.336187+00:00"
+    "confidence": 79.44066593872301,
+    "last_alert_at": "2026-08-22T07:51:54.726593+00:00"
   },
   "crypto:CHILLGUY": {
     "direction": "BUY",
@@ -411,8 +411,8 @@
   },
   "crypto:ZAMA": {
     "direction": "BUY",
-    "confidence": 80.22637526474018,
-    "last_alert_at": "2026-08-22T03:48:09.996462+00:00"
+    "confidence": 84.65613112237399,
+    "last_alert_at": "2026-08-22T07:51:53.990638+00:00"
   },
   "crypto:PLUME": {
     "direction": "BUY",
@@ -936,8 +936,8 @@
   },
   "crypto:MOCA": {
     "direction": "BUY",
-    "confidence": 72.4255619772508,
-    "last_alert_at": "2026-08-22T03:48:09.429897+00:00"
+    "confidence": 79.87352014746193,
+    "last_alert_at": "2026-08-22T07:51:55.367119+00:00"
   },
   "crypto:MAGIC": {
     "direction": "BUY",
