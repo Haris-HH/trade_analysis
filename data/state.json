@@ -571,8 +571,8 @@
   },
   "crypto:TRIA": {
     "direction": "SELL",
-    "confidence": 72.39852893705536,
-    "last_alert_at": "2026-08-21T01:47:27.921197+00:00"
+    "confidence": 70.4182675826124,
+    "last_alert_at": "2026-08-22T15:26:40.200866+00:00"
   },
   "stock:BLDR": {
     "direction": "SELL",
