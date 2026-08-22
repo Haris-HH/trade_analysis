@@ -277,7 +277,7 @@
   "crypto:MOVR": {
     "direction": "BUY",
     "confidence": 74.46707715816747,
-    "last_alert_at": "2026-08-22T04:50:28.038505+00:00"
+    "last_alert_at": "2026-08-22T04:53:58.251346+00:00"
   },
   "crypto:ELSA": {
     "direction": "BUY",
@@ -721,8 +721,8 @@
   },
   "crypto:PNUT": {
     "direction": "BUY",
-    "confidence": 80.12702391678081,
-    "last_alert_at": "2026-08-22T04:50:29.454782+00:00"
+    "confidence": 75.33210400672851,
+    "last_alert_at": "2026-08-22T04:53:59.381368+00:00"
   },
   "crypto:EIGEN": {
     "direction": "BUY",
@@ -786,8 +786,8 @@
   },
   "crypto:SKR": {
     "direction": "BUY",
-    "confidence": 82.93535525963934,
-    "last_alert_at": "2026-08-21T15:57:48.596221+00:00"
+    "confidence": 73.69196376713714,
+    "last_alert_at": "2026-08-22T04:54:00.549593+00:00"
   },
   "crypto:NEXO": {
     "direction": "BUY",
@@ -872,7 +872,7 @@
   "crypto:YB": {
     "direction": "BUY",
     "confidence": 81.36909960315656,
-    "last_alert_at": "2026-08-22T04:50:30.396164+00:00"
+    "last_alert_at": "2026-08-22T04:53:59.962027+00:00"
   },
   "crypto:XDC": {
     "direction": "BUY",
@@ -1037,6 +1037,6 @@
   "crypto:SAPIEN": {
     "direction": "BUY",
     "confidence": 76.65007844853359,
-    "last_alert_at": "2026-08-22T04:50:28.502628+00:00"
+    "last_alert_at": "2026-08-22T04:53:58.809061+00:00"
   }
 }
