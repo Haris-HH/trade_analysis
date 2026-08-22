@@ -21,8 +21,8 @@
   },
   "crypto:PUMP": {
     "direction": "BUY",
-    "confidence": 82.82884303575138,
-    "last_alert_at": "2026-08-21T14:57:49.734630+00:00"
+    "confidence": 74.80475779387947,
+    "last_alert_at": "2026-08-22T02:58:13.353950+00:00"
   },
   "crypto:KUB": {
     "direction": "BUY",
@@ -111,8 +111,8 @@
   },
   "crypto:HBAR": {
     "direction": "BUY",
-    "confidence": 72.37175312108275,
-    "last_alert_at": "2026-08-21T22:57:59.667400+00:00"
+    "confidence": 78.06606247967532,
+    "last_alert_at": "2026-08-22T02:58:11.203045+00:00"
   },
   "crypto:RNDR": {
     "direction": "SELL",
@@ -486,8 +486,8 @@
   },
   "crypto:JASMY": {
     "direction": "BUY",
-    "confidence": 72.6118096873583,
-    "last_alert_at": "2026-08-21T21:38:31.185107+00:00"
+    "confidence": 74.7893889645837,
+    "last_alert_at": "2026-08-22T02:58:13.877900+00:00"
   },
   "crypto:SD": {
     "direction": "BUY",
@@ -536,8 +536,8 @@
   },
   "crypto:MEME": {
     "direction": "BUY",
-    "confidence": 70.2533172780309,
-    "last_alert_at": "2026-08-22T01:02:31.513207+00:00"
+    "confidence": 81.5524605952817,
+    "last_alert_at": "2026-08-22T02:58:11.737227+00:00"
   },
   "crypto:TAO": {
     "direction": "BUY",
@@ -546,8 +546,8 @@
   },
   "crypto:SUI": {
     "direction": "BUY",
-    "confidence": 73.72213736471673,
-    "last_alert_at": "2026-08-22T01:47:36.146010+00:00"
+    "confidence": 85.10455570090546,
+    "last_alert_at": "2026-08-22T02:58:12.814436+00:00"
   },
   "crypto:CFG": {
     "direction": "BUY",
@@ -706,8 +706,8 @@
   },
   "crypto:XLM": {
     "direction": "BUY",
-    "confidence": 85.62756540516112,
-    "last_alert_at": "2026-08-21T22:55:20.251314+00:00"
+    "confidence": 73.3574369963491,
+    "last_alert_at": "2026-08-22T02:58:10.659056+00:00"
   },
   "crypto:VELO": {
     "direction": "BUY",
@@ -726,8 +726,8 @@
   },
   "crypto:EIGEN": {
     "direction": "BUY",
-    "confidence": 77.44665641374101,
-    "last_alert_at": "2026-08-21T13:37:28.970577+00:00"
+    "confidence": 84.47945977429364,
+    "last_alert_at": "2026-08-22T02:58:12.265954+00:00"
   },
   "crypto:ETH": {
     "direction": "BUY",
@@ -956,8 +956,8 @@
   },
   "crypto:ACH": {
     "direction": "BUY",
-    "confidence": 71.75693928416166,
-    "last_alert_at": "2026-08-21T23:40:13.689211+00:00"
+    "confidence": 82.36837682153856,
+    "last_alert_at": "2026-08-22T02:58:14.407795+00:00"
   },
   "crypto:FLUID": {
     "direction": "BUY",
