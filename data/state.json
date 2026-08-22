@@ -91,8 +91,8 @@
   },
   "crypto:NEAR": {
     "direction": "BUY",
-    "confidence": 72.41098647675341,
-    "last_alert_at": "2026-08-21T22:12:36.986786+00:00"
+    "confidence": 82.55659741092815,
+    "last_alert_at": "2026-08-22T02:17:20.739016+00:00"
   },
   "crypto:ONDO": {
     "direction": "BUY",
@@ -851,8 +851,8 @@
   },
   "crypto:ABT": {
     "direction": "BUY",
-    "confidence": 83.48851717420219,
-    "last_alert_at": "2026-08-21T17:42:18.097296+00:00"
+    "confidence": 77.26250631703452,
+    "last_alert_at": "2026-08-22T02:17:21.442946+00:00"
   },
   "crypto:BEAM": {
     "direction": "BUY",
