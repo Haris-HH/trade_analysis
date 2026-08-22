@@ -6,8 +6,8 @@
   },
   "crypto:ADA": {
     "direction": "BUY",
-    "confidence": 84.32814286373944,
-    "last_alert_at": "2026-08-21T22:42:37.841894+00:00"
+    "confidence": 75.23743807184762,
+    "last_alert_at": "2026-08-22T02:43:24.413473+00:00"
   },
   "crypto:ELIZAOS": {
     "direction": "SELL",
@@ -86,8 +86,8 @@
   },
   "crypto:LIT": {
     "direction": "BUY",
-    "confidence": 83.3033584493809,
-    "last_alert_at": "2026-08-21T17:32:26.206524+00:00"
+    "confidence": 75.28461121379571,
+    "last_alert_at": "2026-08-22T02:43:24.875579+00:00"
   },
   "crypto:NEAR": {
     "direction": "BUY",
@@ -911,8 +911,8 @@
   },
   "crypto:AAVE": {
     "direction": "BUY",
-    "confidence": 76.6305046814799,
-    "last_alert_at": "2026-08-21T21:02:10.246603+00:00"
+    "confidence": 70.73895397915513,
+    "last_alert_at": "2026-08-22T02:43:23.944763+00:00"
   },
   "crypto:IMX": {
     "direction": "BUY",
