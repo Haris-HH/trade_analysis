@@ -136,8 +136,8 @@
   },
   "crypto:UNI": {
     "direction": "BUY",
-    "confidence": 72.46318222266824,
-    "last_alert_at": "2026-08-21T21:32:15.431310+00:00"
+    "confidence": 83.4836238931546,
+    "last_alert_at": "2026-08-22T00:42:46.815874+00:00"
   },
   "crypto:ES": {
     "direction": "SELL",
@@ -421,8 +421,8 @@
   },
   "crypto:LDO": {
     "direction": "BUY",
-    "confidence": 83.30970677820665,
-    "last_alert_at": "2026-08-21T10:22:33.950653+00:00"
+    "confidence": 80.24021594268748,
+    "last_alert_at": "2026-08-22T00:42:45.906871+00:00"
   },
   "crypto:BOME": {
     "direction": "BUY",
@@ -826,8 +826,8 @@
   },
   "crypto:POW": {
     "direction": "BUY",
-    "confidence": 78.11280606230402,
-    "last_alert_at": "2026-08-21T15:52:41.253594+00:00"
+    "confidence": 70.19625817350006,
+    "last_alert_at": "2026-08-22T00:42:46.358660+00:00"
   },
   "crypto:BREV": {
     "direction": "BUY",
