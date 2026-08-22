@@ -616,8 +616,8 @@
   },
   "crypto:SPX": {
     "direction": "BUY",
-    "confidence": 75.02598187813734,
-    "last_alert_at": "2026-08-21T15:32:43.002442+00:00"
+    "confidence": 70.85134495142321,
+    "last_alert_at": "2026-08-22T00:52:42.957000+00:00"
   },
   "crypto:ARB": {
     "direction": "BUY",
@@ -766,8 +766,8 @@
   },
   "crypto:WIF": {
     "direction": "BUY",
-    "confidence": 80.4655805007236,
-    "last_alert_at": "2026-08-21T20:47:18.435574+00:00"
+    "confidence": 74.06292098816962,
+    "last_alert_at": "2026-08-22T00:52:42.328511+00:00"
   },
   "crypto:DOOD": {
     "direction": "BUY",
