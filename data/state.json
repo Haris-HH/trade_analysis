@@ -36,8 +36,8 @@
   },
   "crypto:BONK": {
     "direction": "BUY",
-    "confidence": 71.75184222953784,
-    "last_alert_at": "2026-08-22T03:42:56.687020+00:00"
+    "confidence": 84.97845070381501,
+    "last_alert_at": "2026-08-22T04:47:22.093590+00:00"
   },
   "crypto:EDGE": {
     "direction": "BUY",
@@ -381,8 +381,8 @@
   },
   "crypto:ALCH": {
     "direction": "BUY",
-    "confidence": 71.6472241763687,
-    "last_alert_at": "2026-08-22T02:48:34.830001+00:00"
+    "confidence": 83.08221250849917,
+    "last_alert_at": "2026-08-22T04:47:23.392553+00:00"
   },
   "crypto:EPIC": {
     "direction": "BUY",
@@ -541,8 +541,8 @@
   },
   "crypto:TAO": {
     "direction": "BUY",
-    "confidence": 71.67137520604726,
-    "last_alert_at": "2026-08-21T14:12:14.417659+00:00"
+    "confidence": 85.86531940370196,
+    "last_alert_at": "2026-08-22T04:47:22.750502+00:00"
   },
   "crypto:SUI": {
     "direction": "BUY",
