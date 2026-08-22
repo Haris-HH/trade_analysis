@@ -36,8 +36,8 @@
   },
   "crypto:BONK": {
     "direction": "BUY",
-    "confidence": 74.51929145798974,
-    "last_alert_at": "2026-08-21T22:30:06.807814+00:00"
+    "confidence": 71.75184222953784,
+    "last_alert_at": "2026-08-22T03:42:56.687020+00:00"
   },
   "crypto:EDGE": {
     "direction": "BUY",
@@ -256,8 +256,8 @@
   },
   "crypto:XAI": {
     "direction": "BUY",
-    "confidence": 73.02838244878198,
-    "last_alert_at": "2026-08-21T22:55:21.443040+00:00"
+    "confidence": 71.62300483148313,
+    "last_alert_at": "2026-08-22T03:42:58.614078+00:00"
   },
   "crypto:SPEC": {
     "direction": "SELL",
@@ -296,8 +296,8 @@
   },
   "crypto:SIGN": {
     "direction": "BUY",
-    "confidence": 71.4354170365791,
-    "last_alert_at": "2026-08-22T03:30:06.751113+00:00"
+    "confidence": 81.97032215758576,
+    "last_alert_at": "2026-08-22T03:42:57.336187+00:00"
   },
   "crypto:CHILLGUY": {
     "direction": "BUY",
@@ -446,8 +446,8 @@
   },
   "crypto:BASED": {
     "direction": "BUY",
-    "confidence": 73.57487180352307,
-    "last_alert_at": "2026-08-21T15:48:56.025756+00:00"
+    "confidence": 72.55053892102124,
+    "last_alert_at": "2026-08-22T03:42:59.270305+00:00"
   },
   "crypto:ZENT": {
     "direction": "BUY",
@@ -906,8 +906,8 @@
   },
   "crypto:BTT": {
     "direction": "BUY",
-    "confidence": 79.30139950395838,
-    "last_alert_at": "2026-08-21T23:27:28.480038+00:00"
+    "confidence": 74.92731231728543,
+    "last_alert_at": "2026-08-22T03:42:57.973203+00:00"
   },
   "crypto:AAVE": {
     "direction": "BUY",
