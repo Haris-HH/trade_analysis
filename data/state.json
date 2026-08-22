@@ -506,8 +506,8 @@
   },
   "crypto:HYPE": {
     "direction": "BUY",
-    "confidence": 83.07556196138403,
-    "last_alert_at": "2026-08-21T13:32:44.798097+00:00"
+    "confidence": 70.12151932210215,
+    "last_alert_at": "2026-08-22T02:22:16.897330+00:00"
   },
   "stock:SENA.BK": {
     "direction": "SELL",
@@ -676,8 +676,8 @@
   },
   "crypto:MOG": {
     "direction": "BUY",
-    "confidence": 82.7079103182468,
-    "last_alert_at": "2026-08-21T22:07:23.694960+00:00"
+    "confidence": 74.89636831763474,
+    "last_alert_at": "2026-08-22T02:22:17.800080+00:00"
   },
   "crypto:JUP": {
     "direction": "BUY",
@@ -801,8 +801,8 @@
   },
   "crypto:SIX": {
     "direction": "BUY",
-    "confidence": 81.35700314161829,
-    "last_alert_at": "2026-08-21T07:57:59.132764+00:00"
+    "confidence": 72.56624688997769,
+    "last_alert_at": "2026-08-22T02:22:17.351750+00:00"
   },
   "crypto:STRK": {
     "direction": "BUY",
