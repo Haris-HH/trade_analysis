@@ -696,8 +696,8 @@
   },
   "crypto:XRP": {
     "direction": "BUY",
-    "confidence": 81.30919485412534,
-    "last_alert_at": "2026-08-22T01:47:36.775806+00:00"
+    "confidence": 73.12880615764495,
+    "last_alert_at": "2026-08-22T05:52:30.428813+00:00"
   },
   "crypto:DOGE": {
     "direction": "BUY",
@@ -926,8 +926,8 @@
   },
   "crypto:KSM": {
     "direction": "BUY",
-    "confidence": 71.63309632279974,
-    "last_alert_at": "2026-08-22T05:27:17.763388+00:00"
+    "confidence": 83.03022876055797,
+    "last_alert_at": "2026-08-22T05:52:29.836849+00:00"
   },
   "crypto:GRAM": {
     "direction": "BUY",
