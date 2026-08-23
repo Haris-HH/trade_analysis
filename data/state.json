@@ -811,8 +811,8 @@
   },
   "crypto:CPOOL": {
     "direction": "BUY",
-    "confidence": 84.57724278444924,
-    "last_alert_at": "2026-08-22T00:47:35.618879+00:00"
+    "confidence": 83.74161304654012,
+    "last_alert_at": "2026-08-23T01:11:44.391626+00:00"
   },
   "crypto:XPL": {
     "direction": "BUY",
