@@ -1048,5 +1048,10 @@
     "direction": "BUY",
     "confidence": 71.0902374091457,
     "last_alert_at": "2026-08-23T13:06:36.549226+00:00"
+  },
+  "crypto:INJ": {
+    "direction": "BUY",
+    "confidence": 75.24040142185564,
+    "last_alert_at": "2026-08-23T14:12:05.884860+00:00"
   }
 }
