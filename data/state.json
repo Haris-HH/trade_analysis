@@ -761,8 +761,8 @@
   },
   "crypto:AIXBT": {
     "direction": "BUY",
-    "confidence": 73.36811385304289,
-    "last_alert_at": "2026-08-22T02:37:41.125939+00:00"
+    "confidence": 71.40512122736833,
+    "last_alert_at": "2026-08-23T22:21:57.443727+00:00"
   },
   "crypto:WIF": {
     "direction": "BUY",
