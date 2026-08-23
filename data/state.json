@@ -740,9 +740,9 @@
     "last_alert_at": "2026-08-21T06:17:20.898739+00:00"
   },
   "crypto:ASTER": {
-    "direction": "BUY",
-    "confidence": 85.41287993892256,
-    "last_alert_at": "2026-08-22T03:22:54.518675+00:00"
+    "direction": "SELL",
+    "confidence": 70.45163043658546,
+    "last_alert_at": "2026-08-23T04:55:52.677613+00:00"
   },
   "crypto:RED": {
     "direction": "BUY",
