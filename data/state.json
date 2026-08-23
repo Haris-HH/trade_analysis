@@ -1058,5 +1058,10 @@
     "direction": "BUY",
     "confidence": 80.87974773557171,
     "last_alert_at": "2026-08-23T14:26:54.551977+00:00"
+  },
+  "crypto:SPK": {
+    "direction": "BUY",
+    "confidence": 78.40895302804827,
+    "last_alert_at": "2026-08-23T14:40:52.241143+00:00"
   }
 }
