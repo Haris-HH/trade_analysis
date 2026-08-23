@@ -741,8 +741,8 @@
   },
   "crypto:ASTER": {
     "direction": "SELL",
-    "confidence": 70.45163043658546,
-    "last_alert_at": "2026-08-23T04:55:52.677613+00:00"
+    "confidence": 70.31153344182339,
+    "last_alert_at": "2026-08-23T04:57:40.585882+00:00"
   },
   "crypto:RED": {
     "direction": "BUY",
