@@ -136,8 +136,8 @@
   },
   "crypto:UNI": {
     "direction": "BUY",
-    "confidence": 75.13384266371196,
-    "last_alert_at": "2026-08-23T12:46:52.862136+00:00"
+    "confidence": 86.62799780463143,
+    "last_alert_at": "2026-08-23T13:42:01.224224+00:00"
   },
   "crypto:ES": {
     "direction": "SELL",
@@ -526,8 +526,8 @@
   },
   "crypto:VVV": {
     "direction": "BUY",
-    "confidence": 77.61417213224475,
-    "last_alert_at": "2026-08-22T13:51:46.985057+00:00"
+    "confidence": 74.36905665451069,
+    "last_alert_at": "2026-08-23T13:42:00.538707+00:00"
   },
   "crypto:GALA": {
     "direction": "BUY",
