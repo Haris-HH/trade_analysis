@@ -776,8 +776,8 @@
   },
   "crypto:POPCAT": {
     "direction": "BUY",
-    "confidence": 75.77883173587225,
-    "last_alert_at": "2026-08-22T06:57:59.625073+00:00"
+    "confidence": 72.7629028493784,
+    "last_alert_at": "2026-08-23T21:25:51.215412+00:00"
   },
   "crypto:FLOCK": {
     "direction": "BUY",
@@ -1073,5 +1073,10 @@
     "direction": "BUY",
     "confidence": 72.73089580011337,
     "last_alert_at": "2026-08-23T16:13:39.622149+00:00"
+  },
+  "crypto:APT": {
+    "direction": "BUY",
+    "confidence": 71.02276930959081,
+    "last_alert_at": "2026-08-23T21:25:51.908402+00:00"
   }
 }
