@@ -455,9 +455,9 @@
     "last_alert_at": "2026-08-21T13:07:56.891766+00:00"
   },
   "crypto:OPG": {
-    "direction": "BUY",
-    "confidence": 70.38565512801082,
-    "last_alert_at": "2026-08-18T05:46:50.395258+00:00"
+    "direction": "SELL",
+    "confidence": 70.51924414669955,
+    "last_alert_at": "2026-08-23T02:56:48.340882+00:00"
   },
   "crypto:BAND": {
     "direction": "BUY",
