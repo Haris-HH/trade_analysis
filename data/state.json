@@ -136,8 +136,8 @@
   },
   "crypto:UNI": {
     "direction": "BUY",
-    "confidence": 78.66348628525098,
-    "last_alert_at": "2026-08-22T04:43:11.956255+00:00"
+    "confidence": 70.55131804725067,
+    "last_alert_at": "2026-08-23T00:41:50.704308+00:00"
   },
   "crypto:ES": {
     "direction": "SELL",
@@ -996,8 +996,8 @@
   },
   "crypto:AVL": {
     "direction": "BUY",
-    "confidence": 77.13644410204773,
-    "last_alert_at": "2026-08-21T13:22:30.315434+00:00"
+    "confidence": 78.264819169885,
+    "last_alert_at": "2026-08-23T00:41:50.104706+00:00"
   },
   "crypto:OBT": {
     "direction": "BUY",
