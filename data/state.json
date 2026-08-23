@@ -31,8 +31,8 @@
   },
   "crypto:MET": {
     "direction": "BUY",
-    "confidence": 75.92537044701767,
-    "last_alert_at": "2026-08-22T07:31:52.462144+00:00"
+    "confidence": 71.07237931453189,
+    "last_alert_at": "2026-08-23T14:17:02.825193+00:00"
   },
   "crypto:BONK": {
     "direction": "BUY",
@@ -196,8 +196,8 @@
   },
   "crypto:JFIN": {
     "direction": "BUY",
-    "confidence": 72.98153317102458,
-    "last_alert_at": "2026-08-23T01:46:47.073486+00:00"
+    "confidence": 71.64984650036664,
+    "last_alert_at": "2026-08-23T14:17:02.346877+00:00"
   },
   "crypto:KAITO": {
     "direction": "BUY",
