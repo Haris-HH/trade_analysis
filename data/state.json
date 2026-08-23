@@ -1053,5 +1053,10 @@
     "direction": "BUY",
     "confidence": 73.78655805651346,
     "last_alert_at": "2026-08-23T14:13:58.114751+00:00"
+  },
+  "crypto:PYTH": {
+    "direction": "BUY",
+    "confidence": 80.87974773557171,
+    "last_alert_at": "2026-08-23T14:26:54.551977+00:00"
   }
 }
