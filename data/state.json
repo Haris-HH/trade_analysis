@@ -411,8 +411,8 @@
   },
   "crypto:ZAMA": {
     "direction": "BUY",
-    "confidence": 84.65613112237399,
-    "last_alert_at": "2026-08-22T07:51:53.990638+00:00"
+    "confidence": 71.16107782674827,
+    "last_alert_at": "2026-08-23T14:22:01.239799+00:00"
   },
   "crypto:PLUME": {
     "direction": "BUY",
@@ -701,8 +701,8 @@
   },
   "crypto:DOGE": {
     "direction": "BUY",
-    "confidence": 81.86794071547442,
-    "last_alert_at": "2026-08-22T03:30:05.327917+00:00"
+    "confidence": 72.55770476118558,
+    "last_alert_at": "2026-08-23T14:22:01.880457+00:00"
   },
   "crypto:XLM": {
     "direction": "BUY",
