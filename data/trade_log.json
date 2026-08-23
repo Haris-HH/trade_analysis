@@ -140,5 +140,13 @@
     "order_id": "6a8a70b2f6d815d4367890a0ixlnnv",
     "confidence": 77.17321730480643,
     "at": "2026-08-23T04:01:57.375314+00:00"
+  },
+  {
+    "ticker": "JFIN",
+    "side": "reconcile",
+    "note": "balance check found JFIN not actually held on Bitkub (recorded 51.15384615, actual 0.00000000) — likely sold manually outside the bot; closing the tracked position automatically",
+    "coin_amount": 51.15384615384615,
+    "cost_thb": 100.0,
+    "at": "2026-08-23T04:06:43.221190+00:00"
   }
 ]
