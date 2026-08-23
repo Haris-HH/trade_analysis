@@ -401,8 +401,8 @@
   },
   "crypto:ETHFI": {
     "direction": "BUY",
-    "confidence": 75.7005470169638,
-    "last_alert_at": "2026-08-22T17:11:41.422674+00:00"
+    "confidence": 70.0008379790381,
+    "last_alert_at": "2026-08-23T12:06:44.209314+00:00"
   },
   "crypto:PLN": {
     "direction": "BUY",
@@ -816,8 +816,8 @@
   },
   "crypto:XPL": {
     "direction": "BUY",
-    "confidence": 77.52272219353188,
-    "last_alert_at": "2026-08-21T17:32:25.641728+00:00"
+    "confidence": 74.07178316525619,
+    "last_alert_at": "2026-08-23T12:06:43.739267+00:00"
   },
   "crypto:BTC": {
     "direction": "BUY",
