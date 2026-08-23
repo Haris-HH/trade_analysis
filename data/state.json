@@ -926,8 +926,8 @@
   },
   "crypto:KSM": {
     "direction": "BUY",
-    "confidence": 83.03022876055797,
-    "last_alert_at": "2026-08-22T05:52:29.836849+00:00"
+    "confidence": 72.135710655809,
+    "last_alert_at": "2026-08-23T14:13:58.646532+00:00"
   },
   "crypto:GRAM": {
     "direction": "BUY",
@@ -1051,7 +1051,7 @@
   },
   "crypto:INJ": {
     "direction": "BUY",
-    "confidence": 75.24040142185564,
-    "last_alert_at": "2026-08-23T14:12:05.884860+00:00"
+    "confidence": 73.78655805651346,
+    "last_alert_at": "2026-08-23T14:13:58.114751+00:00"
   }
 }
