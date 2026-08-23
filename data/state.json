@@ -125,9 +125,9 @@
     "last_alert_at": "2026-08-11T15:52:34.424434+00:00"
   },
   "crypto:ZEREBRO": {
-    "direction": "BUY",
-    "confidence": 80.08912115331475,
-    "last_alert_at": "2026-08-20T10:27:09.886689+00:00"
+    "direction": "SELL",
+    "confidence": 72.38253060882633,
+    "last_alert_at": "2026-08-23T03:41:50.502873+00:00"
   },
   "crypto:BRETT": {
     "direction": "BUY",
