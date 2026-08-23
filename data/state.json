@@ -471,8 +471,8 @@
   },
   "crypto:ICNT": {
     "direction": "SELL",
-    "confidence": 70.02692101570779,
-    "last_alert_at": "2026-08-20T20:12:06.145139+00:00"
+    "confidence": 72.6883441525935,
+    "last_alert_at": "2026-08-23T03:21:41.688473+00:00"
   },
   "crypto:STABLE": {
     "direction": "BUY",
