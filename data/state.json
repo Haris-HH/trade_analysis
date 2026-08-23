@@ -421,8 +421,8 @@
   },
   "crypto:LDO": {
     "direction": "BUY",
-    "confidence": 78.35673052536164,
-    "last_alert_at": "2026-08-23T13:47:05.807536+00:00"
+    "confidence": 70.97198444884496,
+    "last_alert_at": "2026-08-23T19:46:56.034583+00:00"
   },
   "crypto:BOME": {
     "direction": "BUY",
@@ -661,8 +661,8 @@
   },
   "crypto:TOSHI": {
     "direction": "BUY",
-    "confidence": 77.87530650059172,
-    "last_alert_at": "2026-08-22T03:58:14.817118+00:00"
+    "confidence": 74.73652499724261,
+    "last_alert_at": "2026-08-23T19:46:56.484265+00:00"
   },
   "crypto:PENGU": {
     "direction": "BUY",
