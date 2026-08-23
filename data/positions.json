@@ -1,1 +1,11 @@
-{}
+{
+  "JFIN": {
+    "entry_price": 1.954887218045113,
+    "cost_thb": 100.0,
+    "coin_amount": 51.15384615384615,
+    "order_id": "6a8a6f7e9d5de6f1586db3f1ixlnnv",
+    "opened_at": "2026-08-23T03:56:48.403020+00:00",
+    "buy_confidence": 77.17321730481004,
+    "tp_order_id": "6a8a6f81ba26115987b635a0ixlnnv"
+  }
+}
