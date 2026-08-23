@@ -616,8 +616,8 @@
   },
   "crypto:SPX": {
     "direction": "BUY",
-    "confidence": 81.31440990337178,
-    "last_alert_at": "2026-08-22T03:53:20.648469+00:00"
+    "confidence": 72.45113303521555,
+    "last_alert_at": "2026-08-23T15:41:56.927711+00:00"
   },
   "crypto:ARB": {
     "direction": "BUY",
@@ -666,8 +666,8 @@
   },
   "crypto:PENGU": {
     "direction": "BUY",
-    "confidence": 71.4983390452175,
-    "last_alert_at": "2026-08-22T03:58:13.902511+00:00"
+    "confidence": 71.68422887905253,
+    "last_alert_at": "2026-08-23T15:41:57.434013+00:00"
   },
   "crypto:PEPE": {
     "direction": "BUY",
