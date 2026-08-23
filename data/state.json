@@ -111,8 +111,8 @@
   },
   "crypto:HBAR": {
     "direction": "BUY",
-    "confidence": 88.60804676334457,
-    "last_alert_at": "2026-08-22T04:37:51.070378+00:00"
+    "confidence": 71.99516630828357,
+    "last_alert_at": "2026-08-23T13:47:05.203140+00:00"
   },
   "crypto:RNDR": {
     "direction": "SELL",
@@ -421,8 +421,8 @@
   },
   "crypto:LDO": {
     "direction": "BUY",
-    "confidence": 78.37596865147844,
-    "last_alert_at": "2026-08-22T04:43:11.323286+00:00"
+    "confidence": 78.35673052536164,
+    "last_alert_at": "2026-08-23T13:47:05.807536+00:00"
   },
   "crypto:BOME": {
     "direction": "BUY",
@@ -651,8 +651,8 @@
   },
   "crypto:TRUMP": {
     "direction": "BUY",
-    "confidence": 71.72564934941266,
-    "last_alert_at": "2026-08-23T13:26:47.741899+00:00"
+    "confidence": 82.04570029683471,
+    "last_alert_at": "2026-08-23T13:47:07.025475+00:00"
   },
   "crypto:FLOKI": {
     "direction": "BUY",
@@ -726,8 +726,8 @@
   },
   "crypto:EIGEN": {
     "direction": "BUY",
-    "confidence": 84.47945977429364,
-    "last_alert_at": "2026-08-22T02:58:12.265954+00:00"
+    "confidence": 73.22432784842992,
+    "last_alert_at": "2026-08-23T13:47:06.429809+00:00"
   },
   "crypto:ETH": {
     "direction": "BUY",
