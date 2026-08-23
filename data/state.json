@@ -461,8 +461,8 @@
   },
   "crypto:BAND": {
     "direction": "BUY",
-    "confidence": 72.69243520527104,
-    "last_alert_at": "2026-08-21T19:54:16.185942+00:00"
+    "confidence": 77.6200503754504,
+    "last_alert_at": "2026-08-23T17:51:57.343753+00:00"
   },
   "crypto:GPS": {
     "direction": "BUY",
@@ -726,8 +726,8 @@
   },
   "crypto:EIGEN": {
     "direction": "BUY",
-    "confidence": 73.22432784842992,
-    "last_alert_at": "2026-08-23T13:47:06.429809+00:00"
+    "confidence": 75.44990690257508,
+    "last_alert_at": "2026-08-23T17:51:56.886315+00:00"
   },
   "crypto:ETH": {
     "direction": "BUY",
