@@ -46,6 +46,8 @@ jobs:
           AUTO_TRADE_MIN_CONFIDENCE: ${{ secrets.AUTO_TRADE_MIN_CONFIDENCE }}
           AUTO_TRADE_TAKE_PROFIT_PCT: ${{ secrets.AUTO_TRADE_TAKE_PROFIT_PCT }}
           AUTO_TRADE_STOP_LOSS_PCT: ${{ secrets.AUTO_TRADE_STOP_LOSS_PCT }}
+          AUTO_TRADE_RISK_PCT: ${{ secrets.AUTO_TRADE_RISK_PCT }}
+          BITKUB_FEE_PCT: ${{ secrets.BITKUB_FEE_PCT }}
         run: python scripts/main.py
 
       - name: Commit updated data

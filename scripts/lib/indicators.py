@@ -15,9 +15,14 @@ caller treats that as "no opinion" (QuantDesk's ABSTAIN), not as a weak BUY.
 Three factors here are heuristic ports of TradingView indicators, since a
 Python engine has no chart to attach a Pine Script overlay to:
 - `_compute_trend_confluence` — approximates justUncle's "Big Snapper"
-  alert: a fast/medium EMA cross that only counts fully when a SuperTrend
-  flip agrees with it, the same multi-confirmation idea behind Big Snapper's
-  buy/sell arrows once its raw MA/BB overlay plots are unchecked.
+  alert per its own how-to-use video (ORC Crypto,
+  youtube.com/watch?v=aOYth3R0IaE): trend from a single slow MA (candle
+  above/below it), a trigger event standing in for Big Snapper's own
+  undisclosed signal bar, and a same-colored confirmation candle — with a
+  few bars of grace if the trigger candle itself closes the wrong color
+  (Big Snapper waits for the next one rather than cancelling), and a hard
+  skip (not just a lower vote) for any trigger on the wrong side of the MA,
+  which the video calls an explicit "inverse/error" signal.
 - `_compute_smart_money` — approximates chartPrime's "Smart Money
   Breakouts" + MyTradingCoder's magnified order block: break-of-structure
   (price closing beyond the last confirmed swing high/low) plus the order
@@ -235,17 +240,19 @@ def compute_factors(
 def _supertrend(df: pd.DataFrame, period: int = 10, multiplier: float = 3.0):
     """Classic SuperTrend: ATR-scaled trailing bands that flip trend
     direction when price closes through the opposite band. Returns
-    (uptrend, line_price, just_flipped) or (None, None, False) if there
-    isn't enough warmup data."""
+    (uptrend, line_price, just_flipped, trend_array) or
+    (None, None, False, None) if there isn't enough warmup data. The full
+    boolean trend_array (not just the latest value) lets a caller look back
+    over the last few bars for a flip, not only the current one."""
     n = len(df)
     if n < period + 5:
-        return None, None, False
+        return None, None, False, None
 
     high, low, close = df["high"].values, df["low"].values, df["close"].values
     atr = ta.volatility.AverageTrueRange(df["high"], df["low"], df["close"], window=period).average_true_range().values
     valid = np.where(~np.isnan(atr))[0]
     if len(valid) == 0:
-        return None, None, False
+        return None, None, False, None
     start = int(valid[0])
 
     hl2 = (high + low) / 2.0
@@ -277,34 +284,88 @@ def _supertrend(df: pd.DataFrame, period: int = 10, multiplier: float = 3.0):
     line = float(final_lower[-1] if uptrend else final_upper[-1])
     lookback = min(3, n - start - 1)
     just_flipped = lookback > 0 and bool(np.any(trend[-lookback - 1:-1] != uptrend))
-    return uptrend, line, just_flipped
+    return uptrend, line, just_flipped, trend
 
 
 def _compute_trend_confluence(df: pd.DataFrame) -> Factor | None:
-    close = df["close"]
-    if len(close) < 55:
+    """Approximates justUncle's "Big Snapper" per its own how-to-use video
+    (ORC Crypto, youtube.com/watch?v=aOYth3R0IaE): a single slow MA marks
+    the trend (candle above it = uptrend, below = downtrend); a trigger
+    marks a candidate entry; the entry only actually confirms once a candle
+    in the trigger's own direction closes while price is still on the
+    correct side of the MA. If the trigger candle itself closes the wrong
+    color, Big Snapper doesn't cancel — it waits for the next candle (a few
+    bars of grace here, not just the instantaneous one). A trigger on the
+    wrong side of the MA is an explicit "inverse/error" signal the video
+    says to skip outright, so it's never even considered, not just
+    down-weighted.
+
+    Big Snapper's own trigger formula isn't published (closed-source Pine
+    script) — a SuperTrend flip stands in for it here as the closest
+    generic proxy for "a trend-flip event," same as before, just wired
+    into the real confirmation logic instead of a fast/medium MA cross
+    (which the source video never mentions)."""
+    close_s, open_s = df["close"], df["open"]
+    n = len(close_s)
+    if n < 55:
         return None
-    uptrend, line, just_flipped = _supertrend(df)
+
+    slow_ma = close_s.ewm(span=50, adjust=False).mean()
+    if pd.isna(slow_ma.iloc[-1]):
+        return None
+    price, ma_now = float(close_s.iloc[-1]), float(slow_ma.iloc[-1])
+    above_ma = price > ma_now
+
+    uptrend, _line, _just_flipped, trend_arr = _supertrend(df)
     if uptrend is None:
         return None
 
-    fast = close.ewm(span=8, adjust=False).mean()
-    medium = close.ewm(span=21, adjust=False).mean()
-    fast_v, med_v = float(fast.iloc[-1]), float(medium.iloc[-1])
-    prev_fast, prev_med = float(fast.iloc[-2]), float(medium.iloc[-2])
-    ma_bull = fast_v > med_v
-    cross_now = (prev_fast <= prev_med) != (fast_v <= med_v)
-    agrees = ma_bull == uptrend
+    closes, opens = close_s.values, open_s.values
+    CONFIRM_WINDOW = 3
 
-    vote = (0.5 if ma_bull else -0.5) * (1.6 if agrees else 0.6)
-    if cross_now and agrees:
-        vote = 1.0 if ma_bull else -1.0
+    def _find_trigger(bullish: bool) -> int | None:
+        for k in range(min(CONFIRM_WINDOW, n - 1)):
+            i = n - 1 - k
+            if i < 1:
+                continue
+            if trend_arr[i] == bullish and trend_arr[i - 1] != bullish:
+                return i
+        return None
 
-    desc = (
-        f"Fast/Medium MA {'ตัดขึ้น' if ma_bull else 'ตัดลง'}"
-        f"{' + SuperTrend ยืนยัน (เส้น ' + f'{line:,.4g})' if agrees else ' แต่ SuperTrend ยังไม่ยืนยัน'}"
-        f"{' — สัญญาณใหม่ล่าสุด แบบ Big Snapper' if cross_now and agrees else ''}"
-    )
+    def _confirmed(trigger_idx: int, bullish: bool) -> bool:
+        # True if any candle from the trigger bar through now closed in the
+        # trigger's own direction -- confirmation doesn't have to land on
+        # the exact latest bar, just within the grace window, same as the
+        # video's "wait for the next candle to close the right color."
+        return any((closes[i] > opens[i]) == bullish for i in range(trigger_idx, n))
+
+    vote, desc = None, None
+
+    bull_trigger = _find_trigger(True) if above_ma else None
+    bear_trigger = _find_trigger(False) if not above_ma else None
+
+    if bull_trigger is not None:
+        if _confirmed(bull_trigger, True):
+            vote = 1.0
+            desc = "Big Snapper: สัญญาณ Buy ยืนยันแล้ว (เหนือ Slow MA + แท่งเขียวปิดยืนยัน)"
+        elif closes[-1] <= opens[-1]:
+            vote = 0.3
+            desc = "Big Snapper: สัญญาณ Buy รอแท่งถัดไปยืนยัน (แท่งล่าสุดยังไม่ปิดเขียว)"
+    elif bear_trigger is not None:
+        if _confirmed(bear_trigger, False):
+            vote = -1.0
+            desc = "Big Snapper: สัญญาณ Sell ยืนยันแล้ว (ใต้ Slow MA + แท่งแดงปิดยืนยัน)"
+        elif closes[-1] >= opens[-1]:
+            vote = -0.3
+            desc = "Big Snapper: สัญญาณ Sell รอแท่งถัดไปยืนยัน (แท่งล่าสุดยังไม่ปิดแดง)"
+
+    if vote is None:
+        # No active (non-"inverse") Big Snapper condition right now -- a
+        # much weaker plain price-vs-Slow-MA read, well short of a real
+        # confirmed signal.
+        vote = _clamp((price - ma_now) / ma_now * 8) * 0.25
+        desc = f"Big Snapper: ยังไม่เข้าเงื่อนไข (ราคาอยู่{'เหนือ' if above_ma else 'ใต้'} Slow MA)"
+
     return Factor("trend_confluence", _clamp(vote), WEIGHTS["trend_confluence"], desc)
 
 

@@ -77,11 +77,15 @@ edges the first version of this dashboard didn't handle:
 - **Three extra confluence factors**, heuristic ports of TradingView tools
   the user also watches manually, since a Python engine has no chart to
   attach a Pine Script overlay to (`scripts/lib/indicators.py`):
-  - `trend_confluence` — approximates justUncle's **Big Snapper** alert: a
-    fast(8)/medium(21) EMA cross only votes at full strength when a
-    SuperTrend(10, 3.0) flip agrees with it, the same multi-confirmation
-    idea behind Big Snapper's buy/sell arrows once its raw MA/BB overlay
-    plots are unchecked.
+  - `trend_confluence` — approximates justUncle's **Big Snapper** alert,
+    per its own how-to-use video ([ORC Crypto](https://youtube.com/watch?v=aOYth3R0IaE)):
+    trend from a single slow MA (EMA 50 here — candle above/below it), a
+    trigger event (a SuperTrend(10, 3.0) flip stands in for Big Snapper's
+    own undisclosed signal-bar formula), and a same-colored confirmation
+    candle, with a few bars' grace if the trigger candle itself closes the
+    wrong color (matching the video's "wait for the next candle" rule) and
+    a hard skip — not just a lower vote — for any trigger on the wrong side
+    of the MA, which the video calls an explicit "inverse/error" signal.
   - `smart_money` — approximates chartPrime's **Smart Money Breakouts** +
     MyTradingCoder's **magnified order block**: detects a break of
     structure (price closing beyond the last confirmed swing high/low,
@@ -210,21 +214,47 @@ engine, ATR-based stop/target, veto rules).
 - **Entry (BUY):** a crypto symbol whose signal survived re-verification —
   `direction == BUY`, not vetoed, confidence ≥ `AUTO_TRADE_MIN_CONFIDENCE`
   (default 75, stricter than the 70% alert bar since real money is on the
-  line) — triggers a market buy of `AUTO_TRADE_AMOUNT_THB` (default 100 THB),
-  as long as that ticker isn't already held and `AUTO_TRADE_MAX_POSITIONS`
-  (default 3) isn't already reached.
+  line) — triggers a market buy, as long as that ticker isn't already held
+  and `AUTO_TRADE_MAX_POSITIONS` (default 3) isn't already reached. Position
+  **size** is `AUTO_TRADE_AMOUNT_THB` (default 100 THB) flat per trade,
+  unless risk-based sizing is enabled — see below.
 - **Exit (SELL):** every open position is checked against the current scan's
   price and closed automatically — take-profit at
   `AUTO_TRADE_TAKE_PROFIT_PCT` (default **+5%**), or stop-loss at
   `AUTO_TRADE_STOP_LOSS_PCT` (default -8%, protects capital if a position
   keeps losing — set to `0` to disable and only ever exit at take-profit).
+- **Risk-based position sizing** (`scripts/lib/auto_trader.py`
+  `_position_size_thb`, off by default): set `AUTO_TRADE_RISK_PCT` to size
+  each trade so that hitting the *signal's own* ATR-based stop
+  (`r["stop_loss"]`, the same one behind the veto's risk:reward check — not
+  this module's fixed `AUTO_TRADE_STOP_LOSS_PCT` exit) costs exactly that %
+  of account equity (free THB + the market value of every open position),
+  instead of every trade risking the same flat THB amount regardless of how
+  close or far its stop actually is. Ported from the account's own
+  **ORC_CRYPTO Position Sizer** tool
+  (`ORC_CRYPTO_PositionSizer_FREE_V4.html`) and its companion video
+  ([youtube.com/watch?v=c6DFdPf5bug](https://youtube.com/watch?v=c6DFdPf5bug)),
+  which stresses two things this port keeps: round-trip fees
+  (`BITKUB_FEE_PCT`, default 0.25% per side, doubled) must be included in
+  the sizing math or the position comes out too large, and the video's own
+  risk tiers — 0.5% conservative, 1% standard, 2% aggressive, 3–5% "pro" —
+  are a reasonable starting point for `AUTO_TRADE_RISK_PCT`. Clamped to
+  never exceed account equity and never fall below a 10 THB practical
+  minimum order. Never fetches Bitkub balances during `DRY_RUN` (keeping
+  the "DRY_RUN never calls Bitkub" guarantee below intact) — it just falls
+  back to the flat `AUTO_TRADE_AMOUNT_THB` there instead.
 - Positions persist in [`data/positions.json`](data/positions.json)
   (committed by the Action, same pattern as `data/state.json`); every
   executed trade is appended to [`data/trade_log.json`](data/trade_log.json)
   for a permanent audit trail. Both are also included as `open_positions` /
   implicitly reflected in `public/data/latest.json` for the current state.
 - Every executed trade sends its own Telegram message (🤖 Auto-trade
-  BUY/SELL), separate from the signal alert.
+  BUY/SELL), separate from the signal alert. Whenever at least one position
+  closes in a scan cycle, a second message follows with portfolio-level
+  performance — win rate, profit factor, average R-multiple, total P&L, max
+  drawdown (`scripts/lib/trade_stats.py`) — the same analytics the Position
+  Sizer's own trade journal computes, so the numbers aren't only ever
+  visible one trade at a time.
 
 **Off by default, two independent switches:**
 
@@ -248,7 +278,8 @@ Add these as **GitHub Actions secrets** the same way as `TELEGRAM_BOT_TOKEN`
 `BITKUB_API_KEY`, `BITKUB_API_SECRET`, `AUTO_TRADE_ENABLED`, and optionally
 `AUTO_TRADE_AMOUNT_THB` / `AUTO_TRADE_MAX_POSITIONS` /
 `AUTO_TRADE_MIN_CONFIDENCE` / `AUTO_TRADE_TAKE_PROFIT_PCT` /
-`AUTO_TRADE_STOP_LOSS_PCT` to override the defaults above.
+`AUTO_TRADE_STOP_LOSS_PCT` / `AUTO_TRADE_RISK_PCT` / `BITKUB_FEE_PCT` to
+override the defaults above.
 
 > ⚠️ This places real orders with real money once enabled. The signal engine
 > is a heuristic (see disclaimer above) — it can and will be wrong. Start
@@ -376,7 +407,7 @@ variables → Actions):
 
 - `BITKUB_API_KEY` / `BITKUB_API_SECRET` — from [bitkub.com](https://www.bitkub.com) → API Management, **Trade permission only**, no withdrawal
 - `AUTO_TRADE_ENABLED` — set to `1` to actually trade (test with `DRY_RUN=1` locally first, see step 7)
-- Optionally override `AUTO_TRADE_AMOUNT_THB`, `AUTO_TRADE_MAX_POSITIONS`, `AUTO_TRADE_MIN_CONFIDENCE`, `AUTO_TRADE_TAKE_PROFIT_PCT`, `AUTO_TRADE_STOP_LOSS_PCT`
+- Optionally override `AUTO_TRADE_AMOUNT_THB`, `AUTO_TRADE_MAX_POSITIONS`, `AUTO_TRADE_MIN_CONFIDENCE`, `AUTO_TRADE_TAKE_PROFIT_PCT`, `AUTO_TRADE_STOP_LOSS_PCT`, `AUTO_TRADE_RISK_PCT`, `BITKUB_FEE_PCT`
 
 ### 7. Local development
 
@@ -398,7 +429,7 @@ DRY_RUN=1 python scripts/main.py   # scans + logs would-be Telegram messages, do
   not the same as the longer-horizon target shown on the dashboard, see `price_target.py`)
 - `scripts/lib/indicators.py`: `MIN_CANDLES` (60 — below this, a symbol abstains instead of guessing),
   `TREND_THRESHOLD` (0.8% EMA separation before a market counts as "trending"); `_supertrend()`'s
-  `period`/`multiplier` (10 / 3.0), `_compute_trend_confluence()`'s fast/medium EMA spans (8 / 21),
+  `period`/`multiplier` (10 / 3.0), `_compute_trend_confluence()`'s slow MA span (50) and `CONFIRM_WINDOW` (3 bars),
   `_compute_smart_money()`'s swing lookback/arm (60 bars / 2) and `FRESH_BARS` (6), and
   `_compute_volume_profile()`'s `bins`/`lookback` (20 / 100 candles) — all tunable, same file
   and `_compute_ichimoku()`'s window1/window2/window3 (9 / 26 / 52 — the standard Ichimoku periods)
@@ -411,7 +442,12 @@ DRY_RUN=1 python scripts/main.py   # scans + logs would-be Telegram messages, do
 - `.github/workflows/analyze.yml`: cron schedule (`*/5 * * * *`)
 - `scripts/lib/auto_trader.py` (see "Auto-trading" above, off by default): `AUTO_TRADE_ENABLED` (must be `"1"`),
   `AUTO_TRADE_AMOUNT_THB` (100), `AUTO_TRADE_MAX_POSITIONS` (3), `AUTO_TRADE_MIN_CONFIDENCE` (75),
-  `AUTO_TRADE_TAKE_PROFIT_PCT` (5), `AUTO_TRADE_STOP_LOSS_PCT` (8, `0` disables it)
+  `AUTO_TRADE_TAKE_PROFIT_PCT` (5), `AUTO_TRADE_STOP_LOSS_PCT` (8, `0` disables it),
+  `AUTO_TRADE_RISK_PCT` (0 — disabled, flat `AUTO_TRADE_AMOUNT_THB` sizing; the video's own tiers are
+  0.5/1/2/3-5 for conservative/standard/aggressive/pro), `BITKUB_FEE_PCT` (0.25, per side),
+  `MIN_ORDER_THB` (10, hardcoded floor for risk-based sizing)
+- `scripts/lib/trade_stats.py`: `compute_stats()`'s R-multiple approximation uses
+  `auto_trader.STOP_LOSS_PCT` as the risk denominator — override that, not a separate constant here
 
 ## Disclaimer
 

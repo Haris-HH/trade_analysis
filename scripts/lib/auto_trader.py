@@ -15,6 +15,11 @@ Telegram alerts into real Bitkub market orders.
   cancels the resting order first, since a market exit and a limit order
   must never both be live for the same coins) and, if no resting order
   exists, as a take-profit fallback too.
+- SIZING: flat TRADE_AMOUNT_THB per trade by default, or risk-based sizing
+  (_position_size_thb) once AUTO_TRADE_RISK_PCT is set — sizes each entry
+  so hitting the signal's own ATR stop costs exactly that % of account
+  capital, per the account's own ORC_CRYPTO Position Sizer tool and its
+  companion video (youtube.com/watch?v=c6DFdPf5bug).
 
 Disabled by default: AUTO_TRADE_ENABLED must be exactly "1", so real money
 is only ever risked once the user opts in explicitly with their own Bitkub
@@ -60,6 +65,25 @@ MAX_POSITIONS = _env_int("AUTO_TRADE_MAX_POSITIONS", 3)
 MIN_CONFIDENCE = _env_float("AUTO_TRADE_MIN_CONFIDENCE", 75)
 TAKE_PROFIT_PCT = _env_float("AUTO_TRADE_TAKE_PROFIT_PCT", 5) / 100
 STOP_LOSS_PCT = _env_float("AUTO_TRADE_STOP_LOSS_PCT", 8) / 100
+
+# Risk-based position sizing (off by default; falls back to the flat
+# TRADE_AMOUNT_THB above), per the account's own ORC_CRYPTO Position Sizer
+# tool and its "Position sizing" video (youtube.com/watch?v=c6DFdPf5bug):
+# size the trade so that hitting the signal's own ATR-based stop-loss
+# (r["stop_loss"], the same one used for the veto's risk:reward check —
+# NOT this module's fixed STOP_LOSS_PCT exit) costs exactly RISK_PCT of
+# account capital, instead of every trade risking the same flat THB amount
+# regardless of how close or far its stop actually is. The video's own risk
+# tiers: 0.5% conservative, 1% standard (this module's default once
+# enabled), 2% aggressive, 3-5% what the creator calls "pro".
+RISK_PCT = _env_float("AUTO_TRADE_RISK_PCT", 0) / 100
+# Bitkub's observed taker fee (see bitkub_trade.resolve_fill's docstring:
+# a 100 THB order showed a 0.25 THB fee) -- doubled for the round trip
+# (buy + sell), same as the position sizer's "Fee % (per side)" field. The
+# video stresses this explicitly: leaving fees out of the sizing math
+# understates the real position size needed to hit your intended risk.
+BITKUB_FEE_PCT = _env_float("BITKUB_FEE_PCT", 0.25) / 100
+MIN_ORDER_THB = 10  # Bitkub's practical minimum market order size
 
 
 def _fmt(v: float) -> str:
@@ -284,14 +308,42 @@ def _check_resting_tp_fill(ticker: str, position: dict) -> dict | None:
     }
 
 
-def _try_open(ticker: str, price: float, confidence: float) -> dict | None:
+def _position_size_thb(entry_price: float, stop_price: float | None, capital_thb: float) -> float:
+    """Risk-based sizing: position * (stop_pct + round-trip fee) = capital *
+    RISK_PCT, i.e. hitting `stop_price` costs exactly RISK_PCT of capital.
+    Falls back to the flat TRADE_AMOUNT_THB whenever risk-based sizing is
+    disabled or a required input (stop price, capital) isn't available —
+    same off-by-default posture as every other auto-trade knob."""
+    if RISK_PCT <= 0 or not stop_price or stop_price <= 0 or entry_price <= 0 or capital_thb <= 0:
+        return TRADE_AMOUNT_THB
+    stop_pct = abs(entry_price - stop_price) / entry_price
+    if stop_pct <= 0:
+        return TRADE_AMOUNT_THB
+    size = (capital_thb * RISK_PCT) / (stop_pct + 2 * BITKUB_FEE_PCT)
+    return max(MIN_ORDER_THB, min(size, capital_thb))
+
+
+def _account_capital_thb(balances: dict[str, float], positions: dict, prices: dict[str, float]) -> float:
+    """Free THB + the current market value of every open position — sizing
+    off total equity rather than only idle cash, so risk-based position
+    size doesn't shrink just because capital is already deployed."""
+    thb_free = balances.get("THB", 0.0)
+    positions_value = sum(
+        pos["coin_amount"] * prices.get(ticker, pos["entry_price"])
+        for ticker, pos in positions.items()
+    )
+    return thb_free + positions_value
+
+
+def _try_open(ticker: str, price: float, confidence: float, stop_loss: float | None, capital_thb: float) -> dict | None:
+    amount_thb = _position_size_thb(price, stop_loss, capital_thb)
     try:
         if DRY_RUN:
-            coin_amount, order_id = TRADE_AMOUNT_THB / price, "dry-run"
+            coin_amount, order_id = amount_thb / price, "dry-run"
         else:
-            result = bitkub_trade.place_market_buy(ticker, TRADE_AMOUNT_THB)
+            result = bitkub_trade.place_market_buy(ticker, amount_thb)
             order_id = result.get("id")
-            fill = _resolve_fill(ticker, order_id, "buy", {"coin": TRADE_AMOUNT_THB / price})
+            fill = _resolve_fill(ticker, order_id, "buy", {"coin": amount_thb / price})
             coin_amount = fill["coin"]
         if coin_amount <= 0:
             print(f"[auto-trade] BUY {ticker} filled for zero coin, skipping")
@@ -300,15 +352,16 @@ def _try_open(ticker: str, price: float, confidence: float) -> dict | None:
         print(f"[auto-trade] BUY {ticker} failed: {exc}")
         return None
 
+    sizing_note = f" (risk {RISK_PCT:.1%} ของทุน)" if RISK_PCT > 0 and amount_thb != TRADE_AMOUNT_THB else ""
     _notify(
         f"\U0001f916 <b>Auto-trade BUY</b>\n"
-        f"{ticker}/THB — {TRADE_AMOUNT_THB:,.2f} THB @ {_fmt(price)} "
+        f"{ticker}/THB — {amount_thb:,.2f} THB{sizing_note} @ {_fmt(price)} "
         f"(ความมั่นใจ {confidence:.0f}%)\n"
         f"TP +{TAKE_PROFIT_PCT:.0%} / SL -{STOP_LOSS_PCT:.0%}"
     )
-    print(f"[auto-trade] BUY {ticker} {TRADE_AMOUNT_THB} THB @ {price} conf={confidence:.0f}%")
+    print(f"[auto-trade] BUY {ticker} {amount_thb:.2f} THB @ {price} conf={confidence:.0f}%")
     return {
-        "ticker": ticker, "side": "buy", "price": price, "cost_thb": TRADE_AMOUNT_THB,
+        "ticker": ticker, "side": "buy", "price": price, "cost_thb": amount_thb,
         "coin_amount": coin_amount, "order_id": order_id, "confidence": confidence,
     }
 
@@ -323,8 +376,13 @@ def run(results: list[dict], positions: dict) -> list[dict]:
     trades: list[dict] = []
 
     # One wallet-balances call covers every held ticker, so fetch it once
-    # up front rather than per-position.
-    balances = _fetch_balances() if (positions and not DRY_RUN) else None
+    # up front rather than per-position. Also needed (once, not per-entry)
+    # for risk-based position sizing's capital figure -- never fetched in
+    # DRY_RUN, so "DRY_RUN never calls Bitkub" stays true; risk-based
+    # sizing just falls back to the flat TRADE_AMOUNT_THB there instead.
+    needs_balances = (positions or RISK_PCT > 0) and not DRY_RUN
+    balances = _fetch_balances() if needs_balances else None
+    capital_thb = _account_capital_thb(balances, positions, prices) if balances is not None else 0.0
 
     # 1) Exits first, so a closed position frees a slot for a fresh entry
     #    in the same cycle instead of waiting for the next scan.
@@ -397,7 +455,7 @@ def run(results: list[dict], positions: dict) -> list[dict]:
             ticker = r["raw_key"]
             if ticker in positions:
                 continue
-            trade = _try_open(ticker, r["price"], r["confidence"])
+            trade = _try_open(ticker, r["price"], r["confidence"], r.get("stop_loss"), capital_thb)
             if trade:
                 positions_store.open_position(
                     positions, ticker,

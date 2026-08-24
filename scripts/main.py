@@ -35,7 +35,7 @@ sys.path.insert(0, os.path.dirname(__file__))
 
 import json
 
-from lib import bitkub_source, stock_source, indicators, news_source, scoring, state_store, telegram_notify, chart, price_target, positions_store, auto_trader, fundamentals, fear_greed
+from lib import bitkub_source, stock_source, indicators, news_source, scoring, state_store, telegram_notify, chart, price_target, positions_store, auto_trader, fundamentals, fear_greed, trade_stats
 from lib.universe import STOCK_NAMES
 from lib.scoring import Factor
 
@@ -333,6 +333,19 @@ def main() -> None:
     for trade in trades:
         positions_store.append_trade_log(TRADE_LOG_PATH, trade)
     positions_store.save_positions(POSITIONS_PATH, positions)
+
+    # Portfolio-level performance (win rate / profit factor / avg R / max
+    # drawdown), not just each trade's own P&L -- sent once per scan cycle
+    # whenever a position actually closed this cycle, mirroring the
+    # analytics dashboard in the account's own ORC_CRYPTO Position Sizer
+    # trade journal (see lib/trade_stats.py).
+    if any(t.get("side") == "sell" for t in trades):
+        stats = trade_stats.compute_stats(positions_store.load_trade_log(TRADE_LOG_PATH), auto_trader.STOP_LOSS_PCT)
+        summary = "\U0001f4ca <b>สรุปผลงานพอร์ต Auto-trade</b>\n" + trade_stats.format_summary_th(stats)
+        if auto_trader.DRY_RUN:
+            print("[dry-run] would send Telegram message:\n" + summary)
+        else:
+            telegram_notify.send_telegram_message(summary)
 
     for r in results:
         r.pop("raw_key", None)

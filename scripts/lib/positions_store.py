@@ -43,6 +43,13 @@ def close_position(positions: dict, ticker: str) -> dict | None:
     return positions.pop(ticker, None)
 
 
+def load_trade_log(path: str) -> list:
+    if not os.path.exists(path):
+        return []
+    with open(path, "r", encoding="utf-8") as f:
+        return json.load(f)
+
+
 def append_trade_log(path: str, entry: dict) -> None:
     log = []
     if os.path.exists(path):
