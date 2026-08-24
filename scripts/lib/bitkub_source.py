@@ -30,6 +30,16 @@ STABLECOIN_EXCLUDE = {
 # auto-trader must not try to buy them.
 _source_cache: dict[str, str] = {}
 
+# Same populate-once pattern as _source_cache, read by get_price_scale() for
+# bitkub_trade.place_limit_sell. Each THB pair has its own tick size (e.g.
+# POL/BTC/ETH: 2 decimal places, DOGE: 4) — a resting sell rate that doesn't
+# land on that tick size gets rejected by Bitkub outright (error 13/14:
+# "Invalid rate"/"Improper rate"), which is why POL's take-profit order kept
+# failing every cycle (confirmed 2026-08-24: entry 3.7394233468340214 -> a
+# blind round(rate, 8) produced 3.92639451, but POL's price_scale is 2).
+_price_scale_cache: dict[str, int] = {}
+DEFAULT_PRICE_SCALE = 8  # pre-fix behavior, used only if a ticker's scale was never cached
+
 
 def get_universe() -> dict[str, str]:
     """Returns {ticker: display_name} for every active, non-stablecoin THB market
@@ -50,11 +60,20 @@ def get_universe() -> dict[str, str]:
         name = description[len("Thai Baht to "):] if description.startswith("Thai Baht to ") else ticker
         universe[ticker] = name
         _source_cache[ticker] = row.get("source", "exchange")
+        _price_scale_cache[ticker] = row.get("price_scale", DEFAULT_PRICE_SCALE)
     return universe
 
 
 def is_broker_sourced(ticker: str) -> bool:
     return _source_cache.get(ticker) == "broker"
+
+
+def get_price_scale(ticker: str) -> int:
+    """Decimal places Bitkub accepts for a limit order's rate on this pair
+    (its tick size). Falls back to DEFAULT_PRICE_SCALE for a ticker that
+    was never seen by get_universe() (e.g. a position opened under an older
+    universe run) rather than raising."""
+    return _price_scale_cache.get(ticker, DEFAULT_PRICE_SCALE)
 
 
 def get_klines(ticker: str, resolution: str = "60", bars: int = 150) -> pd.DataFrame:

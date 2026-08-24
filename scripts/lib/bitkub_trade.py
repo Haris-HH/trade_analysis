@@ -20,6 +20,8 @@ from urllib.parse import urlencode
 
 import requests
 
+from . import bitkub_source
+
 BASE_URL = "https://api.bitkub.com"
 HEADERS_BASE = {"Accept": "application/json", "User-Agent": "Mozilla/5.0"}
 
@@ -127,8 +129,16 @@ def place_limit_sell(ticker: str, amount_coin: float, rate: float, client_id: st
     each. Used to place a take-profit order the instant a buy fills, so
     Bitkub's own matching engine catches the target the moment price
     crosses it instead of waiting for this bot's next 5-minute poll (which
-    could miss a spike that reverses before the next check)."""
-    body = {"sym": f"{ticker.lower()}_thb", "amt": round(amount_coin, 8), "rat": round(rate, 8), "typ": "limit"}
+    could miss a spike that reverses before the next check).
+
+    `rate` is rounded to this pair's actual tick size (bitkub_source's
+    price_scale, e.g. 2 decimal places for POL/BTC/ETH), not a flat 8
+    decimals -- a rate that doesn't land on the tick size gets rejected
+    outright (error 13/14: "Invalid rate"/"Improper rate"), which is what
+    was silently breaking every take-profit order for coins with a coarser
+    price scale than 8."""
+    rate = round(rate, bitkub_source.get_price_scale(ticker))
+    body = {"sym": f"{ticker.lower()}_thb", "amt": round(amount_coin, 8), "rat": rate, "typ": "limit"}
     if client_id:
         body["client_id"] = client_id
     return _signed_request("POST", "/api/v3/market/place-ask", body=body)
