@@ -284,5 +284,13 @@
     "order_id": "6a8c6e6a6390ac1b59bc5df4ml0d51",
     "confidence": 70.70050661615073,
     "at": "2026-08-24T16:16:45.516496+00:00"
+  },
+  {
+    "ticker": "ZRC",
+    "side": "reconcile",
+    "note": "balance check found ZRC not actually held on Bitkub (recorded 15113.63636364, actual 0.00000000) — likely sold manually outside the bot; closing the tracked position automatically",
+    "coin_amount": 15113.636363636362,
+    "cost_thb": 500.0,
+    "at": "2026-08-24T17:21:03.609564+00:00"
   }
 ]
