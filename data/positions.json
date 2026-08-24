@@ -1,1 +1,11 @@
-{}
+{
+  "POL": {
+    "entry_price": 3.74937343358396,
+    "cost_thb": 500.0,
+    "coin_amount": 133.35561497326202,
+    "order_id": "6a8c0e576390ac1b59b57972euvq0f",
+    "opened_at": "2026-08-24T09:26:50.145164+00:00",
+    "buy_confidence": 74.00247384151506,
+    "tp_order_id": "6a8c0e5b6debb248e92240c6euvq0f"
+  }
+}
