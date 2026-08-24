@@ -10,20 +10,34 @@ means more than +0.6 from one loud factor and four silent ones — and is
 capped at 90: never claim near-certainty. A signal that clears the
 confidence bar can still be vetoed: no valid stop/target, poor
 risk:reward, or insufficient factor agreement.
+
+`trend_confluence`, `smart_money`, and `volume_profile` (see
+lib/indicators.py) are heuristic approximations of three TradingView tools
+the user trades alongside this engine — justUncle's "Big Snapper" alert
+(fast/medium MA cross confirmed by a SuperTrend flip), chartPrime's "Smart
+Money Breakouts" + MyTradingCoder's magnified order block (break of
+structure + order block pullback), and a classic volume-profile POC/value
+area read — folded in as extra votes rather than as separate chart overlays,
+since this engine has no chart to draw on.
 """
 from __future__ import annotations
 
 from dataclasses import dataclass
 
-# Same weights QuantDesk uses; "trend" carries the most weight because EMA
-# structure is the most reliable read across both trending and ranging
-# regimes, "news" the least because it's the noisiest and most often absent.
+# Same weights QuantDesk uses as a base; "trend" still carries the most
+# weight of any single factor, but "trend_confluence" + "smart_money" add
+# two more trend/structure-confirming votes on top of it (see module
+# docstring), so the combined trend-family weight is actually higher than
+# before. "news" stays low because it's the noisiest and most often absent.
 WEIGHTS = {
-    "trend": 0.28,
-    "momentum": 0.20,
-    "macd": 0.18,
-    "mean_reversion": 0.14,
-    "volume": 0.10,
+    "trend": 0.18,
+    "momentum": 0.13,
+    "macd": 0.12,
+    "mean_reversion": 0.08,
+    "volume": 0.06,
+    "volume_profile": 0.08,
+    "smart_money": 0.14,
+    "trend_confluence": 0.11,
     "news": 0.10,
 }
 

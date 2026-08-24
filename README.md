@@ -16,8 +16,9 @@ GitHub Actions (every 5 min, free)
   → scripts/main.py
       1. Fetch prices for ~950 symbols IN PARALLEL: Bitkub's own API (every coin
          listed there) + Yahoo Finance chart API (S&P 500 + liquid Thai SET stocks)
-      2. Score each with 5 weighted technical factors (trend/momentum/macd/
-         mean_reversion/volume), regime-aware (see "Signal engine" below).
+      2. Score each with 8 weighted technical factors (trend/momentum/macd/
+         mean_reversion/volume/volume_profile/smart_money/trend_confluence),
+         regime-aware (see "Signal engine" below).
          Below 60 candles: no opinion at all (ABSTAIN), not a weak guess
       3. Skip news lookups for symbols whose technical factors alone can't
          mathematically reach 70% confidence even with maximal news — keeps
@@ -72,6 +73,27 @@ edges the first version of this dashboard didn't handle:
   than a plausible-looking number computed from insufficient warmup data.
   These symbols are counted (see the "งดออกความเห็น (ABSTAIN)" badge) but
   excluded from the signal list — there's nothing to show.
+- **Three extra confluence factors**, heuristic ports of TradingView tools
+  the user also watches manually, since a Python engine has no chart to
+  attach a Pine Script overlay to (`scripts/lib/indicators.py`):
+  - `trend_confluence` — approximates justUncle's **Big Snapper** alert: a
+    fast(8)/medium(21) EMA cross only votes at full strength when a
+    SuperTrend(10, 3.0) flip agrees with it, the same multi-confirmation
+    idea behind Big Snapper's buy/sell arrows once its raw MA/BB overlay
+    plots are unchecked.
+  - `smart_money` — approximates chartPrime's **Smart Money Breakouts** +
+    MyTradingCoder's **magnified order block**: detects a break of
+    structure (price closing beyond the last confirmed swing high/low,
+    found via a 5-bar fractal) and checks whether price has pulled back
+    into the order block (the last opposite-colored candle before the
+    breakout leg) for a higher-quality entry read.
+  - `volume_profile` — a point-of-control / value-area read: bins the last
+    100 candles' volume by price, finds the high-volume node (POC) and the
+    70%-of-volume value area, and votes on whether price is breaking out of
+    or drifting back toward that zone.
+  These are optional like every other factor — a symbol without a fresh
+  break of structure simply omits `smart_money` for that scan rather than
+  forcing an opinion (same ABSTAIN-style pattern as the other factors).
 
 Missing news is treated as *absent* evidence (the factor is simply omitted,
 shrinking coverage), not as a neutral vote — a symbol nobody wrote about
@@ -343,7 +365,10 @@ DRY_RUN=1 python scripts/main.py   # scans + logs would-be Telegram messages, do
   `MIN_RR` (1.5), `ATR_STOP_MULTIPLE` / `ATR_TARGET_MULTIPLE` (1.5x / 2.5x, used for the veto check —
   not the same as the longer-horizon target shown on the dashboard, see `price_target.py`)
 - `scripts/lib/indicators.py`: `MIN_CANDLES` (60 — below this, a symbol abstains instead of guessing),
-  `TREND_THRESHOLD` (0.8% EMA separation before a market counts as "trending")
+  `TREND_THRESHOLD` (0.8% EMA separation before a market counts as "trending"); `_supertrend()`'s
+  `period`/`multiplier` (10 / 3.0), `_compute_trend_confluence()`'s fast/medium EMA spans (8 / 21),
+  `_compute_smart_money()`'s swing lookback/arm (60 bars / 2) and `FRESH_BARS` (6), and
+  `_compute_volume_profile()`'s `bins`/`lookback` (20 / 100 candles) — all tunable, same file
 - `scripts/lib/state_store.py`: `COOLDOWN_HOURS` (default 4h between repeat alerts for the same symbol/direction)
 - `data/alert_settings.json`: `alert_mode` (`crypto` / `stock` / `both` / `none`) — which market(s) may send a
   Telegram alert; editable via the dashboard's radio buttons (see setup step 5) or by hand
