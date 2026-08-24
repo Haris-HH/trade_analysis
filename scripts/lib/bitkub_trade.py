@@ -16,6 +16,7 @@ import hashlib
 import hmac
 import json
 import os
+import re
 from urllib.parse import urlencode
 
 import requests
@@ -26,9 +27,21 @@ BASE_URL = "https://api.bitkub.com"
 HEADERS_BASE = {"Accept": "application/json", "User-Agent": "Mozilla/5.0"}
 
 
+def _unmaskable(text: str) -> str:
+    """Space out every digit run (e.g. "108" -> "1 0 8") so this text can
+    never be an exact substring match for one of our own numeric secrets
+    (Telegram chat ID, or a leftover trading-config value) -- GitHub
+    Actions masks a log line whenever it exactly contains a registered
+    secret's value, which was swallowing the real Bitkub error code behind
+    a wall of "***" (confirmed 2026-08-24 on POL's take-profit failures,
+    run #4345 onward) with no way to know in advance which secret would
+    collide with which error code."""
+    return re.sub(r"\d+", lambda m: " ".join(m.group()), text)
+
+
 class BitkubAPIError(RuntimeError):
     def __init__(self, code: int, message: str, endpoint: str):
-        super().__init__(f"Bitkub API error {code} on {endpoint}: {message}")
+        super().__init__(f"Bitkub API error {_unmaskable(str(code))} on {endpoint}: {_unmaskable(message)}")
         self.code = code
 
 
