@@ -230,9 +230,9 @@
     "last_alert_at": "2026-08-22T03:33:07.247230+00:00"
   },
   "crypto:ROBO": {
-    "direction": "BUY",
-    "confidence": 81.45408754129946,
-    "last_alert_at": "2026-08-21T20:57:07.183706+00:00"
+    "direction": "SELL",
+    "confidence": 71.92717139579482,
+    "last_alert_at": "2026-08-24T01:26:43.710843+00:00"
   },
   "crypto:ZIL": {
     "direction": "BUY",
