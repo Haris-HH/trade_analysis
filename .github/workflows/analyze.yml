@@ -36,7 +36,10 @@ jobs:
       - name: Run analysis
         env:
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
-          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+          # Not a credential by itself (useless without TELEGRAM_BOT_TOKEN)
+          # -- moved out of Secrets because its digits were still colliding
+          # with unrelated numbers (e.g. Bitkub error codes) in scan logs.
+          TELEGRAM_CHAT_ID: ${{ vars.TELEGRAM_CHAT_ID }}
           DRY_RUN: ${{ inputs.dry_run == true && '1' || '' }}
           BITKUB_API_KEY: ${{ secrets.BITKUB_API_KEY }}
           BITKUB_API_SECRET: ${{ secrets.BITKUB_API_SECRET }}
