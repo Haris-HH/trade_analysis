@@ -196,8 +196,8 @@
   },
   "crypto:JFIN": {
     "direction": "BUY",
-    "confidence": 84.24024539172534,
-    "last_alert_at": "2026-08-23T15:57:04.554192+00:00"
+    "confidence": 72.43214349585466,
+    "last_alert_at": "2026-08-24T02:01:56.506084+00:00"
   },
   "crypto:KAITO": {
     "direction": "BUY",
@@ -445,9 +445,9 @@
     "last_alert_at": "2026-08-19T23:47:05.754580+00:00"
   },
   "crypto:BASED": {
-    "direction": "BUY",
-    "confidence": 72.55053892102124,
-    "last_alert_at": "2026-08-22T03:42:59.270305+00:00"
+    "direction": "SELL",
+    "confidence": 74.73552740997248,
+    "last_alert_at": "2026-08-24T02:01:56.959890+00:00"
   },
   "crypto:ZENT": {
     "direction": "BUY",
