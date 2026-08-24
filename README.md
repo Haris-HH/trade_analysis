@@ -16,9 +16,10 @@ GitHub Actions (every 5 min, free)
   → scripts/main.py
       1. Fetch prices for ~950 symbols IN PARALLEL: Bitkub's own API (every coin
          listed there) + Yahoo Finance chart API (S&P 500 + liquid Thai SET stocks)
-      2. Score each with 8 weighted technical factors (trend/momentum/macd/
-         mean_reversion/volume/volume_profile/smart_money/trend_confluence),
-         regime-aware (see "Signal engine" below).
+      2. Score each with 11 weighted factors (trend/momentum/macd/
+         mean_reversion/volume/volume_profile/smart_money/trend_confluence/
+         fundamental/market_mood/ichimoku), regime-aware (see "Signal
+         engine" below).
          Below 60 candles: no opinion at all (ABSTAIN), not a weak guess
       3. Skip news lookups for symbols whose technical factors alone can't
          mathematically reach 70% confidence even with maximal news — keeps
@@ -41,7 +42,7 @@ GitHub Actions (every 5 min, free)
          and auto-sells any open position at +5% take-profit or -8%
          stop-loss — see "Auto-trading" below
   → commits public/data/latest.json + data/state.json + data/positions.json +
-    data/trade_log.json back to the repo
+    data/trade_log.json + data/coingecko_cache.json back to the repo
   → push triggers Vercel to redeploy the dashboard (free Hobby plan)
 ```
 
@@ -94,6 +95,37 @@ edges the first version of this dashboard didn't handle:
   These are optional like every other factor — a symbol without a fresh
   break of structure simply omits `smart_money` for that scan rather than
   forcing an opinion (same ABSTAIN-style pattern as the other factors).
+- **Two crypto-only factors covering fundamentals and market mood** — the
+  legs of the user's own 4-part checklist (fundamental analysis, news &
+  sentiment) that price/volume data alone can't reach:
+  - `fundamental` (`scripts/lib/fundamentals.py`) — market-cap rank +
+    circulating/total supply ratio from CoinGecko's free `/coins/markets`
+    endpoint, as a computable proxy for "มีโปรเจกต์และทีมงานเบื้องหลังที่
+    น่าเชื่อถือหรือไม่" (team/project credibility can't be automated, but a
+    large, long-lived market cap is the closest available signal) and
+    "ดู Total Supply และ Circulating Supply" (a low circulating/total ratio
+    flags dilution risk from future token unlocks). Fetched once per scan
+    (not once per symbol — ~1000 coins across 4 pages), cached to
+    `data/coingecko_cache.json` with a 12h TTL, and **committed back to the
+    repo by the CI workflow** (same pattern as `data/state.json`) since
+    GitHub Actions runners are ephemeral and would otherwise lose the cache
+    every run.
+  - `market_mood` (`scripts/lib/fear_greed.py`) — Alternative.me's Fear &
+    Greed Index (0–100), fetched once per scan and shared across every
+    crypto symbol in that cycle, voted contrarian: extreme fear tilts
+    toward BUY, extreme greed tilts toward caution — directly the
+    checklist's "วัดอารมณ์ตลาด (Fear and Greed Index) ว่าช่วงนั้นคนโลภหรือ
+    กลัวมากเกินไป".
+  Both are omitted (not forced to a weak vote) when data is unavailable,
+  and both are skipped entirely for stocks, which have neither a supply
+  concept nor crypto-specific sentiment.
+- **`ichimoku`** — the one indicator from Bitkub's own "Indicator" blog
+  guide (bitkub.com/th/blog/indicator-8eefc6fd5a53) not already covered
+  above: price position relative to the Ichimoku Cloud (properly
+  time-shifted 26 bars, matching what the chart actually displays — above
+  the cloud is an uptrend, below is a downtrend, inside is genuinely
+  undecided, straight from the article) plus the Tenkan/Kijun cross as a
+  secondary momentum confirmation. Needs ≥78 candles; omitted below that.
 
 Missing news is treated as *absent* evidence (the factor is simply omitted,
 shrinking coverage), not as a neutral vote — a symbol nobody wrote about
@@ -369,6 +401,9 @@ DRY_RUN=1 python scripts/main.py   # scans + logs would-be Telegram messages, do
   `period`/`multiplier` (10 / 3.0), `_compute_trend_confluence()`'s fast/medium EMA spans (8 / 21),
   `_compute_smart_money()`'s swing lookback/arm (60 bars / 2) and `FRESH_BARS` (6), and
   `_compute_volume_profile()`'s `bins`/`lookback` (20 / 100 candles) — all tunable, same file
+  and `_compute_ichimoku()`'s window1/window2/window3 (9 / 26 / 52 — the standard Ichimoku periods)
+- `scripts/lib/fundamentals.py`: `PAGES` (4 — top 1000 coins by market cap), `CACHE_TTL_SECONDS` (12h)
+- `scripts/lib/fear_greed.py`: no knobs — one shared value fetched fresh every scan cycle
 - `scripts/lib/state_store.py`: `COOLDOWN_HOURS` (default 4h between repeat alerts for the same symbol/direction)
 - `data/alert_settings.json`: `alert_mode` (`crypto` / `stock` / `both` / `none`) — which market(s) may send a
   Telegram alert; editable via the dashboard's radio buttons (see setup step 5) or by hand

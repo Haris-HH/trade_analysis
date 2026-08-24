@@ -35,7 +35,7 @@ sys.path.insert(0, os.path.dirname(__file__))
 
 import json
 
-from lib import bitkub_source, stock_source, indicators, news_source, scoring, state_store, telegram_notify, chart, price_target, positions_store, auto_trader
+from lib import bitkub_source, stock_source, indicators, news_source, scoring, state_store, telegram_notify, chart, price_target, positions_store, auto_trader, fundamentals, fear_greed
 from lib.universe import STOCK_NAMES
 from lib.scoring import Factor
 
@@ -100,7 +100,7 @@ def fetch_price_data(item: dict) -> tuple[dict, object] | None:
         return None
 
 
-def technical_pass(item: dict, df) -> dict:
+def technical_pass(item: dict, df, fundamentals_map: dict, fg_value: dict | None) -> dict:
     if item["market"] == "crypto":
         price = bitkub_source.get_last_price(item["ticker"], df)
         display_symbol = f"{item['ticker']}/THB"
@@ -117,7 +117,14 @@ def technical_pass(item: dict, df) -> dict:
         "sparkline": chart.extract_sparkline(df),
     }
 
-    factors = indicators.compute_factors(df)
+    # Fundamental/market-mood factors are crypto-only (stocks have no
+    # supply concept and Fear & Greed tracks crypto sentiment specifically).
+    is_crypto = item["market"] == "crypto"
+    factors = indicators.compute_factors(
+        df,
+        fundamentals=fundamentals_map.get(item["ticker"].upper()) if is_crypto else None,
+        fear_greed=fg_value if is_crypto else None,
+    )
     if not factors:
         # Fewer than MIN_CANDLES bars available — no directional view, not a
         # weak guess (QuantDesk calls this ABSTAIN).
@@ -198,7 +205,7 @@ def add_without_news(partial: dict) -> dict:
     return finalize(partial, None, [])
 
 
-def scan_universe(universe: list[dict]) -> list[dict]:
+def scan_universe(universe: list[dict], fundamentals_map: dict, fg_value: dict | None) -> list[dict]:
     technical_results = []
     with ThreadPoolExecutor(max_workers=PRICE_FETCH_WORKERS) as pool:
         futures = [pool.submit(fetch_price_data, item) for item in universe]
@@ -208,7 +215,7 @@ def scan_universe(universe: list[dict]) -> list[dict]:
                 continue
             item, df = result
             try:
-                technical_results.append(technical_pass(item, df))
+                technical_results.append(technical_pass(item, df, fundamentals_map, fg_value))
             except Exception as exc:
                 print(f"[technical] {item['market']}:{item['ticker']} failed: {exc}")
 
@@ -238,7 +245,7 @@ def scan_universe(universe: list[dict]) -> list[dict]:
     return scored
 
 
-def reverify_candidates(candidates: list[dict]) -> list[dict]:
+def reverify_candidates(candidates: list[dict], fundamentals_map: dict, fg_value: dict | None) -> list[dict]:
     if not candidates:
         return []
     print(f"Waiting {VERIFY_DELAY_SECONDS}s before re-verifying {len(candidates)} candidate(s)...")
@@ -250,7 +257,7 @@ def reverify_candidates(candidates: list[dict]) -> list[dict]:
         if result is None:
             return None
         _, df = result
-        partial = technical_pass(item, df)
+        partial = technical_pass(item, df, fundamentals_map, fg_value)
         if partial["abstain"]:
             return make_abstain_result(partial)
         return add_news_and_score(partial)
@@ -277,14 +284,21 @@ def main() -> None:
     print(f"Universe: {sum(1 for u in universe if u['market'] == 'crypto')} crypto, "
           f"{sum(1 for u in universe if u['market'] == 'stock')} stocks.")
 
-    results = scan_universe(universe)
+    # Fetched once per scan cycle, not once per symbol — see
+    # lib/fundamentals.py and lib/fear_greed.py for why.
+    fundamentals_map = fundamentals.get_fundamentals_map()
+    fg_value = fear_greed.get_fear_greed()
+    print(f"Fundamentals: {len(fundamentals_map)} symbol(s) cached. "
+          f"Fear & Greed: {fg_value['value'] if fg_value else 'unavailable'}.")
+
+    results = scan_universe(universe, fundamentals_map, fg_value)
 
     by_key = {(r["market"], r["raw_key"]): i for i, r in enumerate(results)}
     candidates = [r for r in results if r["confidence"] >= MIN_CONFIDENCE and not r.get("vetoed")]
     print(f"{len(candidates)} candidate(s) crossed {MIN_CONFIDENCE}% and survived veto checks on first pass.")
 
     alerts_sent = 0
-    for original, verified in reverify_candidates(candidates):
+    for original, verified in reverify_candidates(candidates, fundamentals_map, fg_value):
         key = f"{verified['market']}:{verified['raw_key']}"
 
         if verified["confidence"] < MIN_CONFIDENCE or verified["direction"] != original["direction"] or verified.get("vetoed"):

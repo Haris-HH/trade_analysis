@@ -26,6 +26,23 @@ Python engine has no chart to attach a Pine Script overlay to:
 - `_compute_volume_profile` — a POC/value-area read (point of control +
   70%-of-volume value area over the recent lookback), voting on whether
   price is breaking out of, or drifting back toward, the high-volume node.
+
+Two more factors cover the fundamental-analysis and market-sentiment legs
+of the checklist that price/volume data alone can't reach — both optional,
+both crypto-only, both computed from data fetched once per scan (not once
+per symbol) and passed in by the caller:
+- `_compute_fundamental` — market-cap rank + circulating/total supply
+  ratio from lib/fundamentals.py, as a proxy for project credibility and
+  dilution risk.
+- `_compute_market_mood` — Alternative.me's Fear & Greed Index from
+  lib/fear_greed.py, as a contrarian market-wide sentiment read.
+
+`_compute_ichimoku` adds the one indicator from Bitkub's own "Indicator"
+guide (bitkub.com/th/blog/indicator-8eefc6fd5a53) not already covered by
+the factors above — Ichimoku Cloud ("มองแวบเดียวรู้ทิศทาง"): price above
+the (properly time-shifted) cloud is an uptrend, below is a downtrend,
+inside is genuinely undecided per the article, plus the Tenkan/Kijun cross
+as a secondary momentum confirmation.
 """
 from __future__ import annotations
 
@@ -43,8 +60,18 @@ def _clamp(v: float, lo: float = -1.0, hi: float = 1.0) -> float:
     return max(lo, min(hi, v))
 
 
-def compute_factors(df: pd.DataFrame) -> list[Factor]:
-    """df: columns open/high/low/close/volume, ascending time index."""
+def compute_factors(
+    df: pd.DataFrame,
+    fundamentals: dict | None = None,
+    fear_greed: dict | None = None,
+) -> list[Factor]:
+    """df: columns open/high/low/close/volume, ascending time index.
+
+    `fundamentals` (from lib/fundamentals.get_fundamentals_map(), keyed by
+    ticker) and `fear_greed` (from lib/fear_greed.get_fear_greed()) are
+    fetched once per scan cycle by the caller, not once per symbol — pass
+    None for either (or both) to omit those factors, e.g. for stocks, which
+    have neither a circulating-supply concept nor a crypto sentiment index."""
     if len(df) < MIN_CANDLES:
         return []
 
@@ -175,6 +202,30 @@ def compute_factors(df: pd.DataFrame) -> list[Factor]:
         vol_profile = _compute_volume_profile(df)
         if vol_profile:
             factors.append(vol_profile)
+    except Exception:
+        pass
+
+    # ---- Fundamental: market-cap rank + supply dilution ----
+    try:
+        fundamental = _compute_fundamental(fundamentals)
+        if fundamental:
+            factors.append(fundamental)
+    except Exception:
+        pass
+
+    # ---- Market mood: Fear & Greed Index (contrarian) ----
+    try:
+        mood = _compute_market_mood(fear_greed)
+        if mood:
+            factors.append(mood)
+    except Exception:
+        pass
+
+    # ---- Ichimoku Cloud: price-vs-cloud + Tenkan/Kijun cross ----
+    try:
+        ichimoku = _compute_ichimoku(df)
+        if ichimoku:
+            factors.append(ichimoku)
     except Exception:
         pass
 
@@ -374,6 +425,80 @@ def _compute_volume_profile(df: pd.DataFrame, bins: int = 20, lookback: int = 10
         desc = f"ราคาอยู่ใน Value Area (POC {poc_price:,.4g}) — โน้มเข้าหาโซนปริมาณซื้อขายหนาแน่น"
 
     return Factor("volume_profile", vote, WEIGHTS["volume_profile"], desc)
+
+
+def _compute_fundamental(fundamentals: dict | None) -> Factor | None:
+    if not fundamentals:
+        return None
+    rank = fundamentals.get("market_cap_rank")
+    supply_ratio = fundamentals.get("supply_ratio")
+    if rank is None and supply_ratio is None:
+        return None
+
+    # Unranked/unknown supply data isn't itself bearish (many legitimate
+    # small projects lack full data) — score it mildly cautious/neutral
+    # rather than penalizing it as if it were a known-bad rank/ratio.
+    rank_score = _clamp(1 - (rank / 500), 0.0, 1.0) if rank else 0.3
+    supply_score = _clamp(supply_ratio, 0.0, 1.0) if supply_ratio is not None else 0.5
+
+    strength = 0.6 * rank_score + 0.4 * supply_score
+    vote = _clamp((strength - 0.4) * 1.4)
+
+    parts = [f"อันดับ Market Cap #{rank}" if rank else "ไม่มีอันดับ Market Cap (โปรเจกต์เล็ก/ใหม่)"]
+    if supply_ratio is not None:
+        parts.append(
+            f"หมุนเวียนแล้ว {supply_ratio:.0%} ของ Total Supply"
+            + (" ⚠ เสี่ยง dilution สูง" if supply_ratio < 0.3 else "")
+        )
+    return Factor("fundamental", vote, WEIGHTS["fundamental"], "พื้นฐานโปรเจกต์: " + ", ".join(parts))
+
+
+def _compute_market_mood(fear_greed: dict | None) -> Factor | None:
+    if not fear_greed:
+        return None
+    value = fear_greed["value"]
+    # Contrarian: extreme fear -> lean BUY ("be greedy when others are
+    # fearful"), extreme greed -> lean caution/SELL.
+    vote = _clamp((50 - value) / 40)
+    desc = f"Fear & Greed Index {value} ({fear_greed['classification']})"
+    return Factor("market_mood", vote, WEIGHTS["market_mood"], desc)
+
+
+def _compute_ichimoku(df: pd.DataFrame) -> Factor | None:
+    n = len(df)
+    if n < 78:  # 52 + 26: shortest history that yields a real (non-NaN) shifted cloud
+        return None
+
+    ichi = ta.trend.IchimokuIndicator(df["high"], df["low"], window1=9, window2=26, window3=52)
+    senkou_a, senkou_b = ichi.ichimoku_a(), ichi.ichimoku_b()
+    tenkan, kijun = ichi.ichimoku_conversion_line(), ichi.ichimoku_base_line()
+
+    # ta's ichimoku_a()/ichimoku_b() are NOT shifted forward — the cloud
+    # visibly plotted at the current bar was calculated from data as of 26
+    # bars ago, then displayed 26 bars ahead. Read that earlier index to get
+    # what the chart actually shows "above/below" the current candle.
+    cloud_idx = n - 1 - 26
+    if cloud_idx < 0 or pd.isna(senkou_a.iloc[cloud_idx]) or pd.isna(senkou_b.iloc[cloud_idx]):
+        return None
+    if pd.isna(tenkan.iloc[-1]) or pd.isna(kijun.iloc[-1]):
+        return None
+
+    a, b = float(senkou_a.iloc[cloud_idx]), float(senkou_b.iloc[cloud_idx])
+    cloud_top, cloud_bottom = max(a, b), min(a, b)
+    bullish_cloud = a > b
+    price = float(df["close"].iloc[-1])
+    momentum_bull = float(tenkan.iloc[-1]) > float(kijun.iloc[-1])
+
+    if price > cloud_top:
+        vote, pos_desc = 0.6, "เหนือ Ichimoku Cloud (ขาขึ้น)"
+    elif price < cloud_bottom:
+        vote, pos_desc = -0.6, "ใต้ Ichimoku Cloud (ขาลง)"
+    else:
+        vote, pos_desc = (0.15 if bullish_cloud else -0.15), "อยู่ใน Ichimoku Cloud (ทิศทางไม่ชัดเจน)"
+    vote += 0.3 if momentum_bull else -0.3
+
+    desc = f"{pos_desc}, Tenkan/Kijun {'ตัดขึ้น' if momentum_bull else 'ตัดลง'}"
+    return Factor("ichimoku", _clamp(vote), WEIGHTS["ichimoku"], desc)
 
 
 def compute_atr(df: pd.DataFrame, window: int = 14) -> float | None:

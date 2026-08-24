@@ -53,6 +53,13 @@ jobs:
           git config user.name "market-scan-bot"
           git config user.email "actions@users.noreply.github.com"
           git add public/data/latest.json data/state.json data/positions.json data/trade_log.json
+          # Only committed once a fetch has actually succeeded at least once
+          # (e.g. not on a run where CoinGecko was unreachable before any
+          # cache existed) -- `git add` on a missing path would otherwise
+          # fail the step outright.
+          if [ -f data/coingecko_cache.json ]; then
+            git add data/coingecko_cache.json
+          fi
           git diff --cached --quiet && exit 0
           git commit -m "chore: update market scan data [skip ci]"
           # If origin advanced since checkout (another push landed in between --

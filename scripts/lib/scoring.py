@@ -19,26 +19,46 @@ Money Breakouts" + MyTradingCoder's magnified order block (break of
 structure + order block pullback), and a classic volume-profile POC/value
 area read — folded in as extra votes rather than as separate chart overlays,
 since this engine has no chart to draw on.
+
+`fundamental` and `market_mood` (lib/fundamentals.py, lib/fear_greed.py)
+cover the other two legs of the user's own 4-part checklist (fundamental
+analysis + news/sentiment) that pure price-and-volume factors can't reach:
+market-cap rank + circulating/total supply ratio as a proxy for project
+credibility and dilution risk, and Alternative.me's Fear & Greed Index as a
+contrarian market-wide mood read. Both are crypto-only and both are
+optional the same way every other factor is — missing data omits the
+factor rather than forcing a weak vote.
+
+`ichimoku` (lib/indicators.py) is the one indicator from Bitkub's own
+"Indicator" blog guide not already covered by the factors above — price
+position relative to the (properly time-shifted) Ichimoku Cloud plus the
+Tenkan/Kijun cross.
 """
 from __future__ import annotations
 
 from dataclasses import dataclass
 
-# Same weights QuantDesk uses as a base; "trend" still carries the most
-# weight of any single factor, but "trend_confluence" + "smart_money" add
-# two more trend/structure-confirming votes on top of it (see module
-# docstring), so the combined trend-family weight is actually higher than
-# before. "news" stays low because it's the noisiest and most often absent.
+# Same weights QuantDesk uses as a base, extended with the factors above.
+# "trend" still carries the most weight of any single factor, but
+# "trend_confluence" + "smart_money" + "ichimoku" add three more
+# trend/structure-confirming votes on top of it, so the combined
+# trend-family weight is actually higher than before. "news" and
+# "fundamental"/"market_mood" stay low — noisiest, most often absent, or
+# (for market_mood) shared across every symbol in a scan rather than
+# symbol-specific.
 WEIGHTS = {
-    "trend": 0.18,
-    "momentum": 0.13,
-    "macd": 0.12,
-    "mean_reversion": 0.08,
-    "volume": 0.06,
-    "volume_profile": 0.08,
-    "smart_money": 0.14,
-    "trend_confluence": 0.11,
-    "news": 0.10,
+    "trend": 0.15,
+    "momentum": 0.11,
+    "macd": 0.10,
+    "mean_reversion": 0.07,
+    "volume": 0.05,
+    "volume_profile": 0.07,
+    "smart_money": 0.12,
+    "trend_confluence": 0.09,
+    "news": 0.08,
+    "fundamental": 0.05,
+    "market_mood": 0.05,
+    "ichimoku": 0.06,
 }
 
 CONFIDENCE_CAP = 90.0
