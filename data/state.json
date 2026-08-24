@@ -246,8 +246,8 @@
   },
   "crypto:WET": {
     "direction": "SELL",
-    "confidence": 80.33503850486622,
-    "last_alert_at": "2026-08-23T02:21:36.607394+00:00"
+    "confidence": 70.91096125669539,
+    "last_alert_at": "2026-08-24T22:31:46.210004+00:00"
   },
   "crypto:MPLX": {
     "direction": "BUY",
