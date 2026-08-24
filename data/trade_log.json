@@ -230,5 +230,23 @@
     "order_id": "6a8c0eba11016c4f53f63238euvq0f",
     "confidence": 74.36912838160949,
     "at": "2026-08-24T09:28:30.212734+00:00"
+  },
+  {
+    "ticker": "POL",
+    "side": "reconcile",
+    "note": "balance check found POL not actually held on Bitkub (recorded 133.71045576, actual 0.00000000) — likely sold manually outside the bot; closing the tracked position automatically",
+    "coin_amount": 133.71045576407508,
+    "cost_thb": 500.0,
+    "at": "2026-08-24T12:47:02.350680+00:00"
+  },
+  {
+    "ticker": "POL",
+    "side": "buy",
+    "price": 3.83,
+    "cost_thb": 500.0,
+    "coin_amount": 130.5628272251309,
+    "order_id": "6a8c3d42bbe0b540ccb4c616euvq0f",
+    "confidence": 75.74423290654285,
+    "at": "2026-08-24T12:47:02.351289+00:00"
   }
 ]
