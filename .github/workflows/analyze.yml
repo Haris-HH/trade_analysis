@@ -41,13 +41,19 @@ jobs:
           BITKUB_API_KEY: ${{ secrets.BITKUB_API_KEY }}
           BITKUB_API_SECRET: ${{ secrets.BITKUB_API_SECRET }}
           AUTO_TRADE_ENABLED: ${{ secrets.AUTO_TRADE_ENABLED }}
-          AUTO_TRADE_AMOUNT_THB: ${{ secrets.AUTO_TRADE_AMOUNT_THB }}
-          AUTO_TRADE_MAX_POSITIONS: ${{ secrets.AUTO_TRADE_MAX_POSITIONS }}
-          AUTO_TRADE_MIN_CONFIDENCE: ${{ secrets.AUTO_TRADE_MIN_CONFIDENCE }}
-          AUTO_TRADE_TAKE_PROFIT_PCT: ${{ secrets.AUTO_TRADE_TAKE_PROFIT_PCT }}
-          AUTO_TRADE_STOP_LOSS_PCT: ${{ secrets.AUTO_TRADE_STOP_LOSS_PCT }}
-          AUTO_TRADE_RISK_PCT: ${{ secrets.AUTO_TRADE_RISK_PCT }}
-          BITKUB_FEE_PCT: ${{ secrets.BITKUB_FEE_PCT }}
+          # Trading-config knobs below are plain numbers, not credentials --
+          # kept as repository Variables (not Secrets) so GitHub's log
+          # masking doesn't blanket-redact every coincidental digit match in
+          # the scan output (it was masking Bitkub API error codes too,
+          # e.g. run #4355's POL take-profit failure was unreadable because
+          # of this).
+          AUTO_TRADE_AMOUNT_THB: ${{ vars.AUTO_TRADE_AMOUNT_THB }}
+          AUTO_TRADE_MAX_POSITIONS: ${{ vars.AUTO_TRADE_MAX_POSITIONS }}
+          AUTO_TRADE_MIN_CONFIDENCE: ${{ vars.AUTO_TRADE_MIN_CONFIDENCE }}
+          AUTO_TRADE_TAKE_PROFIT_PCT: ${{ vars.AUTO_TRADE_TAKE_PROFIT_PCT }}
+          AUTO_TRADE_STOP_LOSS_PCT: ${{ vars.AUTO_TRADE_STOP_LOSS_PCT }}
+          AUTO_TRADE_RISK_PCT: ${{ vars.AUTO_TRADE_RISK_PCT }}
+          BITKUB_FEE_PCT: ${{ vars.BITKUB_FEE_PCT }}
         run: python scripts/main.py
 
       - name: Commit updated data
