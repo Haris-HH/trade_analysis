@@ -586,8 +586,8 @@
   },
   "crypto:HEMI": {
     "direction": "SELL",
-    "confidence": 73.52382058865216,
-    "last_alert_at": "2026-08-24T18:26:42.374676+00:00"
+    "confidence": 72.7644398928683,
+    "last_alert_at": "2026-08-24T23:01:52.595978+00:00"
   },
   "crypto:MASK": {
     "direction": "BUY",
