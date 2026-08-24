@@ -440,9 +440,9 @@
     "last_alert_at": "2026-08-22T04:12:36.743122+00:00"
   },
   "crypto:TA": {
-    "direction": "SELL",
-    "confidence": 70.97505931875685,
-    "last_alert_at": "2026-08-19T23:47:05.754580+00:00"
+    "direction": "BUY",
+    "confidence": 71.17953739707073,
+    "last_alert_at": "2026-08-24T14:06:55.272911+00:00"
   },
   "crypto:BASED": {
     "direction": "SELL",
