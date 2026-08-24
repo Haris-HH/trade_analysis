@@ -175,9 +175,9 @@
     "last_alert_at": "2026-08-23T05:46:49.208404+00:00"
   },
   "crypto:ZRC": {
-    "direction": "SELL",
-    "confidence": 70.52683643859058,
-    "last_alert_at": "2026-08-19T15:02:13.047192+00:00"
+    "direction": "BUY",
+    "confidence": 70.70050661615073,
+    "last_alert_at": "2026-08-24T16:16:41.132406+00:00"
   },
   "crypto:VIC": {
     "direction": "SELL",
