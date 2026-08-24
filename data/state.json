@@ -185,9 +185,9 @@
     "last_alert_at": "2026-08-20T05:01:58.199337+00:00"
   },
   "crypto:BMT": {
-    "direction": "BUY",
-    "confidence": 71.5252457325802,
-    "last_alert_at": "2026-08-22T02:48:34.209679+00:00"
+    "direction": "SELL",
+    "confidence": 73.01825415164687,
+    "last_alert_at": "2026-08-24T00:46:51.367699+00:00"
   },
   "crypto:NXPC": {
     "direction": "BUY",
@@ -1083,5 +1083,10 @@
     "direction": "BUY",
     "confidence": 72.26668375966699,
     "last_alert_at": "2026-08-24T00:16:47.429458+00:00"
+  },
+  "crypto:REALX": {
+    "direction": "SELL",
+    "confidence": 71.56991867499154,
+    "last_alert_at": "2026-08-24T00:46:50.896921+00:00"
   }
 }
