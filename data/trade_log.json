@@ -320,5 +320,23 @@
     "order_id": "6a8cfd69582b3c0284f49031m8a2qe",
     "confidence": 70.8084882994503,
     "at": "2026-08-25T02:26:53.537720+00:00"
+  },
+  {
+    "ticker": "BTC",
+    "side": "reconcile",
+    "note": "balance check found BTC not actually held on Bitkub (recorded 0.00018854, actual 0.00000000) — likely sold manually outside the bot; closing the tracked position automatically",
+    "coin_amount": 0.0001885426179956975,
+    "cost_thb": 500.0,
+    "at": "2026-08-25T02:32:04.262834+00:00"
+  },
+  {
+    "ticker": "BTC",
+    "side": "buy",
+    "price": 2651467.58,
+    "cost_thb": 500.0,
+    "coin_amount": 0.00018809336739793785,
+    "order_id": "6a8cfea0de09d86d00927dc9m8a2qe",
+    "confidence": 70.98454974837368,
+    "at": "2026-08-25T02:32:04.263661+00:00"
   }
 ]
