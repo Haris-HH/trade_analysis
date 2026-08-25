@@ -396,8 +396,8 @@
   },
   "crypto:PEOPLE": {
     "direction": "SELL",
-    "confidence": 70.14899639248691,
-    "last_alert_at": "2026-08-25T03:56:49.122723+00:00"
+    "confidence": 70.64903036558462,
+    "last_alert_at": "2026-08-25T08:21:46.034271+00:00"
   },
   "crypto:ETHFI": {
     "direction": "BUY",
