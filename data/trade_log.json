@@ -381,6 +381,6 @@
     "note": "balance check found BTC not actually held on Bitkub (recorded 0.00018752, actual 0.00000000) — likely sold manually outside the bot; closing the tracked position automatically",
     "coin_amount": 0.0001875217764950223,
     "cost_thb": 500.0,
-    "at": "2026-08-25T02:46:58.667971+00:00"
+    "at": "2026-08-25T02:48:52.514086+00:00"
   }
 ]
