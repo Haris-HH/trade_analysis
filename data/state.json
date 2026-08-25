@@ -516,8 +516,8 @@
   },
   "crypto:POL": {
     "direction": "BUY",
-    "confidence": 74.36912838160949,
-    "last_alert_at": "2026-08-24T09:28:25.141232+00:00"
+    "confidence": 73.65144551261768,
+    "last_alert_at": "2026-08-25T06:31:54.484301+00:00"
   },
   "stock:DVN": {
     "direction": "BUY",
@@ -711,8 +711,8 @@
   },
   "crypto:VELO": {
     "direction": "BUY",
-    "confidence": 73.45188541163853,
-    "last_alert_at": "2026-08-22T03:12:41.984184+00:00"
+    "confidence": 70.54577811606748,
+    "last_alert_at": "2026-08-25T06:31:54.005902+00:00"
   },
   "crypto:OP": {
     "direction": "BUY",

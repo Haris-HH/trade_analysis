@@ -1,1 +1,20 @@
-{}
+{
+  "POL": {
+    "entry_price": 4.0,
+    "cost_thb": 500.0,
+    "coin_amount": 125.0,
+    "order_id": "6a8d36dcd34a6712f682dba9euvq0f",
+    "opened_at": "2026-08-25T06:31:58.438915+00:00",
+    "buy_confidence": 73.65144551261768,
+    "tp_order_id": "6a8d36e0bbe0b540ccc6c8a3euvq0f"
+  },
+  "VELO": {
+    "entry_price": 0.7488721804511279,
+    "cost_thb": 500.0,
+    "coin_amount": 667.6706827309237,
+    "order_id": "6a8d36e1c1ba219fee63ed9cp8uaqs",
+    "opened_at": "2026-08-25T06:32:03.985131+00:00",
+    "buy_confidence": 70.54577811606748,
+    "tp_order_id": "6a8d36e5a0fe2fef3031bc6bp8uaqs"
+  }
+}
