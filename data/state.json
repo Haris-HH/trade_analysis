@@ -446,8 +446,8 @@
   },
   "crypto:BASED": {
     "direction": "SELL",
-    "confidence": 74.73552740997248,
-    "last_alert_at": "2026-08-24T02:01:56.959890+00:00"
+    "confidence": 74.88451188044381,
+    "last_alert_at": "2026-08-25T07:56:48.494786+00:00"
   },
   "crypto:ZENT": {
     "direction": "BUY",
