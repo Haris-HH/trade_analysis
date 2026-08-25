@@ -1,11 +1,11 @@
 {
   "BTC": {
-    "entry_price": 2658254.2857142854,
+    "entry_price": 2654027.429121386,
     "cost_thb": 500.0,
-    "coin_amount": 0.00018809336739793785,
-    "order_id": "6a8cfea0de09d86d00927dc9m8a2qe",
-    "opened_at": "2026-08-25T02:32:03.010866+00:00",
-    "buy_confidence": 70.98454974837368,
-    "tp_order_id": "6a8cfea4f6d815d4369fb339m8a2qe"
+    "coin_amount": 0.00018839292861623692,
+    "order_id": "6a8cffc2de09d86d00929295m8a2qe",
+    "opened_at": "2026-08-25T02:36:52.281942+00:00",
+    "buy_confidence": 70.11021079764735,
+    "tp_order_id": "6a8cffc5d34a6712f67fe48cm8a2qe"
   }
 }
