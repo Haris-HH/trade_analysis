@@ -402,5 +402,31 @@
     "order_id": "6a8d36e1c1ba219fee63ed9cp8uaqs",
     "confidence": 70.54577811606748,
     "at": "2026-08-25T06:32:05.760338+00:00"
+  },
+  {
+    "ticker": "POL",
+    "side": "reconcile",
+    "note": "balance check found POL not actually held on Bitkub (recorded 125.00000000, actual 0.00000000) — likely sold manually outside the bot; closing the tracked position automatically",
+    "coin_amount": 125.0,
+    "cost_thb": 500.0,
+    "at": "2026-08-25T06:36:49.957508+00:00"
+  },
+  {
+    "ticker": "VELO",
+    "side": "reconcile",
+    "note": "balance check found VELO not actually held on Bitkub (recorded 667.67068273, actual 0.00000000) — likely sold manually outside the bot; closing the tracked position automatically",
+    "coin_amount": 667.6706827309237,
+    "cost_thb": 500.0,
+    "at": "2026-08-25T06:36:49.958397+00:00"
+  },
+  {
+    "ticker": "POL",
+    "side": "buy",
+    "price": 3.97,
+    "cost_thb": 500.0,
+    "coin_amount": 124.6875,
+    "order_id": "6a8d37fedf02d1c58ac1b0afeuvq0f",
+    "confidence": 72.6448758822155,
+    "at": "2026-08-25T06:36:49.959249+00:00"
   }
 ]
