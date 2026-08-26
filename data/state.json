@@ -566,8 +566,8 @@
   },
   "stock:BGRIM.BK": {
     "direction": "BUY",
-    "confidence": 74.28502684743529,
-    "last_alert_at": "2026-08-18T09:36:41.613290+00:00"
+    "confidence": 70.2186591879557,
+    "last_alert_at": "2026-08-26T10:01:54.355616+00:00"
   },
   "crypto:TRIA": {
     "direction": "SELL",
