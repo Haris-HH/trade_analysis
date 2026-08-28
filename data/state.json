@@ -1088,5 +1088,10 @@
     "direction": "SELL",
     "confidence": 71.56991867499154,
     "last_alert_at": "2026-08-24T00:46:50.896921+00:00"
+  },
+  "stock:CDW": {
+    "direction": "BUY",
+    "confidence": 70.1888468408781,
+    "last_alert_at": "2026-08-28T13:41:50.539933+00:00"
   }
 }
